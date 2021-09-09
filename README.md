@@ -52,6 +52,6 @@ The proof-of-concept approach can be started simply via:
 ```
 python3 run.py
 ```
-This will show two windows, one with the reference cone sections and one with the learned cone sectios.
+This will show two windows, one with the reference cone sections and one with the learned cone sections. Good results are reached after ~10,000 iterations.
 Press Ctrl-C 3 times to stop the training process.
 
