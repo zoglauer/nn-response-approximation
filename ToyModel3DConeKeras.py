@@ -134,7 +134,7 @@ class ToyModel3DCone:
     plt.show()
     plt.pause(0.001)
     
-    if FigureNumber == 0:
+    if FigureNumber == 1:
       plt.savefig(self.OutputPrefix + "_Original.png")
     else:
       plt.savefig(self.OutputPrefix + "_Result.png")
@@ -219,9 +219,7 @@ class ToyModel3DCone:
     '''
     Perfrom the neural network training
     '''
-    
-    global Interrupted
-    
+        
     print("Info: Creating %i data sets" % (self.TrainingBatchSize + self.TestBatchSize))
 
         
@@ -256,8 +254,6 @@ class ToyModel3DCone:
     
     Model.summary()
     
-
-
     print("Info: Training and evaluating the network")
 
     # Train the network
@@ -273,7 +269,8 @@ class ToyModel3DCone:
 
     for Iteration in range(0, 50000):
       
-      # Take care of Ctrl-C
+      # Take care of Ctrl-C -- does not work
+      global Interrupted
       if Interrupted == True: break
 
       # Train
@@ -301,6 +298,9 @@ class ToyModel3DCone:
           
         else:
           TimesNoImprovement += 1
+      else:
+        plt.pause(0.001)
+
  
         # end: check performance
 
