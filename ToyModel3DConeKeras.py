@@ -52,6 +52,8 @@ class ToyModel3DCone:
     """
 
     self.OutputPrefix = OutputPrefix
+    self.UseBatchMode = False
+
     #self.Layout = [10, 100, 1000]
 
     print("\nToyModel: (x,y) --> Compton cone for all  x, y in [-1, 1]\n")
@@ -99,6 +101,17 @@ class ToyModel3DCone:
     self.NTestingBatches = 1
     self.TestBatchSize = self.NTestingBatches*self.SubBatchSize
 
+
+
+###################################################################################################
+
+
+  def setBatchMode(self, UseBatchMode = True):
+    '''
+    Toggle the batch mode, i.e., choose if to use a UI or not
+    '''
+
+    self.UseBatchMode = UseBatchMode
 
 
 ###################################################################################################
@@ -261,7 +274,8 @@ class ToyModel3DCone:
 
     XSingle = XTest[0:1]
     YSingle = YTest[0:1]
-    self.Plot2D(XSingle, YSingle, "Original", 1)
+    if self.UseBatchMode == False:
+      self.Plot2D(XSingle, YSingle, "Original", 1)
 
 
     TimesNoImprovement = 0
@@ -294,12 +308,14 @@ class ToyModel3DCone:
           # Test just the first test case:
           YOutSingle = Model.predict(XSingle)
           
-          self.Plot2D(XSingle, YOutSingle, "Reconstructed at iteration {}".format(Iteration), 2)
+          if self.UseBatchMode == False:
+            self.Plot2D(XSingle, YOutSingle, "Reconstructed at iteration {}".format(Iteration), 2)
           
         else:
           TimesNoImprovement += 1
       else:
-        plt.pause(0.001)
+        if self.UseBatchMode == False:
+          plt.pause(0.001)
 
  
         # end: check performance
