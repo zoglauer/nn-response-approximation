@@ -21,7 +21,7 @@ import signal
 
 # Own tools
 from ToyModel3DConeKeras import ToyModel3DCone
-from helpers import *
+from utility.Helpers import *
   
 ###################################################################################################
 
