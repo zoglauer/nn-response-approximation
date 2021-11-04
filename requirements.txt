@@ -1,5 +1,6 @@
 # Required software
 
-tensorflow-gpu
-matplotlib
-
+tensorflow-gpu~=2.6.0
+matplotlib~=3.4.3
+numpy~=1.19.5
+healpy~=1.15.0
