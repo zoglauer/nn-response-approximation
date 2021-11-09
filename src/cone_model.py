@@ -12,9 +12,10 @@ from src.dataset import ApproxDataset
 
 class ToyModel3DCone:
 
-    def __init__(self, output_dir='Run'):
+    def __init__(self, output_dir='Run', flattened=True):
         print('\nToyModel: (x,y) --> Compton cone for all  x, y in [-1, 1]')
-
+        
+        self.flattened = flattened
         self.output_dir = output_dir
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
@@ -71,7 +72,11 @@ class ToyModel3DCone:
             zGridElement = int((i-1)*self.gTrainingGridZ/4)
             for x in range(self.gTrainingGridXY):
                 for y in range(self.gTrainingGridXY):
-                    Z[x, y] = YSingle[x + y*self.gTrainingGridXY + zGridElement*self.gTrainingGridXY*self.gTrainingGridXY]
+                    if self.flattened:
+                        idx = x + y*self.gTrainingGridXY + zGridElement*self.gTrainingGridXY*self.gTrainingGridXY
+                        Z[x, y] = YSingle[idx]
+                    else:
+                        Z[x, y] = YSingle[x][y][zGridElement]
 
             ax = fig.add_subplot(2, 2, i)
             ax.set_title('Slice through z={}'.format(self.gGridCentersZ[zGridElement]))
@@ -100,17 +105,16 @@ class ToyModel3DCone:
         return 1/(sigma*math.sqrt(2*np.pi)) * math.exp(-0.5*pow(d/sigma, 2))
 
 
-    def CreateFullResponse(self, PosX, PosY, flattened=True):
+    def CreateFullResponse(self, PosX, PosY):
         '''
         Create the response for a source at position PosX, PosY
         
         Args:
         PosX (float): x position of the source
         PosY (float): y position of the source
-        flattened: whether the return array is flattened into 1-D array
         
         '''
-        if flattened:
+        if self.flattened:
             Out = np.zeros(shape=(self.OutputDataSpaceSize, ))
         else:
             Out = np.zeros(shape=(self.gTrainingGridXY, self.gTrainingGridXY, self.gTrainingGridZ))
@@ -120,7 +124,7 @@ class ToyModel3DCone:
             for y in range(0, self.gTrainingGridXY):
                 for z in range(0, self.gTrainingGridZ):
                     r = math.sqrt((PosX - self.gGridCentersXY[x])**2 + (PosY - self.gGridCentersXY[y])**2 )
-                    if flattened:
+                    if self.flattened:
                         idx = x + y*self.gTrainingGridXY + z*self.gTrainingGridXY*self.gTrainingGridXY
                         Out[idx] = self.getGauss(math.fabs(r - self.gGridCentersZ[z]), self.gSigmaR)
                     else:
@@ -129,26 +133,25 @@ class ToyModel3DCone:
         return Out
     
 
-    def create_dataset(self, dataset_size=1024, flattened=True):
+    def create_dataset(self, dataset_size=1024):
         '''
         Generate dataset for the responses.
         
         Args:
         dataset_size: Dataset size
-        flattened: whether the return array is flattened into 1-D array
         '''
-        X, Y = self.create_data(dataset_size, flattened)
+        X, Y = self.create_data(dataset_size)
 
         return ApproxDataset(X, Y)
         
 
-    def create_data(self, data_amount, flattened):
+    def create_data(self, data_amount):
         X = np.zeros(shape=(data_amount, self.InputDataSpaceSize))
         Y = np.zeros(shape=(data_amount, self.OutputDataSpaceSize))
         for i in tqdm(range(data_amount), desc='creating data'):
             X[i, 0] = random.uniform(self.gMinXY, self.gMaxXY)
             X[i, 1] = random.uniform(self.gMinXY, self.gMaxXY)
-            Y[i] = self.CreateFullResponse(X[i, 0], X[i, 1], flattened)       
+            Y[i] = self.CreateFullResponse(X[i, 0], X[i, 1])       
 
         return X, Y
     

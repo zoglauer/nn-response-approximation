@@ -30,9 +30,12 @@ if __name__ == '__main__':
     set_seed(2021)
 
     # Dataset, DataLoader
-    toy_cone = ToyModel3DCone(output_dir=os.path.join(config.working_dir, 'figs'))
-    train_dset = toy_cone.create_dataset(1024, flattened=True)
-    val_dset = toy_cone.create_dataset(1024, flattened=True)
+    toy_cone = ToyModel3DCone(
+        output_dir=os.path.join(config.working_dir, 'figs'),
+        flattened=True
+    )
+    train_dset = toy_cone.create_dataset(dataset_size=1024)
+    val_dset = toy_cone.create_dataset(dataset_size=1024)
     train_loader = torch.utils.data.DataLoader(train_dset, 
         batch_size=config.train_batch_size, shuffle=True, num_workers=4)
     val_loader = torch.utils.data.DataLoader(val_dset, 
