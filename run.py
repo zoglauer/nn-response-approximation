@@ -1,57 +1,52 @@
-###################################################################################################
-#
-# run.py
-#
-# Copyright (C) by Andreas Zoglauer & contributors
-# All rights reserved.
-#
-# Please see the file License.txt in the main repository for the copyright-notice. 
-#  
-###################################################################################################
-
-  
-  
-###################################################################################################
-
-# Base python
 import os
-import sys
-import argparse
-import signal
-
-# Own tools
-from ToyModel3DConeKeras import ToyModel3DCone
-from helpers import *
-  
-###################################################################################################
-
-
-"""
-This is the main program for the imaging response testing and training in python.
-For all the command line options, try:
-
-python3 run.py --help
-
-"""
-
-print("Starting response approximation")
+import time
+import torch
+from src.cone_model import ToyModel3DCone
+from src.loss import ApproxLoss
+from src.model import ApproxModel
+from src.config import Config
+from src.train import Trainer
+from src.utils import set_seed, ensure_dir_exists
 
 
-# Parse the command line
-parser = argparse.ArgumentParser(description='Perform training and/or testing of the response approximation tool.')
-parser.add_argument('-p', '--prefix', default='Run', help='Prefix for saving the output result')
-parser.add_argument('-b', '--batch', default=False, action='store_true', help='Run the tool in batch mode, i.e., without UI')
+if __name__ == '__main__':
 
+    # Config
+    config = Config()
+    config.model_type = 'fc'
+    config.loss_type = 'MSELoss'
+    config.metric_monitor = 'loss'
+    config.lr = 1e-3
+    config.train_batch_size = 1024
+    config.eval_batch_size = 1024
+    config.epoch = 10000
+    config.device = 'cuda:0'
+    config.working_dir = os.path.join('results', 
+        '{}_{}_{}'.format(config.model_type, config.loss_type, time.strftime('%m%d_%H-%M')),
+    )
+    ensure_dir_exists(config.working_dir)
+    config.dump(os.path.join(config.working_dir, 'config.json'))
+    
+    set_seed(2021)
 
-args = parser.parse_args()
+    # Dataset, DataLoader
+    toy_cone = ToyModel3DCone(output_dir=os.path.join(config.working_dir, 'figs'))
+    train_dset = toy_cone.create_dataset(1024, flattened=True)
+    val_dset = toy_cone.create_dataset(1024, flattened=True)
+    train_loader = torch.utils.data.DataLoader(train_dset, 
+        batch_size=config.train_batch_size, shuffle=True, num_workers=4)
+    val_loader = torch.utils.data.DataLoader(val_dset, 
+        batch_size=config.eval_batch_size, num_workers=4)
+    
 
+    # Model, Loss, Optimizer
+    input_size, output_size = toy_cone.InputDataSpaceSize, toy_cone.OutputDataSpaceSize
+    fc_param = {'input_size': input_size, 'output_size': output_size}
+    model = ApproxModel(config.model_type, **fc_param)
+    criterion = ApproxLoss(config.loss_type)
+    optimizer = torch.optim.Adam(model.parameters(), lr=config.lr)
+    
 
-AI = ToyModel3DCone()
-AI.setBatchMode(args.batch)
+    trainer = Trainer(config, model, criterion, optimizer, toy_cone)
+    trainer.train(train_loader, val_loader)
 
-if AI.train() == False:
-  sys.exit()
-
-
-# END
-###################################################################################################
