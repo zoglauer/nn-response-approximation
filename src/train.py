@@ -35,8 +35,8 @@ class Trainer:
         val_metric_meters = {'loss': MetricMeter(), 'mse': MetricMeter(), 'mae': MetricMeter()}
 
         # Plot original one
-        XSingle = train_loader.dataset[0]['data']
-        YSingle = train_loader.dataset[0]['label']
+        XSingle = val_loader.dataset[0]['data']
+        YSingle = val_loader.dataset[0]['label']
         self.cone_model.Plot2D(XSingle, YSingle, figure_title='Original.png')
          
         epoch, times_no_improvement = 0, 0
@@ -69,8 +69,9 @@ class Trainer:
                 else:
                     times_no_improvement += 1 
                     
-                XSingle = train_loader.dataset[0]['data']
+                XSingle = val_loader.dataset[0]['data']
                 YSingle = self.predict(ptu.from_numpy(XSingle))
+                YSingle = ptu.to_numpy(YSingle)
                 self.cone_model.Plot2D(XSingle, YSingle, 
                     figure_title='Reconstructed at epoch {}'.format(epoch))
           

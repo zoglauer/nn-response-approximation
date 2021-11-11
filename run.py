@@ -21,8 +21,10 @@ if __name__ == '__main__':
     config.eval_batch_size = 1024
     config.epoch = 10000
     config.device = 'cuda:0'
+    # config.exp_name = '{}_{}_xybins30_datasize1024'.format(config.model_type, config.loss_type)
+    config.exp_name = 'kaiming_normal'
     config.working_dir = os.path.join('results', 
-        '{}_{}_{}'.format(config.model_type, config.loss_type, time.strftime('%m%d_%H-%M')),
+        '{}_{}'.format(config.exp_name, time.strftime('%m%d_%H-%M'))
     )
     ensure_dir_exists(config.working_dir)
     config.dump(os.path.join(config.working_dir, 'config.json'))

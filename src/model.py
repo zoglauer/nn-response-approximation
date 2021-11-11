@@ -19,6 +19,7 @@ class ApproxModel(nn.Module):
         super().__init__()        
         if model_type == 'fc':
             self.model = fully_connected(*args, **kwargs)
+            self.model.apply(self.init_weights)
             
         elif model_type == 'resnet':
             self.model = ResNet18(*args, **kwargs)
@@ -34,9 +35,14 @@ class ApproxModel(nn.Module):
         
         self.model.__name__ = model_type
 
-
     def forward(self, *args, **kwargs):
         return self.model(*args, **kwargs)
+    
+    def init_weights(self, m):
+        if isinstance(m, nn.Linear):
+            print("init by kaiming_normal_")
+            torch.nn.init.kaiming_normal_(m.weight, nonlinearity='relu')
+            m.bias.data.fill_(0.0)
     
 
 
@@ -52,5 +58,6 @@ def fully_connected(input_size, output_size, dropout_rate=0.5):
         nn.ReLU(),
         # nn.Dropout(dropout_rate),
         nn.Linear(1000, output_size),
-        nn.ReLU(),
     )
+
+
