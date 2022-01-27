@@ -9,6 +9,7 @@ class ApproxLoss():
 
         if hasattr(torch.nn, loss_type):
             self.criterion = getattr(torch.nn, loss_type)()
+            
         else:
             # Add some self-defined metrics here
             raise NotImplementedError

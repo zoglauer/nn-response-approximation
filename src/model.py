@@ -7,7 +7,8 @@ import torch.nn.functional as F
 
 # import torchvision.models as models
 # from src.module.resnet import ResNet18
-# from src.module.transpose_cnn import TransposeCNN
+from src.module.transpose_cnn import TransposeCNN
+from src.module.conv import Conv_CNN
 
 
 class ApproxModel(nn.Module):
@@ -16,7 +17,8 @@ class ApproxModel(nn.Module):
     '''
 
     def __init__(self, model_type='fc', *args, **kwargs):     
-        super().__init__()        
+        super().__init__()   
+   
         if model_type == 'fc':
             self.model = fully_connected(*args, **kwargs)
             self.model.apply(self.init_weights)
@@ -27,23 +29,31 @@ class ApproxModel(nn.Module):
         elif model_type == 'transpose_conv':
             self.model = TransposeCNN(*args, **kwargs)
         
+        elif model_type == 'conv':
+            self.model = Conv_CNN(*args, **kwargs)
+        
         elif model_type == 'sphere_conv':
-            self.model = TransposeCNN(*args, **kwargs)
+            pass
+            # self.model = TransposeCNN(*args, **kwargs)
         
         else:
             raise NotImplementedError
         
         self.model.__name__ = model_type
 
+
     def forward(self, *args, **kwargs):
         return self.model(*args, **kwargs)
     
+
     def init_weights(self, m):
         if isinstance(m, nn.Linear):
-            print("init by kaiming_normal_")
-            torch.nn.init.kaiming_normal_(m.weight, nonlinearity='relu')
-            m.bias.data.fill_(0.0)
+            # print("init by kaiming_normal_")
+            torch.nn.init.kaiming_normal_(m.weight)
+            # kaiming_uniform_
+            m.bias.data.fill_(0.00)
     
+   
 
 
 def fully_connected(input_size, output_size, dropout_rate=0.5):

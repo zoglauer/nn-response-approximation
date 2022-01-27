@@ -67,6 +67,7 @@ class ToyModel3DCone:
         plt.subplots_adjust(hspace=0.5)
 
         # fig.canvas.set_window_title(Title)
+        # print("YSingle.shape", YSingle.shape)
 
         for i in range(1, 5):    
             zGridElement = int((i-1)*self.gTrainingGridZ/4)
@@ -83,8 +84,8 @@ class ToyModel3DCone:
             contour = ax.contourf(XV, YV, Z)  
 
         plt.ion()
-        plt.show()
-        plt.pause(0.001)
+        # plt.show()
+        # plt.pause(0.001)
         
         plt.savefig(os.path.join(
             self.output_dir,
@@ -147,11 +148,14 @@ class ToyModel3DCone:
 
     def create_data(self, data_amount):
         X = np.zeros(shape=(data_amount, self.InputDataSpaceSize))
-        Y = np.zeros(shape=(data_amount, self.OutputDataSpaceSize))
+        if self.flattened:
+            Y = np.zeros(shape=(data_amount, self.OutputDataSpaceSize))
+        else:
+            Y = np.zeros(shape=(data_amount, self.gTrainingGridXY, self.gTrainingGridXY, self.gTrainingGridZ))
+            
         for i in tqdm(range(data_amount), desc='creating data'):
-            X[i, 0] = random.uniform(self.gMinXY, self.gMaxXY)
-            X[i, 1] = random.uniform(self.gMinXY, self.gMaxXY)
-            Y[i] = self.CreateFullResponse(X[i, 0], X[i, 1])       
+            X[i] = np.random.uniform(self.gMinXY, self.gMaxXY, size=(self.InputDataSpaceSize, ))
+            Y[i] = self.CreateFullResponse(PosX=X[i, 0], PosY=X[i, 1])       
 
         return X, Y
     
@@ -167,5 +171,14 @@ class ToyModel3DCone:
                     unflattened_array[x][y][z] = flattened_array[idx]
         
         return unflattened_array
+
+    def flatten_array(self, unflattened_array):
+        flattened_array = np.zeros(shape=(self.gTrainingGridXY * self.gTrainingGridXY * self.gTrainingGridZ, ))
+        for x in range(0, self.gTrainingGridXY):
+            for y in range(0, self.gTrainingGridXY):
+                for z in range(0, self.gTrainingGridZ):
+                    idx = x + y*self.gTrainingGridXY + z*self.gTrainingGridXY*self.gTrainingGridXY
+                    flattened_array[idx] = unflattened_array[x][y][z]
         
+        return flattened_array  
 

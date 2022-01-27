@@ -28,6 +28,15 @@ class Trainer:
             os.makedirs(self.model_path)
             
         logger.set_dest_path(os.path.join(self.model_path, 'log.txt'))
+        print('Logging dir:', self.model_path)
+
+        with open(os.path.join(self.model_path, 'model_arch.txt'), 'w') as f:
+            print(str(self.model), file=f)
+        
+        logger.print('Number of parameters in model: {}'.format(
+            sum([p.numel() for p in self.model.parameters()])
+        ))
+        logger.print('Using {}'.format(torch.cuda.get_device_name()))
     
     
     def train(self, train_loader, val_loader):
@@ -59,21 +68,27 @@ class Trainer:
                     val_metric_meters['mse'].get_score(),
                     val_metric_meters['mae'].get_score()
                 ))
-
-                # Log the model
-                val_monitor_metric = val_metric_meters[self.metric_monitor].get_score()
-                if val_monitor_metric < min_metric:
-                    min_metric = val_monitor_metric
-                    self.save_model()
-                    times_no_improvement = 0
-                else:
-                    times_no_improvement += 1 
-                    
+  
                 XSingle = val_loader.dataset[0]['data']
                 YSingle = self.predict(ptu.from_numpy(XSingle))
                 YSingle = ptu.to_numpy(YSingle)
                 self.cone_model.Plot2D(XSingle, YSingle, 
                     figure_title='Reconstructed at epoch {}'.format(epoch))
+                   
+                # Log the model
+                val_monitor_metric = val_metric_meters[self.metric_monitor].get_score()
+                if val_monitor_metric < min_metric:
+                    min_metric = val_monitor_metric
+                    self.save_model()
+                    
+                    XSingle = ptu.from_numpy(val_loader.dataset[0]['data'])
+                    YSingle = ptu.to_numpy(self.predict(XSingle))
+                    self.cone_model.Plot2D(XSingle, YSingle, 
+                        figure_title='Best reconstruction'.format(epoch))
+                        
+                    times_no_improvement = 0
+                else:
+                    times_no_improvement += 1 
           
             epoch += 1
         
@@ -133,7 +148,7 @@ class Trainer:
 
     def evaluate(self, eval_loader):
         predictions = []
-        for i, batch in enumerate(val_loader, start=1):  
+        for i, batch in enumerate(eval_loader, start=1):  
             data = ptu.to_device(batch['data'])
             label = ptu.to_device(batch['label'])
             
@@ -148,7 +163,8 @@ class Trainer:
 
     def predict(self, data):
         with torch.no_grad():  
-            return self.model(data)
+            data = data.unsqueeze(0)
+            return self.model(data).squeeze(0)
     
 
     def save_model(self, save_name='best_loss.pth'):
