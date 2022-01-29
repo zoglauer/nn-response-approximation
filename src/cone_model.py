@@ -6,6 +6,7 @@ from tqdm import tqdm
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt 
+import scipy.ndimage as ndimage
 
 from src.dataset import ApproxDataset
 
@@ -78,10 +79,15 @@ class ToyModel3DCone:
                         Z[x, y] = YSingle[idx]
                     else:
                         Z[x, y] = YSingle[x][y][zGridElement]
+                     
 
             ax = fig.add_subplot(2, 2, i)
             ax.set_title('Slice through z={}'.format(self.gGridCentersZ[zGridElement]))
-            contour = ax.contourf(XV, YV, Z)  
+            contour = ax.contourf(XV, YV, Z)
+            
+        #Applying median filter from SciPy
+        filter_size=3
+        Z = ndimage.median_filter(Z, size=filter_size)
 
         plt.ion()
         # plt.show()

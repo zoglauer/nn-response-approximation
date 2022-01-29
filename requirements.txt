@@ -2,3 +2,5 @@ torch
 tqdm
 matplotlib
 numpy
+scipy
+torchvision
