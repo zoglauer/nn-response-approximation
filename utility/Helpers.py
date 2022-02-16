@@ -39,8 +39,9 @@ def signal_handler(signal, frame):
         print("Aborting!")
         sys.exit()
 
-
 signal.signal(signal.SIGINT, signal_handler)
+
+
 
 # END
 ###################################################################################################

@@ -16,6 +16,8 @@
 import random
 import math
 import time
+import concurrent.futures
+
 
 # High level python tools
 from mpl_toolkits.mplot3d import Axes3D
@@ -59,7 +61,8 @@ class ToyModel3DCone:
         self.gSigmaR = 0.1
 
         # The Compton Data Space of the model
-        self.comptonDataSpace = HEALPixSpace(2)
+        NSIDE = 5
+        self.comptonDataSpace = HEALPixSpace(NSIDE)
 
         # Set test and traing data set parameters
         self.InputDataSpaceSize = 2
@@ -72,6 +75,7 @@ class ToyModel3DCone:
 
         self.NTestingBatches = 1
         self.TestBatchSize = self.NTestingBatches * self.SubBatchSize
+
 
     ###################################################################################################
 
@@ -141,7 +145,7 @@ class ToyModel3DCone:
 
     ###################################################################################################
 
-    def CreateFullResponse(self, PosX, PosY):
+    def CreateFullResponse(self, PosX, PosY, d=0):
         '''
         Create the response for a source at position PosX, PosY
 
@@ -150,9 +154,50 @@ class ToyModel3DCone:
           PosY (float): y position of the source
 
         '''
-        return self.comptonDataSpace.createGaussianFlattenedResponse(PosX, PosY, self.gSigmaR)
+        k = 0.05
+        b = 0
+        adjustedSigma = k*d+b+self.gSigmaR
+        return self.comptonDataSpace.createGaussianFlattenedResponse(PosX, PosY, adjustedSigma)
 
     ###################################################################################################
+
+    """
+    def test(self):
+        colatitude, longitude = self.comptonDataSpace.sampleSinglePointOnXY()
+        for d in range(0, 5):
+            YTrain = np.zeros(shape=(2, self.OutputDataSpaceSize))
+            YTrain[0,] = self.CreateFullResponse(colatitude, longitude, d)
+            self.Plot2D((colatitude, longitude), YTrain[0:1], f"Original d = {d}", d)
+        plt.show()
+    """
+
+    def _gen_one_data(self, index):
+        X = self.comptonDataSpace.sampleSinglePointOnXY()
+        Y = self.CreateFullResponse(X[0], X[1])
+        return (index, X, Y)
+
+
+    def genSimulatedData(self, totalBatchSize):
+        # Meta Data
+        completed = 0
+
+        # Start Task
+        X = np.zeros(shape=(totalBatchSize, self.InputDataSpaceSize))
+        Y = np.zeros(shape=(totalBatchSize, self.OutputDataSpaceSize))
+        with concurrent.futures.ProcessPoolExecutor() as executor:
+            futures = {executor.submit(self._gen_one_data, i) for i in range(0, totalBatchSize)}
+
+            for fut in concurrent.futures.as_completed(futures):
+                index, X_Single, Y_Single = fut.result()
+                X[index] = X_Single
+                Y[index, ] = Y_Single
+
+                completed += 1
+                if completed > 0 and completed % 128 == 0:
+                    print("Data creation: {}/{}".format(completed, totalBatchSize))
+
+        return X, Y
+
 
     def train(self):
         '''
@@ -160,24 +205,13 @@ class ToyModel3DCone:
         '''
         print("Info: Creating %i data sets" % (self.TrainingBatchSize + self.TestBatchSize))
 
-        XTrain = np.zeros(shape=(self.TrainingBatchSize, self.InputDataSpaceSize))
-        YTrain = np.zeros(shape=(self.TrainingBatchSize, self.OutputDataSpaceSize))
-        for i in range(0, self.TrainingBatchSize):
-            if i > 0 and i % 128 == 0:
-                print("Training set creation: {}/{}".format(i, self.TrainingBatchSize))
-            XTrain[i] = self.comptonDataSpace.sampleSinglePointOnXY()
-            YTrain[i,] = self.CreateFullResponse(XTrain[i, 0], XTrain[i, 1])
+        print("\nInfo: Generating Training Data")
+        XTrain, YTrain = self.genSimulatedData(self.TrainingBatchSize)
 
-        XTest = np.zeros(shape=(self.TestBatchSize, self.InputDataSpaceSize))
-        YTest = np.zeros(shape=(self.TestBatchSize, self.OutputDataSpaceSize))
-        for i in range(0, self.TestBatchSize):
-            if i > 0 and i % 128 == 0:
-                print("Testing set creation: {}/{}".format(i, self.TestBatchSize))
-            XTest[i] = self.comptonDataSpace.sampleSinglePointOnXY()
-            YTest[i,] = self.CreateFullResponse(XTest[i, 0], XTest[i, 1])
+        print("\nInfo: Generating Testing Data")
+        XTest, YTest = self.genSimulatedData(self.TestBatchSize)
 
-        print("Info: Setting up neural network...")
-
+        print("\nInfo: Setting up neural network...")
         Model = tf.keras.Sequential()
         Model.add(tf.keras.layers.Dense(10, activation="relu", kernel_initializer='he_normal',
                                         input_shape=(self.InputDataSpaceSize,)))
