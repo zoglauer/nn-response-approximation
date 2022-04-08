@@ -46,12 +46,11 @@ if __name__ == '__main__':
     cone_model = HEALPixCone(
         output_dir=os.path.join(config.working_dir, 'figs')
     )
-    # train_dset = cone_model.create_dataset(dataset_size=1024)
-    # val_dset = cone_model.create_dataset(dataset_size=1024)   
+    train_dset = cone_model.create_dataset(dataset_size=1024)
+    val_dset = cone_model.create_dataset(dataset_size=1024)   
     # f = open("sphere_datasets.pkl", "wb"); pickle.dump((train_dset, val_dset), f); f.close()
-    f = open("sphere_datasets.pkl", "rb"); train_dset, val_dset = pickle.load(f); f.close()
-    cone_model.Plot2D(train_dset[0]['data'], train_dset[0]['label'])
-    exit()
+    # f = open("sphere_datasets.pkl", "rb"); train_dset, val_dset = pickle.load(f); f.close()
+
     train_loader = torch.utils.data.DataLoader(train_dset, 
         batch_size=config.train_batch_size, shuffle=True)
     val_loader = torch.utils.data.DataLoader(val_dset, 
