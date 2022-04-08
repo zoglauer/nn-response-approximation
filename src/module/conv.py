@@ -16,24 +16,38 @@ class Conv_CNN(nn.Module):
         
         self.num_xy_grids = num_xy_grids
         self.fc = nn.Sequential(
-            nn.Linear(2, num_xy_grids*num_xy_grids*100),
+            nn.Linear(2, num_xy_grids*num_xy_grids*900),
             nn.ReLU()
         )
 
         self.conv_layers = nn.Sequential(
-            nn.Conv2d(1, num_z_grids*100, kernel_size=5, stride=5), 
+            nn.Conv2d(input_size, num_z_grids*100, kernel_size=5, stride=5), 
             nn.ReLU(),
-            nn.Conv2d(num_z_grids*100, num_z_grids*100, kernel_size=2, stride=2), 
+            nn.Conv2d(num_z_grids*100, num_z_grids*100, kernel_size=1, stride=1),  
+            nn.ReLU(),
+            nn.Conv2d(num_z_grids*100, num_z_grids*100, kernel_size=3, stride=3), 
             nn.ReLU(),
             nn.Conv2d(num_z_grids*100, num_z_grids*100, kernel_size=1, stride=1), 
             nn.ReLU(),
-            nn.Conv2d(num_z_grids*100, num_z_grids, kernel_size=1, stride=1)
+            nn.Conv2d(num_z_grids*100, num_z_grids*100, kernel_size=2, stride=2),  
+            nn.ReLU(),
+            nn.Conv2d(num_z_grids*100, num_z_grids, kernel_size=1, stride=1),
         )
+        
     
     def forward(self, x):
         # x: (bs, 2)
         x = self.fc(x) # (bs, 90000)
         x = x.view(-1, 1, self.num_xy_grids*10, self.num_xy_grids*10) # (bs, 1, 300, 300)
+        # print(x.shape)
         x = self.conv_layers(x) # (bs, 4, 30, 30)
         
         return x.permute(0, 2, 3, 1)  # (bs, 30, 30, 4)
+
+if __name__ == '__main__':
+    net = Conv_CNN()
+    x = torch.zeros((3, 2))
+    y = net(x)
+    print(y.shape)
+    from torchsummary import summary
+    summary(net.cuda(), (3, 2))

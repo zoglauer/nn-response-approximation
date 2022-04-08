@@ -46,7 +46,7 @@ class Trainer:
         # Plot original one
         XSingle = val_loader.dataset[0]['data']
         YSingle = val_loader.dataset[0]['label']
-        self.cone_model.Plot2D(XSingle, YSingle, figure_title='Original.png')
+        # self.cone_model.Plot2D(XSingle, YSingle, figure_title='Original.png')
          
         epoch, times_no_improvement = 0, 0
         min_metric = float('inf')
@@ -72,8 +72,8 @@ class Trainer:
                 XSingle = val_loader.dataset[0]['data']
                 YSingle = self.predict(ptu.from_numpy(XSingle))
                 YSingle = ptu.to_numpy(YSingle)
-                self.cone_model.Plot2D(XSingle, YSingle, 
-                    figure_title='Reconstructed at epoch {}'.format(epoch))
+                # self.cone_model.Plot2D(XSingle, YSingle, 
+                #    figure_title='Reconstructed at epoch {}'.format(epoch))
                    
                 # Log the model
                 val_monitor_metric = val_metric_meters[self.metric_monitor].get_score()
@@ -83,8 +83,8 @@ class Trainer:
                     
                     XSingle = ptu.from_numpy(val_loader.dataset[0]['data'])
                     YSingle = ptu.to_numpy(self.predict(XSingle))
-                    self.cone_model.Plot2D(XSingle, YSingle, 
-                        figure_title='Best reconstruction'.format(epoch))
+                    # self.cone_model.Plot2D(XSingle, YSingle, 
+                    #    figure_title='Best reconstruction'.format(epoch))
                         
                     times_no_improvement = 0
                 else:

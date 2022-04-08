@@ -9,6 +9,9 @@ import torch.nn.functional as F
 # from src.module.resnet import ResNet18
 from src.module.transpose_cnn import TransposeCNN
 from src.module.conv import Conv_CNN
+from src.module.fc import FC
+from src.module.resnet import ResNet
+from src.module.filter import Filter
 
 
 class ApproxModel(nn.Module):
@@ -16,15 +19,15 @@ class ApproxModel(nn.Module):
     Model wrapper
     '''
 
-    def __init__(self, model_type='fc', *args, **kwargs):     
+    def __init__(self, model_type='fc', filter_size=3, *args, **kwargs):     
         super().__init__()   
    
         if model_type == 'fc':
-            self.model = fully_connected(*args, **kwargs)
+            self.model = FC(*args, **kwargs)
             self.model.apply(self.init_weights)
             
         elif model_type == 'resnet':
-            self.model = ResNet18(*args, **kwargs)
+            self.model = ResNet(*args, **kwargs)
 
         elif model_type == 'transpose_conv':
             self.model = TransposeCNN(*args, **kwargs)
@@ -39,11 +42,20 @@ class ApproxModel(nn.Module):
         else:
             raise NotImplementedError
         
+        self.filter_layer = Filter(filter_size)
+        self.model_type = model_type
         self.model.__name__ = model_type
 
 
     def forward(self, *args, **kwargs):
-        return self.model(*args, **kwargs)
+        x = self.model(*args, **kwargs)  # (bs, 30, 30, 4)
+        # bs, w, h, c = x.shape
+        # x = self.filter_layer(x.reshape(-1, w, h)).view(bs, w, h, c)
+        
+        # if self.model_type == 'fc':
+        #     x = x.view(bs, -1)
+        
+        return x
     
 
     def init_weights(self, m):
