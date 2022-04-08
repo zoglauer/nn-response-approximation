@@ -32,7 +32,8 @@ class HEALPixCone:
         
         self.flattened = True
         self.InputDataSpaceSize = 2
-        self.totalPixNums = self.OutputDataSpaceSize = self.compton_space.totalPixNums
+        self.totalPixNums = self.compton_space.totalPixNums
+        self.OutputDataSpaceSize = self.compton_space.totalBinNums
 
     def CreateFullResponse(self, PosX, PosY, d=0):
         '''
@@ -84,8 +85,8 @@ class HEALPixCone:
 
         return X, Y
     
-    def Plot2D(self, XSingle, YSingle, figure_title, zSlices=4):
-        print("XSingle, YSingle:", XSingle.shape, YSingle.shape)
+    def Plot2D(self, XSingle, YSingle, figure_title='plot.png', zSlices=4):
+        # print("XSingle, YSingle:", XSingle.shape, YSingle.shape)
         if (zSlices <= 0 or zSlices > self.gTrainingGridZ):
             warnings.warn(f"zSlices={zSlices} is not between 1 and {self.gTrainingGridZ}(Z_BIN_NUM). " +
                           f"Thus, zSlices is replaced by the program with the following values: 1")
@@ -113,9 +114,9 @@ class HEALPixCone:
         for plotIndex, z_Idx in enumerate(range(initialZIdx, self.gTrainingGridZ, zStep), 1):
             startPixIndex = z_Idx*self.totalPixNums
             endPixIndex = z_Idx*self.totalPixNums+self.totalPixNums - 1
-            currHEALPixMap = YSingle[0, startPixIndex:endPixIndex+1]
+            currHEALPixMap = YSingle[startPixIndex:endPixIndex+1]
             #print(startPixIndex:endPixIndex+1)
-            print(currHEALPixMap, currHEALPixMap.shape)
+            # print(currHEALPixMap, currHEALPixMap.shape)
             # add another subplot for the later mollview plot
             fig.add_subplot(plotRows, plotCols, plotIndex)
             # the following mollview will be automatically plotted on the added subplot

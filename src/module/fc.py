@@ -4,7 +4,7 @@ from torchvision import models
 import numpy as np
 
 class FC(nn.Module):
-    def __init__(self, input_size, output_size, dropout_rate=0.5):
+    def __init__(self, input_size, output_size, dropout_rate=0.0):
         super().__init__()
         self.input_size = input_size
         # self.num_xy_grids = num_xy_grids
@@ -13,19 +13,19 @@ class FC(nn.Module):
         # output_size = num_xy_grids * num_xy_grids * num_z_grids
         self.fc_layer = nn.Sequential(
             nn.Linear(input_size, 10),
-            nn.ReLU(),
             nn.Dropout(dropout_rate),
+            nn.ReLU(),
             nn.Linear(10, 100),
-            nn.ReLU(),
             nn.Dropout(dropout_rate),
+            nn.ReLU(),
             nn.Linear(100, 1000),
-            nn.ReLU(),
             nn.Dropout(dropout_rate),
+            nn.ReLU(),
             nn.Linear(1000, 10000),
+            nn.Dropout(dropout_rate),
             nn.ReLU(),
-            nn.Dropout(dropout_rate),
             nn.Linear(10000, output_size),
-            nn.Dropout(dropout_rate),
+            nn.Dropout(dropout_rate)
         )
         self.fc_layer.apply(self.init_weights)
         

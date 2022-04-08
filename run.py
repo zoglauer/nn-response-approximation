@@ -27,14 +27,11 @@ if __name__ == '__main__':
     # If flatten, the label will be of length 3600. Otherwise, it will be of shape (30, 30, 4)
     config.flattened = False  
     config.filter_size = 3
-    #config.exp_name = 'test_{}_{}_prefilter{}_xybins30_datasize1024'.format(
-    #    config.model_type, config.loss_type, config.filter_size)
-    config.exp_name = 'results/test'.format(
+    config.exp_name = 'test_sphere_datasize1024'.format(
        config.model_type, config.loss_type, config.filter_size)
     config.working_dir = os.path.join('results', 
         '{}_{}'.format(config.exp_name, time.strftime('%m%d_%H-%M'))
     )
-    config.working_dir = config.exp_name
     ensure_dir_exists(config.working_dir)
     config.dump(os.path.join(config.working_dir, 'config.json'))
     
@@ -53,7 +50,7 @@ if __name__ == '__main__':
     # val_dset = cone_model.create_dataset(dataset_size=1024)   
     # f = open("sphere_datasets.pkl", "wb"); pickle.dump((train_dset, val_dset), f); f.close()
     f = open("sphere_datasets.pkl", "rb"); train_dset, val_dset = pickle.load(f); f.close()
-    cone_model.Plot2D(train_dset[0]['data'], train_dset[0]['label'].reshape(1, -1), 'test')
+    cone_model.Plot2D(train_dset[0]['data'], train_dset[0]['label'])
     exit()
     train_loader = torch.utils.data.DataLoader(train_dset, 
         batch_size=config.train_batch_size, shuffle=True)
