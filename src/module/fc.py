@@ -21,11 +21,10 @@ class FC(nn.Module):
             nn.Linear(100, 1000),
             nn.Dropout(dropout_rate),
             nn.ReLU(),
-            nn.Linear(1000, 10000),
-            nn.Dropout(dropout_rate),
-            nn.ReLU(),
-            nn.Linear(10000, output_size),
-            nn.Dropout(dropout_rate)
+            #nn.Linear(1000, 10000),
+            #nn.Dropout(dropout_rate),
+            #nn.ReLU(),
+            nn.Linear(1000, output_size)
         )
         self.fc_layer.apply(self.init_weights)
         

@@ -1,4 +1,4 @@
 __pycache__/
 *.pyc
 results/
-sphere_datasets.pkl
+sphere_datasets_NSIDE32.pkl

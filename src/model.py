@@ -42,9 +42,8 @@ class ApproxModel(nn.Module):
         else:
             raise NotImplementedError
         
-        self.filter_layer = Filter(filter_size)
-        self.model_type = model_type
-        self.model.__name__ = model_type
+        # self.filter_layer = Filter(filter_size)
+        self.model_type = self.model.__name__ = model_type
 
 
     def forward(self, *args, **kwargs):

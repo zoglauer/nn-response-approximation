@@ -17,18 +17,19 @@ if __name__ == '__main__':
     config.model_type = 'fc'
     config.loss_type = 'MSELoss'
     config.metric_monitor = 'loss'
-    config.lr = 1e-2
+    config.lr = 1e-3
+    config.dropout_rate = 0.0
     config.train_batch_size = 1024
     config.eval_batch_size = 1024
     config.epoch = 20000
     config.device = 'cuda:0'
     
-    # True for using fully-connected layers, False for using conv-based layers
-    # If flatten, the label will be of length 3600. Otherwise, it will be of shape (30, 30, 4)
-    config.flattened = False  
+    # flattened = True for using fully-connected layers, False for using conv-based layers
+    config.flattened = True  
     config.filter_size = 3
-    config.exp_name = 'test_sphere_datasize1024'.format(
-       config.model_type, config.loss_type, config.filter_size)
+    config.NSIDE = 6
+    config.exp_name = 'sphere_{}_{}_NSIDE{}_datasize1024'.format(
+       config.model_type, config.loss_type, config.NSIDE)
     config.working_dir = os.path.join('results', 
         '{}_{}'.format(config.exp_name, time.strftime('%m%d_%H-%M'))
     )
@@ -44,13 +45,16 @@ if __name__ == '__main__':
     #     filter_size=config.filter_size
     # )
     cone_model = HEALPixCone(
-        output_dir=os.path.join(config.working_dir, 'figs')
+        output_dir=os.path.join(config.working_dir, 'figs'),
+        NSIDE=config.NSIDE
     )
-    train_dset = cone_model.create_dataset(dataset_size=1024)
-    val_dset = cone_model.create_dataset(dataset_size=1024)   
-    # f = open("sphere_datasets.pkl", "wb"); pickle.dump((train_dset, val_dset), f); f.close()
-    # f = open("sphere_datasets.pkl", "rb"); train_dset, val_dset = pickle.load(f); f.close()
-
+    # train_dset = cone_model.create_dataset(dataset_size=1024)
+    # val_dset = cone_model.create_dataset(dataset_size=1024)   
+    # f = open(f"sphere_datasets_NSIDE{config.NSIDE}.pkl", "wb"); pickle.dump((train_dset, val_dset), f); f.close()
+    
+    # this pkl file is generated using the above three lines of code
+    f = open("sphere_datasets_NSIDE6.pkl", "rb"); train_dset, val_dset = pickle.load(f); f.close()
+    
     train_loader = torch.utils.data.DataLoader(train_dset, 
         batch_size=config.train_batch_size, shuffle=True)
     val_loader = torch.utils.data.DataLoader(val_dset, 
@@ -61,7 +65,8 @@ if __name__ == '__main__':
     if config.model_type == 'fc':
         model_param = {
             'input_size': cone_model.InputDataSpaceSize, 
-            'output_size': cone_model.OutputDataSpaceSize
+            'output_size': cone_model.OutputDataSpaceSize, 
+            'dropout_rate': config.dropout_rate
         }
     else:
         model_param = {
@@ -71,10 +76,8 @@ if __name__ == '__main__':
         }
         
     model = ApproxModel(config.model_type, **model_param)
-
     criterion = ApproxLoss(config.loss_type)
     optimizer = torch.optim.Adam(model.parameters(), lr=config.lr)
-    
 
     trainer = Trainer(config, model, criterion, optimizer, cone_model)
     trainer.train(train_loader, val_loader)

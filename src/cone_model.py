@@ -7,6 +7,9 @@ import healpy as hp
 from tqdm import tqdm
 import concurrent.futures
 
+import logging
+logging.basicConfig(level=logging.INFO)
+
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt 
@@ -16,13 +19,14 @@ from src.comptonspace.healpixspace import HEALPixSpace
 
 
 class HEALPixCone:
-    def __init__(self, output_dir='Run', NSIDE=32, gMinZ=0, gMaxZ=1, gTrainingGridZ=4):
+    def __init__(self, output_dir='Run', NSIDE=6, gMinZ=0, gMaxZ=1, gTrainingGridZ=4):
         self.output_dir = output_dir
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
 
         self.compton_space = HEALPixSpace(NSIDE, gMinZ, gMaxZ, gTrainingGridZ)
-        
+        self.NSIDE = NSIDE
+
         self.gTrainingGridXY = self.compton_space.totalPixNums
         self.gTrainingGridZ = gTrainingGridZ
         self.gMinZ = 0
@@ -47,31 +51,11 @@ class HEALPixCone:
         return self.compton_space.createGaussianFlattenedResponse(PosX, PosY, adjustedSigma)
 
     def create_dataset(self, dataset_size=1024):
+        # X, Y = self.create_data(dataset_size)
         X, Y = self.create_data(dataset_size)
         return ApproxDataset(X, Y)
 
     def create_data(self, data_amount):
-        X = np.zeros(shape=(data_amount, self.InputDataSpaceSize))
-        Y = np.zeros(shape=(data_amount, self.OutputDataSpaceSize))
-
-        def _gen_one_data(index):
-            X = self.compton_space.sampleSinglePointOnXY()
-            Y = self.CreateFullResponse(X[0], X[1])
-            print(index, end='\r')
-            return (index, X, Y)
-
-
-        with concurrent.futures.ProcessPoolExecutor() as executor:
-            futures = {executor.submit(_gen_one_data, i) for i in range(0, data_amount)}
-
-            for fut in concurrent.futures.as_completed(futures):
-                index, X_Single, Y_Single = fut.result()
-                X[index] = X_Single
-                Y[index, ] = Y_Single
-        
-        return X, Y
-
-    def create_data2(self, data_amount):
         X = np.zeros(shape=(data_amount, self.InputDataSpaceSize))
         if self.flattened:
             Y = np.zeros(shape=(data_amount, self.OutputDataSpaceSize))
@@ -81,9 +65,39 @@ class HEALPixCone:
         for i in tqdm(range(data_amount), desc='Generating data...'):
             # X[i] = np.random.uniform(self.gMinXY, self.gMaxXY, size=(self.InputDataSpaceSize, ))
             X[i] = self.compton_space.sampleSinglePointOnXY()
-            Y[i] = self.compton_space.createGaussianFlattenedResponse(PosX=X[i, 0], PosY=X[i, 1], SigmaR=0.1)       
+            Y[i] = self.compton_space.createGaussianFlattenedResponse(
+                PosX=X[i, 0], PosY=X[i, 1], SigmaR=0.1)       
 
         return X, Y
+    
+    def create_data_parallel(self, data_amount):
+        ''' Not working on all machines!!!  Still under development. '''
+        # Meta Data
+        completed = 0
+
+        def _gen_one_data(index):
+            X = self.compton_space.sampleSinglePointOnXY()
+            Y = self.compton_space.createGaussianFlattenedResponse(
+                PosX=X[index, 0], PosY=X[index, 1], SigmaR=0.1)    
+            return (index, X, Y)
+
+
+        # Start Task
+        X = np.zeros(shape=(data_amount, self.InputDataSpaceSize))
+        Y = np.zeros(shape=(data_amount, self.OutputDataSpaceSize))
+        with concurrent.futures.ProcessPoolExecutor() as executor:
+            futures = {executor.submit(_gen_one_data, i) for i in range(0, data_amount)}
+
+            for fut in concurrent.futures.as_completed(futures):
+                index, X_Single, Y_Single = fut.result()
+                X[index] = X_Single
+                Y[index, ] = Y_Single
+
+                completed += 1
+                if completed > 0 and completed % 128 == 0:
+                    print("Data creation: {}/{}".format(completed, data_amount))
+
+        return X, 
     
     def Plot2D(self, XSingle, YSingle, figure_title='plot.png', zSlices=4):
         # print("XSingle, YSingle:", XSingle.shape, YSingle.shape)
