@@ -1,5 +1,8 @@
-# Required software
-
-tensorflow-gpu
+torch
+tqdm
 matplotlib
-
+numpy
+scipy
+torchvision
+einops
+scikit-image
