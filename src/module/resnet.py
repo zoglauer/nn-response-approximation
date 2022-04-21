@@ -3,6 +3,32 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 
+class ResNet(nn.Module):
+    def __init__(self, input_size=2, num_z_grids=4, num_xy_grids=30):
+        super().__init__()
+        self.num_xy_grids = num_xy_grids
+        self.num_z_grids = num_z_grids
+        self.fc = nn.Sequential(
+            nn.Linear(2, num_xy_grids*num_xy_grids*100),
+            nn.ReLU()
+        )
+        self.conv_layers = nn.Sequential(
+            BasicBlock(1, num_z_grids*100),
+            # BasicBlock(num_z_grids*100, num_z_grids*100),
+            nn.Conv2d(num_z_grids*100, num_z_grids, kernel_size=10, stride=10)
+        )
+
+        
+
+    def forward(self, x):
+        # x: (bs, 2)
+        x = self.fc(x) # (bs, 90000)
+        x = x.view(-1, 1, self.num_xy_grids*10, self.num_xy_grids*10) # (bs, 1, 300, 300)
+        x = self.conv_layers(x) # (bs, 4, 30, 30)
+        
+        return x.permute(0, 2, 3, 1)  # (bs, 30, 30, 4)
+
+
 class BasicBlock(nn.Module):
     expansion = 1
 
@@ -62,7 +88,7 @@ class Bottleneck(nn.Module):
         return out
 
 
-class ResNet(nn.Module):
+class ResNet_Original(nn.Module):
     def __init__(self, block, num_blocks, num_classes=10):
         super(ResNet, self).__init__()
         self.in_planes = 64
@@ -114,3 +140,13 @@ def ResNet101():
 
 def ResNet152():
     return ResNet(Bottleneck, [3, 8, 36, 3])
+
+
+if __name__ == '__main__':
+    net = ResNet()
+    x = torch.zeros((3, 2))
+    # y = net(x)
+    # print(y.shape)
+    
+    from torchsummary import summary
+    summary(net.cuda(), (3, 2))

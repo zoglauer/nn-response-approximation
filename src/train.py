@@ -3,19 +3,21 @@ import torch
 import torch.nn.functional as F
 from src.logger import MetricMeter, TrainingLogger
 from src.utils import PytorchUtils
-import einops
+import numpy as np
 
 ptu = PytorchUtils()
 logger = TrainingLogger()
 
 class Trainer:
-    def __init__(self, config, model, criterion, optimizer, cone_model, autoencmodel, log_freq=20):
+    def __init__(self, config, model, criterion, optimizer, cone_model, autoenc, log_freq=20):
         self.config = config
         self.model = model
         self.criterion = criterion
         self.optimizer = optimizer
         self.cone_model = cone_model
-        self.denoiser = autoencmodel
+        
+        #Adding class variable for autoencoder
+        self.denoiser=autoenc
 
         # hyper-parameters
         self.total_epoch = config.epoch
@@ -48,7 +50,8 @@ class Trainer:
         # Plot original one
         XSingle = val_loader.dataset[0]['data']
         YSingle = val_loader.dataset[0]['label']
-        ZOriginal=self.cone_model.Plot2D(XSingle, YSingle, 0, figure_title='Original.png')
+        self.cone_model.Plot2D(XSingle, YSingle, figure_title='Original.png')
+        YOriginal=YSingle.copy()
          
         epoch, times_no_improvement = 0, 0
         min_metric = float('inf')
@@ -74,21 +77,14 @@ class Trainer:
                 XSingle = val_loader.dataset[0]['data']
                 YSingle = self.predict(ptu.from_numpy(XSingle))
                 YSingle = ptu.to_numpy(YSingle)
-                ZSingle=self.cone_model.Plot2D(XSingle, YSingle, 1, 
-                    figure_title='Reconstructed at epoch {}'.format(epoch))
-                self.cone_model.Plot2DNoise(ZOriginal,ZSingle,
-                figure_title='Noise between original and ConvNet output at epoch {}'.format(epoch))
-
-                #Denoising with autoencoder
-                autoenc_input = ptu.from_numpy(YSingle)
-                #print("autoenc_input shape: ", autoenc_input.shape)
-                autoenc_input = einops.rearrange(autoenc_input,'h w b -> b h w')
-                #print("autoenc_input shape: ", autoenc_input.shape)
-                ZFinal = self.denoiser.test_model(autoenc_input)
-                self.denoiser.plot2D_fourslice(ZFinal,title='Reconstructed (denoised) at epoch {}'.format(epoch),output_dir=self.cone_model.output_dir)
+                self.cone_model.Plot2D(XSingle, YSingle, 
+                   figure_title='Reconstructed at epoch {}'.format(epoch))
                 
-                self.cone_model.Plot2DNoise(ZOriginal,ZFinal,
-                figure_title='Noise between original and filtered at epoch {}'.format(epoch))
+                #After denoising
+                YSingle = self.denoiser.test_model(ptu.from_numpy(YSingle))
+                YSingle = ptu.to_numpy(YSingle)
+                self.cone_model.Plot2D(XSingle, YSingle, 
+                   figure_title='Reconstructed (Denoised) at epoch {}'.format(epoch))
 
                 # Log the model
                 val_monitor_metric = val_metric_meters[self.metric_monitor].get_score()
@@ -96,24 +92,28 @@ class Trainer:
                     min_metric = val_monitor_metric
                     self.save_model()
                     
-                    XSingle = ptu.from_numpy(val_loader.dataset[0]['data'])
-                    YSingle = ptu.to_numpy(self.predict(XSingle))
-                    self.cone_model.Plot2D(XSingle, YSingle, 1,
-                        figure_title='Best reconstruction'.format(epoch))
+                    XSingle = val_loader.dataset[0]['data']
+                    YSingle = self.predict(ptu.from_numpy(XSingle))
+                    YSingle = ptu.to_numpy(YSingle)
+                    self.cone_model.Plot2D(XSingle, YSingle, 
+                       figure_title='Best reconstruction'.format(epoch))
+                    noise_val=np.mean(np.square(YOriginal - YSingle))
+                    track_str="Noise between original and best reconstruction: {}".format(noise_val)
+                    print(track_str)
+                    with open("./final_noise.txt","w") as file1:
+                      file1.write(track_str)
+                      file1.write("\n")
                     
-                    #Denoising with autoencoder
-                    autoenc_input = ptu.from_numpy(YSingle)
-                    #print("autoenc_input shape: ", autoenc_input.shape)
-                    autoenc_input = einops.rearrange(autoenc_input,'h w b -> b h w')
-                    #print("autoenc_input shape: ", autoenc_input.shape)
-                    ZFinal = self.denoiser.test_model(autoenc_input)
-                    self.denoiser.plot2D_fourslice(ZFinal,
-                        title='Best Reconstruction (denoised)'.format(epoch),
-                        output_dir=self.cone_model.output_dir)
-                    
-                    self.cone_model.Plot2DNoise(ZOriginal,ZFinal,
-                        figure_title='Best Reconstruction Noise between original and filtered'.format(epoch))
-                        
+                    YSingle = self.denoiser.test_model(ptu.from_numpy(YSingle))
+                    YSingle = ptu.to_numpy(YSingle)
+                    self.cone_model.Plot2D(XSingle, YSingle, 
+                    figure_title='Best Reconstruction (Denoised)'.format(epoch))
+                    noise_val=np.mean(np.square(YOriginal - YSingle))
+                    track_str="Noise between original and best denoised reconstruction: {}".format(noise_val)
+                    print(track_str)
+                    with open("./final_noise.txt","a") as file1:
+                      file1.write(track_str)
+                
                     times_no_improvement = 0
                 else:
                     times_no_improvement += 1 
@@ -167,7 +167,6 @@ class Trainer:
                 metric_meters['loss'].update(loss.item())
                 metric_meters['mse'].update(mse.item())
                 metric_meters['mae'].update(mae.item())
-
 
 
     def _reset_meters(self, meters):

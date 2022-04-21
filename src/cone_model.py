@@ -1,19 +1,154 @@
 import os
 import math
 import random
+import warnings
 import numpy as np
+import healpy as hp
 from tqdm import tqdm
+import concurrent.futures
+
+import logging
+logging.basicConfig(level=logging.INFO)
+
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt 
-import scipy.ndimage as ndimage
 
 from src.dataset import ApproxDataset
+from src.comptonspace.healpixspace import HEALPixSpace
+
+
+class HEALPixCone:
+    def __init__(self, output_dir='Run', NSIDE=6, gMinZ=0, gMaxZ=1, gTrainingGridZ=4):
+        self.output_dir = output_dir
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
+
+        self.compton_space = HEALPixSpace(NSIDE, gMinZ, gMaxZ, gTrainingGridZ)
+        self.NSIDE = NSIDE
+
+        self.gTrainingGridXY = self.compton_space.totalPixNums
+        self.gTrainingGridZ = gTrainingGridZ
+        self.gMinZ = 0
+        self.gMaxZ = 1
+        # Width of the cone
+        self.gSigmaR = 0.1
+        
+        self.flattened = True
+        self.InputDataSpaceSize = 2
+        self.totalPixNums = self.compton_space.totalPixNums
+        self.OutputDataSpaceSize = self.compton_space.totalBinNums
+
+    def CreateFullResponse(self, PosX, PosY, d=0):
+        '''
+        Create the response for a source at position PosX, PosY
+        Args:
+          PosX (float): x position of the source
+          PosY (float): y position of the source
+        '''
+        k, b = 0.05, 0
+        adjustedSigma = k * d + b + self.gSigmaR
+        return self.compton_space.createGaussianFlattenedResponse(PosX, PosY, adjustedSigma)
+
+    def create_dataset(self, dataset_size=1024):
+        # X, Y = self.create_data(dataset_size)
+        X, Y = self.create_data(dataset_size)
+        return ApproxDataset(X, Y)
+
+    def create_data(self, data_amount):
+        X = np.zeros(shape=(data_amount, self.InputDataSpaceSize))
+        if self.flattened:
+            Y = np.zeros(shape=(data_amount, self.OutputDataSpaceSize))
+        else:
+            Y = np.zeros(shape=(data_amount, self.gTrainingGridXY, self.gTrainingGridXY, self.gTrainingGridZ))
+            
+        for i in tqdm(range(data_amount), desc='Generating data...'):
+            # X[i] = np.random.uniform(self.gMinXY, self.gMaxXY, size=(self.InputDataSpaceSize, ))
+            X[i] = self.compton_space.sampleSinglePointOnXY()
+            Y[i] = self.compton_space.createGaussianFlattenedResponse(
+                PosX=X[i, 0], PosY=X[i, 1], SigmaR=0.1)       
+
+        return X, Y
+    
+    def create_data_parallel(self, data_amount):
+        ''' Not working on all machines!!!  Still under development. '''
+        # Meta Data
+        completed = 0
+
+        def _gen_one_data(index):
+            X = self.compton_space.sampleSinglePointOnXY()
+            Y = self.compton_space.createGaussianFlattenedResponse(
+                PosX=X[index, 0], PosY=X[index, 1], SigmaR=0.1)    
+            return (index, X, Y)
+
+
+        # Start Task
+        X = np.zeros(shape=(data_amount, self.InputDataSpaceSize))
+        Y = np.zeros(shape=(data_amount, self.OutputDataSpaceSize))
+        with concurrent.futures.ProcessPoolExecutor() as executor:
+            futures = {executor.submit(_gen_one_data, i) for i in range(0, data_amount)}
+
+            for fut in concurrent.futures.as_completed(futures):
+                index, X_Single, Y_Single = fut.result()
+                X[index] = X_Single
+                Y[index, ] = Y_Single
+
+                completed += 1
+                if completed > 0 and completed % 128 == 0:
+                    print("Data creation: {}/{}".format(completed, data_amount))
+
+        return X, 
+    
+    def Plot2D(self, XSingle, YSingle, figure_title='plot.png', zSlices=4):
+        # print("XSingle, YSingle:", XSingle.shape, YSingle.shape)
+        if (zSlices <= 0 or zSlices > self.gTrainingGridZ):
+            warnings.warn(f"zSlices={zSlices} is not between 1 and {self.gTrainingGridZ}(Z_BIN_NUM). " +
+                          f"Thus, zSlices is replaced by the program with the following values: 1")
+            zSlices = 1
+
+        if (self.gTrainingGridZ % zSlices != 0):
+            warnings.warn(f"{self.gTrainingGridZ}(Z_BIN_NUM) is not divisible by zSlices={zSlices}. " +
+                          f"Thus, zSlices is automatically rounded to {int(self.gTrainingGridZ/int(self.gTrainingGridZ/zSlices))}.")
+            zSlices = int(self.gTrainingGridZ/int(self.gTrainingGridZ/zSlices))
+
+
+        # Figure setup
+        fig = plt.figure()
+        plt.clf()   # clear everything on this figure
+        # fig.canvas.set_window_title(figure_title)
+        fig.suptitle(f"XSingle = {np.degrees(XSingle)}")
+        plt.subplots_adjust(hspace=0.5)
+        plotCols = 2
+        plotRows = int(math.ceil(zSlices / plotCols))
+
+
+        # Iterate through all zSlice and plot the 2D slice of the XY plane
+        initialZIdx = 0
+        zStep = int(self.gTrainingGridZ / zSlices)
+        for plotIndex, z_Idx in enumerate(range(initialZIdx, self.gTrainingGridZ, zStep), 1):
+            startPixIndex = z_Idx*self.totalPixNums
+            endPixIndex = z_Idx*self.totalPixNums+self.totalPixNums - 1
+            currHEALPixMap = YSingle[startPixIndex:endPixIndex+1]
+            #print(startPixIndex:endPixIndex+1)
+            # print(currHEALPixMap, currHEALPixMap.shape)
+            # add another subplot for the later mollview plot
+            fig.add_subplot(plotRows, plotCols, plotIndex)
+            # the following mollview will be automatically plotted on the added subplot
+            hp.mollview(currHEALPixMap, title="Slice through z={}".format(self.compton_space.GridZ[z_Idx]), hold=True)
+            hp.graticule()
+
+
+        plt.savefig(os.path.join(
+            self.output_dir,
+            figure_title
+        ))
+        plt.close()
+
 
 
 class ToyModel3DCone:
 
-    def __init__(self, output_dir='Run', flattened=True):
+    def __init__(self, output_dir='Run', flattened=True, filter_size=3):
         print('\nToyModel: (x,y) --> Compton cone for all  x, y in [-1, 1]')
         
         self.flattened = flattened
@@ -55,15 +190,16 @@ class ToyModel3DCone:
         self.InputDataSpaceSize = 2 
         self.OutputDataSpaceSize = self.gTrainingGridXY * self.gTrainingGridXY * self.gTrainingGridZ
 
+        # Post-processing parameters
+        self.filter_size = filter_size
 
-    def Plot2D(self, XSingle, YSingle, origCheck, figure_title):
+    def Plot2D(self, XSingle, YSingle, figure_title):
         '''
         A function for plotting 4 slices of the model in one figure
         '''
         XV, YV = np.meshgrid(self.gGridCentersXY, self.gGridCentersXY)
         Z = np.zeros(shape=(self.gTrainingGridXY, self.gTrainingGridXY))
-        ZFinal=np.zeros(shape=((4,)+Z.shape))
-
+        
         fig = plt.figure(0)
         plt.clf()
         plt.subplots_adjust(hspace=0.5)
@@ -81,18 +217,12 @@ class ToyModel3DCone:
                     else:
                         Z[x, y] = YSingle[x][y][zGridElement]
             
-            if origCheck==1:
-              #Applying median filter from SciPy
-              filter_size=3
-              Z = ndimage.median_filter(Z, size=filter_size)
-              #Z = ndimage.median_filter(Z, size=2)
-              #Z = ndimage.median_filter(Z, size=2)         
-            ZFinal[i-1]=Z
-
+            # Z = ndimage.median_filter(Z, size=self.filter_size)
             ax = fig.add_subplot(2, 2, i)
             ax.set_title('Slice through z={}'.format(self.gGridCentersZ[zGridElement]))
             contour = ax.contourf(XV, YV, Z)
             
+        #Applying median filter from SciPy
         
 
         plt.ion()
@@ -103,37 +233,6 @@ class ToyModel3DCone:
             self.output_dir,
             figure_title
         ))
-        plt.close()
-        return ZFinal
-
-    def Plot2DNoise(self, ZOriginal,ZFiltered,figure_title):
-
-        XV, YV = np.meshgrid(self.gGridCentersXY, self.gGridCentersXY)
-        fig = plt.figure(0)
-        plt.clf()
-        plt.subplots_adjust(hspace=0.5)
-        loss=0
-
-        for i in range(1,5):
-          zGridElement = int((i-1)*self.gTrainingGridZ/4)
-          #Z = np.absolute(ZOriginal[i-1]-ZFiltered[i-1])
-          Z = (ZOriginal[i-1]-ZFiltered[i-1])
-          loss += np.mean(Z**2)
-          ax = fig.add_subplot(2, 2, i)
-          ax.set_title('Slice through z={}'.format(self.gGridCentersZ[zGridElement]))
-          contour = ax.contourf(XV, YV, Z)
-        
-        loss=loss/4
-        print("Noise MSE: ", loss)
-        print()
-        plt.ion()
-        # plt.show()
-        # plt.pause(0.001)
-        
-        plt.savefig(os.path.join(
-            self.output_dir,
-            figure_title
-          ))
         plt.close()
 
 
