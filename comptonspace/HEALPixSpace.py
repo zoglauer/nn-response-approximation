@@ -2,6 +2,10 @@
 import math
 import random
 import warnings
+from pathlib import Path
+import glob
+import pickle
+import logging
 
 # Third Party Libraries
 import numpy as np
@@ -82,6 +86,8 @@ class HEALPixSpace(AbstractComptonSpace):
         """
         This method plots the imaging response by slicing at different Z and plots the corresponding XY plane in 2D.
         The corresponding response is plotted using 'Mollview' as provided in the 'healpy' library.
+
+        NOTE: If this function doesn't show the plot, try calling "plt.show()" after this function
         ------------------------------------------------------------------------------------
         :param XSingle: the input data/measurement
         :param YSingle: the flattened imaging response (1D array)
@@ -165,6 +171,9 @@ class HEALPixSpace(AbstractComptonSpace):
         """
         return hp.pix2ang(self.NSIDE, pix_Idx, lonlat=degree)
 
+    def getPixIdxFromLatLong(self, latitude, longitude, degree=False):
+        return hp.ang2pix(self.NSIDE, latitude, longitude, lonlat=degree)
+
     def getScatterAngFromZIdx(self, z_Idx):
         """
         This method returns the corresponding z value given an index for the bin on the Z axis
@@ -176,6 +185,23 @@ class HEALPixSpace(AbstractComptonSpace):
             raise IndexError(f"The z-Index {z_Idx} is out of bound on the z axis for this compton data space " +
                              f"whose 'gTrainingGridZ = {self.gTrainingGridZ}'")
         return self.GridZ[z_Idx]
+
+    def getZIdxFromScatterAng(self, scatterAng, zWidth=-1):
+        """
+        TODO: OPTIMIZE THIS
+        """
+        if (zWidth == -1):
+            z_interval = (self.gMaxZ - self.gMinZ) / self.gTrainingGridZ
+            for zIdx in range(0, self.gTrainingGridZ-1):
+                if (scatterAng <= self.GridZ[zIdx] + z_interval):
+                    return zIdx
+            return self.gTrainingGridZ-1
+        else:
+            for zIdx in range(0, self.gTrainingGridZ):
+                if ((scatterAng >= self.GridZ[zIdx]-zWidth) and (scatterAng <= self.GridZ[zIdx]+zWidth)):
+                    return zIdx
+            return -1
+
 
     def convertToFlattenedIndex(self, pix_Idx, z_Idx):
         """
@@ -233,9 +259,83 @@ class HEALPixSpace(AbstractComptonSpace):
         return gGridZ
 
 
+    def loadSimulationData(self, simulation_file, zWidth=2.5):
+        """
+        TODO:
+        This function was not finished!! Don't use directly!!
+        """
+        simulation_file = Path(simulation_file).resolve()
+        if not simulation_file.is_file():
+            raise Exception(f"The path {simulation_file} is not a valid file")
 
+        Out = np.zeros(shape=(1, self.totalBinNums))
+        with open(simulation_file, "rb") as simulation_file:
+            incoming_dir, events_id, scatter_ang, theta, phi, collision_dist = pickle.load(simulation_file)
+            incoming_dir = [float(i) / 180 * np.pi for i in incoming_dir]
+
+            total_events_num = len(events_id)
+            print(f"incoming angle: {np.array(incoming_dir) / np.pi * 180}")
+            print(f"valid events: {total_events_num}")
+
+            print(f"min theta = {min(theta)}; max theta = {max(theta)}")
+            print(f"min phi = {min(phi)}; max phi = {max(phi)}")
+            print(f"min collision_dist = {min(collision_dist)}; max collision_dist = {max(collision_dist)}")
+
+            theta = np.radians(np.asarray(theta))
+            phi = np.asarray(phi)
+            phi = np.where(phi < 0, np.radians(phi+360), np.radians(phi))
+
+            for i in range(total_events_num):
+
+                pixIdx = self.getPixIdxFromLatLong(theta[i], phi[i])
+                zIdx = self.getZIdxFromScatterAng(scatter_ang[i], zWidth=zWidth)
+                if (zIdx == -1 or collision_dist[i] <= 0.5):
+                    continue
+                # print(f"scatter ang = {scatter_ang[i]} ==> ziDx = {zIdx}")
+                Out[0, self.convertToFlattenedIndex(pixIdx, zIdx)] += 1
+
+            dataspace.plotFlattenedResponse(incoming_dir, Out, Title="test", zSlices=self.gTrainingGridZ)
+            plt.show()
+
+        # phi_shifted = np.array([])
+        # for p in phi:
+        #     if (p < 0):
+        #         phi_shifted = np.append(phi_shifted, ((p+360)/180*np.pi))
+        #     else:
+        #         phi_shifted = np.append(phi_shifted, (p/180*np.pi))
+        # allFiles = glob.glob(f"{simulation_folder / '*'}")
+        # for file in allFiles:
+        #     if file.endswith("pkl"):
+        #         with open(file, "rb") as simulation_file:
+        #             incoming_dir, events_id, scatter_ang, theta, phi, collision_dist = pickle.load(simulation_file)
+        #             theta = np.array(theta) / 180 * np.pi
+        #             phi = (np.array(phi)+180) / 180 * np.pi
+        #             total_events_num = len(events_id)
+        #             for i in range(total_events_num):
+        #                 pixIdx = self.getPixIdxFromLatLong(theta[i], phi[i])
+        #                 zIdx = self.getZIdxFromScatterAng(scatter_ang[i])
+        #                 Out[0, self.convertToFlattenedIndex(pixIdx, zIdx)] += 1
+
+        return Out
+
+
+# for testing purposes only
 if __name__ == "__main__":
-    # for testing purposes only
-    dataspace = HEALPixSpace()
+    logging.disable('WARNING')
+
+    dataspace = HEALPixSpace(NSIDE=5, gMinZ=0, gMaxZ=180, gTrainingGridZ=4)
+    print(dataspace.GridZ)
+
+    simulation_folder = r"/home/tezktenr/Study/UCB_Capstone/simulation_data/March31_EarlyMorning"
+    allFiles = glob.glob(f"{Path(simulation_folder) / '*'}")
+    simulation_file = allFiles[3]
+
+    # simulation_file = r"/home/tezktenr/Study/UCB_Capstone/simulation_data/PS_0_0.inc1.id1.tra.gz.pkl"
+    out = dataspace.loadSimulationData(simulation_file, zWidth=2.5)
+    print(max(max(out)))
+    # print(out)
+
+
+
 
 

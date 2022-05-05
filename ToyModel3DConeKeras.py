@@ -61,7 +61,7 @@ class ToyModel3DCone:
         self.gSigmaR = 0.1
 
         # The Compton Data Space of the model
-        NSIDE = 5
+        NSIDE = 32
         self.comptonDataSpace = HEALPixSpace(NSIDE)
 
         # Set test and traing data set parameters
@@ -145,7 +145,7 @@ class ToyModel3DCone:
 
     ###################################################################################################
 
-    def CreateFullResponse(self, PosX, PosY, d=0):
+    def CreateFullResponse(self, PosX, PosY):
         '''
         Create the response for a source at position PosX, PosY
 
@@ -153,11 +153,16 @@ class ToyModel3DCone:
           PosX (float): x position of the source
           PosY (float): y position of the source
 
-        '''
+        TODO:
+        # This way of integrating the distance between first and second compton interaction might be WRONG!!
+        # ASK Andreas before proceeding
+        distance_betw_first_second_interaction = 0
         k = 0.05
         b = 0
-        adjustedSigma = k*d+b+self.gSigmaR
+        adjustedSigma = k * distance_betw_first_second_interaction + b + self.gSigmaR
         return self.comptonDataSpace.createGaussianFlattenedResponse(PosX, PosY, adjustedSigma)
+        '''
+        return self.comptonDataSpace.createGaussianFlattenedResponse(PosX, PosY, self.gSigmaR)
 
     ###################################################################################################
 
@@ -173,6 +178,8 @@ class ToyModel3DCone:
 
     def _gen_one_data(self, index):
         X = self.comptonDataSpace.sampleSinglePointOnXY()
+        collision_distance = 5 * np.random.random_sample()
+        print("progress..")
         Y = self.CreateFullResponse(X[0], X[1])
         return (index, X, Y)
 
