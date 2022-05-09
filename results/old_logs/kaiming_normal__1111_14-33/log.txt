@@ -1,0 +1,1070 @@
+Epoch   0| Train | Loss: 1.8944   MSE: 1.8944   MAE: 0.8829
+Epoch   0|  Val  | Loss: 1.5409   MSE: 1.5409   MAE: 0.7444
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch  20| Train | Loss: 0.9398   MSE: 0.9398   MAE: 0.5581
+Epoch  20|  Val  | Loss: 0.9307   MSE: 0.9307   MAE: 0.5564
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch  40| Train | Loss: 0.8098   MSE: 0.8098   MAE: 0.5272
+Epoch  40|  Val  | Loss: 0.8060   MSE: 0.8060   MAE: 0.5263
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch  60| Train | Loss: 0.7287   MSE: 0.7287   MAE: 0.4981
+Epoch  60|  Val  | Loss: 0.7289   MSE: 0.7289   MAE: 0.4993
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch  80| Train | Loss: 0.6340   MSE: 0.6340   MAE: 0.4790
+Epoch  80|  Val  | Loss: 0.6416   MSE: 0.6416   MAE: 0.4820
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 100| Train | Loss: 0.5449   MSE: 0.5449   MAE: 0.4535
+Epoch 100|  Val  | Loss: 0.5610   MSE: 0.5610   MAE: 0.4580
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 120| Train | Loss: 0.4778   MSE: 0.4778   MAE: 0.4216
+Epoch 120|  Val  | Loss: 0.4983   MSE: 0.4983   MAE: 0.4290
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 140| Train | Loss: 0.4242   MSE: 0.4242   MAE: 0.3964
+Epoch 140|  Val  | Loss: 0.4467   MSE: 0.4467   MAE: 0.4057
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 160| Train | Loss: 0.3776   MSE: 0.3776   MAE: 0.3733
+Epoch 160|  Val  | Loss: 0.4009   MSE: 0.4009   MAE: 0.3835
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 180| Train | Loss: 0.3354   MSE: 0.3354   MAE: 0.3510
+Epoch 180|  Val  | Loss: 0.3589   MSE: 0.3589   MAE: 0.3615
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 200| Train | Loss: 0.2968   MSE: 0.2968   MAE: 0.3294
+Epoch 200|  Val  | Loss: 0.3206   MSE: 0.3206   MAE: 0.3407
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 220| Train | Loss: 0.2628   MSE: 0.2628   MAE: 0.3093
+Epoch 220|  Val  | Loss: 0.2869   MSE: 0.2869   MAE: 0.3216
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 240| Train | Loss: 0.2329   MSE: 0.2329   MAE: 0.2907
+Epoch 240|  Val  | Loss: 0.2570   MSE: 0.2570   MAE: 0.3040
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 260| Train | Loss: 0.2061   MSE: 0.2061   MAE: 0.2734
+Epoch 260|  Val  | Loss: 0.2302   MSE: 0.2302   MAE: 0.2875
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 280| Train | Loss: 0.1825   MSE: 0.1825   MAE: 0.2572
+Epoch 280|  Val  | Loss: 0.2061   MSE: 0.2061   MAE: 0.2721
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 300| Train | Loss: 0.1618   MSE: 0.1618   MAE: 0.2423
+Epoch 300|  Val  | Loss: 0.1849   MSE: 0.1849   MAE: 0.2574
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 320| Train | Loss: 0.1438   MSE: 0.1438   MAE: 0.2283
+Epoch 320|  Val  | Loss: 0.1663   MSE: 0.1663   MAE: 0.2439
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 340| Train | Loss: 0.1285   MSE: 0.1285   MAE: 0.2164
+Epoch 340|  Val  | Loss: 0.1504   MSE: 0.1504   MAE: 0.2322
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 360| Train | Loss: 0.1153   MSE: 0.1153   MAE: 0.2044
+Epoch 360|  Val  | Loss: 0.1365   MSE: 0.1365   MAE: 0.2211
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 380| Train | Loss: 0.1046   MSE: 0.1046   MAE: 0.1957
+Epoch 380|  Val  | Loss: 0.1249   MSE: 0.1249   MAE: 0.2118
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 400| Train | Loss: 0.0949   MSE: 0.0949   MAE: 0.1855
+Epoch 400|  Val  | Loss: 0.1148   MSE: 0.1148   MAE: 0.2026
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 420| Train | Loss: 0.0869   MSE: 0.0869   MAE: 0.1777
+Epoch 420|  Val  | Loss: 0.1062   MSE: 0.1062   MAE: 0.1948
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 440| Train | Loss: 0.0800   MSE: 0.0800   MAE: 0.1707
+Epoch 440|  Val  | Loss: 0.0986   MSE: 0.0986   MAE: 0.1880
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 460| Train | Loss: 0.0743   MSE: 0.0743   MAE: 0.1656
+Epoch 460|  Val  | Loss: 0.0920   MSE: 0.0920   MAE: 0.1818
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 480| Train | Loss: 0.0688   MSE: 0.0688   MAE: 0.1587
+Epoch 480|  Val  | Loss: 0.0862   MSE: 0.0862   MAE: 0.1761
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 500| Train | Loss: 0.0646   MSE: 0.0646   MAE: 0.1552
+Epoch 500|  Val  | Loss: 0.0816   MSE: 0.0816   MAE: 0.1726
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 520| Train | Loss: 0.0601   MSE: 0.0601   MAE: 0.1490
+Epoch 520|  Val  | Loss: 0.0768   MSE: 0.0768   MAE: 0.1666
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 540| Train | Loss: 0.0568   MSE: 0.0568   MAE: 0.1458
+Epoch 540|  Val  | Loss: 0.0733   MSE: 0.0733   MAE: 0.1640
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 560| Train | Loss: 0.0534   MSE: 0.0534   MAE: 0.1411
+Epoch 560|  Val  | Loss: 0.0694   MSE: 0.0694   MAE: 0.1591
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 580| Train | Loss: 0.0506   MSE: 0.0506   MAE: 0.1376
+Epoch 580|  Val  | Loss: 0.0663   MSE: 0.0663   MAE: 0.1556
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 600| Train | Loss: 0.0483   MSE: 0.0483   MAE: 0.1350
+Epoch 600|  Val  | Loss: 0.0634   MSE: 0.0634   MAE: 0.1524
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 620| Train | Loss: 0.0458   MSE: 0.0458   MAE: 0.1313
+Epoch 620|  Val  | Loss: 0.0608   MSE: 0.0608   MAE: 0.1494
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 640| Train | Loss: 0.0439   MSE: 0.0439   MAE: 0.1292
+Epoch 640|  Val  | Loss: 0.0588   MSE: 0.0588   MAE: 0.1474
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 660| Train | Loss: 0.0419   MSE: 0.0419   MAE: 0.1261
+Epoch 660|  Val  | Loss: 0.0564   MSE: 0.0564   MAE: 0.1440
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 680| Train | Loss: 0.0399   MSE: 0.0399   MAE: 0.1229
+Epoch 680|  Val  | Loss: 0.0542   MSE: 0.0542   MAE: 0.1412
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 700| Train | Loss: 0.0388   MSE: 0.0388   MAE: 0.1226
+Epoch 700|  Val  | Loss: 0.0530   MSE: 0.0530   MAE: 0.1409
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 720| Train | Loss: 0.0368   MSE: 0.0368   MAE: 0.1182
+Epoch 720|  Val  | Loss: 0.0507   MSE: 0.0507   MAE: 0.1364
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 740| Train | Loss: 0.0357   MSE: 0.0357   MAE: 0.1170
+Epoch 740|  Val  | Loss: 0.0495   MSE: 0.0495   MAE: 0.1358
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 760| Train | Loss: 0.0341   MSE: 0.0341   MAE: 0.1139
+Epoch 760|  Val  | Loss: 0.0476   MSE: 0.0476   MAE: 0.1323
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 780| Train | Loss: 0.0334   MSE: 0.0334   MAE: 0.1142
+Epoch 780|  Val  | Loss: 0.0467   MSE: 0.0467   MAE: 0.1324
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 800| Train | Loss: 0.0318   MSE: 0.0318   MAE: 0.1105
+Epoch 800|  Val  | Loss: 0.0450   MSE: 0.0450   MAE: 0.1290
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 820| Train | Loss: 0.0310   MSE: 0.0310   MAE: 0.1097
+Epoch 820|  Val  | Loss: 0.0439   MSE: 0.0439   MAE: 0.1276
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 840| Train | Loss: 0.0298   MSE: 0.0298   MAE: 0.1072
+Epoch 840|  Val  | Loss: 0.0426   MSE: 0.0426   MAE: 0.1256
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 860| Train | Loss: 0.0293   MSE: 0.0293   MAE: 0.1077
+Epoch 860|  Val  | Loss: 0.0419   MSE: 0.0419   MAE: 0.1257
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 880| Train | Loss: 0.0279   MSE: 0.0279   MAE: 0.1036
+Epoch 880|  Val  | Loss: 0.0404   MSE: 0.0404   MAE: 0.1223
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 900| Train | Loss: 0.0281   MSE: 0.0281   MAE: 0.1069
+Epoch 900|  Val  | Loss: 0.0405   MSE: 0.0405   MAE: 0.1251
+Epoch 920| Train | Loss: 0.0264   MSE: 0.0264   MAE: 0.1013
+Epoch 920|  Val  | Loss: 0.0386   MSE: 0.0386   MAE: 0.1200
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 940| Train | Loss: 0.0257   MSE: 0.0257   MAE: 0.1004
+Epoch 940|  Val  | Loss: 0.0377   MSE: 0.0377   MAE: 0.1184
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 960| Train | Loss: 0.0247   MSE: 0.0247   MAE: 0.0977
+Epoch 960|  Val  | Loss: 0.0367   MSE: 0.0367   MAE: 0.1164
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 980| Train | Loss: 0.0249   MSE: 0.0249   MAE: 0.1005
+Epoch 980|  Val  | Loss: 0.0362   MSE: 0.0362   MAE: 0.1167
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1000| Train | Loss: 0.0235   MSE: 0.0235   MAE: 0.0958
+Epoch 1000|  Val  | Loss: 0.0352   MSE: 0.0352   MAE: 0.1144
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1020| Train | Loss: 0.0229   MSE: 0.0229   MAE: 0.0945
+Epoch 1020|  Val  | Loss: 0.0346   MSE: 0.0346   MAE: 0.1135
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1040| Train | Loss: 0.0223   MSE: 0.0223   MAE: 0.0935
+Epoch 1040|  Val  | Loss: 0.0337   MSE: 0.0337   MAE: 0.1119
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1060| Train | Loss: 0.0218   MSE: 0.0218   MAE: 0.0923
+Epoch 1060|  Val  | Loss: 0.0331   MSE: 0.0331   MAE: 0.1110
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1080| Train | Loss: 0.0218   MSE: 0.0218   MAE: 0.0942
+Epoch 1080|  Val  | Loss: 0.0332   MSE: 0.0332   MAE: 0.1131
+Epoch 1100| Train | Loss: 0.0207   MSE: 0.0207   MAE: 0.0901
+Epoch 1100|  Val  | Loss: 0.0319   MSE: 0.0319   MAE: 0.1091
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1120| Train | Loss: 0.0212   MSE: 0.0212   MAE: 0.0937
+Epoch 1120|  Val  | Loss: 0.0319   MSE: 0.0319   MAE: 0.1106
+Epoch 1140| Train | Loss: 0.0198   MSE: 0.0198   MAE: 0.0885
+Epoch 1140|  Val  | Loss: 0.0309   MSE: 0.0309   MAE: 0.1075
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1160| Train | Loss: 0.0194   MSE: 0.0194   MAE: 0.0874
+Epoch 1160|  Val  | Loss: 0.0303   MSE: 0.0303   MAE: 0.1064
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1180| Train | Loss: 0.0190   MSE: 0.0190   MAE: 0.0871
+Epoch 1180|  Val  | Loss: 0.0299   MSE: 0.0299   MAE: 0.1061
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1200| Train | Loss: 0.0190   MSE: 0.0190   MAE: 0.0881
+Epoch 1200|  Val  | Loss: 0.0296   MSE: 0.0296   MAE: 0.1065
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1220| Train | Loss: 0.0187   MSE: 0.0187   MAE: 0.0875
+Epoch 1220|  Val  | Loss: 0.0295   MSE: 0.0295   MAE: 0.1065
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1240| Train | Loss: 0.0177   MSE: 0.0177   MAE: 0.0838
+Epoch 1240|  Val  | Loss: 0.0283   MSE: 0.0283   MAE: 0.1028
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1260| Train | Loss: 0.0175   MSE: 0.0175   MAE: 0.0836
+Epoch 1260|  Val  | Loss: 0.0279   MSE: 0.0279   MAE: 0.1025
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1280| Train | Loss: 0.0173   MSE: 0.0173   MAE: 0.0836
+Epoch 1280|  Val  | Loss: 0.0277   MSE: 0.0277   MAE: 0.1029
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1300| Train | Loss: 0.0169   MSE: 0.0169   MAE: 0.0826
+Epoch 1300|  Val  | Loss: 0.0272   MSE: 0.0272   MAE: 0.1016
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1320| Train | Loss: 0.0167   MSE: 0.0167   MAE: 0.0824
+Epoch 1320|  Val  | Loss: 0.0269   MSE: 0.0269   MAE: 0.1010
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1340| Train | Loss: 0.0164   MSE: 0.0164   MAE: 0.0817
+Epoch 1340|  Val  | Loss: 0.0265   MSE: 0.0265   MAE: 0.1007
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1360| Train | Loss: 0.0164   MSE: 0.0164   MAE: 0.0828
+Epoch 1360|  Val  | Loss: 0.0263   MSE: 0.0263   MAE: 0.1008
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1380| Train | Loss: 0.0156   MSE: 0.0156   MAE: 0.0793
+Epoch 1380|  Val  | Loss: 0.0256   MSE: 0.0256   MAE: 0.0982
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1400| Train | Loss: 0.0156   MSE: 0.0156   MAE: 0.0802
+Epoch 1400|  Val  | Loss: 0.0256   MSE: 0.0256   MAE: 0.0993
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1420| Train | Loss: 0.0152   MSE: 0.0152   MAE: 0.0788
+Epoch 1420|  Val  | Loss: 0.0250   MSE: 0.0250   MAE: 0.0979
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1440| Train | Loss: 0.0148   MSE: 0.0148   MAE: 0.0771
+Epoch 1440|  Val  | Loss: 0.0245   MSE: 0.0245   MAE: 0.0961
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1460| Train | Loss: 0.0155   MSE: 0.0155   MAE: 0.0817
+Epoch 1460|  Val  | Loss: 0.0251   MSE: 0.0251   MAE: 0.0997
+Epoch 1480| Train | Loss: 0.0147   MSE: 0.0147   MAE: 0.0783
+Epoch 1480|  Val  | Loss: 0.0242   MSE: 0.0242   MAE: 0.0966
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1500| Train | Loss: 0.0141   MSE: 0.0141   MAE: 0.0760
+Epoch 1500|  Val  | Loss: 0.0237   MSE: 0.0237   MAE: 0.0950
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1520| Train | Loss: 0.0141   MSE: 0.0141   MAE: 0.0763
+Epoch 1520|  Val  | Loss: 0.0235   MSE: 0.0235   MAE: 0.0949
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1540| Train | Loss: 0.0141   MSE: 0.0141   MAE: 0.0771
+Epoch 1540|  Val  | Loss: 0.0235   MSE: 0.0235   MAE: 0.0958
+Epoch 1560| Train | Loss: 0.0137   MSE: 0.0137   MAE: 0.0757
+Epoch 1560|  Val  | Loss: 0.0231   MSE: 0.0231   MAE: 0.0943
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1580| Train | Loss: 0.0132   MSE: 0.0132   MAE: 0.0737
+Epoch 1580|  Val  | Loss: 0.0225   MSE: 0.0225   MAE: 0.0928
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1600| Train | Loss: 0.0132   MSE: 0.0132   MAE: 0.0740
+Epoch 1600|  Val  | Loss: 0.0224   MSE: 0.0224   MAE: 0.0926
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1620| Train | Loss: 0.0131   MSE: 0.0131   MAE: 0.0742
+Epoch 1620|  Val  | Loss: 0.0223   MSE: 0.0223   MAE: 0.0929
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1640| Train | Loss: 0.0128   MSE: 0.0128   MAE: 0.0730
+Epoch 1640|  Val  | Loss: 0.0219   MSE: 0.0219   MAE: 0.0920
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1660| Train | Loss: 0.0129   MSE: 0.0129   MAE: 0.0739
+Epoch 1660|  Val  | Loss: 0.0220   MSE: 0.0220   MAE: 0.0930
+Epoch 1680| Train | Loss: 0.0124   MSE: 0.0124   MAE: 0.0715
+Epoch 1680|  Val  | Loss: 0.0214   MSE: 0.0214   MAE: 0.0903
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1700| Train | Loss: 0.0126   MSE: 0.0126   MAE: 0.0735
+Epoch 1700|  Val  | Loss: 0.0217   MSE: 0.0217   MAE: 0.0923
+Epoch 1720| Train | Loss: 0.0122   MSE: 0.0122   MAE: 0.0718
+Epoch 1720|  Val  | Loss: 0.0211   MSE: 0.0211   MAE: 0.0903
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1740| Train | Loss: 0.0118   MSE: 0.0118   MAE: 0.0699
+Epoch 1740|  Val  | Loss: 0.0207   MSE: 0.0207   MAE: 0.0890
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1760| Train | Loss: 0.0118   MSE: 0.0118   MAE: 0.0705
+Epoch 1760|  Val  | Loss: 0.0205   MSE: 0.0205   MAE: 0.0887
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1780| Train | Loss: 0.0116   MSE: 0.0116   MAE: 0.0695
+Epoch 1780|  Val  | Loss: 0.0203   MSE: 0.0203   MAE: 0.0882
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1800| Train | Loss: 0.0127   MSE: 0.0127   MAE: 0.0757
+Epoch 1800|  Val  | Loss: 0.0215   MSE: 0.0215   MAE: 0.0942
+Epoch 1820| Train | Loss: 0.0113   MSE: 0.0113   MAE: 0.0691
+Epoch 1820|  Val  | Loss: 0.0199   MSE: 0.0199   MAE: 0.0877
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1840| Train | Loss: 0.0111   MSE: 0.0111   MAE: 0.0682
+Epoch 1840|  Val  | Loss: 0.0198   MSE: 0.0198   MAE: 0.0876
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1860| Train | Loss: 0.0111   MSE: 0.0111   MAE: 0.0683
+Epoch 1860|  Val  | Loss: 0.0196   MSE: 0.0196   MAE: 0.0872
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1880| Train | Loss: 0.0110   MSE: 0.0110   MAE: 0.0682
+Epoch 1880|  Val  | Loss: 0.0195   MSE: 0.0195   MAE: 0.0871
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1900| Train | Loss: 0.0112   MSE: 0.0112   MAE: 0.0699
+Epoch 1900|  Val  | Loss: 0.0197   MSE: 0.0197   MAE: 0.0881
+Epoch 1920| Train | Loss: 0.0107   MSE: 0.0107   MAE: 0.0676
+Epoch 1920|  Val  | Loss: 0.0191   MSE: 0.0191   MAE: 0.0864
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1940| Train | Loss: 0.0105   MSE: 0.0105   MAE: 0.0668
+Epoch 1940|  Val  | Loss: 0.0190   MSE: 0.0190   MAE: 0.0858
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 1960| Train | Loss: 0.0106   MSE: 0.0106   MAE: 0.0678
+Epoch 1960|  Val  | Loss: 0.0192   MSE: 0.0192   MAE: 0.0870
+Epoch 1980| Train | Loss: 0.0103   MSE: 0.0103   MAE: 0.0662
+Epoch 1980|  Val  | Loss: 0.0186   MSE: 0.0186   MAE: 0.0849
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 2000| Train | Loss: 0.0101   MSE: 0.0101   MAE: 0.0656
+Epoch 2000|  Val  | Loss: 0.0185   MSE: 0.0185   MAE: 0.0847
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 2020| Train | Loss: 0.0112   MSE: 0.0112   MAE: 0.0718
+Epoch 2020|  Val  | Loss: 0.0195   MSE: 0.0195   MAE: 0.0900
+Epoch 2040| Train | Loss: 0.0100   MSE: 0.0100   MAE: 0.0658
+Epoch 2040|  Val  | Loss: 0.0183   MSE: 0.0183   MAE: 0.0845
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 2060| Train | Loss: 0.0097   MSE: 0.0097   MAE: 0.0638
+Epoch 2060|  Val  | Loss: 0.0180   MSE: 0.0180   MAE: 0.0832
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 2080| Train | Loss: 0.0097   MSE: 0.0097   MAE: 0.0642
+Epoch 2080|  Val  | Loss: 0.0179   MSE: 0.0179   MAE: 0.0834
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 2100| Train | Loss: 0.0097   MSE: 0.0097   MAE: 0.0645
+Epoch 2100|  Val  | Loss: 0.0179   MSE: 0.0179   MAE: 0.0837
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 2120| Train | Loss: 0.0097   MSE: 0.0097   MAE: 0.0647
+Epoch 2120|  Val  | Loss: 0.0178   MSE: 0.0178   MAE: 0.0835
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 2140| Train | Loss: 0.0094   MSE: 0.0094   MAE: 0.0638
+Epoch 2140|  Val  | Loss: 0.0176   MSE: 0.0176   MAE: 0.0828
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 2160| Train | Loss: 0.0095   MSE: 0.0095   MAE: 0.0641
+Epoch 2160|  Val  | Loss: 0.0176   MSE: 0.0176   MAE: 0.0830
+Epoch 2180| Train | Loss: 0.0093   MSE: 0.0093   MAE: 0.0632
+Epoch 2180|  Val  | Loss: 0.0173   MSE: 0.0173   MAE: 0.0823
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 2200| Train | Loss: 0.0091   MSE: 0.0091   MAE: 0.0625
+Epoch 2200|  Val  | Loss: 0.0172   MSE: 0.0172   MAE: 0.0818
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 2220| Train | Loss: 0.0091   MSE: 0.0091   MAE: 0.0631
+Epoch 2220|  Val  | Loss: 0.0171   MSE: 0.0171   MAE: 0.0820
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 2240| Train | Loss: 0.0093   MSE: 0.0093   MAE: 0.0642
+Epoch 2240|  Val  | Loss: 0.0172   MSE: 0.0172   MAE: 0.0828
+Epoch 2260| Train | Loss: 0.0089   MSE: 0.0089   MAE: 0.0621
+Epoch 2260|  Val  | Loss: 0.0168   MSE: 0.0168   MAE: 0.0811
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 2280| Train | Loss: 0.0087   MSE: 0.0087   MAE: 0.0608
+Epoch 2280|  Val  | Loss: 0.0165   MSE: 0.0165   MAE: 0.0799
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 2300| Train | Loss: 0.0092   MSE: 0.0092   MAE: 0.0644
+Epoch 2300|  Val  | Loss: 0.0169   MSE: 0.0169   MAE: 0.0824
+Epoch 2320| Train | Loss: 0.0088   MSE: 0.0088   MAE: 0.0619
+Epoch 2320|  Val  | Loss: 0.0165   MSE: 0.0165   MAE: 0.0806
+Epoch 2340| Train | Loss: 0.0084   MSE: 0.0084   MAE: 0.0598
+Epoch 2340|  Val  | Loss: 0.0162   MSE: 0.0162   MAE: 0.0792
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 2360| Train | Loss: 0.0090   MSE: 0.0090   MAE: 0.0640
+Epoch 2360|  Val  | Loss: 0.0168   MSE: 0.0168   MAE: 0.0825
+Epoch 2380| Train | Loss: 0.0084   MSE: 0.0084   MAE: 0.0603
+Epoch 2380|  Val  | Loss: 0.0161   MSE: 0.0161   MAE: 0.0794
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 2400| Train | Loss: 0.0086   MSE: 0.0086   MAE: 0.0620
+Epoch 2400|  Val  | Loss: 0.0163   MSE: 0.0163   MAE: 0.0806
+Epoch 2420| Train | Loss: 0.0085   MSE: 0.0085   MAE: 0.0613
+Epoch 2420|  Val  | Loss: 0.0162   MSE: 0.0162   MAE: 0.0801
+Epoch 2440| Train | Loss: 0.0081   MSE: 0.0081   MAE: 0.0595
+Epoch 2440|  Val  | Loss: 0.0158   MSE: 0.0158   MAE: 0.0788
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 2460| Train | Loss: 0.0096   MSE: 0.0096   MAE: 0.0686
+Epoch 2460|  Val  | Loss: 0.0175   MSE: 0.0175   MAE: 0.0867
+Epoch 2480| Train | Loss: 0.0081   MSE: 0.0081   MAE: 0.0600
+Epoch 2480|  Val  | Loss: 0.0158   MSE: 0.0158   MAE: 0.0787
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 2500| Train | Loss: 0.0080   MSE: 0.0080   MAE: 0.0594
+Epoch 2500|  Val  | Loss: 0.0155   MSE: 0.0155   MAE: 0.0779
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 2520| Train | Loss: 0.0081   MSE: 0.0081   MAE: 0.0600
+Epoch 2520|  Val  | Loss: 0.0158   MSE: 0.0158   MAE: 0.0796
+Epoch 2540| Train | Loss: 0.0080   MSE: 0.0080   MAE: 0.0594
+Epoch 2540|  Val  | Loss: 0.0154   MSE: 0.0154   MAE: 0.0776
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 2560| Train | Loss: 0.0077   MSE: 0.0077   MAE: 0.0580
+Epoch 2560|  Val  | Loss: 0.0152   MSE: 0.0152   MAE: 0.0772
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 2580| Train | Loss: 0.0078   MSE: 0.0078   MAE: 0.0588
+Epoch 2580|  Val  | Loss: 0.0152   MSE: 0.0152   MAE: 0.0776
+Epoch 2600| Train | Loss: 0.0079   MSE: 0.0079   MAE: 0.0594
+Epoch 2600|  Val  | Loss: 0.0154   MSE: 0.0154   MAE: 0.0783
+Epoch 2620| Train | Loss: 0.0078   MSE: 0.0078   MAE: 0.0588
+Epoch 2620|  Val  | Loss: 0.0153   MSE: 0.0153   MAE: 0.0780
+Epoch 2640| Train | Loss: 0.0075   MSE: 0.0075   MAE: 0.0571
+Epoch 2640|  Val  | Loss: 0.0148   MSE: 0.0148   MAE: 0.0761
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 2660| Train | Loss: 0.0076   MSE: 0.0076   MAE: 0.0584
+Epoch 2660|  Val  | Loss: 0.0150   MSE: 0.0150   MAE: 0.0773
+Epoch 2680| Train | Loss: 0.0073   MSE: 0.0073   MAE: 0.0567
+Epoch 2680|  Val  | Loss: 0.0148   MSE: 0.0148   MAE: 0.0762
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 2700| Train | Loss: 0.0074   MSE: 0.0074   MAE: 0.0577
+Epoch 2700|  Val  | Loss: 0.0148   MSE: 0.0148   MAE: 0.0765
+Epoch 2720| Train | Loss: 0.0073   MSE: 0.0073   MAE: 0.0571
+Epoch 2720|  Val  | Loss: 0.0147   MSE: 0.0147   MAE: 0.0764
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 2740| Train | Loss: 0.0071   MSE: 0.0071   MAE: 0.0558
+Epoch 2740|  Val  | Loss: 0.0144   MSE: 0.0144   MAE: 0.0751
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 2760| Train | Loss: 0.0074   MSE: 0.0074   MAE: 0.0577
+Epoch 2760|  Val  | Loss: 0.0146   MSE: 0.0146   MAE: 0.0760
+Epoch 2780| Train | Loss: 0.0073   MSE: 0.0073   MAE: 0.0578
+Epoch 2780|  Val  | Loss: 0.0146   MSE: 0.0146   MAE: 0.0767
+Epoch 2800| Train | Loss: 0.0070   MSE: 0.0070   MAE: 0.0553
+Epoch 2800|  Val  | Loss: 0.0143   MSE: 0.0143   MAE: 0.0747
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 2820| Train | Loss: 0.0073   MSE: 0.0073   MAE: 0.0577
+Epoch 2820|  Val  | Loss: 0.0146   MSE: 0.0146   MAE: 0.0768
+Epoch 2840| Train | Loss: 0.0070   MSE: 0.0070   MAE: 0.0559
+Epoch 2840|  Val  | Loss: 0.0143   MSE: 0.0143   MAE: 0.0751
+Epoch 2860| Train | Loss: 0.0070   MSE: 0.0070   MAE: 0.0559
+Epoch 2860|  Val  | Loss: 0.0143   MSE: 0.0143   MAE: 0.0751
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 2880| Train | Loss: 0.0071   MSE: 0.0071   MAE: 0.0568
+Epoch 2880|  Val  | Loss: 0.0144   MSE: 0.0144   MAE: 0.0758
+Epoch 2900| Train | Loss: 0.0074   MSE: 0.0074   MAE: 0.0588
+Epoch 2900|  Val  | Loss: 0.0146   MSE: 0.0146   MAE: 0.0776
+Epoch 2920| Train | Loss: 0.0069   MSE: 0.0069   MAE: 0.0559
+Epoch 2920|  Val  | Loss: 0.0140   MSE: 0.0140   MAE: 0.0748
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 2940| Train | Loss: 0.0071   MSE: 0.0071   MAE: 0.0572
+Epoch 2940|  Val  | Loss: 0.0143   MSE: 0.0143   MAE: 0.0761
+Epoch 2960| Train | Loss: 0.0068   MSE: 0.0068   MAE: 0.0556
+Epoch 2960|  Val  | Loss: 0.0139   MSE: 0.0139   MAE: 0.0746
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 2980| Train | Loss: 0.0068   MSE: 0.0068   MAE: 0.0553
+Epoch 2980|  Val  | Loss: 0.0139   MSE: 0.0139   MAE: 0.0745
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 3000| Train | Loss: 0.0067   MSE: 0.0067   MAE: 0.0551
+Epoch 3000|  Val  | Loss: 0.0138   MSE: 0.0138   MAE: 0.0741
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 3020| Train | Loss: 0.0066   MSE: 0.0066   MAE: 0.0543
+Epoch 3020|  Val  | Loss: 0.0137   MSE: 0.0137   MAE: 0.0735
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 3040| Train | Loss: 0.0070   MSE: 0.0070   MAE: 0.0569
+Epoch 3040|  Val  | Loss: 0.0141   MSE: 0.0141   MAE: 0.0759
+Epoch 3060| Train | Loss: 0.0067   MSE: 0.0067   MAE: 0.0553
+Epoch 3060|  Val  | Loss: 0.0138   MSE: 0.0138   MAE: 0.0746
+Epoch 3080| Train | Loss: 0.0063   MSE: 0.0063   MAE: 0.0529
+Epoch 3080|  Val  | Loss: 0.0133   MSE: 0.0133   MAE: 0.0723
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 3100| Train | Loss: 0.0063   MSE: 0.0063   MAE: 0.0531
+Epoch 3100|  Val  | Loss: 0.0134   MSE: 0.0134   MAE: 0.0728
+Epoch 3120| Train | Loss: 0.0066   MSE: 0.0066   MAE: 0.0552
+Epoch 3120|  Val  | Loss: 0.0136   MSE: 0.0136   MAE: 0.0741
+Epoch 3140| Train | Loss: 0.0062   MSE: 0.0062   MAE: 0.0528
+Epoch 3140|  Val  | Loss: 0.0132   MSE: 0.0132   MAE: 0.0721
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 3160| Train | Loss: 0.0064   MSE: 0.0064   MAE: 0.0543
+Epoch 3160|  Val  | Loss: 0.0133   MSE: 0.0133   MAE: 0.0726
+Epoch 3180| Train | Loss: 0.0064   MSE: 0.0064   MAE: 0.0545
+Epoch 3180|  Val  | Loss: 0.0135   MSE: 0.0135   MAE: 0.0735
+Epoch 3200| Train | Loss: 0.0063   MSE: 0.0063   MAE: 0.0537
+Epoch 3200|  Val  | Loss: 0.0132   MSE: 0.0132   MAE: 0.0727
+Epoch 3220| Train | Loss: 0.0062   MSE: 0.0062   MAE: 0.0532
+Epoch 3220|  Val  | Loss: 0.0132   MSE: 0.0132   MAE: 0.0723
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 3240| Train | Loss: 0.0064   MSE: 0.0064   MAE: 0.0543
+Epoch 3240|  Val  | Loss: 0.0133   MSE: 0.0133   MAE: 0.0729
+Epoch 3260| Train | Loss: 0.0060   MSE: 0.0060   MAE: 0.0521
+Epoch 3260|  Val  | Loss: 0.0129   MSE: 0.0129   MAE: 0.0716
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 3280| Train | Loss: 0.0064   MSE: 0.0064   MAE: 0.0550
+Epoch 3280|  Val  | Loss: 0.0134   MSE: 0.0134   MAE: 0.0737
+Epoch 3300| Train | Loss: 0.0059   MSE: 0.0059   MAE: 0.0513
+Epoch 3300|  Val  | Loss: 0.0128   MSE: 0.0128   MAE: 0.0711
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 3320| Train | Loss: 0.0058   MSE: 0.0058   MAE: 0.0510
+Epoch 3320|  Val  | Loss: 0.0127   MSE: 0.0127   MAE: 0.0706
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 3340| Train | Loss: 0.0062   MSE: 0.0062   MAE: 0.0541
+Epoch 3340|  Val  | Loss: 0.0130   MSE: 0.0130   MAE: 0.0726
+Epoch 3360| Train | Loss: 0.0057   MSE: 0.0057   MAE: 0.0505
+Epoch 3360|  Val  | Loss: 0.0126   MSE: 0.0126   MAE: 0.0702
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 3380| Train | Loss: 0.0060   MSE: 0.0060   MAE: 0.0523
+Epoch 3380|  Val  | Loss: 0.0127   MSE: 0.0127   MAE: 0.0712
+Epoch 3400| Train | Loss: 0.0062   MSE: 0.0062   MAE: 0.0542
+Epoch 3400|  Val  | Loss: 0.0132   MSE: 0.0132   MAE: 0.0736
+Epoch 3420| Train | Loss: 0.0058   MSE: 0.0058   MAE: 0.0512
+Epoch 3420|  Val  | Loss: 0.0126   MSE: 0.0126   MAE: 0.0705
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 3440| Train | Loss: 0.0062   MSE: 0.0062   MAE: 0.0542
+Epoch 3440|  Val  | Loss: 0.0129   MSE: 0.0129   MAE: 0.0728
+Epoch 3460| Train | Loss: 0.0057   MSE: 0.0057   MAE: 0.0510
+Epoch 3460|  Val  | Loss: 0.0125   MSE: 0.0125   MAE: 0.0703
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 3480| Train | Loss: 0.0061   MSE: 0.0061   MAE: 0.0536
+Epoch 3480|  Val  | Loss: 0.0128   MSE: 0.0128   MAE: 0.0720
+Epoch 3500| Train | Loss: 0.0057   MSE: 0.0057   MAE: 0.0515
+Epoch 3500|  Val  | Loss: 0.0124   MSE: 0.0124   MAE: 0.0703
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 3520| Train | Loss: 0.0055   MSE: 0.0055   MAE: 0.0494
+Epoch 3520|  Val  | Loss: 0.0122   MSE: 0.0122   MAE: 0.0693
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 3540| Train | Loss: 0.0058   MSE: 0.0058   MAE: 0.0518
+Epoch 3540|  Val  | Loss: 0.0124   MSE: 0.0124   MAE: 0.0705
+Epoch 3560| Train | Loss: 0.0061   MSE: 0.0061   MAE: 0.0543
+Epoch 3560|  Val  | Loss: 0.0130   MSE: 0.0130   MAE: 0.0735
+Epoch 3580| Train | Loss: 0.0053   MSE: 0.0053   MAE: 0.0486
+Epoch 3580|  Val  | Loss: 0.0120   MSE: 0.0120   MAE: 0.0685
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 3600| Train | Loss: 0.0055   MSE: 0.0055   MAE: 0.0500
+Epoch 3600|  Val  | Loss: 0.0122   MSE: 0.0122   MAE: 0.0697
+Epoch 3620| Train | Loss: 0.0056   MSE: 0.0056   MAE: 0.0508
+Epoch 3620|  Val  | Loss: 0.0124   MSE: 0.0124   MAE: 0.0704
+Epoch 3640| Train | Loss: 0.0053   MSE: 0.0053   MAE: 0.0490
+Epoch 3640|  Val  | Loss: 0.0121   MSE: 0.0121   MAE: 0.0689
+Epoch 3660| Train | Loss: 0.0054   MSE: 0.0054   MAE: 0.0494
+Epoch 3660|  Val  | Loss: 0.0120   MSE: 0.0120   MAE: 0.0688
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 3680| Train | Loss: 0.0054   MSE: 0.0054   MAE: 0.0502
+Epoch 3680|  Val  | Loss: 0.0121   MSE: 0.0121   MAE: 0.0693
+Epoch 3700| Train | Loss: 0.0054   MSE: 0.0054   MAE: 0.0502
+Epoch 3700|  Val  | Loss: 0.0121   MSE: 0.0121   MAE: 0.0695
+Epoch 3720| Train | Loss: 0.0056   MSE: 0.0056   MAE: 0.0513
+Epoch 3720|  Val  | Loss: 0.0121   MSE: 0.0121   MAE: 0.0699
+Epoch 3740| Train | Loss: 0.0053   MSE: 0.0053   MAE: 0.0493
+Epoch 3740|  Val  | Loss: 0.0119   MSE: 0.0119   MAE: 0.0688
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 3760| Train | Loss: 0.0053   MSE: 0.0053   MAE: 0.0490
+Epoch 3760|  Val  | Loss: 0.0118   MSE: 0.0118   MAE: 0.0684
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 3780| Train | Loss: 0.0055   MSE: 0.0055   MAE: 0.0507
+Epoch 3780|  Val  | Loss: 0.0121   MSE: 0.0121   MAE: 0.0701
+Epoch 3800| Train | Loss: 0.0058   MSE: 0.0058   MAE: 0.0531
+Epoch 3800|  Val  | Loss: 0.0124   MSE: 0.0124   MAE: 0.0718
+Epoch 3820| Train | Loss: 0.0053   MSE: 0.0053   MAE: 0.0499
+Epoch 3820|  Val  | Loss: 0.0119   MSE: 0.0119   MAE: 0.0690
+Epoch 3840| Train | Loss: 0.0050   MSE: 0.0050   MAE: 0.0479
+Epoch 3840|  Val  | Loss: 0.0117   MSE: 0.0117   MAE: 0.0680
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 3860| Train | Loss: 0.0054   MSE: 0.0054   MAE: 0.0507
+Epoch 3860|  Val  | Loss: 0.0119   MSE: 0.0119   MAE: 0.0694
+Epoch 3880| Train | Loss: 0.0050   MSE: 0.0050   MAE: 0.0480
+Epoch 3880|  Val  | Loss: 0.0116   MSE: 0.0116   MAE: 0.0676
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 3900| Train | Loss: 0.0052   MSE: 0.0052   MAE: 0.0493
+Epoch 3900|  Val  | Loss: 0.0118   MSE: 0.0118   MAE: 0.0688
+Epoch 3920| Train | Loss: 0.0053   MSE: 0.0053   MAE: 0.0500
+Epoch 3920|  Val  | Loss: 0.0118   MSE: 0.0118   MAE: 0.0688
+Epoch 3940| Train | Loss: 0.0051   MSE: 0.0051   MAE: 0.0488
+Epoch 3940|  Val  | Loss: 0.0117   MSE: 0.0117   MAE: 0.0686
+Epoch 3960| Train | Loss: 0.0050   MSE: 0.0050   MAE: 0.0481
+Epoch 3960|  Val  | Loss: 0.0116   MSE: 0.0116   MAE: 0.0678
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 3980| Train | Loss: 0.0053   MSE: 0.0053   MAE: 0.0501
+Epoch 3980|  Val  | Loss: 0.0117   MSE: 0.0117   MAE: 0.0688
+Epoch 4000| Train | Loss: 0.0050   MSE: 0.0050   MAE: 0.0482
+Epoch 4000|  Val  | Loss: 0.0115   MSE: 0.0115   MAE: 0.0675
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 4020| Train | Loss: 0.0049   MSE: 0.0049   MAE: 0.0477
+Epoch 4020|  Val  | Loss: 0.0114   MSE: 0.0114   MAE: 0.0673
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 4040| Train | Loss: 0.0052   MSE: 0.0052   MAE: 0.0496
+Epoch 4040|  Val  | Loss: 0.0117   MSE: 0.0117   MAE: 0.0686
+Epoch 4060| Train | Loss: 0.0050   MSE: 0.0050   MAE: 0.0483
+Epoch 4060|  Val  | Loss: 0.0115   MSE: 0.0115   MAE: 0.0678
+Epoch 4080| Train | Loss: 0.0050   MSE: 0.0050   MAE: 0.0482
+Epoch 4080|  Val  | Loss: 0.0115   MSE: 0.0115   MAE: 0.0680
+Epoch 4100| Train | Loss: 0.0048   MSE: 0.0048   MAE: 0.0469
+Epoch 4100|  Val  | Loss: 0.0113   MSE: 0.0113   MAE: 0.0670
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 4120| Train | Loss: 0.0052   MSE: 0.0052   MAE: 0.0503
+Epoch 4120|  Val  | Loss: 0.0117   MSE: 0.0117   MAE: 0.0690
+Epoch 4140| Train | Loss: 0.0049   MSE: 0.0049   MAE: 0.0476
+Epoch 4140|  Val  | Loss: 0.0113   MSE: 0.0113   MAE: 0.0673
+Epoch 4160| Train | Loss: 0.0049   MSE: 0.0049   MAE: 0.0484
+Epoch 4160|  Val  | Loss: 0.0113   MSE: 0.0113   MAE: 0.0676
+Epoch 4180| Train | Loss: 0.0048   MSE: 0.0048   MAE: 0.0475
+Epoch 4180|  Val  | Loss: 0.0113   MSE: 0.0113   MAE: 0.0676
+Epoch 4200| Train | Loss: 0.0049   MSE: 0.0049   MAE: 0.0482
+Epoch 4200|  Val  | Loss: 0.0113   MSE: 0.0113   MAE: 0.0675
+Epoch 4220| Train | Loss: 0.0046   MSE: 0.0046   MAE: 0.0458
+Epoch 4220|  Val  | Loss: 0.0110   MSE: 0.0110   MAE: 0.0661
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 4240| Train | Loss: 0.0049   MSE: 0.0049   MAE: 0.0480
+Epoch 4240|  Val  | Loss: 0.0113   MSE: 0.0113   MAE: 0.0675
+Epoch 4260| Train | Loss: 0.0048   MSE: 0.0048   MAE: 0.0475
+Epoch 4260|  Val  | Loss: 0.0112   MSE: 0.0112   MAE: 0.0668
+Epoch 4280| Train | Loss: 0.0047   MSE: 0.0047   MAE: 0.0468
+Epoch 4280|  Val  | Loss: 0.0111   MSE: 0.0111   MAE: 0.0668
+Epoch 4300| Train | Loss: 0.0048   MSE: 0.0048   MAE: 0.0477
+Epoch 4300|  Val  | Loss: 0.0112   MSE: 0.0112   MAE: 0.0672
+Epoch 4320| Train | Loss: 0.0050   MSE: 0.0050   MAE: 0.0491
+Epoch 4320|  Val  | Loss: 0.0113   MSE: 0.0113   MAE: 0.0681
+Epoch 4340| Train | Loss: 0.0049   MSE: 0.0049   MAE: 0.0486
+Epoch 4340|  Val  | Loss: 0.0113   MSE: 0.0113   MAE: 0.0679
+Epoch 4360| Train | Loss: 0.0046   MSE: 0.0046   MAE: 0.0467
+Epoch 4360|  Val  | Loss: 0.0110   MSE: 0.0110   MAE: 0.0664
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 4380| Train | Loss: 0.0052   MSE: 0.0052   MAE: 0.0508
+Epoch 4380|  Val  | Loss: 0.0114   MSE: 0.0114   MAE: 0.0683
+Epoch 4400| Train | Loss: 0.0046   MSE: 0.0046   MAE: 0.0468
+Epoch 4400|  Val  | Loss: 0.0110   MSE: 0.0110   MAE: 0.0664
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 4420| Train | Loss: 0.0046   MSE: 0.0046   MAE: 0.0462
+Epoch 4420|  Val  | Loss: 0.0109   MSE: 0.0109   MAE: 0.0660
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 4440| Train | Loss: 0.0044   MSE: 0.0044   MAE: 0.0453
+Epoch 4440|  Val  | Loss: 0.0107   MSE: 0.0107   MAE: 0.0649
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 4460| Train | Loss: 0.0043   MSE: 0.0043   MAE: 0.0443
+Epoch 4460|  Val  | Loss: 0.0107   MSE: 0.0107   MAE: 0.0647
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 4480| Train | Loss: 0.0044   MSE: 0.0044   MAE: 0.0449
+Epoch 4480|  Val  | Loss: 0.0106   MSE: 0.0106   MAE: 0.0645
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 4500| Train | Loss: 0.0049   MSE: 0.0049   MAE: 0.0493
+Epoch 4500|  Val  | Loss: 0.0112   MSE: 0.0112   MAE: 0.0683
+Epoch 4520| Train | Loss: 0.0044   MSE: 0.0044   MAE: 0.0450
+Epoch 4520|  Val  | Loss: 0.0107   MSE: 0.0107   MAE: 0.0650
+Epoch 4540| Train | Loss: 0.0046   MSE: 0.0046   MAE: 0.0469
+Epoch 4540|  Val  | Loss: 0.0108   MSE: 0.0108   MAE: 0.0657
+Epoch 4560| Train | Loss: 0.0046   MSE: 0.0046   MAE: 0.0469
+Epoch 4560|  Val  | Loss: 0.0109   MSE: 0.0109   MAE: 0.0665
+Epoch 4580| Train | Loss: 0.0046   MSE: 0.0046   MAE: 0.0466
+Epoch 4580|  Val  | Loss: 0.0108   MSE: 0.0108   MAE: 0.0661
+Epoch 4600| Train | Loss: 0.0046   MSE: 0.0046   MAE: 0.0470
+Epoch 4600|  Val  | Loss: 0.0108   MSE: 0.0108   MAE: 0.0662
+Epoch 4620| Train | Loss: 0.0050   MSE: 0.0050   MAE: 0.0503
+Epoch 4620|  Val  | Loss: 0.0113   MSE: 0.0113   MAE: 0.0690
+Epoch 4640| Train | Loss: 0.0045   MSE: 0.0045   MAE: 0.0461
+Epoch 4640|  Val  | Loss: 0.0107   MSE: 0.0107   MAE: 0.0658
+Epoch 4660| Train | Loss: 0.0043   MSE: 0.0043   MAE: 0.0452
+Epoch 4660|  Val  | Loss: 0.0106   MSE: 0.0106   MAE: 0.0651
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 4680| Train | Loss: 0.0044   MSE: 0.0044   MAE: 0.0459
+Epoch 4680|  Val  | Loss: 0.0107   MSE: 0.0107   MAE: 0.0657
+Epoch 4700| Train | Loss: 0.0044   MSE: 0.0044   MAE: 0.0461
+Epoch 4700|  Val  | Loss: 0.0107   MSE: 0.0107   MAE: 0.0658
+Epoch 4720| Train | Loss: 0.0042   MSE: 0.0042   MAE: 0.0443
+Epoch 4720|  Val  | Loss: 0.0104   MSE: 0.0104   MAE: 0.0641
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 4740| Train | Loss: 0.0044   MSE: 0.0044   MAE: 0.0463
+Epoch 4740|  Val  | Loss: 0.0106   MSE: 0.0106   MAE: 0.0655
+Epoch 4760| Train | Loss: 0.0044   MSE: 0.0044   MAE: 0.0457
+Epoch 4760|  Val  | Loss: 0.0106   MSE: 0.0106   MAE: 0.0653
+Epoch 4780| Train | Loss: 0.0043   MSE: 0.0043   MAE: 0.0448
+Epoch 4780|  Val  | Loss: 0.0105   MSE: 0.0105   MAE: 0.0648
+Epoch 4800| Train | Loss: 0.0043   MSE: 0.0043   MAE: 0.0454
+Epoch 4800|  Val  | Loss: 0.0106   MSE: 0.0106   MAE: 0.0655
+Epoch 4820| Train | Loss: 0.0043   MSE: 0.0043   MAE: 0.0455
+Epoch 4820|  Val  | Loss: 0.0105   MSE: 0.0105   MAE: 0.0651
+Epoch 4840| Train | Loss: 0.0042   MSE: 0.0042   MAE: 0.0450
+Epoch 4840|  Val  | Loss: 0.0104   MSE: 0.0104   MAE: 0.0646
+Epoch 4860| Train | Loss: 0.0043   MSE: 0.0043   MAE: 0.0456
+Epoch 4860|  Val  | Loss: 0.0105   MSE: 0.0105   MAE: 0.0651
+Epoch 4880| Train | Loss: 0.0041   MSE: 0.0041   MAE: 0.0441
+Epoch 4880|  Val  | Loss: 0.0104   MSE: 0.0104   MAE: 0.0645
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 4900| Train | Loss: 0.0046   MSE: 0.0046   MAE: 0.0478
+Epoch 4900|  Val  | Loss: 0.0108   MSE: 0.0108   MAE: 0.0670
+Epoch 4920| Train | Loss: 0.0044   MSE: 0.0044   MAE: 0.0460
+Epoch 4920|  Val  | Loss: 0.0105   MSE: 0.0105   MAE: 0.0653
+Epoch 4940| Train | Loss: 0.0041   MSE: 0.0041   MAE: 0.0442
+Epoch 4940|  Val  | Loss: 0.0103   MSE: 0.0103   MAE: 0.0641
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 4960| Train | Loss: 0.0040   MSE: 0.0040   MAE: 0.0430
+Epoch 4960|  Val  | Loss: 0.0101   MSE: 0.0101   MAE: 0.0632
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 4980| Train | Loss: 0.0046   MSE: 0.0046   MAE: 0.0479
+Epoch 4980|  Val  | Loss: 0.0108   MSE: 0.0108   MAE: 0.0675
+Epoch 5000| Train | Loss: 0.0042   MSE: 0.0042   MAE: 0.0449
+Epoch 5000|  Val  | Loss: 0.0103   MSE: 0.0103   MAE: 0.0640
+Epoch 5020| Train | Loss: 0.0041   MSE: 0.0041   MAE: 0.0446
+Epoch 5020|  Val  | Loss: 0.0103   MSE: 0.0103   MAE: 0.0646
+Epoch 5040| Train | Loss: 0.0042   MSE: 0.0042   MAE: 0.0449
+Epoch 5040|  Val  | Loss: 0.0103   MSE: 0.0103   MAE: 0.0645
+Epoch 5060| Train | Loss: 0.0041   MSE: 0.0041   MAE: 0.0442
+Epoch 5060|  Val  | Loss: 0.0101   MSE: 0.0101   MAE: 0.0638
+Epoch 5080| Train | Loss: 0.0043   MSE: 0.0043   MAE: 0.0459
+Epoch 5080|  Val  | Loss: 0.0103   MSE: 0.0103   MAE: 0.0647
+Epoch 5100| Train | Loss: 0.0040   MSE: 0.0040   MAE: 0.0435
+Epoch 5100|  Val  | Loss: 0.0101   MSE: 0.0101   MAE: 0.0633
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 5120| Train | Loss: 0.0040   MSE: 0.0040   MAE: 0.0438
+Epoch 5120|  Val  | Loss: 0.0102   MSE: 0.0102   MAE: 0.0642
+Epoch 5140| Train | Loss: 0.0040   MSE: 0.0040   MAE: 0.0433
+Epoch 5140|  Val  | Loss: 0.0101   MSE: 0.0101   MAE: 0.0635
+Epoch 5160| Train | Loss: 0.0041   MSE: 0.0041   MAE: 0.0444
+Epoch 5160|  Val  | Loss: 0.0102   MSE: 0.0102   MAE: 0.0643
+Epoch 5180| Train | Loss: 0.0041   MSE: 0.0041   MAE: 0.0446
+Epoch 5180|  Val  | Loss: 0.0102   MSE: 0.0102   MAE: 0.0646
+Epoch 5200| Train | Loss: 0.0039   MSE: 0.0039   MAE: 0.0431
+Epoch 5200|  Val  | Loss: 0.0101   MSE: 0.0101   MAE: 0.0634
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 5220| Train | Loss: 0.0043   MSE: 0.0043   MAE: 0.0458
+Epoch 5220|  Val  | Loss: 0.0103   MSE: 0.0103   MAE: 0.0649
+Epoch 5240| Train | Loss: 0.0041   MSE: 0.0041   MAE: 0.0444
+Epoch 5240|  Val  | Loss: 0.0100   MSE: 0.0100   MAE: 0.0636
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 5260| Train | Loss: 0.0038   MSE: 0.0038   MAE: 0.0423
+Epoch 5260|  Val  | Loss: 0.0099   MSE: 0.0099   MAE: 0.0628
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 5280| Train | Loss: 0.0042   MSE: 0.0042   MAE: 0.0452
+Epoch 5280|  Val  | Loss: 0.0102   MSE: 0.0102   MAE: 0.0647
+Epoch 5300| Train | Loss: 0.0041   MSE: 0.0041   MAE: 0.0452
+Epoch 5300|  Val  | Loss: 0.0102   MSE: 0.0102   MAE: 0.0647
+Epoch 5320| Train | Loss: 0.0040   MSE: 0.0040   MAE: 0.0442
+Epoch 5320|  Val  | Loss: 0.0102   MSE: 0.0102   MAE: 0.0645
+Epoch 5340| Train | Loss: 0.0043   MSE: 0.0043   MAE: 0.0462
+Epoch 5340|  Val  | Loss: 0.0103   MSE: 0.0103   MAE: 0.0655
+Epoch 5360| Train | Loss: 0.0039   MSE: 0.0039   MAE: 0.0433
+Epoch 5360|  Val  | Loss: 0.0100   MSE: 0.0100   MAE: 0.0636
+Epoch 5380| Train | Loss: 0.0040   MSE: 0.0040   MAE: 0.0443
+Epoch 5380|  Val  | Loss: 0.0101   MSE: 0.0101   MAE: 0.0640
+Epoch 5400| Train | Loss: 0.0039   MSE: 0.0039   MAE: 0.0437
+Epoch 5400|  Val  | Loss: 0.0100   MSE: 0.0100   MAE: 0.0635
+Epoch 5420| Train | Loss: 0.0040   MSE: 0.0040   MAE: 0.0443
+Epoch 5420|  Val  | Loss: 0.0099   MSE: 0.0099   MAE: 0.0636
+Epoch 5440| Train | Loss: 0.0039   MSE: 0.0039   MAE: 0.0435
+Epoch 5440|  Val  | Loss: 0.0100   MSE: 0.0100   MAE: 0.0640
+Epoch 5460| Train | Loss: 0.0039   MSE: 0.0039   MAE: 0.0434
+Epoch 5460|  Val  | Loss: 0.0099   MSE: 0.0099   MAE: 0.0631
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 5480| Train | Loss: 0.0038   MSE: 0.0038   MAE: 0.0428
+Epoch 5480|  Val  | Loss: 0.0098   MSE: 0.0098   MAE: 0.0626
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 5500| Train | Loss: 0.0037   MSE: 0.0037   MAE: 0.0419
+Epoch 5500|  Val  | Loss: 0.0097   MSE: 0.0097   MAE: 0.0619
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 5520| Train | Loss: 0.0036   MSE: 0.0036   MAE: 0.0412
+Epoch 5520|  Val  | Loss: 0.0097   MSE: 0.0097   MAE: 0.0621
+Epoch 5540| Train | Loss: 0.0040   MSE: 0.0040   MAE: 0.0443
+Epoch 5540|  Val  | Loss: 0.0101   MSE: 0.0101   MAE: 0.0646
+Epoch 5560| Train | Loss: 0.0038   MSE: 0.0038   MAE: 0.0431
+Epoch 5560|  Val  | Loss: 0.0099   MSE: 0.0099   MAE: 0.0636
+Epoch 5580| Train | Loss: 0.0037   MSE: 0.0037   MAE: 0.0424
+Epoch 5580|  Val  | Loss: 0.0097   MSE: 0.0097   MAE: 0.0625
+Epoch 5600| Train | Loss: 0.0038   MSE: 0.0038   MAE: 0.0427
+Epoch 5600|  Val  | Loss: 0.0097   MSE: 0.0097   MAE: 0.0624
+Epoch 5620| Train | Loss: 0.0036   MSE: 0.0036   MAE: 0.0411
+Epoch 5620|  Val  | Loss: 0.0096   MSE: 0.0096   MAE: 0.0615
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 5640| Train | Loss: 0.0036   MSE: 0.0036   MAE: 0.0415
+Epoch 5640|  Val  | Loss: 0.0095   MSE: 0.0095   MAE: 0.0615
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 5660| Train | Loss: 0.0037   MSE: 0.0037   MAE: 0.0419
+Epoch 5660|  Val  | Loss: 0.0096   MSE: 0.0096   MAE: 0.0621
+Epoch 5680| Train | Loss: 0.0037   MSE: 0.0037   MAE: 0.0423
+Epoch 5680|  Val  | Loss: 0.0096   MSE: 0.0096   MAE: 0.0623
+Epoch 5700| Train | Loss: 0.0036   MSE: 0.0036   MAE: 0.0418
+Epoch 5700|  Val  | Loss: 0.0095   MSE: 0.0095   MAE: 0.0618
+Epoch 5720| Train | Loss: 0.0041   MSE: 0.0041   MAE: 0.0452
+Epoch 5720|  Val  | Loss: 0.0101   MSE: 0.0101   MAE: 0.0648
+Epoch 5740| Train | Loss: 0.0037   MSE: 0.0037   MAE: 0.0421
+Epoch 5740|  Val  | Loss: 0.0095   MSE: 0.0095   MAE: 0.0620
+Epoch 5760| Train | Loss: 0.0038   MSE: 0.0038   MAE: 0.0435
+Epoch 5760|  Val  | Loss: 0.0097   MSE: 0.0097   MAE: 0.0631
+Epoch 5780| Train | Loss: 0.0037   MSE: 0.0037   MAE: 0.0424
+Epoch 5780|  Val  | Loss: 0.0096   MSE: 0.0096   MAE: 0.0624
+Epoch 5800| Train | Loss: 0.0036   MSE: 0.0036   MAE: 0.0418
+Epoch 5800|  Val  | Loss: 0.0095   MSE: 0.0095   MAE: 0.0618
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 5820| Train | Loss: 0.0035   MSE: 0.0035   MAE: 0.0411
+Epoch 5820|  Val  | Loss: 0.0094   MSE: 0.0094   MAE: 0.0614
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 5840| Train | Loss: 0.0037   MSE: 0.0037   MAE: 0.0427
+Epoch 5840|  Val  | Loss: 0.0096   MSE: 0.0096   MAE: 0.0624
+Epoch 5860| Train | Loss: 0.0038   MSE: 0.0038   MAE: 0.0436
+Epoch 5860|  Val  | Loss: 0.0097   MSE: 0.0097   MAE: 0.0634
+Epoch 5880| Train | Loss: 0.0038   MSE: 0.0038   MAE: 0.0431
+Epoch 5880|  Val  | Loss: 0.0096   MSE: 0.0096   MAE: 0.0626
+Epoch 5900| Train | Loss: 0.0037   MSE: 0.0037   MAE: 0.0425
+Epoch 5900|  Val  | Loss: 0.0096   MSE: 0.0096   MAE: 0.0624
+Epoch 5920| Train | Loss: 0.0035   MSE: 0.0035   MAE: 0.0414
+Epoch 5920|  Val  | Loss: 0.0095   MSE: 0.0095   MAE: 0.0618
+Epoch 5940| Train | Loss: 0.0034   MSE: 0.0034   MAE: 0.0398
+Epoch 5940|  Val  | Loss: 0.0093   MSE: 0.0093   MAE: 0.0605
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 5960| Train | Loss: 0.0037   MSE: 0.0037   MAE: 0.0424
+Epoch 5960|  Val  | Loss: 0.0097   MSE: 0.0097   MAE: 0.0630
+Epoch 5980| Train | Loss: 0.0034   MSE: 0.0034   MAE: 0.0401
+Epoch 5980|  Val  | Loss: 0.0092   MSE: 0.0092   MAE: 0.0606
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 6000| Train | Loss: 0.0036   MSE: 0.0036   MAE: 0.0416
+Epoch 6000|  Val  | Loss: 0.0094   MSE: 0.0094   MAE: 0.0615
+Epoch 6020| Train | Loss: 0.0037   MSE: 0.0037   MAE: 0.0428
+Epoch 6020|  Val  | Loss: 0.0096   MSE: 0.0096   MAE: 0.0627
+Epoch 6040| Train | Loss: 0.0038   MSE: 0.0038   MAE: 0.0437
+Epoch 6040|  Val  | Loss: 0.0097   MSE: 0.0097   MAE: 0.0633
+Epoch 6060| Train | Loss: 0.0035   MSE: 0.0035   MAE: 0.0410
+Epoch 6060|  Val  | Loss: 0.0093   MSE: 0.0093   MAE: 0.0609
+Epoch 6080| Train | Loss: 0.0035   MSE: 0.0035   MAE: 0.0416
+Epoch 6080|  Val  | Loss: 0.0094   MSE: 0.0094   MAE: 0.0616
+Epoch 6100| Train | Loss: 0.0034   MSE: 0.0034   MAE: 0.0409
+Epoch 6100|  Val  | Loss: 0.0093   MSE: 0.0093   MAE: 0.0612
+Epoch 6120| Train | Loss: 0.0036   MSE: 0.0036   MAE: 0.0423
+Epoch 6120|  Val  | Loss: 0.0094   MSE: 0.0094   MAE: 0.0622
+Epoch 6140| Train | Loss: 0.0038   MSE: 0.0038   MAE: 0.0440
+Epoch 6140|  Val  | Loss: 0.0095   MSE: 0.0095   MAE: 0.0624
+Epoch 6160| Train | Loss: 0.0035   MSE: 0.0035   MAE: 0.0418
+Epoch 6160|  Val  | Loss: 0.0093   MSE: 0.0093   MAE: 0.0616
+Epoch 6180| Train | Loss: 0.0033   MSE: 0.0033   MAE: 0.0399
+Epoch 6180|  Val  | Loss: 0.0091   MSE: 0.0091   MAE: 0.0602
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 6200| Train | Loss: 0.0034   MSE: 0.0034   MAE: 0.0408
+Epoch 6200|  Val  | Loss: 0.0092   MSE: 0.0092   MAE: 0.0606
+Epoch 6220| Train | Loss: 0.0035   MSE: 0.0035   MAE: 0.0414
+Epoch 6220|  Val  | Loss: 0.0093   MSE: 0.0093   MAE: 0.0613
+Epoch 6240| Train | Loss: 0.0034   MSE: 0.0034   MAE: 0.0411
+Epoch 6240|  Val  | Loss: 0.0092   MSE: 0.0092   MAE: 0.0610
+Epoch 6260| Train | Loss: 0.0035   MSE: 0.0035   MAE: 0.0414
+Epoch 6260|  Val  | Loss: 0.0093   MSE: 0.0093   MAE: 0.0614
+Epoch 6280| Train | Loss: 0.0033   MSE: 0.0033   MAE: 0.0397
+Epoch 6280|  Val  | Loss: 0.0092   MSE: 0.0092   MAE: 0.0607
+Epoch 6300| Train | Loss: 0.0035   MSE: 0.0035   MAE: 0.0419
+Epoch 6300|  Val  | Loss: 0.0093   MSE: 0.0093   MAE: 0.0614
+Epoch 6320| Train | Loss: 0.0034   MSE: 0.0034   MAE: 0.0409
+Epoch 6320|  Val  | Loss: 0.0092   MSE: 0.0092   MAE: 0.0611
+Epoch 6340| Train | Loss: 0.0036   MSE: 0.0036   MAE: 0.0426
+Epoch 6340|  Val  | Loss: 0.0093   MSE: 0.0093   MAE: 0.0619
+Epoch 6360| Train | Loss: 0.0035   MSE: 0.0035   MAE: 0.0415
+Epoch 6360|  Val  | Loss: 0.0092   MSE: 0.0092   MAE: 0.0611
+Epoch 6380| Train | Loss: 0.0034   MSE: 0.0034   MAE: 0.0413
+Epoch 6380|  Val  | Loss: 0.0092   MSE: 0.0092   MAE: 0.0612
+Epoch 6400| Train | Loss: 0.0035   MSE: 0.0035   MAE: 0.0420
+Epoch 6400|  Val  | Loss: 0.0094   MSE: 0.0094   MAE: 0.0624
+Epoch 6420| Train | Loss: 0.0033   MSE: 0.0033   MAE: 0.0401
+Epoch 6420|  Val  | Loss: 0.0090   MSE: 0.0090   MAE: 0.0601
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 6440| Train | Loss: 0.0035   MSE: 0.0035   MAE: 0.0422
+Epoch 6440|  Val  | Loss: 0.0092   MSE: 0.0092   MAE: 0.0612
+Epoch 6460| Train | Loss: 0.0033   MSE: 0.0033   MAE: 0.0402
+Epoch 6460|  Val  | Loss: 0.0091   MSE: 0.0091   MAE: 0.0606
+Epoch 6480| Train | Loss: 0.0034   MSE: 0.0034   MAE: 0.0406
+Epoch 6480|  Val  | Loss: 0.0092   MSE: 0.0092   MAE: 0.0613
+Epoch 6500| Train | Loss: 0.0036   MSE: 0.0036   MAE: 0.0424
+Epoch 6500|  Val  | Loss: 0.0093   MSE: 0.0093   MAE: 0.0622
+Epoch 6520| Train | Loss: 0.0032   MSE: 0.0032   MAE: 0.0389
+Epoch 6520|  Val  | Loss: 0.0089   MSE: 0.0089   MAE: 0.0597
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 6540| Train | Loss: 0.0033   MSE: 0.0033   MAE: 0.0406
+Epoch 6540|  Val  | Loss: 0.0091   MSE: 0.0091   MAE: 0.0606
+Epoch 6560| Train | Loss: 0.0032   MSE: 0.0032   MAE: 0.0390
+Epoch 6560|  Val  | Loss: 0.0089   MSE: 0.0089   MAE: 0.0595
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 6580| Train | Loss: 0.0035   MSE: 0.0035   MAE: 0.0422
+Epoch 6580|  Val  | Loss: 0.0093   MSE: 0.0093   MAE: 0.0620
+Epoch 6600| Train | Loss: 0.0033   MSE: 0.0033   MAE: 0.0402
+Epoch 6600|  Val  | Loss: 0.0090   MSE: 0.0090   MAE: 0.0604
+Epoch 6620| Train | Loss: 0.0030   MSE: 0.0030   MAE: 0.0379
+Epoch 6620|  Val  | Loss: 0.0088   MSE: 0.0088   MAE: 0.0588
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 6640| Train | Loss: 0.0036   MSE: 0.0036   MAE: 0.0426
+Epoch 6640|  Val  | Loss: 0.0093   MSE: 0.0093   MAE: 0.0619
+Epoch 6660| Train | Loss: 0.0032   MSE: 0.0032   MAE: 0.0392
+Epoch 6660|  Val  | Loss: 0.0089   MSE: 0.0089   MAE: 0.0597
+Epoch 6680| Train | Loss: 0.0032   MSE: 0.0032   MAE: 0.0396
+Epoch 6680|  Val  | Loss: 0.0089   MSE: 0.0089   MAE: 0.0601
+Epoch 6700| Train | Loss: 0.0031   MSE: 0.0031   MAE: 0.0390
+Epoch 6700|  Val  | Loss: 0.0089   MSE: 0.0089   MAE: 0.0595
+Epoch 6720| Train | Loss: 0.0033   MSE: 0.0033   MAE: 0.0403
+Epoch 6720|  Val  | Loss: 0.0090   MSE: 0.0090   MAE: 0.0604
+Epoch 6740| Train | Loss: 0.0030   MSE: 0.0030   MAE: 0.0380
+Epoch 6740|  Val  | Loss: 0.0087   MSE: 0.0087   MAE: 0.0587
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 6760| Train | Loss: 0.0035   MSE: 0.0035   MAE: 0.0420
+Epoch 6760|  Val  | Loss: 0.0092   MSE: 0.0092   MAE: 0.0616
+Epoch 6780| Train | Loss: 0.0031   MSE: 0.0031   MAE: 0.0391
+Epoch 6780|  Val  | Loss: 0.0088   MSE: 0.0088   MAE: 0.0593
+Epoch 6800| Train | Loss: 0.0032   MSE: 0.0032   MAE: 0.0398
+Epoch 6800|  Val  | Loss: 0.0089   MSE: 0.0089   MAE: 0.0600
+Epoch 6820| Train | Loss: 0.0033   MSE: 0.0033   MAE: 0.0402
+Epoch 6820|  Val  | Loss: 0.0089   MSE: 0.0089   MAE: 0.0601
+Epoch 6840| Train | Loss: 0.0033   MSE: 0.0033   MAE: 0.0403
+Epoch 6840|  Val  | Loss: 0.0090   MSE: 0.0090   MAE: 0.0603
+Epoch 6860| Train | Loss: 0.0033   MSE: 0.0033   MAE: 0.0410
+Epoch 6860|  Val  | Loss: 0.0090   MSE: 0.0090   MAE: 0.0608
+Epoch 6880| Train | Loss: 0.0032   MSE: 0.0032   MAE: 0.0397
+Epoch 6880|  Val  | Loss: 0.0088   MSE: 0.0088   MAE: 0.0597
+Epoch 6900| Train | Loss: 0.0031   MSE: 0.0031   MAE: 0.0390
+Epoch 6900|  Val  | Loss: 0.0088   MSE: 0.0088   MAE: 0.0598
+Epoch 6920| Train | Loss: 0.0032   MSE: 0.0032   MAE: 0.0402
+Epoch 6920|  Val  | Loss: 0.0089   MSE: 0.0089   MAE: 0.0603
+Epoch 6940| Train | Loss: 0.0030   MSE: 0.0030   MAE: 0.0378
+Epoch 6940|  Val  | Loss: 0.0087   MSE: 0.0087   MAE: 0.0587
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 6960| Train | Loss: 0.0033   MSE: 0.0033   MAE: 0.0412
+Epoch 6960|  Val  | Loss: 0.0090   MSE: 0.0090   MAE: 0.0607
+Epoch 6980| Train | Loss: 0.0030   MSE: 0.0030   MAE: 0.0383
+Epoch 6980|  Val  | Loss: 0.0087   MSE: 0.0087   MAE: 0.0588
+Epoch 7000| Train | Loss: 0.0033   MSE: 0.0033   MAE: 0.0412
+Epoch 7000|  Val  | Loss: 0.0090   MSE: 0.0090   MAE: 0.0610
+Epoch 7020| Train | Loss: 0.0035   MSE: 0.0035   MAE: 0.0425
+Epoch 7020|  Val  | Loss: 0.0091   MSE: 0.0091   MAE: 0.0618
+Epoch 7040| Train | Loss: 0.0032   MSE: 0.0032   MAE: 0.0396
+Epoch 7040|  Val  | Loss: 0.0088   MSE: 0.0088   MAE: 0.0600
+Epoch 7060| Train | Loss: 0.0033   MSE: 0.0033   MAE: 0.0408
+Epoch 7060|  Val  | Loss: 0.0089   MSE: 0.0089   MAE: 0.0605
+Epoch 7080| Train | Loss: 0.0033   MSE: 0.0033   MAE: 0.0412
+Epoch 7080|  Val  | Loss: 0.0089   MSE: 0.0089   MAE: 0.0606
+Epoch 7100| Train | Loss: 0.0030   MSE: 0.0030   MAE: 0.0383
+Epoch 7100|  Val  | Loss: 0.0086   MSE: 0.0086   MAE: 0.0589
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 7120| Train | Loss: 0.0031   MSE: 0.0031   MAE: 0.0388
+Epoch 7120|  Val  | Loss: 0.0088   MSE: 0.0088   MAE: 0.0594
+Epoch 7140| Train | Loss: 0.0031   MSE: 0.0031   MAE: 0.0395
+Epoch 7140|  Val  | Loss: 0.0088   MSE: 0.0088   MAE: 0.0598
+Epoch 7160| Train | Loss: 0.0030   MSE: 0.0030   MAE: 0.0385
+Epoch 7160|  Val  | Loss: 0.0087   MSE: 0.0087   MAE: 0.0590
+Epoch 7180| Train | Loss: 0.0032   MSE: 0.0032   MAE: 0.0400
+Epoch 7180|  Val  | Loss: 0.0088   MSE: 0.0088   MAE: 0.0600
+Epoch 7200| Train | Loss: 0.0029   MSE: 0.0029   MAE: 0.0374
+Epoch 7200|  Val  | Loss: 0.0086   MSE: 0.0086   MAE: 0.0584
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 7220| Train | Loss: 0.0031   MSE: 0.0031   MAE: 0.0393
+Epoch 7220|  Val  | Loss: 0.0087   MSE: 0.0087   MAE: 0.0598
+Epoch 7240| Train | Loss: 0.0030   MSE: 0.0030   MAE: 0.0385
+Epoch 7240|  Val  | Loss: 0.0086   MSE: 0.0086   MAE: 0.0588
+Epoch 7260| Train | Loss: 0.0030   MSE: 0.0030   MAE: 0.0388
+Epoch 7260|  Val  | Loss: 0.0087   MSE: 0.0087   MAE: 0.0592
+Epoch 7280| Train | Loss: 0.0036   MSE: 0.0036   MAE: 0.0431
+Epoch 7280|  Val  | Loss: 0.0093   MSE: 0.0093   MAE: 0.0630
+Epoch 7300| Train | Loss: 0.0031   MSE: 0.0031   MAE: 0.0391
+Epoch 7300|  Val  | Loss: 0.0086   MSE: 0.0086   MAE: 0.0593
+Epoch 7320| Train | Loss: 0.0031   MSE: 0.0031   MAE: 0.0393
+Epoch 7320|  Val  | Loss: 0.0087   MSE: 0.0087   MAE: 0.0594
+Epoch 7340| Train | Loss: 0.0029   MSE: 0.0029   MAE: 0.0377
+Epoch 7340|  Val  | Loss: 0.0085   MSE: 0.0085   MAE: 0.0587
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 7360| Train | Loss: 0.0031   MSE: 0.0031   MAE: 0.0391
+Epoch 7360|  Val  | Loss: 0.0087   MSE: 0.0087   MAE: 0.0594
+Epoch 7380| Train | Loss: 0.0035   MSE: 0.0035   MAE: 0.0425
+Epoch 7380|  Val  | Loss: 0.0090   MSE: 0.0090   MAE: 0.0615
+Epoch 7400| Train | Loss: 0.0028   MSE: 0.0028   MAE: 0.0367
+Epoch 7400|  Val  | Loss: 0.0084   MSE: 0.0084   MAE: 0.0576
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 7420| Train | Loss: 0.0032   MSE: 0.0032   MAE: 0.0405
+Epoch 7420|  Val  | Loss: 0.0089   MSE: 0.0089   MAE: 0.0607
+Epoch 7440| Train | Loss: 0.0032   MSE: 0.0032   MAE: 0.0403
+Epoch 7440|  Val  | Loss: 0.0088   MSE: 0.0088   MAE: 0.0601
+Epoch 7460| Train | Loss: 0.0032   MSE: 0.0032   MAE: 0.0400
+Epoch 7460|  Val  | Loss: 0.0088   MSE: 0.0088   MAE: 0.0602
+Epoch 7480| Train | Loss: 0.0030   MSE: 0.0030   MAE: 0.0383
+Epoch 7480|  Val  | Loss: 0.0085   MSE: 0.0085   MAE: 0.0587
+Epoch 7500| Train | Loss: 0.0028   MSE: 0.0028   MAE: 0.0367
+Epoch 7500|  Val  | Loss: 0.0084   MSE: 0.0084   MAE: 0.0575
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 7520| Train | Loss: 0.0029   MSE: 0.0029   MAE: 0.0377
+Epoch 7520|  Val  | Loss: 0.0085   MSE: 0.0085   MAE: 0.0585
+Epoch 7540| Train | Loss: 0.0029   MSE: 0.0029   MAE: 0.0375
+Epoch 7540|  Val  | Loss: 0.0084   MSE: 0.0084   MAE: 0.0580
+Epoch 7560| Train | Loss: 0.0029   MSE: 0.0029   MAE: 0.0376
+Epoch 7560|  Val  | Loss: 0.0084   MSE: 0.0084   MAE: 0.0581
+Epoch 7580| Train | Loss: 0.0032   MSE: 0.0032   MAE: 0.0404
+Epoch 7580|  Val  | Loss: 0.0087   MSE: 0.0087   MAE: 0.0598
+Epoch 7600| Train | Loss: 0.0028   MSE: 0.0028   MAE: 0.0367
+Epoch 7600|  Val  | Loss: 0.0083   MSE: 0.0083   MAE: 0.0575
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 7620| Train | Loss: 0.0032   MSE: 0.0032   MAE: 0.0407
+Epoch 7620|  Val  | Loss: 0.0087   MSE: 0.0087   MAE: 0.0599
+Epoch 7640| Train | Loss: 0.0030   MSE: 0.0030   MAE: 0.0390
+Epoch 7640|  Val  | Loss: 0.0086   MSE: 0.0086   MAE: 0.0594
+Epoch 7660| Train | Loss: 0.0028   MSE: 0.0028   MAE: 0.0370
+Epoch 7660|  Val  | Loss: 0.0083   MSE: 0.0083   MAE: 0.0575
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 7680| Train | Loss: 0.0032   MSE: 0.0032   MAE: 0.0408
+Epoch 7680|  Val  | Loss: 0.0087   MSE: 0.0087   MAE: 0.0602
+Epoch 7700| Train | Loss: 0.0031   MSE: 0.0031   MAE: 0.0399
+Epoch 7700|  Val  | Loss: 0.0087   MSE: 0.0087   MAE: 0.0599
+Epoch 7720| Train | Loss: 0.0029   MSE: 0.0029   MAE: 0.0379
+Epoch 7720|  Val  | Loss: 0.0084   MSE: 0.0084   MAE: 0.0583
+Epoch 7740| Train | Loss: 0.0028   MSE: 0.0028   MAE: 0.0369
+Epoch 7740|  Val  | Loss: 0.0083   MSE: 0.0083   MAE: 0.0576
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 7760| Train | Loss: 0.0026   MSE: 0.0026   MAE: 0.0355
+Epoch 7760|  Val  | Loss: 0.0082   MSE: 0.0082   MAE: 0.0567
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 7780| Train | Loss: 0.0028   MSE: 0.0028   MAE: 0.0374
+Epoch 7780|  Val  | Loss: 0.0083   MSE: 0.0083   MAE: 0.0577
+Epoch 7800| Train | Loss: 0.0029   MSE: 0.0029   MAE: 0.0378
+Epoch 7800|  Val  | Loss: 0.0084   MSE: 0.0084   MAE: 0.0582
+Epoch 7820| Train | Loss: 0.0027   MSE: 0.0027   MAE: 0.0359
+Epoch 7820|  Val  | Loss: 0.0082   MSE: 0.0082   MAE: 0.0571
+Epoch 7840| Train | Loss: 0.0029   MSE: 0.0029   MAE: 0.0383
+Epoch 7840|  Val  | Loss: 0.0084   MSE: 0.0084   MAE: 0.0587
+Epoch 7860| Train | Loss: 0.0030   MSE: 0.0030   MAE: 0.0387
+Epoch 7860|  Val  | Loss: 0.0085   MSE: 0.0085   MAE: 0.0590
+Epoch 7880| Train | Loss: 0.0027   MSE: 0.0027   MAE: 0.0363
+Epoch 7880|  Val  | Loss: 0.0082   MSE: 0.0082   MAE: 0.0570
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 7900| Train | Loss: 0.0029   MSE: 0.0029   MAE: 0.0382
+Epoch 7900|  Val  | Loss: 0.0084   MSE: 0.0084   MAE: 0.0584
+Epoch 7920| Train | Loss: 0.0028   MSE: 0.0028   MAE: 0.0376
+Epoch 7920|  Val  | Loss: 0.0083   MSE: 0.0083   MAE: 0.0581
+Epoch 7940| Train | Loss: 0.0030   MSE: 0.0030   MAE: 0.0388
+Epoch 7940|  Val  | Loss: 0.0086   MSE: 0.0086   MAE: 0.0596
+Epoch 7960| Train | Loss: 0.0029   MSE: 0.0029   MAE: 0.0385
+Epoch 7960|  Val  | Loss: 0.0084   MSE: 0.0084   MAE: 0.0584
+Epoch 7980| Train | Loss: 0.0029   MSE: 0.0029   MAE: 0.0384
+Epoch 7980|  Val  | Loss: 0.0084   MSE: 0.0084   MAE: 0.0587
+Epoch 8000| Train | Loss: 0.0027   MSE: 0.0027   MAE: 0.0367
+Epoch 8000|  Val  | Loss: 0.0083   MSE: 0.0083   MAE: 0.0576
+Epoch 8020| Train | Loss: 0.0029   MSE: 0.0029   MAE: 0.0383
+Epoch 8020|  Val  | Loss: 0.0084   MSE: 0.0084   MAE: 0.0588
+Epoch 8040| Train | Loss: 0.0027   MSE: 0.0027   MAE: 0.0368
+Epoch 8040|  Val  | Loss: 0.0082   MSE: 0.0082   MAE: 0.0574
+Epoch 8060| Train | Loss: 0.0028   MSE: 0.0028   MAE: 0.0375
+Epoch 8060|  Val  | Loss: 0.0082   MSE: 0.0082   MAE: 0.0578
+Epoch 8080| Train | Loss: 0.0027   MSE: 0.0027   MAE: 0.0364
+Epoch 8080|  Val  | Loss: 0.0082   MSE: 0.0082   MAE: 0.0575
+Epoch 8100| Train | Loss: 0.0028   MSE: 0.0028   MAE: 0.0375
+Epoch 8100|  Val  | Loss: 0.0083   MSE: 0.0083   MAE: 0.0581
+Epoch 8120| Train | Loss: 0.0028   MSE: 0.0028   MAE: 0.0374
+Epoch 8120|  Val  | Loss: 0.0082   MSE: 0.0082   MAE: 0.0575
+Epoch 8140| Train | Loss: 0.0030   MSE: 0.0030   MAE: 0.0389
+Epoch 8140|  Val  | Loss: 0.0084   MSE: 0.0084   MAE: 0.0590
+Epoch 8160| Train | Loss: 0.0029   MSE: 0.0029   MAE: 0.0387
+Epoch 8160|  Val  | Loss: 0.0083   MSE: 0.0083   MAE: 0.0581
+Epoch 8180| Train | Loss: 0.0030   MSE: 0.0030   MAE: 0.0396
+Epoch 8180|  Val  | Loss: 0.0085   MSE: 0.0085   MAE: 0.0595
+Epoch 8200| Train | Loss: 0.0026   MSE: 0.0026   MAE: 0.0362
+Epoch 8200|  Val  | Loss: 0.0081   MSE: 0.0081   MAE: 0.0569
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 8220| Train | Loss: 0.0029   MSE: 0.0029   MAE: 0.0385
+Epoch 8220|  Val  | Loss: 0.0084   MSE: 0.0084   MAE: 0.0588
+Epoch 8240| Train | Loss: 0.0027   MSE: 0.0027   MAE: 0.0372
+Epoch 8240|  Val  | Loss: 0.0082   MSE: 0.0082   MAE: 0.0575
+Epoch 8260| Train | Loss: 0.0027   MSE: 0.0027   MAE: 0.0367
+Epoch 8260|  Val  | Loss: 0.0082   MSE: 0.0082   MAE: 0.0577
+Epoch 8280| Train | Loss: 0.0029   MSE: 0.0029   MAE: 0.0385
+Epoch 8280|  Val  | Loss: 0.0084   MSE: 0.0084   MAE: 0.0588
+Epoch 8300| Train | Loss: 0.0026   MSE: 0.0026   MAE: 0.0362
+Epoch 8300|  Val  | Loss: 0.0081   MSE: 0.0081   MAE: 0.0568
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 8320| Train | Loss: 0.0030   MSE: 0.0030   MAE: 0.0396
+Epoch 8320|  Val  | Loss: 0.0085   MSE: 0.0085   MAE: 0.0597
+Epoch 8340| Train | Loss: 0.0027   MSE: 0.0027   MAE: 0.0371
+Epoch 8340|  Val  | Loss: 0.0082   MSE: 0.0082   MAE: 0.0575
+Epoch 8360| Train | Loss: 0.0028   MSE: 0.0028   MAE: 0.0377
+Epoch 8360|  Val  | Loss: 0.0082   MSE: 0.0082   MAE: 0.0578
+Epoch 8380| Train | Loss: 0.0027   MSE: 0.0027   MAE: 0.0364
+Epoch 8380|  Val  | Loss: 0.0081   MSE: 0.0081   MAE: 0.0570
+Epoch 8400| Train | Loss: 0.0028   MSE: 0.0028   MAE: 0.0374
+Epoch 8400|  Val  | Loss: 0.0082   MSE: 0.0082   MAE: 0.0575
+Epoch 8420| Train | Loss: 0.0025   MSE: 0.0025   MAE: 0.0347
+Epoch 8420|  Val  | Loss: 0.0079   MSE: 0.0079   MAE: 0.0558
+Save model to results/kaiming_uniform__1111_14-33/best_loss.pth
+Epoch 8440| Train | Loss: 0.0028   MSE: 0.0028   MAE: 0.0375
+Epoch 8440|  Val  | Loss: 0.0082   MSE: 0.0082   MAE: 0.0578
+Epoch 8460| Train | Loss: 0.0027   MSE: 0.0027   MAE: 0.0373
+Epoch 8460|  Val  | Loss: 0.0082   MSE: 0.0082   MAE: 0.0577
+Epoch 8480| Train | Loss: 0.0026   MSE: 0.0026   MAE: 0.0358
+Epoch 8480|  Val  | Loss: 0.0080   MSE: 0.0080   MAE: 0.0567
+Epoch 8500| Train | Loss: 0.0026   MSE: 0.0026   MAE: 0.0357
+Epoch 8500|  Val  | Loss: 0.0080   MSE: 0.0080   MAE: 0.0562
+Epoch 8520| Train | Loss: 0.0026   MSE: 0.0026   MAE: 0.0363
+Epoch 8520|  Val  | Loss: 0.0080   MSE: 0.0080   MAE: 0.0569
+Epoch 8540| Train | Loss: 0.0026   MSE: 0.0026   MAE: 0.0365
+Epoch 8540|  Val  | Loss: 0.0080   MSE: 0.0080   MAE: 0.0570
+Epoch 8560| Train | Loss: 0.0028   MSE: 0.0028   MAE: 0.0375
+Epoch 8560|  Val  | Loss: 0.0081   MSE: 0.0081   MAE: 0.0574
+Epoch 8580| Train | Loss: 0.0026   MSE: 0.0026   MAE: 0.0363
+Epoch 8580|  Val  | Loss: 0.0080   MSE: 0.0080   MAE: 0.0565
+Epoch 8600| Train | Loss: 0.0028   MSE: 0.0028   MAE: 0.0380
+Epoch 8600|  Val  | Loss: 0.0081   MSE: 0.0081   MAE: 0.0576
+Epoch 8620| Train | Loss: 0.0028   MSE: 0.0028   MAE: 0.0375
+Epoch 8620|  Val  | Loss: 0.0082   MSE: 0.0082   MAE: 0.0579
+Epoch 8640| Train | Loss: 0.0027   MSE: 0.0027   MAE: 0.0367
+Epoch 8640|  Val  | Loss: 0.0081   MSE: 0.0081   MAE: 0.0571
+Epoch 8660| Train | Loss: 0.0027   MSE: 0.0027   MAE: 0.0371
+Epoch 8660|  Val  | Loss: 0.0080   MSE: 0.0080   MAE: 0.0568
+Epoch 8680| Train | Loss: 0.0026   MSE: 0.0026   MAE: 0.0363
+Epoch 8680|  Val  | Loss: 0.0080   MSE: 0.0080   MAE: 0.0565
+Epoch 8700| Train | Loss: 0.0029   MSE: 0.0029   MAE: 0.0384
+Epoch 8700|  Val  | Loss: 0.0082   MSE: 0.0082   MAE: 0.0580
+Epoch 8720| Train | Loss: 0.0027   MSE: 0.0027   MAE: 0.0373
+Epoch 8720|  Val  | Loss: 0.0082   MSE: 0.0082   MAE: 0.0577
+Epoch 8740| Train | Loss: 0.0027   MSE: 0.0027   MAE: 0.0375
+Epoch 8740|  Val  | Loss: 0.0081   MSE: 0.0081   MAE: 0.0577
+Epoch 8760| Train | Loss: 0.0026   MSE: 0.0026   MAE: 0.0364
+Epoch 8760|  Val  | Loss: 0.0080   MSE: 0.0080   MAE: 0.0569
+Epoch 8780| Train | Loss: 0.0026   MSE: 0.0026   MAE: 0.0363
+Epoch 8780|  Val  | Loss: 0.0080   MSE: 0.0080   MAE: 0.0568
+Epoch 8800| Train | Loss: 0.0026   MSE: 0.0026   MAE: 0.0362
+Epoch 8800|  Val  | Loss: 0.0080   MSE: 0.0080   MAE: 0.0570
+Epoch 8820| Train | Loss: 0.0026   MSE: 0.0026   MAE: 0.0366
+Epoch 8820|  Val  | Loss: 0.0080   MSE: 0.0080   MAE: 0.0571

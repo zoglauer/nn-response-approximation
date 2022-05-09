@@ -60,7 +60,7 @@ if __name__ == '__main__':
     val_loader = torch.utils.data.DataLoader(val_dset, 
         batch_size=config.eval_batch_size)
     
-
+ 
     # Model, Loss, Optimizer
     if config.model_type == 'fc':
         model_param = {

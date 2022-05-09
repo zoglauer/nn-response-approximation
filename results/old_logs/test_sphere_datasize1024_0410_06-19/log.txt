@@ -1,0 +1,1125 @@
+Number of parameters in model: 601690452
+Using NVIDIA GeForce RTX 3090
+Epoch   0| Train | Loss: 15.3562   MSE: 15.3562   MAE: 2.8709
+Epoch   0|  Val  | Loss: 1334616.7500   MSE: 1334616.7500   MAE: 991.6862
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch  20| Train | Loss: 1.1535   MSE: 1.1535   MAE: 0.7921
+Epoch  20|  Val  | Loss: 0.7466   MSE: 0.7466   MAE: 0.4870
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch  40| Train | Loss: 0.5441   MSE: 0.5441   MAE: 0.3463
+Epoch  40|  Val  | Loss: 0.5483   MSE: 0.5483   MAE: 0.3615
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch  60| Train | Loss: 0.5043   MSE: 0.5043   MAE: 0.3495
+Epoch  60|  Val  | Loss: 0.5047   MSE: 0.5047   MAE: 0.3531
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch  80| Train | Loss: 0.4787   MSE: 0.4787   MAE: 0.3450
+Epoch  80|  Val  | Loss: 0.4854   MSE: 0.4854   MAE: 0.3478
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 100| Train | Loss: 0.4615   MSE: 0.4615   MAE: 0.3472
+Epoch 100|  Val  | Loss: 0.4676   MSE: 0.4676   MAE: 0.3565
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 120| Train | Loss: 0.4518   MSE: 0.4518   MAE: 0.3584
+Epoch 120|  Val  | Loss: 0.4577   MSE: 0.4577   MAE: 0.3560
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 140| Train | Loss: 0.4364   MSE: 0.4364   MAE: 0.3510
+Epoch 140|  Val  | Loss: 0.4421   MSE: 0.4421   MAE: 0.3532
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 160| Train | Loss: 0.4282   MSE: 0.4282   MAE: 0.3495
+Epoch 160|  Val  | Loss: 0.4344   MSE: 0.4344   MAE: 0.3519
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 180| Train | Loss: 0.4252   MSE: 0.4252   MAE: 0.3484
+Epoch 180|  Val  | Loss: 0.4303   MSE: 0.4303   MAE: 0.3422
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 200| Train | Loss: 0.4055   MSE: 0.4055   MAE: 0.3391
+Epoch 200|  Val  | Loss: 0.4129   MSE: 0.4129   MAE: 0.3430
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 220| Train | Loss: 0.3925   MSE: 0.3925   MAE: 0.3301
+Epoch 220|  Val  | Loss: 0.4017   MSE: 0.4017   MAE: 0.3358
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 240| Train | Loss: 0.3858   MSE: 0.3858   MAE: 0.3262
+Epoch 240|  Val  | Loss: 0.3918   MSE: 0.3918   MAE: 0.3250
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 260| Train | Loss: 0.3820   MSE: 0.3820   MAE: 0.3342
+Epoch 260|  Val  | Loss: 0.3888   MSE: 0.3888   MAE: 0.3354
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 280| Train | Loss: 0.3779   MSE: 0.3779   MAE: 0.3250
+Epoch 280|  Val  | Loss: 0.3853   MSE: 0.3853   MAE: 0.3248
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 300| Train | Loss: 0.3712   MSE: 0.3712   MAE: 0.3219
+Epoch 300|  Val  | Loss: 0.3817   MSE: 0.3817   MAE: 0.3234
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 320| Train | Loss: 0.3676   MSE: 0.3676   MAE: 0.3193
+Epoch 320|  Val  | Loss: 0.3786   MSE: 0.3786   MAE: 0.3253
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 340| Train | Loss: 0.3687   MSE: 0.3687   MAE: 0.3221
+Epoch 340|  Val  | Loss: 0.3787   MSE: 0.3787   MAE: 0.3261
+Epoch 360| Train | Loss: 0.3677   MSE: 0.3677   MAE: 0.3178
+Epoch 360|  Val  | Loss: 0.3781   MSE: 0.3781   MAE: 0.3284
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 380| Train | Loss: 0.3739   MSE: 0.3739   MAE: 0.3237
+Epoch 380|  Val  | Loss: 0.3766   MSE: 0.3766   MAE: 0.3230
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 400| Train | Loss: 0.3674   MSE: 0.3674   MAE: 0.3188
+Epoch 400|  Val  | Loss: 0.3763   MSE: 0.3763   MAE: 0.3227
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 420| Train | Loss: 0.3600   MSE: 0.3600   MAE: 0.3181
+Epoch 420|  Val  | Loss: 0.3715   MSE: 0.3715   MAE: 0.3231
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 440| Train | Loss: 0.3573   MSE: 0.3573   MAE: 0.3185
+Epoch 440|  Val  | Loss: 0.3694   MSE: 0.3694   MAE: 0.3225
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 460| Train | Loss: 0.3651   MSE: 0.3651   MAE: 0.3250
+Epoch 460|  Val  | Loss: 0.3737   MSE: 0.3737   MAE: 0.3222
+Epoch 480| Train | Loss: 0.3611   MSE: 0.3611   MAE: 0.3189
+Epoch 480|  Val  | Loss: 0.3785   MSE: 0.3785   MAE: 0.3348
+Epoch 500| Train | Loss: 0.3538   MSE: 0.3538   MAE: 0.3182
+Epoch 500|  Val  | Loss: 0.3667   MSE: 0.3667   MAE: 0.3233
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 520| Train | Loss: 0.3500   MSE: 0.3500   MAE: 0.3150
+Epoch 520|  Val  | Loss: 0.3638   MSE: 0.3638   MAE: 0.3212
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 540| Train | Loss: 0.3492   MSE: 0.3492   MAE: 0.3155
+Epoch 540|  Val  | Loss: 0.3628   MSE: 0.3628   MAE: 0.3187
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 560| Train | Loss: 0.3489   MSE: 0.3489   MAE: 0.3149
+Epoch 560|  Val  | Loss: 0.3658   MSE: 0.3658   MAE: 0.3221
+Epoch 580| Train | Loss: 0.3458   MSE: 0.3458   MAE: 0.3144
+Epoch 580|  Val  | Loss: 0.3594   MSE: 0.3594   MAE: 0.3177
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 600| Train | Loss: 0.3426   MSE: 0.3426   MAE: 0.3109
+Epoch 600|  Val  | Loss: 0.3580   MSE: 0.3580   MAE: 0.3182
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 620| Train | Loss: 0.3436   MSE: 0.3436   MAE: 0.3137
+Epoch 620|  Val  | Loss: 0.3614   MSE: 0.3614   MAE: 0.3174
+Epoch 640| Train | Loss: 0.3442   MSE: 0.3442   MAE: 0.3146
+Epoch 640|  Val  | Loss: 0.3596   MSE: 0.3596   MAE: 0.3197
+Epoch 660| Train | Loss: 0.3387   MSE: 0.3387   MAE: 0.3095
+Epoch 660|  Val  | Loss: 0.3544   MSE: 0.3544   MAE: 0.3157
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 680| Train | Loss: 0.3385   MSE: 0.3385   MAE: 0.3091
+Epoch 680|  Val  | Loss: 0.3539   MSE: 0.3539   MAE: 0.3140
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 700| Train | Loss: 0.3366   MSE: 0.3366   MAE: 0.3078
+Epoch 700|  Val  | Loss: 0.3533   MSE: 0.3533   MAE: 0.3149
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 720| Train | Loss: 0.3363   MSE: 0.3363   MAE: 0.3081
+Epoch 720|  Val  | Loss: 0.3525   MSE: 0.3525   MAE: 0.3149
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 740| Train | Loss: 0.3355   MSE: 0.3355   MAE: 0.3079
+Epoch 740|  Val  | Loss: 0.3519   MSE: 0.3519   MAE: 0.3140
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 760| Train | Loss: 0.3363   MSE: 0.3363   MAE: 0.3069
+Epoch 760|  Val  | Loss: 0.3543   MSE: 0.3543   MAE: 0.3180
+Epoch 780| Train | Loss: 0.3341   MSE: 0.3341   MAE: 0.3069
+Epoch 780|  Val  | Loss: 0.3517   MSE: 0.3517   MAE: 0.3144
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 800| Train | Loss: 0.3345   MSE: 0.3345   MAE: 0.3082
+Epoch 800|  Val  | Loss: 0.3505   MSE: 0.3505   MAE: 0.3133
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 820| Train | Loss: 0.3350   MSE: 0.3350   MAE: 0.3086
+Epoch 820|  Val  | Loss: 0.3507   MSE: 0.3507   MAE: 0.3134
+Epoch 840| Train | Loss: 0.3326   MSE: 0.3326   MAE: 0.3068
+Epoch 840|  Val  | Loss: 0.3491   MSE: 0.3491   MAE: 0.3136
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 860| Train | Loss: 0.3344   MSE: 0.3344   MAE: 0.3064
+Epoch 860|  Val  | Loss: 0.3525   MSE: 0.3525   MAE: 0.3189
+Epoch 880| Train | Loss: 0.3326   MSE: 0.3326   MAE: 0.3077
+Epoch 880|  Val  | Loss: 0.3491   MSE: 0.3491   MAE: 0.3134
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 900| Train | Loss: 0.3325   MSE: 0.3325   MAE: 0.3067
+Epoch 900|  Val  | Loss: 0.3490   MSE: 0.3490   MAE: 0.3142
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 920| Train | Loss: 0.3312   MSE: 0.3312   MAE: 0.3071
+Epoch 920|  Val  | Loss: 0.3469   MSE: 0.3469   MAE: 0.3123
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 940| Train | Loss: 0.3355   MSE: 0.3355   MAE: 0.3133
+Epoch 940|  Val  | Loss: 0.3530   MSE: 0.3530   MAE: 0.3240
+Epoch 960| Train | Loss: 0.3294   MSE: 0.3294   MAE: 0.3061
+Epoch 960|  Val  | Loss: 0.3474   MSE: 0.3474   MAE: 0.3145
+Epoch 980| Train | Loss: 0.3281   MSE: 0.3281   MAE: 0.3059
+Epoch 980|  Val  | Loss: 0.3453   MSE: 0.3453   MAE: 0.3129
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 1000| Train | Loss: 0.3290   MSE: 0.3290   MAE: 0.3069
+Epoch 1000|  Val  | Loss: 0.3470   MSE: 0.3470   MAE: 0.3147
+Epoch 1020| Train | Loss: 0.3282   MSE: 0.3282   MAE: 0.3070
+Epoch 1020|  Val  | Loss: 0.3462   MSE: 0.3462   MAE: 0.3145
+Epoch 1040| Train | Loss: 0.3282   MSE: 0.3282   MAE: 0.3059
+Epoch 1040|  Val  | Loss: 0.3457   MSE: 0.3457   MAE: 0.3146
+Epoch 1060| Train | Loss: 0.3297   MSE: 0.3297   MAE: 0.3092
+Epoch 1060|  Val  | Loss: 0.3454   MSE: 0.3454   MAE: 0.3133
+Epoch 1080| Train | Loss: 0.3280   MSE: 0.3280   MAE: 0.3086
+Epoch 1080|  Val  | Loss: 0.3445   MSE: 0.3445   MAE: 0.3128
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 1100| Train | Loss: 0.3256   MSE: 0.3256   MAE: 0.3057
+Epoch 1100|  Val  | Loss: 0.3431   MSE: 0.3431   MAE: 0.3128
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 1120| Train | Loss: 0.3269   MSE: 0.3269   MAE: 0.3065
+Epoch 1120|  Val  | Loss: 0.3450   MSE: 0.3450   MAE: 0.3152
+Epoch 1140| Train | Loss: 0.3294   MSE: 0.3294   MAE: 0.3110
+Epoch 1140|  Val  | Loss: 0.3470   MSE: 0.3470   MAE: 0.3161
+Epoch 1160| Train | Loss: 0.3260   MSE: 0.3260   MAE: 0.3057
+Epoch 1160|  Val  | Loss: 0.3437   MSE: 0.3437   MAE: 0.3136
+Epoch 1180| Train | Loss: 0.3250   MSE: 0.3250   MAE: 0.3054
+Epoch 1180|  Val  | Loss: 0.3427   MSE: 0.3427   MAE: 0.3125
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 1200| Train | Loss: 0.3275   MSE: 0.3275   MAE: 0.3055
+Epoch 1200|  Val  | Loss: 0.3440   MSE: 0.3440   MAE: 0.3143
+Epoch 1220| Train | Loss: 0.3239   MSE: 0.3239   MAE: 0.3050
+Epoch 1220|  Val  | Loss: 0.3419   MSE: 0.3419   MAE: 0.3125
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 1240| Train | Loss: 0.3254   MSE: 0.3254   MAE: 0.3069
+Epoch 1240|  Val  | Loss: 0.3424   MSE: 0.3424   MAE: 0.3123
+Epoch 1260| Train | Loss: 0.3251   MSE: 0.3251   MAE: 0.3052
+Epoch 1260|  Val  | Loss: 0.3432   MSE: 0.3432   MAE: 0.3132
+Epoch 1280| Train | Loss: 0.3239   MSE: 0.3239   MAE: 0.3042
+Epoch 1280|  Val  | Loss: 0.3422   MSE: 0.3422   MAE: 0.3131
+Epoch 1300| Train | Loss: 0.3238   MSE: 0.3238   MAE: 0.3053
+Epoch 1300|  Val  | Loss: 0.3424   MSE: 0.3424   MAE: 0.3115
+Epoch 1320| Train | Loss: 0.3233   MSE: 0.3233   MAE: 0.3042
+Epoch 1320|  Val  | Loss: 0.3414   MSE: 0.3414   MAE: 0.3122
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 1340| Train | Loss: 0.3248   MSE: 0.3248   MAE: 0.3053
+Epoch 1340|  Val  | Loss: 0.3443   MSE: 0.3443   MAE: 0.3163
+Epoch 1360| Train | Loss: 0.3238   MSE: 0.3238   MAE: 0.3054
+Epoch 1360|  Val  | Loss: 0.3427   MSE: 0.3427   MAE: 0.3118
+Epoch 1380| Train | Loss: 0.3232   MSE: 0.3232   MAE: 0.3035
+Epoch 1380|  Val  | Loss: 0.3411   MSE: 0.3411   MAE: 0.3116
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 1400| Train | Loss: 0.3229   MSE: 0.3229   MAE: 0.3032
+Epoch 1400|  Val  | Loss: 0.3423   MSE: 0.3423   MAE: 0.3122
+Epoch 1420| Train | Loss: 0.3236   MSE: 0.3236   MAE: 0.3044
+Epoch 1420|  Val  | Loss: 0.3422   MSE: 0.3422   MAE: 0.3131
+Epoch 1440| Train | Loss: 0.3229   MSE: 0.3229   MAE: 0.3046
+Epoch 1440|  Val  | Loss: 0.3408   MSE: 0.3408   MAE: 0.3113
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 1460| Train | Loss: 0.3251   MSE: 0.3251   MAE: 0.3061
+Epoch 1460|  Val  | Loss: 0.3424   MSE: 0.3424   MAE: 0.3109
+Epoch 1480| Train | Loss: 0.3225   MSE: 0.3225   MAE: 0.3031
+Epoch 1480|  Val  | Loss: 0.3411   MSE: 0.3411   MAE: 0.3119
+Epoch 1500| Train | Loss: 0.3242   MSE: 0.3242   MAE: 0.3061
+Epoch 1500|  Val  | Loss: 0.3418   MSE: 0.3418   MAE: 0.3114
+Epoch 1520| Train | Loss: 0.3230   MSE: 0.3230   MAE: 0.3036
+Epoch 1520|  Val  | Loss: 0.3412   MSE: 0.3412   MAE: 0.3116
+Epoch 1540| Train | Loss: 0.3237   MSE: 0.3237   MAE: 0.3044
+Epoch 1540|  Val  | Loss: 0.3425   MSE: 0.3425   MAE: 0.3116
+Epoch 1560| Train | Loss: 0.3221   MSE: 0.3221   MAE: 0.3030
+Epoch 1560|  Val  | Loss: 0.3407   MSE: 0.3407   MAE: 0.3116
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 1580| Train | Loss: 0.3228   MSE: 0.3228   MAE: 0.3037
+Epoch 1580|  Val  | Loss: 0.3415   MSE: 0.3415   MAE: 0.3126
+Epoch 1600| Train | Loss: 0.3249   MSE: 0.3249   MAE: 0.3061
+Epoch 1600|  Val  | Loss: 0.3446   MSE: 0.3446   MAE: 0.3136
+Epoch 1620| Train | Loss: 0.3222   MSE: 0.3222   MAE: 0.3034
+Epoch 1620|  Val  | Loss: 0.3414   MSE: 0.3414   MAE: 0.3130
+Epoch 1640| Train | Loss: 0.3214   MSE: 0.3214   MAE: 0.3025
+Epoch 1640|  Val  | Loss: 0.3401   MSE: 0.3401   MAE: 0.3105
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 1660| Train | Loss: 0.3219   MSE: 0.3219   MAE: 0.3034
+Epoch 1660|  Val  | Loss: 0.3407   MSE: 0.3407   MAE: 0.3101
+Epoch 1680| Train | Loss: 0.3226   MSE: 0.3226   MAE: 0.3037
+Epoch 1680|  Val  | Loss: 0.3419   MSE: 0.3419   MAE: 0.3134
+Epoch 1700| Train | Loss: 0.3219   MSE: 0.3219   MAE: 0.3027
+Epoch 1700|  Val  | Loss: 0.3409   MSE: 0.3409   MAE: 0.3115
+Epoch 1720| Train | Loss: 0.3217   MSE: 0.3217   MAE: 0.3015
+Epoch 1720|  Val  | Loss: 0.3405   MSE: 0.3405   MAE: 0.3107
+Epoch 1740| Train | Loss: 0.3213   MSE: 0.3213   MAE: 0.3025
+Epoch 1740|  Val  | Loss: 0.3398   MSE: 0.3398   MAE: 0.3102
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 1760| Train | Loss: 0.3231   MSE: 0.3231   MAE: 0.3053
+Epoch 1760|  Val  | Loss: 0.3420   MSE: 0.3420   MAE: 0.3141
+Epoch 1780| Train | Loss: 0.3214   MSE: 0.3214   MAE: 0.3030
+Epoch 1780|  Val  | Loss: 0.3397   MSE: 0.3397   MAE: 0.3099
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 1800| Train | Loss: 0.3237   MSE: 0.3237   MAE: 0.3054
+Epoch 1800|  Val  | Loss: 0.3410   MSE: 0.3410   MAE: 0.3102
+Epoch 1820| Train | Loss: 0.3217   MSE: 0.3217   MAE: 0.3032
+Epoch 1820|  Val  | Loss: 0.3404   MSE: 0.3404   MAE: 0.3101
+Epoch 1840| Train | Loss: 0.3217   MSE: 0.3217   MAE: 0.3041
+Epoch 1840|  Val  | Loss: 0.3402   MSE: 0.3402   MAE: 0.3102
+Epoch 1860| Train | Loss: 0.3223   MSE: 0.3223   MAE: 0.3029
+Epoch 1860|  Val  | Loss: 0.3425   MSE: 0.3425   MAE: 0.3102
+Epoch 1880| Train | Loss: 0.3212   MSE: 0.3212   MAE: 0.3021
+Epoch 1880|  Val  | Loss: 0.3405   MSE: 0.3405   MAE: 0.3119
+Epoch 1900| Train | Loss: 0.3217   MSE: 0.3217   MAE: 0.3038
+Epoch 1900|  Val  | Loss: 0.3405   MSE: 0.3405   MAE: 0.3108
+Epoch 1920| Train | Loss: 0.3211   MSE: 0.3211   MAE: 0.3019
+Epoch 1920|  Val  | Loss: 0.3398   MSE: 0.3398   MAE: 0.3100
+Epoch 1940| Train | Loss: 0.3217   MSE: 0.3217   MAE: 0.3036
+Epoch 1940|  Val  | Loss: 0.3401   MSE: 0.3401   MAE: 0.3091
+Epoch 1960| Train | Loss: 0.3222   MSE: 0.3222   MAE: 0.3043
+Epoch 1960|  Val  | Loss: 0.3408   MSE: 0.3408   MAE: 0.3098
+Epoch 1980| Train | Loss: 0.3249   MSE: 0.3249   MAE: 0.3035
+Epoch 1980|  Val  | Loss: 0.3444   MSE: 0.3444   MAE: 0.3130
+Epoch 2000| Train | Loss: 0.3204   MSE: 0.3204   MAE: 0.3018
+Epoch 2000|  Val  | Loss: 0.3395   MSE: 0.3395   MAE: 0.3100
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 2020| Train | Loss: 0.3227   MSE: 0.3227   MAE: 0.3050
+Epoch 2020|  Val  | Loss: 0.3403   MSE: 0.3403   MAE: 0.3095
+Epoch 2040| Train | Loss: 0.3204   MSE: 0.3204   MAE: 0.3019
+Epoch 2040|  Val  | Loss: 0.3395   MSE: 0.3395   MAE: 0.3094
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 2060| Train | Loss: 0.3208   MSE: 0.3208   MAE: 0.3016
+Epoch 2060|  Val  | Loss: 0.3392   MSE: 0.3392   MAE: 0.3097
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 2080| Train | Loss: 0.3207   MSE: 0.3207   MAE: 0.3020
+Epoch 2080|  Val  | Loss: 0.3400   MSE: 0.3400   MAE: 0.3105
+Epoch 2100| Train | Loss: 0.3213   MSE: 0.3213   MAE: 0.3019
+Epoch 2100|  Val  | Loss: 0.3403   MSE: 0.3403   MAE: 0.3105
+Epoch 2120| Train | Loss: 0.3217   MSE: 0.3217   MAE: 0.3036
+Epoch 2120|  Val  | Loss: 0.3399   MSE: 0.3399   MAE: 0.3081
+Epoch 2140| Train | Loss: 0.3205   MSE: 0.3205   MAE: 0.3018
+Epoch 2140|  Val  | Loss: 0.3392   MSE: 0.3392   MAE: 0.3091
+Epoch 2160| Train | Loss: 0.3208   MSE: 0.3208   MAE: 0.3020
+Epoch 2160|  Val  | Loss: 0.3396   MSE: 0.3396   MAE: 0.3102
+Epoch 2180| Train | Loss: 0.3203   MSE: 0.3203   MAE: 0.3019
+Epoch 2180|  Val  | Loss: 0.3392   MSE: 0.3392   MAE: 0.3100
+Epoch 2200| Train | Loss: 0.3220   MSE: 0.3220   MAE: 0.3045
+Epoch 2200|  Val  | Loss: 0.3405   MSE: 0.3405   MAE: 0.3100
+Epoch 2220| Train | Loss: 0.3206   MSE: 0.3206   MAE: 0.3029
+Epoch 2220|  Val  | Loss: 0.3393   MSE: 0.3393   MAE: 0.3097
+Epoch 2240| Train | Loss: 0.3222   MSE: 0.3222   MAE: 0.3031
+Epoch 2240|  Val  | Loss: 0.3409   MSE: 0.3409   MAE: 0.3117
+Epoch 2260| Train | Loss: 0.3225   MSE: 0.3225   MAE: 0.3049
+Epoch 2260|  Val  | Loss: 0.3412   MSE: 0.3412   MAE: 0.3111
+Epoch 2280| Train | Loss: 0.3213   MSE: 0.3213   MAE: 0.3027
+Epoch 2280|  Val  | Loss: 0.3400   MSE: 0.3400   MAE: 0.3079
+Epoch 2300| Train | Loss: 0.3210   MSE: 0.3210   MAE: 0.3010
+Epoch 2300|  Val  | Loss: 0.3406   MSE: 0.3406   MAE: 0.3105
+Epoch 2320| Train | Loss: 0.3218   MSE: 0.3218   MAE: 0.3022
+Epoch 2320|  Val  | Loss: 0.3403   MSE: 0.3403   MAE: 0.3104
+Epoch 2340| Train | Loss: 0.3202   MSE: 0.3202   MAE: 0.3022
+Epoch 2340|  Val  | Loss: 0.3392   MSE: 0.3392   MAE: 0.3085
+Epoch 2360| Train | Loss: 0.3207   MSE: 0.3207   MAE: 0.3013
+Epoch 2360|  Val  | Loss: 0.3403   MSE: 0.3403   MAE: 0.3105
+Epoch 2380| Train | Loss: 0.3214   MSE: 0.3214   MAE: 0.3037
+Epoch 2380|  Val  | Loss: 0.3398   MSE: 0.3398   MAE: 0.3086
+Epoch 2400| Train | Loss: 0.3211   MSE: 0.3211   MAE: 0.3009
+Epoch 2400|  Val  | Loss: 0.3400   MSE: 0.3400   MAE: 0.3102
+Epoch 2420| Train | Loss: 0.3221   MSE: 0.3221   MAE: 0.3011
+Epoch 2420|  Val  | Loss: 0.3411   MSE: 0.3411   MAE: 0.3102
+Epoch 2440| Train | Loss: 0.3201   MSE: 0.3201   MAE: 0.3021
+Epoch 2440|  Val  | Loss: 0.3390   MSE: 0.3390   MAE: 0.3082
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 2460| Train | Loss: 0.3229   MSE: 0.3229   MAE: 0.3011
+Epoch 2460|  Val  | Loss: 0.3437   MSE: 0.3437   MAE: 0.3122
+Epoch 2480| Train | Loss: 0.3197   MSE: 0.3197   MAE: 0.3012
+Epoch 2480|  Val  | Loss: 0.3389   MSE: 0.3389   MAE: 0.3096
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 2500| Train | Loss: 0.3206   MSE: 0.3206   MAE: 0.3013
+Epoch 2500|  Val  | Loss: 0.3397   MSE: 0.3397   MAE: 0.3102
+Epoch 2520| Train | Loss: 0.3221   MSE: 0.3221   MAE: 0.3020
+Epoch 2520|  Val  | Loss: 0.3421   MSE: 0.3421   MAE: 0.3121
+Epoch 2540| Train | Loss: 0.3197   MSE: 0.3197   MAE: 0.3008
+Epoch 2540|  Val  | Loss: 0.3389   MSE: 0.3389   MAE: 0.3092
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 2560| Train | Loss: 0.3204   MSE: 0.3204   MAE: 0.3004
+Epoch 2560|  Val  | Loss: 0.3401   MSE: 0.3401   MAE: 0.3101
+Epoch 2580| Train | Loss: 0.3203   MSE: 0.3203   MAE: 0.3022
+Epoch 2580|  Val  | Loss: 0.3390   MSE: 0.3390   MAE: 0.3086
+Epoch 2600| Train | Loss: 0.3199   MSE: 0.3199   MAE: 0.3018
+Epoch 2600|  Val  | Loss: 0.3395   MSE: 0.3395   MAE: 0.3099
+Epoch 2620| Train | Loss: 0.3198   MSE: 0.3198   MAE: 0.3001
+Epoch 2620|  Val  | Loss: 0.3393   MSE: 0.3393   MAE: 0.3096
+Epoch 2640| Train | Loss: 0.3199   MSE: 0.3199   MAE: 0.3017
+Epoch 2640|  Val  | Loss: 0.3394   MSE: 0.3394   MAE: 0.3096
+Epoch 2660| Train | Loss: 0.3201   MSE: 0.3201   MAE: 0.3009
+Epoch 2660|  Val  | Loss: 0.3393   MSE: 0.3393   MAE: 0.3094
+Epoch 2680| Train | Loss: 0.3204   MSE: 0.3204   MAE: 0.3023
+Epoch 2680|  Val  | Loss: 0.3393   MSE: 0.3393   MAE: 0.3090
+Epoch 2700| Train | Loss: 0.3208   MSE: 0.3208   MAE: 0.3032
+Epoch 2700|  Val  | Loss: 0.3391   MSE: 0.3391   MAE: 0.3072
+Epoch 2720| Train | Loss: 0.3214   MSE: 0.3214   MAE: 0.3032
+Epoch 2720|  Val  | Loss: 0.3402   MSE: 0.3402   MAE: 0.3076
+Epoch 2740| Train | Loss: 0.3200   MSE: 0.3200   MAE: 0.3005
+Epoch 2740|  Val  | Loss: 0.3395   MSE: 0.3395   MAE: 0.3099
+Epoch 2760| Train | Loss: 0.3195   MSE: 0.3195   MAE: 0.3016
+Epoch 2760|  Val  | Loss: 0.3383   MSE: 0.3383   MAE: 0.3072
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 2780| Train | Loss: 0.3191   MSE: 0.3191   MAE: 0.3001
+Epoch 2780|  Val  | Loss: 0.3384   MSE: 0.3384   MAE: 0.3086
+Epoch 2800| Train | Loss: 0.3206   MSE: 0.3206   MAE: 0.3018
+Epoch 2800|  Val  | Loss: 0.3402   MSE: 0.3402   MAE: 0.3107
+Epoch 2820| Train | Loss: 0.3206   MSE: 0.3206   MAE: 0.3026
+Epoch 2820|  Val  | Loss: 0.3390   MSE: 0.3390   MAE: 0.3077
+Epoch 2840| Train | Loss: 0.3191   MSE: 0.3191   MAE: 0.3004
+Epoch 2840|  Val  | Loss: 0.3383   MSE: 0.3383   MAE: 0.3079
+Epoch 2860| Train | Loss: 0.3200   MSE: 0.3200   MAE: 0.3017
+Epoch 2860|  Val  | Loss: 0.3387   MSE: 0.3387   MAE: 0.3084
+Epoch 2880| Train | Loss: 0.3196   MSE: 0.3196   MAE: 0.3008
+Epoch 2880|  Val  | Loss: 0.3385   MSE: 0.3385   MAE: 0.3084
+Epoch 2900| Train | Loss: 0.3195   MSE: 0.3195   MAE: 0.3015
+Epoch 2900|  Val  | Loss: 0.3386   MSE: 0.3386   MAE: 0.3088
+Epoch 2920| Train | Loss: 0.3192   MSE: 0.3192   MAE: 0.2997
+Epoch 2920|  Val  | Loss: 0.3385   MSE: 0.3385   MAE: 0.3085
+Epoch 2940| Train | Loss: 0.3210   MSE: 0.3210   MAE: 0.3027
+Epoch 2940|  Val  | Loss: 0.3394   MSE: 0.3394   MAE: 0.3092
+Epoch 2960| Train | Loss: 0.3188   MSE: 0.3188   MAE: 0.3005
+Epoch 2960|  Val  | Loss: 0.3380   MSE: 0.3380   MAE: 0.3072
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 2980| Train | Loss: 0.3198   MSE: 0.3198   MAE: 0.2998
+Epoch 2980|  Val  | Loss: 0.3386   MSE: 0.3386   MAE: 0.3087
+Epoch 3000| Train | Loss: 0.3194   MSE: 0.3194   MAE: 0.3011
+Epoch 3000|  Val  | Loss: 0.3394   MSE: 0.3394   MAE: 0.3098
+Epoch 3020| Train | Loss: 0.3189   MSE: 0.3189   MAE: 0.3001
+Epoch 3020|  Val  | Loss: 0.3383   MSE: 0.3383   MAE: 0.3074
+Epoch 3040| Train | Loss: 0.3208   MSE: 0.3208   MAE: 0.3020
+Epoch 3040|  Val  | Loss: 0.3399   MSE: 0.3399   MAE: 0.3083
+Epoch 3060| Train | Loss: 0.3196   MSE: 0.3196   MAE: 0.3000
+Epoch 3060|  Val  | Loss: 0.3394   MSE: 0.3394   MAE: 0.3098
+Epoch 3080| Train | Loss: 0.3195   MSE: 0.3195   MAE: 0.2999
+Epoch 3080|  Val  | Loss: 0.3389   MSE: 0.3389   MAE: 0.3086
+Epoch 3100| Train | Loss: 0.3200   MSE: 0.3200   MAE: 0.2998
+Epoch 3100|  Val  | Loss: 0.3397   MSE: 0.3397   MAE: 0.3094
+Epoch 3120| Train | Loss: 0.3197   MSE: 0.3197   MAE: 0.3010
+Epoch 3120|  Val  | Loss: 0.3386   MSE: 0.3386   MAE: 0.3079
+Epoch 3140| Train | Loss: 0.3195   MSE: 0.3195   MAE: 0.3001
+Epoch 3140|  Val  | Loss: 0.3390   MSE: 0.3390   MAE: 0.3090
+Epoch 3160| Train | Loss: 0.3190   MSE: 0.3190   MAE: 0.3004
+Epoch 3160|  Val  | Loss: 0.3384   MSE: 0.3384   MAE: 0.3076
+Epoch 3180| Train | Loss: 0.3186   MSE: 0.3186   MAE: 0.3002
+Epoch 3180|  Val  | Loss: 0.3380   MSE: 0.3380   MAE: 0.3074
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 3200| Train | Loss: 0.3199   MSE: 0.3199   MAE: 0.3023
+Epoch 3200|  Val  | Loss: 0.3394   MSE: 0.3394   MAE: 0.3094
+Epoch 3220| Train | Loss: 0.3188   MSE: 0.3188   MAE: 0.3001
+Epoch 3220|  Val  | Loss: 0.3380   MSE: 0.3380   MAE: 0.3072
+Epoch 3240| Train | Loss: 0.3203   MSE: 0.3203   MAE: 0.2998
+Epoch 3240|  Val  | Loss: 0.3390   MSE: 0.3390   MAE: 0.3085
+Epoch 3260| Train | Loss: 0.3190   MSE: 0.3190   MAE: 0.2999
+Epoch 3260|  Val  | Loss: 0.3382   MSE: 0.3382   MAE: 0.3075
+Epoch 3280| Train | Loss: 0.3201   MSE: 0.3201   MAE: 0.2990
+Epoch 3280|  Val  | Loss: 0.3397   MSE: 0.3397   MAE: 0.3091
+Epoch 3300| Train | Loss: 0.3188   MSE: 0.3188   MAE: 0.3004
+Epoch 3300|  Val  | Loss: 0.3381   MSE: 0.3381   MAE: 0.3068
+Epoch 3320| Train | Loss: 0.3207   MSE: 0.3207   MAE: 0.3017
+Epoch 3320|  Val  | Loss: 0.3388   MSE: 0.3388   MAE: 0.3079
+Epoch 3340| Train | Loss: 0.3206   MSE: 0.3206   MAE: 0.3020
+Epoch 3340|  Val  | Loss: 0.3391   MSE: 0.3391   MAE: 0.3075
+Epoch 3360| Train | Loss: 0.3192   MSE: 0.3192   MAE: 0.3002
+Epoch 3360|  Val  | Loss: 0.3382   MSE: 0.3382   MAE: 0.3081
+Epoch 3380| Train | Loss: 0.3181   MSE: 0.3181   MAE: 0.2991
+Epoch 3380|  Val  | Loss: 0.3375   MSE: 0.3375   MAE: 0.3070
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 3400| Train | Loss: 0.3210   MSE: 0.3210   MAE: 0.3011
+Epoch 3400|  Val  | Loss: 0.3401   MSE: 0.3401   MAE: 0.3103
+Epoch 3420| Train | Loss: 0.3186   MSE: 0.3186   MAE: 0.2988
+Epoch 3420|  Val  | Loss: 0.3379   MSE: 0.3379   MAE: 0.3082
+Epoch 3440| Train | Loss: 0.3195   MSE: 0.3195   MAE: 0.2987
+Epoch 3440|  Val  | Loss: 0.3382   MSE: 0.3382   MAE: 0.3083
+Epoch 3460| Train | Loss: 0.3185   MSE: 0.3185   MAE: 0.3000
+Epoch 3460|  Val  | Loss: 0.3377   MSE: 0.3377   MAE: 0.3075
+Epoch 3480| Train | Loss: 0.3194   MSE: 0.3194   MAE: 0.3007
+Epoch 3480|  Val  | Loss: 0.3386   MSE: 0.3386   MAE: 0.3068
+Epoch 3500| Train | Loss: 0.3192   MSE: 0.3192   MAE: 0.2989
+Epoch 3500|  Val  | Loss: 0.3379   MSE: 0.3379   MAE: 0.3075
+Epoch 3520| Train | Loss: 0.3185   MSE: 0.3185   MAE: 0.3007
+Epoch 3520|  Val  | Loss: 0.3380   MSE: 0.3380   MAE: 0.3065
+Epoch 3540| Train | Loss: 0.3183   MSE: 0.3183   MAE: 0.2998
+Epoch 3540|  Val  | Loss: 0.3376   MSE: 0.3376   MAE: 0.3078
+Epoch 3560| Train | Loss: 0.3178   MSE: 0.3178   MAE: 0.2986
+Epoch 3560|  Val  | Loss: 0.3368   MSE: 0.3368   MAE: 0.3064
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 3580| Train | Loss: 0.3287   MSE: 0.3287   MAE: 0.3190
+Epoch 3580|  Val  | Loss: 0.3455   MSE: 0.3455   MAE: 0.3180
+Epoch 3600| Train | Loss: 0.3190   MSE: 0.3190   MAE: 0.3000
+Epoch 3600|  Val  | Loss: 0.3376   MSE: 0.3376   MAE: 0.3071
+Epoch 3620| Train | Loss: 0.3179   MSE: 0.3179   MAE: 0.2990
+Epoch 3620|  Val  | Loss: 0.3374   MSE: 0.3374   MAE: 0.3068
+Epoch 3640| Train | Loss: 0.3184   MSE: 0.3184   MAE: 0.3003
+Epoch 3640|  Val  | Loss: 0.3373   MSE: 0.3373   MAE: 0.3050
+Epoch 3660| Train | Loss: 0.3180   MSE: 0.3180   MAE: 0.3001
+Epoch 3660|  Val  | Loss: 0.3370   MSE: 0.3370   MAE: 0.3055
+Epoch 3680| Train | Loss: 0.3178   MSE: 0.3178   MAE: 0.2998
+Epoch 3680|  Val  | Loss: 0.3368   MSE: 0.3368   MAE: 0.3051
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 3700| Train | Loss: 0.3175   MSE: 0.3175   MAE: 0.2998
+Epoch 3700|  Val  | Loss: 0.3366   MSE: 0.3366   MAE: 0.3058
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 3720| Train | Loss: 0.3177   MSE: 0.3177   MAE: 0.2999
+Epoch 3720|  Val  | Loss: 0.3363   MSE: 0.3363   MAE: 0.3060
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 3740| Train | Loss: 0.3197   MSE: 0.3197   MAE: 0.3020
+Epoch 3740|  Val  | Loss: 0.3398   MSE: 0.3398   MAE: 0.3075
+Epoch 3760| Train | Loss: 0.3190   MSE: 0.3190   MAE: 0.3022
+Epoch 3760|  Val  | Loss: 0.3381   MSE: 0.3381   MAE: 0.3076
+Epoch 3780| Train | Loss: 0.3183   MSE: 0.3183   MAE: 0.2987
+Epoch 3780|  Val  | Loss: 0.3378   MSE: 0.3378   MAE: 0.3079
+Epoch 3800| Train | Loss: 0.3164   MSE: 0.3164   MAE: 0.2989
+Epoch 3800|  Val  | Loss: 0.3358   MSE: 0.3358   MAE: 0.3061
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 3820| Train | Loss: 0.3171   MSE: 0.3171   MAE: 0.2982
+Epoch 3820|  Val  | Loss: 0.3365   MSE: 0.3365   MAE: 0.3064
+Epoch 3840| Train | Loss: 0.3163   MSE: 0.3163   MAE: 0.2982
+Epoch 3840|  Val  | Loss: 0.3355   MSE: 0.3355   MAE: 0.3057
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 3860| Train | Loss: 0.3187   MSE: 0.3187   MAE: 0.2994
+Epoch 3860|  Val  | Loss: 0.3376   MSE: 0.3376   MAE: 0.3085
+Epoch 3880| Train | Loss: 0.3198   MSE: 0.3198   MAE: 0.3032
+Epoch 3880|  Val  | Loss: 0.3404   MSE: 0.3404   MAE: 0.3128
+Epoch 3900| Train | Loss: 0.3160   MSE: 0.3160   MAE: 0.2980
+Epoch 3900|  Val  | Loss: 0.3353   MSE: 0.3353   MAE: 0.3056
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 3920| Train | Loss: 0.3163   MSE: 0.3163   MAE: 0.2972
+Epoch 3920|  Val  | Loss: 0.3357   MSE: 0.3357   MAE: 0.3062
+Epoch 3940| Train | Loss: 0.3156   MSE: 0.3156   MAE: 0.2979
+Epoch 3940|  Val  | Loss: 0.3347   MSE: 0.3347   MAE: 0.3054
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 3960| Train | Loss: 0.3151   MSE: 0.3151   MAE: 0.2981
+Epoch 3960|  Val  | Loss: 0.3350   MSE: 0.3350   MAE: 0.3055
+Epoch 3980| Train | Loss: 0.3145   MSE: 0.3145   MAE: 0.2976
+Epoch 3980|  Val  | Loss: 0.3339   MSE: 0.3339   MAE: 0.3048
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 4000| Train | Loss: 0.3170   MSE: 0.3170   MAE: 0.3008
+Epoch 4000|  Val  | Loss: 0.3359   MSE: 0.3359   MAE: 0.3067
+Epoch 4020| Train | Loss: 0.3147   MSE: 0.3147   MAE: 0.2969
+Epoch 4020|  Val  | Loss: 0.3339   MSE: 0.3339   MAE: 0.3052
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 4040| Train | Loss: 0.3152   MSE: 0.3152   MAE: 0.2985
+Epoch 4040|  Val  | Loss: 0.3350   MSE: 0.3350   MAE: 0.3059
+Epoch 4060| Train | Loss: 0.3153   MSE: 0.3153   MAE: 0.2994
+Epoch 4060|  Val  | Loss: 0.3343   MSE: 0.3343   MAE: 0.3055
+Epoch 4080| Train | Loss: 0.3191   MSE: 0.3191   MAE: 0.3038
+Epoch 4080|  Val  | Loss: 0.3376   MSE: 0.3376   MAE: 0.3096
+Epoch 4100| Train | Loss: 0.3144   MSE: 0.3144   MAE: 0.2979
+Epoch 4100|  Val  | Loss: 0.3333   MSE: 0.3333   MAE: 0.3049
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 4120| Train | Loss: 0.3142   MSE: 0.3142   MAE: 0.2969
+Epoch 4120|  Val  | Loss: 0.3333   MSE: 0.3333   MAE: 0.3053
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 4140| Train | Loss: 0.3141   MSE: 0.3141   MAE: 0.2980
+Epoch 4140|  Val  | Loss: 0.3331   MSE: 0.3331   MAE: 0.3034
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 4160| Train | Loss: 0.3135   MSE: 0.3135   MAE: 0.2973
+Epoch 4160|  Val  | Loss: 0.3330   MSE: 0.3330   MAE: 0.3045
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 4180| Train | Loss: 0.3127   MSE: 0.3127   MAE: 0.2964
+Epoch 4180|  Val  | Loss: 0.3324   MSE: 0.3324   MAE: 0.3034
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 4200| Train | Loss: 0.3147   MSE: 0.3147   MAE: 0.2975
+Epoch 4200|  Val  | Loss: 0.3360   MSE: 0.3360   MAE: 0.3101
+Epoch 4220| Train | Loss: 0.3140   MSE: 0.3140   MAE: 0.2971
+Epoch 4220|  Val  | Loss: 0.3331   MSE: 0.3331   MAE: 0.3038
+Epoch 4240| Train | Loss: 0.3152   MSE: 0.3152   MAE: 0.2999
+Epoch 4240|  Val  | Loss: 0.3356   MSE: 0.3356   MAE: 0.3064
+Epoch 4260| Train | Loss: 0.3133   MSE: 0.3133   MAE: 0.2980
+Epoch 4260|  Val  | Loss: 0.3321   MSE: 0.3321   MAE: 0.3030
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 4280| Train | Loss: 0.3122   MSE: 0.3122   MAE: 0.2956
+Epoch 4280|  Val  | Loss: 0.3318   MSE: 0.3318   MAE: 0.3039
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 4300| Train | Loss: 0.3175   MSE: 0.3175   MAE: 0.3020
+Epoch 4300|  Val  | Loss: 0.3379   MSE: 0.3379   MAE: 0.3082
+Epoch 4320| Train | Loss: 0.3123   MSE: 0.3123   MAE: 0.2958
+Epoch 4320|  Val  | Loss: 0.3323   MSE: 0.3323   MAE: 0.3047
+Epoch 4340| Train | Loss: 0.3130   MSE: 0.3130   MAE: 0.2979
+Epoch 4340|  Val  | Loss: 0.3324   MSE: 0.3324   MAE: 0.3032
+Epoch 4360| Train | Loss: 0.3147   MSE: 0.3147   MAE: 0.3007
+Epoch 4360|  Val  | Loss: 0.3337   MSE: 0.3337   MAE: 0.3062
+Epoch 4380| Train | Loss: 0.3115   MSE: 0.3115   MAE: 0.2955
+Epoch 4380|  Val  | Loss: 0.3311   MSE: 0.3311   MAE: 0.3028
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 4400| Train | Loss: 0.3135   MSE: 0.3135   MAE: 0.2966
+Epoch 4400|  Val  | Loss: 0.3330   MSE: 0.3330   MAE: 0.3052
+Epoch 4420| Train | Loss: 0.3119   MSE: 0.3119   MAE: 0.2967
+Epoch 4420|  Val  | Loss: 0.3317   MSE: 0.3317   MAE: 0.3036
+Epoch 4440| Train | Loss: 0.3121   MSE: 0.3121   MAE: 0.2964
+Epoch 4440|  Val  | Loss: 0.3313   MSE: 0.3313   MAE: 0.3029
+Epoch 4460| Train | Loss: 0.3122   MSE: 0.3122   MAE: 0.2966
+Epoch 4460|  Val  | Loss: 0.3313   MSE: 0.3313   MAE: 0.3026
+Epoch 4480| Train | Loss: 0.3114   MSE: 0.3114   MAE: 0.2958
+Epoch 4480|  Val  | Loss: 0.3311   MSE: 0.3311   MAE: 0.3034
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 4500| Train | Loss: 0.3155   MSE: 0.3155   MAE: 0.2998
+Epoch 4500|  Val  | Loss: 0.3351   MSE: 0.3351   MAE: 0.3077
+Epoch 4520| Train | Loss: 0.3118   MSE: 0.3118   MAE: 0.2966
+Epoch 4520|  Val  | Loss: 0.3312   MSE: 0.3312   MAE: 0.3027
+Epoch 4540| Train | Loss: 0.3121   MSE: 0.3121   MAE: 0.2955
+Epoch 4540|  Val  | Loss: 0.3324   MSE: 0.3324   MAE: 0.3055
+Epoch 4560| Train | Loss: 0.3121   MSE: 0.3121   MAE: 0.2969
+Epoch 4560|  Val  | Loss: 0.3315   MSE: 0.3315   MAE: 0.3028
+Epoch 4580| Train | Loss: 0.3130   MSE: 0.3130   MAE: 0.2976
+Epoch 4580|  Val  | Loss: 0.3327   MSE: 0.3327   MAE: 0.3037
+Epoch 4600| Train | Loss: 0.3115   MSE: 0.3115   MAE: 0.2965
+Epoch 4600|  Val  | Loss: 0.3311   MSE: 0.3311   MAE: 0.3032
+Epoch 4620| Train | Loss: 0.3114   MSE: 0.3114   MAE: 0.2954
+Epoch 4620|  Val  | Loss: 0.3311   MSE: 0.3311   MAE: 0.3033
+Epoch 4640| Train | Loss: 0.3122   MSE: 0.3122   MAE: 0.2973
+Epoch 4640|  Val  | Loss: 0.3314   MSE: 0.3314   MAE: 0.3024
+Epoch 4660| Train | Loss: 0.3114   MSE: 0.3114   MAE: 0.2951
+Epoch 4660|  Val  | Loss: 0.3315   MSE: 0.3315   MAE: 0.3042
+Epoch 4680| Train | Loss: 0.3124   MSE: 0.3124   MAE: 0.2955
+Epoch 4680|  Val  | Loss: 0.3320   MSE: 0.3320   MAE: 0.3041
+Epoch 4700| Train | Loss: 0.3115   MSE: 0.3115   MAE: 0.2962
+Epoch 4700|  Val  | Loss: 0.3315   MSE: 0.3315   MAE: 0.3036
+Epoch 4720| Train | Loss: 0.3111   MSE: 0.3111   MAE: 0.2955
+Epoch 4720|  Val  | Loss: 0.3309   MSE: 0.3309   MAE: 0.3027
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 4740| Train | Loss: 0.3112   MSE: 0.3112   MAE: 0.2961
+Epoch 4740|  Val  | Loss: 0.3310   MSE: 0.3310   MAE: 0.3032
+Epoch 4760| Train | Loss: 0.3114   MSE: 0.3114   MAE: 0.2958
+Epoch 4760|  Val  | Loss: 0.3308   MSE: 0.3308   MAE: 0.3023
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 4780| Train | Loss: 0.3115   MSE: 0.3115   MAE: 0.2961
+Epoch 4780|  Val  | Loss: 0.3310   MSE: 0.3310   MAE: 0.3032
+Epoch 4800| Train | Loss: 0.3137   MSE: 0.3137   MAE: 0.2992
+Epoch 4800|  Val  | Loss: 0.3329   MSE: 0.3329   MAE: 0.3047
+Epoch 4820| Train | Loss: 0.3123   MSE: 0.3123   MAE: 0.2953
+Epoch 4820|  Val  | Loss: 0.3317   MSE: 0.3317   MAE: 0.3040
+Epoch 4840| Train | Loss: 0.3112   MSE: 0.3112   MAE: 0.2963
+Epoch 4840|  Val  | Loss: 0.3307   MSE: 0.3307   MAE: 0.3024
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 4860| Train | Loss: 0.3135   MSE: 0.3135   MAE: 0.3003
+Epoch 4860|  Val  | Loss: 0.3342   MSE: 0.3342   MAE: 0.3075
+Epoch 4880| Train | Loss: 0.3117   MSE: 0.3117   MAE: 0.2967
+Epoch 4880|  Val  | Loss: 0.3315   MSE: 0.3315   MAE: 0.3028
+Epoch 4900| Train | Loss: 0.3120   MSE: 0.3120   MAE: 0.2957
+Epoch 4900|  Val  | Loss: 0.3316   MSE: 0.3316   MAE: 0.3037
+Epoch 4920| Train | Loss: 0.3114   MSE: 0.3114   MAE: 0.2963
+Epoch 4920|  Val  | Loss: 0.3309   MSE: 0.3309   MAE: 0.3025
+Epoch 4940| Train | Loss: 0.3124   MSE: 0.3124   MAE: 0.2974
+Epoch 4940|  Val  | Loss: 0.3313   MSE: 0.3313   MAE: 0.3043
+Epoch 4960| Train | Loss: 0.3118   MSE: 0.3118   MAE: 0.2967
+Epoch 4960|  Val  | Loss: 0.3314   MSE: 0.3314   MAE: 0.3034
+Epoch 4980| Train | Loss: 0.3120   MSE: 0.3120   MAE: 0.2965
+Epoch 4980|  Val  | Loss: 0.3319   MSE: 0.3319   MAE: 0.3033
+Epoch 5000| Train | Loss: 0.3112   MSE: 0.3112   MAE: 0.2958
+Epoch 5000|  Val  | Loss: 0.3310   MSE: 0.3310   MAE: 0.3037
+Epoch 5020| Train | Loss: 0.3131   MSE: 0.3131   MAE: 0.2988
+Epoch 5020|  Val  | Loss: 0.3324   MSE: 0.3324   MAE: 0.3043
+Epoch 5040| Train | Loss: 0.3108   MSE: 0.3108   MAE: 0.2954
+Epoch 5040|  Val  | Loss: 0.3309   MSE: 0.3309   MAE: 0.3026
+Epoch 5060| Train | Loss: 0.3111   MSE: 0.3111   MAE: 0.2959
+Epoch 5060|  Val  | Loss: 0.3309   MSE: 0.3309   MAE: 0.3026
+Epoch 5080| Train | Loss: 0.3115   MSE: 0.3115   MAE: 0.2965
+Epoch 5080|  Val  | Loss: 0.3307   MSE: 0.3307   MAE: 0.3021
+Epoch 5100| Train | Loss: 0.3109   MSE: 0.3109   MAE: 0.2958
+Epoch 5100|  Val  | Loss: 0.3307   MSE: 0.3307   MAE: 0.3019
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 5120| Train | Loss: 0.3113   MSE: 0.3113   MAE: 0.2946
+Epoch 5120|  Val  | Loss: 0.3312   MSE: 0.3312   MAE: 0.3036
+Epoch 5140| Train | Loss: 0.3118   MSE: 0.3118   MAE: 0.2962
+Epoch 5140|  Val  | Loss: 0.3318   MSE: 0.3318   MAE: 0.3044
+Epoch 5160| Train | Loss: 0.3113   MSE: 0.3113   MAE: 0.2959
+Epoch 5160|  Val  | Loss: 0.3309   MSE: 0.3309   MAE: 0.3019
+Epoch 5180| Train | Loss: 0.3113   MSE: 0.3113   MAE: 0.2961
+Epoch 5180|  Val  | Loss: 0.3314   MSE: 0.3314   MAE: 0.3034
+Epoch 5200| Train | Loss: 0.3117   MSE: 0.3117   MAE: 0.2971
+Epoch 5200|  Val  | Loss: 0.3314   MSE: 0.3314   MAE: 0.3040
+Epoch 5220| Train | Loss: 0.3111   MSE: 0.3111   MAE: 0.2951
+Epoch 5220|  Val  | Loss: 0.3312   MSE: 0.3312   MAE: 0.3034
+Epoch 5240| Train | Loss: 0.3114   MSE: 0.3114   MAE: 0.2966
+Epoch 5240|  Val  | Loss: 0.3308   MSE: 0.3308   MAE: 0.3029
+Epoch 5260| Train | Loss: 0.3111   MSE: 0.3111   MAE: 0.2963
+Epoch 5260|  Val  | Loss: 0.3313   MSE: 0.3313   MAE: 0.3028
+Epoch 5280| Train | Loss: 0.3130   MSE: 0.3130   MAE: 0.2990
+Epoch 5280|  Val  | Loss: 0.3343   MSE: 0.3343   MAE: 0.3083
+Epoch 5300| Train | Loss: 0.3111   MSE: 0.3111   MAE: 0.2942
+Epoch 5300|  Val  | Loss: 0.3313   MSE: 0.3313   MAE: 0.3037
+Epoch 5320| Train | Loss: 0.3114   MSE: 0.3114   MAE: 0.2960
+Epoch 5320|  Val  | Loss: 0.3307   MSE: 0.3307   MAE: 0.3021
+Epoch 5340| Train | Loss: 0.3109   MSE: 0.3109   MAE: 0.2951
+Epoch 5340|  Val  | Loss: 0.3308   MSE: 0.3308   MAE: 0.3030
+Epoch 5360| Train | Loss: 0.3128   MSE: 0.3128   MAE: 0.2954
+Epoch 5360|  Val  | Loss: 0.3333   MSE: 0.3333   MAE: 0.3049
+Epoch 5380| Train | Loss: 0.3109   MSE: 0.3109   MAE: 0.2958
+Epoch 5380|  Val  | Loss: 0.3308   MSE: 0.3308   MAE: 0.3026
+Epoch 5400| Train | Loss: 0.3110   MSE: 0.3110   MAE: 0.2961
+Epoch 5400|  Val  | Loss: 0.3311   MSE: 0.3311   MAE: 0.3030
+Epoch 5420| Train | Loss: 0.3107   MSE: 0.3107   MAE: 0.2959
+Epoch 5420|  Val  | Loss: 0.3305   MSE: 0.3305   MAE: 0.3016
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 5440| Train | Loss: 0.3116   MSE: 0.3116   MAE: 0.2949
+Epoch 5440|  Val  | Loss: 0.3314   MSE: 0.3314   MAE: 0.3035
+Epoch 5460| Train | Loss: 0.3112   MSE: 0.3112   MAE: 0.2962
+Epoch 5460|  Val  | Loss: 0.3312   MSE: 0.3312   MAE: 0.3034
+Epoch 5480| Train | Loss: 0.3115   MSE: 0.3115   MAE: 0.2957
+Epoch 5480|  Val  | Loss: 0.3314   MSE: 0.3314   MAE: 0.3034
+Epoch 5500| Train | Loss: 0.3128   MSE: 0.3128   MAE: 0.2954
+Epoch 5500|  Val  | Loss: 0.3325   MSE: 0.3325   MAE: 0.3041
+Epoch 5520| Train | Loss: 0.3109   MSE: 0.3109   MAE: 0.2948
+Epoch 5520|  Val  | Loss: 0.3306   MSE: 0.3306   MAE: 0.3028
+Epoch 5540| Train | Loss: 0.3119   MSE: 0.3119   MAE: 0.2970
+Epoch 5540|  Val  | Loss: 0.3324   MSE: 0.3324   MAE: 0.3045
+Epoch 5560| Train | Loss: 0.3110   MSE: 0.3110   MAE: 0.2960
+Epoch 5560|  Val  | Loss: 0.3310   MSE: 0.3310   MAE: 0.3035
+Epoch 5580| Train | Loss: 0.3141   MSE: 0.3141   MAE: 0.2980
+Epoch 5580|  Val  | Loss: 0.3336   MSE: 0.3336   MAE: 0.3036
+Epoch 5600| Train | Loss: 0.3108   MSE: 0.3108   MAE: 0.2955
+Epoch 5600|  Val  | Loss: 0.3305   MSE: 0.3305   MAE: 0.3032
+Epoch 5620| Train | Loss: 0.3114   MSE: 0.3114   MAE: 0.2955
+Epoch 5620|  Val  | Loss: 0.3315   MSE: 0.3315   MAE: 0.3034
+Epoch 5640| Train | Loss: 0.3122   MSE: 0.3122   MAE: 0.2974
+Epoch 5640|  Val  | Loss: 0.3323   MSE: 0.3323   MAE: 0.3031
+Epoch 5660| Train | Loss: 0.3111   MSE: 0.3111   MAE: 0.2960
+Epoch 5660|  Val  | Loss: 0.3307   MSE: 0.3307   MAE: 0.3026
+Epoch 5680| Train | Loss: 0.3110   MSE: 0.3110   MAE: 0.2947
+Epoch 5680|  Val  | Loss: 0.3307   MSE: 0.3307   MAE: 0.3028
+Epoch 5700| Train | Loss: 0.3108   MSE: 0.3108   MAE: 0.2958
+Epoch 5700|  Val  | Loss: 0.3308   MSE: 0.3308   MAE: 0.3024
+Epoch 5720| Train | Loss: 0.3123   MSE: 0.3123   MAE: 0.2970
+Epoch 5720|  Val  | Loss: 0.3333   MSE: 0.3333   MAE: 0.3068
+Epoch 5740| Train | Loss: 0.3114   MSE: 0.3114   MAE: 0.2968
+Epoch 5740|  Val  | Loss: 0.3315   MSE: 0.3315   MAE: 0.3029
+Epoch 5760| Train | Loss: 0.3105   MSE: 0.3105   MAE: 0.2953
+Epoch 5760|  Val  | Loss: 0.3307   MSE: 0.3307   MAE: 0.3023
+Epoch 5780| Train | Loss: 0.3115   MSE: 0.3115   MAE: 0.2946
+Epoch 5780|  Val  | Loss: 0.3309   MSE: 0.3309   MAE: 0.3037
+Epoch 5800| Train | Loss: 0.3104   MSE: 0.3104   MAE: 0.2950
+Epoch 5800|  Val  | Loss: 0.3303   MSE: 0.3303   MAE: 0.3025
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 5820| Train | Loss: 0.3127   MSE: 0.3127   MAE: 0.2955
+Epoch 5820|  Val  | Loss: 0.3325   MSE: 0.3325   MAE: 0.3054
+Epoch 5840| Train | Loss: 0.3107   MSE: 0.3107   MAE: 0.2959
+Epoch 5840|  Val  | Loss: 0.3306   MSE: 0.3306   MAE: 0.3019
+Epoch 5860| Train | Loss: 0.3108   MSE: 0.3108   MAE: 0.2958
+Epoch 5860|  Val  | Loss: 0.3309   MSE: 0.3309   MAE: 0.3021
+Epoch 5880| Train | Loss: 0.3108   MSE: 0.3108   MAE: 0.2955
+Epoch 5880|  Val  | Loss: 0.3307   MSE: 0.3307   MAE: 0.3026
+Epoch 5900| Train | Loss: 0.3115   MSE: 0.3115   MAE: 0.2959
+Epoch 5900|  Val  | Loss: 0.3313   MSE: 0.3313   MAE: 0.3022
+Epoch 5920| Train | Loss: 0.3112   MSE: 0.3112   MAE: 0.2955
+Epoch 5920|  Val  | Loss: 0.3310   MSE: 0.3310   MAE: 0.3031
+Epoch 5940| Train | Loss: 0.3123   MSE: 0.3123   MAE: 0.2966
+Epoch 5940|  Val  | Loss: 0.3318   MSE: 0.3318   MAE: 0.3035
+Epoch 5960| Train | Loss: 0.3104   MSE: 0.3104   MAE: 0.2957
+Epoch 5960|  Val  | Loss: 0.3306   MSE: 0.3306   MAE: 0.3021
+Epoch 5980| Train | Loss: 0.3106   MSE: 0.3106   MAE: 0.2948
+Epoch 5980|  Val  | Loss: 0.3310   MSE: 0.3310   MAE: 0.3031
+Epoch 6000| Train | Loss: 0.3115   MSE: 0.3115   MAE: 0.2960
+Epoch 6000|  Val  | Loss: 0.3310   MSE: 0.3310   MAE: 0.3026
+Epoch 6020| Train | Loss: 0.3114   MSE: 0.3114   MAE: 0.2974
+Epoch 6020|  Val  | Loss: 0.3312   MSE: 0.3312   MAE: 0.3024
+Epoch 6040| Train | Loss: 0.3105   MSE: 0.3105   MAE: 0.2952
+Epoch 6040|  Val  | Loss: 0.3302   MSE: 0.3302   MAE: 0.3019
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 6060| Train | Loss: 0.3131   MSE: 0.3131   MAE: 0.3002
+Epoch 6060|  Val  | Loss: 0.3325   MSE: 0.3325   MAE: 0.3053
+Epoch 6080| Train | Loss: 0.3116   MSE: 0.3116   MAE: 0.2938
+Epoch 6080|  Val  | Loss: 0.3315   MSE: 0.3315   MAE: 0.3041
+Epoch 6100| Train | Loss: 0.3112   MSE: 0.3112   MAE: 0.2964
+Epoch 6100|  Val  | Loss: 0.3311   MSE: 0.3311   MAE: 0.3017
+Epoch 6120| Train | Loss: 0.3113   MSE: 0.3113   MAE: 0.2959
+Epoch 6120|  Val  | Loss: 0.3306   MSE: 0.3306   MAE: 0.3026
+Epoch 6140| Train | Loss: 0.3115   MSE: 0.3115   MAE: 0.2963
+Epoch 6140|  Val  | Loss: 0.3317   MSE: 0.3317   MAE: 0.3020
+Epoch 6160| Train | Loss: 0.3105   MSE: 0.3105   MAE: 0.2957
+Epoch 6160|  Val  | Loss: 0.3307   MSE: 0.3307   MAE: 0.3020
+Epoch 6180| Train | Loss: 0.3128   MSE: 0.3128   MAE: 0.2951
+Epoch 6180|  Val  | Loss: 0.3341   MSE: 0.3341   MAE: 0.3057
+Epoch 6200| Train | Loss: 0.3104   MSE: 0.3104   MAE: 0.2942
+Epoch 6200|  Val  | Loss: 0.3306   MSE: 0.3306   MAE: 0.3025
+Epoch 6220| Train | Loss: 0.3111   MSE: 0.3111   MAE: 0.2943
+Epoch 6220|  Val  | Loss: 0.3317   MSE: 0.3317   MAE: 0.3042
+Epoch 6240| Train | Loss: 0.3103   MSE: 0.3103   MAE: 0.2950
+Epoch 6240|  Val  | Loss: 0.3303   MSE: 0.3303   MAE: 0.3022
+Epoch 6260| Train | Loss: 0.3105   MSE: 0.3105   MAE: 0.2948
+Epoch 6260|  Val  | Loss: 0.3303   MSE: 0.3303   MAE: 0.3026
+Epoch 6280| Train | Loss: 0.3106   MSE: 0.3106   MAE: 0.2946
+Epoch 6280|  Val  | Loss: 0.3307   MSE: 0.3307   MAE: 0.3030
+Epoch 6300| Train | Loss: 0.3108   MSE: 0.3108   MAE: 0.2956
+Epoch 6300|  Val  | Loss: 0.3308   MSE: 0.3308   MAE: 0.3022
+Epoch 6320| Train | Loss: 0.3101   MSE: 0.3101   MAE: 0.2946
+Epoch 6320|  Val  | Loss: 0.3304   MSE: 0.3304   MAE: 0.3014
+Epoch 6340| Train | Loss: 0.3118   MSE: 0.3118   MAE: 0.2971
+Epoch 6340|  Val  | Loss: 0.3320   MSE: 0.3320   MAE: 0.3045
+Epoch 6360| Train | Loss: 0.3103   MSE: 0.3103   MAE: 0.2948
+Epoch 6360|  Val  | Loss: 0.3305   MSE: 0.3305   MAE: 0.3027
+Epoch 6380| Train | Loss: 0.3113   MSE: 0.3113   MAE: 0.2956
+Epoch 6380|  Val  | Loss: 0.3313   MSE: 0.3313   MAE: 0.3032
+Epoch 6400| Train | Loss: 0.3099   MSE: 0.3099   MAE: 0.2943
+Epoch 6400|  Val  | Loss: 0.3301   MSE: 0.3301   MAE: 0.3023
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 6420| Train | Loss: 0.3102   MSE: 0.3102   MAE: 0.2946
+Epoch 6420|  Val  | Loss: 0.3302   MSE: 0.3302   MAE: 0.3023
+Epoch 6440| Train | Loss: 0.3115   MSE: 0.3115   MAE: 0.2949
+Epoch 6440|  Val  | Loss: 0.3321   MSE: 0.3321   MAE: 0.3043
+Epoch 6460| Train | Loss: 0.3105   MSE: 0.3105   MAE: 0.2957
+Epoch 6460|  Val  | Loss: 0.3308   MSE: 0.3308   MAE: 0.3017
+Epoch 6480| Train | Loss: 0.3113   MSE: 0.3113   MAE: 0.2958
+Epoch 6480|  Val  | Loss: 0.3315   MSE: 0.3315   MAE: 0.3039
+Epoch 6500| Train | Loss: 0.3099   MSE: 0.3099   MAE: 0.2949
+Epoch 6500|  Val  | Loss: 0.3301   MSE: 0.3301   MAE: 0.3015
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 6520| Train | Loss: 0.3109   MSE: 0.3109   MAE: 0.2954
+Epoch 6520|  Val  | Loss: 0.3311   MSE: 0.3311   MAE: 0.3026
+Epoch 6540| Train | Loss: 0.3104   MSE: 0.3104   MAE: 0.2957
+Epoch 6540|  Val  | Loss: 0.3308   MSE: 0.3308   MAE: 0.3021
+Epoch 6560| Train | Loss: 0.3104   MSE: 0.3104   MAE: 0.2940
+Epoch 6560|  Val  | Loss: 0.3309   MSE: 0.3309   MAE: 0.3029
+Epoch 6580| Train | Loss: 0.3107   MSE: 0.3107   MAE: 0.2938
+Epoch 6580|  Val  | Loss: 0.3311   MSE: 0.3311   MAE: 0.3037
+Epoch 6600| Train | Loss: 0.3111   MSE: 0.3111   MAE: 0.2963
+Epoch 6600|  Val  | Loss: 0.3315   MSE: 0.3315   MAE: 0.3030
+Epoch 6620| Train | Loss: 0.3126   MSE: 0.3126   MAE: 0.2964
+Epoch 6620|  Val  | Loss: 0.3323   MSE: 0.3323   MAE: 0.3033
+Epoch 6640| Train | Loss: 0.3100   MSE: 0.3100   MAE: 0.2943
+Epoch 6640|  Val  | Loss: 0.3302   MSE: 0.3302   MAE: 0.3012
+Epoch 6660| Train | Loss: 0.3103   MSE: 0.3103   MAE: 0.2947
+Epoch 6660|  Val  | Loss: 0.3306   MSE: 0.3306   MAE: 0.3016
+Epoch 6680| Train | Loss: 0.3107   MSE: 0.3107   MAE: 0.2963
+Epoch 6680|  Val  | Loss: 0.3309   MSE: 0.3309   MAE: 0.3029
+Epoch 6700| Train | Loss: 0.3102   MSE: 0.3102   MAE: 0.2953
+Epoch 6700|  Val  | Loss: 0.3307   MSE: 0.3307   MAE: 0.3022
+Epoch 6720| Train | Loss: 0.3103   MSE: 0.3103   MAE: 0.2958
+Epoch 6720|  Val  | Loss: 0.3306   MSE: 0.3306   MAE: 0.3013
+Epoch 6740| Train | Loss: 0.3100   MSE: 0.3100   MAE: 0.2940
+Epoch 6740|  Val  | Loss: 0.3302   MSE: 0.3302   MAE: 0.3023
+Epoch 6760| Train | Loss: 0.3129   MSE: 0.3129   MAE: 0.2962
+Epoch 6760|  Val  | Loss: 0.3326   MSE: 0.3326   MAE: 0.3049
+Epoch 6780| Train | Loss: 0.3100   MSE: 0.3100   MAE: 0.2950
+Epoch 6780|  Val  | Loss: 0.3300   MSE: 0.3300   MAE: 0.3013
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 6800| Train | Loss: 0.3105   MSE: 0.3105   MAE: 0.2941
+Epoch 6800|  Val  | Loss: 0.3315   MSE: 0.3315   MAE: 0.3035
+Epoch 6820| Train | Loss: 0.3108   MSE: 0.3108   MAE: 0.2954
+Epoch 6820|  Val  | Loss: 0.3305   MSE: 0.3305   MAE: 0.3018
+Epoch 6840| Train | Loss: 0.3101   MSE: 0.3101   MAE: 0.2949
+Epoch 6840|  Val  | Loss: 0.3304   MSE: 0.3304   MAE: 0.3014
+Epoch 6860| Train | Loss: 0.3103   MSE: 0.3103   MAE: 0.2955
+Epoch 6860|  Val  | Loss: 0.3303   MSE: 0.3303   MAE: 0.3016
+Epoch 6880| Train | Loss: 0.3099   MSE: 0.3099   MAE: 0.2949
+Epoch 6880|  Val  | Loss: 0.3302   MSE: 0.3302   MAE: 0.3015
+Epoch 6900| Train | Loss: 0.3120   MSE: 0.3120   MAE: 0.2970
+Epoch 6900|  Val  | Loss: 0.3318   MSE: 0.3318   MAE: 0.3016
+Epoch 6920| Train | Loss: 0.3098   MSE: 0.3098   MAE: 0.2938
+Epoch 6920|  Val  | Loss: 0.3302   MSE: 0.3302   MAE: 0.3023
+Epoch 6940| Train | Loss: 0.3109   MSE: 0.3109   MAE: 0.2949
+Epoch 6940|  Val  | Loss: 0.3309   MSE: 0.3309   MAE: 0.3024
+Epoch 6960| Train | Loss: 0.3100   MSE: 0.3100   MAE: 0.2952
+Epoch 6960|  Val  | Loss: 0.3304   MSE: 0.3304   MAE: 0.3016
+Epoch 6980| Train | Loss: 0.3099   MSE: 0.3099   MAE: 0.2950
+Epoch 6980|  Val  | Loss: 0.3300   MSE: 0.3300   MAE: 0.3014
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 7000| Train | Loss: 0.3101   MSE: 0.3101   MAE: 0.2945
+Epoch 7000|  Val  | Loss: 0.3305   MSE: 0.3305   MAE: 0.3020
+Epoch 7020| Train | Loss: 0.3102   MSE: 0.3102   MAE: 0.2943
+Epoch 7020|  Val  | Loss: 0.3306   MSE: 0.3306   MAE: 0.3024
+Epoch 7040| Train | Loss: 0.3102   MSE: 0.3102   MAE: 0.2953
+Epoch 7040|  Val  | Loss: 0.3302   MSE: 0.3302   MAE: 0.3012
+Epoch 7060| Train | Loss: 0.3096   MSE: 0.3096   MAE: 0.2944
+Epoch 7060|  Val  | Loss: 0.3299   MSE: 0.3299   MAE: 0.3011
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 7080| Train | Loss: 0.3133   MSE: 0.3133   MAE: 0.2973
+Epoch 7080|  Val  | Loss: 0.3324   MSE: 0.3324   MAE: 0.3038
+Epoch 7100| Train | Loss: 0.3105   MSE: 0.3105   MAE: 0.2960
+Epoch 7100|  Val  | Loss: 0.3304   MSE: 0.3304   MAE: 0.3012
+Epoch 7120| Train | Loss: 0.3098   MSE: 0.3098   MAE: 0.2937
+Epoch 7120|  Val  | Loss: 0.3300   MSE: 0.3300   MAE: 0.3019
+Epoch 7140| Train | Loss: 0.3098   MSE: 0.3098   MAE: 0.2944
+Epoch 7140|  Val  | Loss: 0.3300   MSE: 0.3300   MAE: 0.3016
+Epoch 7160| Train | Loss: 0.3102   MSE: 0.3102   MAE: 0.2938
+Epoch 7160|  Val  | Loss: 0.3305   MSE: 0.3305   MAE: 0.3019
+Epoch 7180| Train | Loss: 0.3102   MSE: 0.3102   MAE: 0.2937
+Epoch 7180|  Val  | Loss: 0.3305   MSE: 0.3305   MAE: 0.3028
+Epoch 7200| Train | Loss: 0.3099   MSE: 0.3099   MAE: 0.2947
+Epoch 7200|  Val  | Loss: 0.3302   MSE: 0.3302   MAE: 0.3012
+Epoch 7220| Train | Loss: 0.3282   MSE: 0.3282   MAE: 0.3289
+Epoch 7220|  Val  | Loss: 0.3503   MSE: 0.3503   MAE: 0.3327
+Epoch 7240| Train | Loss: 0.3165   MSE: 0.3165   MAE: 0.3008
+Epoch 7240|  Val  | Loss: 0.3371   MSE: 0.3371   MAE: 0.3116
+Epoch 7260| Train | Loss: 0.3109   MSE: 0.3109   MAE: 0.2948
+Epoch 7260|  Val  | Loss: 0.3304   MSE: 0.3304   MAE: 0.3020
+Epoch 7280| Train | Loss: 0.3107   MSE: 0.3107   MAE: 0.2951
+Epoch 7280|  Val  | Loss: 0.3298   MSE: 0.3298   MAE: 0.3004
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 7300| Train | Loss: 0.3095   MSE: 0.3095   MAE: 0.2937
+Epoch 7300|  Val  | Loss: 0.3294   MSE: 0.3294   MAE: 0.3008
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 7320| Train | Loss: 0.3095   MSE: 0.3095   MAE: 0.2935
+Epoch 7320|  Val  | Loss: 0.3295   MSE: 0.3295   MAE: 0.3009
+Epoch 7340| Train | Loss: 0.3095   MSE: 0.3095   MAE: 0.2932
+Epoch 7340|  Val  | Loss: 0.3294   MSE: 0.3294   MAE: 0.3009
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 7360| Train | Loss: 0.3101   MSE: 0.3101   MAE: 0.2950
+Epoch 7360|  Val  | Loss: 0.3300   MSE: 0.3300   MAE: 0.3001
+Epoch 7380| Train | Loss: 0.3098   MSE: 0.3098   MAE: 0.2936
+Epoch 7380|  Val  | Loss: 0.3303   MSE: 0.3303   MAE: 0.3022
+Epoch 7400| Train | Loss: 0.3102   MSE: 0.3102   MAE: 0.2935
+Epoch 7400|  Val  | Loss: 0.3301   MSE: 0.3301   MAE: 0.3021
+Epoch 7420| Train | Loss: 0.3093   MSE: 0.3093   MAE: 0.2933
+Epoch 7420|  Val  | Loss: 0.3294   MSE: 0.3294   MAE: 0.3009
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 7440| Train | Loss: 0.3106   MSE: 0.3106   MAE: 0.2950
+Epoch 7440|  Val  | Loss: 0.3308   MSE: 0.3308   MAE: 0.3018
+Epoch 7460| Train | Loss: 0.3093   MSE: 0.3093   MAE: 0.2932
+Epoch 7460|  Val  | Loss: 0.3297   MSE: 0.3297   MAE: 0.3015
+Epoch 7480| Train | Loss: 0.3102   MSE: 0.3102   MAE: 0.2947
+Epoch 7480|  Val  | Loss: 0.3305   MSE: 0.3305   MAE: 0.3006
+Epoch 7500| Train | Loss: 0.3091   MSE: 0.3091   MAE: 0.2941
+Epoch 7500|  Val  | Loss: 0.3294   MSE: 0.3294   MAE: 0.2999
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 7520| Train | Loss: 0.3094   MSE: 0.3094   MAE: 0.2941
+Epoch 7520|  Val  | Loss: 0.3295   MSE: 0.3295   MAE: 0.3008
+Epoch 7540| Train | Loss: 0.3093   MSE: 0.3093   MAE: 0.2942
+Epoch 7540|  Val  | Loss: 0.3296   MSE: 0.3296   MAE: 0.3000
+Epoch 7560| Train | Loss: 0.3094   MSE: 0.3094   MAE: 0.2950
+Epoch 7560|  Val  | Loss: 0.3295   MSE: 0.3295   MAE: 0.3000
+Epoch 7580| Train | Loss: 0.3090   MSE: 0.3090   MAE: 0.2936
+Epoch 7580|  Val  | Loss: 0.3293   MSE: 0.3293   MAE: 0.3009
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 7600| Train | Loss: 0.3091   MSE: 0.3091   MAE: 0.2933
+Epoch 7600|  Val  | Loss: 0.3294   MSE: 0.3294   MAE: 0.3008
+Epoch 7620| Train | Loss: 0.3104   MSE: 0.3104   MAE: 0.2951
+Epoch 7620|  Val  | Loss: 0.3298   MSE: 0.3298   MAE: 0.3004
+Epoch 7640| Train | Loss: 0.3185   MSE: 0.3185   MAE: 0.2972
+Epoch 7640|  Val  | Loss: 0.3619   MSE: 0.3619   MAE: 0.3385
+Epoch 7660| Train | Loss: 0.3232   MSE: 0.3232   MAE: 0.3069
+Epoch 7660|  Val  | Loss: 0.3413   MSE: 0.3413   MAE: 0.3129
+Epoch 7680| Train | Loss: 0.3099   MSE: 0.3099   MAE: 0.2961
+Epoch 7680|  Val  | Loss: 0.3284   MSE: 0.3284   MAE: 0.3009
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 7700| Train | Loss: 0.3042   MSE: 0.3042   MAE: 0.2905
+Epoch 7700|  Val  | Loss: 0.3240   MSE: 0.3240   MAE: 0.2987
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 7720| Train | Loss: 0.3105   MSE: 0.3105   MAE: 0.2979
+Epoch 7720|  Val  | Loss: 0.3317   MSE: 0.3317   MAE: 0.3066
+Epoch 7740| Train | Loss: 0.3017   MSE: 0.3017   MAE: 0.2909
+Epoch 7740|  Val  | Loss: 0.3215   MSE: 0.3215   MAE: 0.2971
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 7760| Train | Loss: 0.3014   MSE: 0.3014   MAE: 0.2897
+Epoch 7760|  Val  | Loss: 0.3218   MSE: 0.3218   MAE: 0.2954
+Epoch 7780| Train | Loss: 0.3005   MSE: 0.3005   MAE: 0.2876
+Epoch 7780|  Val  | Loss: 0.3213   MSE: 0.3213   MAE: 0.2971
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 7800| Train | Loss: 0.2987   MSE: 0.2987   MAE: 0.2877
+Epoch 7800|  Val  | Loss: 0.3201   MSE: 0.3201   MAE: 0.2946
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 7820| Train | Loss: 0.3002   MSE: 0.3002   MAE: 0.2863
+Epoch 7820|  Val  | Loss: 0.3206   MSE: 0.3206   MAE: 0.2968
+Epoch 7840| Train | Loss: 0.2980   MSE: 0.2980   MAE: 0.2866
+Epoch 7840|  Val  | Loss: 0.3197   MSE: 0.3197   MAE: 0.2940
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 7860| Train | Loss: 0.2992   MSE: 0.2992   MAE: 0.2872
+Epoch 7860|  Val  | Loss: 0.3210   MSE: 0.3210   MAE: 0.2965
+Epoch 7880| Train | Loss: 0.2976   MSE: 0.2976   MAE: 0.2857
+Epoch 7880|  Val  | Loss: 0.3195   MSE: 0.3195   MAE: 0.2940
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 7900| Train | Loss: 0.2976   MSE: 0.2976   MAE: 0.2855
+Epoch 7900|  Val  | Loss: 0.3196   MSE: 0.3196   MAE: 0.2938
+Epoch 7920| Train | Loss: 0.2983   MSE: 0.2983   MAE: 0.2849
+Epoch 7920|  Val  | Loss: 0.3199   MSE: 0.3199   MAE: 0.2950
+Epoch 7940| Train | Loss: 0.2969   MSE: 0.2969   MAE: 0.2840
+Epoch 7940|  Val  | Loss: 0.3191   MSE: 0.3191   MAE: 0.2931
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 7960| Train | Loss: 0.2981   MSE: 0.2981   MAE: 0.2844
+Epoch 7960|  Val  | Loss: 0.3199   MSE: 0.3199   MAE: 0.2943
+Epoch 7980| Train | Loss: 0.2976   MSE: 0.2976   MAE: 0.2854
+Epoch 7980|  Val  | Loss: 0.3206   MSE: 0.3206   MAE: 0.2930
+Epoch 8000| Train | Loss: 0.2973   MSE: 0.2973   MAE: 0.2845
+Epoch 8000|  Val  | Loss: 0.3194   MSE: 0.3194   MAE: 0.2938
+Epoch 8020| Train | Loss: 0.2985   MSE: 0.2985   MAE: 0.2844
+Epoch 8020|  Val  | Loss: 0.3197   MSE: 0.3197   MAE: 0.2939
+Epoch 8040| Train | Loss: 0.2960   MSE: 0.2960   MAE: 0.2833
+Epoch 8040|  Val  | Loss: 0.3184   MSE: 0.3184   MAE: 0.2921
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 8060| Train | Loss: 0.2969   MSE: 0.2969   MAE: 0.2841
+Epoch 8060|  Val  | Loss: 0.3201   MSE: 0.3201   MAE: 0.2941
+Epoch 8080| Train | Loss: 0.2963   MSE: 0.2963   MAE: 0.2840
+Epoch 8080|  Val  | Loss: 0.3185   MSE: 0.3185   MAE: 0.2917
+Epoch 8100| Train | Loss: 0.2997   MSE: 0.2997   MAE: 0.2843
+Epoch 8100|  Val  | Loss: 0.3218   MSE: 0.3218   MAE: 0.2947
+Epoch 8120| Train | Loss: 0.2961   MSE: 0.2961   MAE: 0.2840
+Epoch 8120|  Val  | Loss: 0.3185   MSE: 0.3185   MAE: 0.2925
+Epoch 8140| Train | Loss: 0.2972   MSE: 0.2972   MAE: 0.2834
+Epoch 8140|  Val  | Loss: 0.3200   MSE: 0.3200   MAE: 0.2935
+Epoch 8160| Train | Loss: 0.2957   MSE: 0.2957   MAE: 0.2826
+Epoch 8160|  Val  | Loss: 0.3182   MSE: 0.3182   MAE: 0.2921
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 8180| Train | Loss: 0.2958   MSE: 0.2958   MAE: 0.2839
+Epoch 8180|  Val  | Loss: 0.3179   MSE: 0.3179   MAE: 0.2915
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 8200| Train | Loss: 0.2993   MSE: 0.2993   MAE: 0.2850
+Epoch 8200|  Val  | Loss: 0.3204   MSE: 0.3204   MAE: 0.2948
+Epoch 8220| Train | Loss: 0.2956   MSE: 0.2956   MAE: 0.2837
+Epoch 8220|  Val  | Loss: 0.3180   MSE: 0.3180   MAE: 0.2922
+Epoch 8240| Train | Loss: 0.2964   MSE: 0.2964   MAE: 0.2836
+Epoch 8240|  Val  | Loss: 0.3184   MSE: 0.3184   MAE: 0.2925
+Epoch 8260| Train | Loss: 0.2962   MSE: 0.2962   MAE: 0.2828
+Epoch 8260|  Val  | Loss: 0.3179   MSE: 0.3179   MAE: 0.2928
+Epoch 8280| Train | Loss: 0.2955   MSE: 0.2955   MAE: 0.2837
+Epoch 8280|  Val  | Loss: 0.3180   MSE: 0.3180   MAE: 0.2910
+Epoch 8300| Train | Loss: 0.2957   MSE: 0.2957   MAE: 0.2833
+Epoch 8300|  Val  | Loss: 0.3184   MSE: 0.3184   MAE: 0.2934
+Epoch 8320| Train | Loss: 0.2972   MSE: 0.2972   MAE: 0.2858
+Epoch 8320|  Val  | Loss: 0.3186   MSE: 0.3186   MAE: 0.2909
+Epoch 8340| Train | Loss: 0.2950   MSE: 0.2950   MAE: 0.2834
+Epoch 8340|  Val  | Loss: 0.3174   MSE: 0.3174   MAE: 0.2915
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 8360| Train | Loss: 0.2966   MSE: 0.2966   MAE: 0.2842
+Epoch 8360|  Val  | Loss: 0.3193   MSE: 0.3193   MAE: 0.2930
+Epoch 8380| Train | Loss: 0.2958   MSE: 0.2958   MAE: 0.2842
+Epoch 8380|  Val  | Loss: 0.3183   MSE: 0.3183   MAE: 0.2907
+Epoch 8400| Train | Loss: 0.2948   MSE: 0.2948   MAE: 0.2823
+Epoch 8400|  Val  | Loss: 0.3175   MSE: 0.3175   MAE: 0.2926
+Epoch 8420| Train | Loss: 0.2952   MSE: 0.2952   MAE: 0.2844
+Epoch 8420|  Val  | Loss: 0.3177   MSE: 0.3177   MAE: 0.2915
+Epoch 8440| Train | Loss: 0.2978   MSE: 0.2978   MAE: 0.2863
+Epoch 8440|  Val  | Loss: 0.3198   MSE: 0.3198   MAE: 0.2916
+Epoch 8460| Train | Loss: 0.2945   MSE: 0.2945   MAE: 0.2831
+Epoch 8460|  Val  | Loss: 0.3170   MSE: 0.3170   MAE: 0.2916
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 8480| Train | Loss: 0.2947   MSE: 0.2947   MAE: 0.2832
+Epoch 8480|  Val  | Loss: 0.3173   MSE: 0.3173   MAE: 0.2922
+Epoch 8500| Train | Loss: 0.2949   MSE: 0.2949   MAE: 0.2834
+Epoch 8500|  Val  | Loss: 0.3179   MSE: 0.3179   MAE: 0.2934
+Epoch 8520| Train | Loss: 0.2941   MSE: 0.2941   MAE: 0.2825
+Epoch 8520|  Val  | Loss: 0.3169   MSE: 0.3169   MAE: 0.2914
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 8540| Train | Loss: 0.2960   MSE: 0.2960   MAE: 0.2834
+Epoch 8540|  Val  | Loss: 0.3184   MSE: 0.3184   MAE: 0.2945
+Epoch 8560| Train | Loss: 0.2943   MSE: 0.2943   MAE: 0.2824
+Epoch 8560|  Val  | Loss: 0.3171   MSE: 0.3171   MAE: 0.2922
+Epoch 8580| Train | Loss: 0.2945   MSE: 0.2945   MAE: 0.2836
+Epoch 8580|  Val  | Loss: 0.3174   MSE: 0.3174   MAE: 0.2932
+Epoch 8600| Train | Loss: 0.2939   MSE: 0.2939   MAE: 0.2829
+Epoch 8600|  Val  | Loss: 0.3165   MSE: 0.3165   MAE: 0.2917
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 8620| Train | Loss: 0.2964   MSE: 0.2964   MAE: 0.2840
+Epoch 8620|  Val  | Loss: 0.3192   MSE: 0.3192   MAE: 0.2954
+Epoch 8640| Train | Loss: 0.2946   MSE: 0.2946   MAE: 0.2825
+Epoch 8640|  Val  | Loss: 0.3170   MSE: 0.3170   MAE: 0.2932
+Epoch 8660| Train | Loss: 0.2937   MSE: 0.2937   MAE: 0.2823
+Epoch 8660|  Val  | Loss: 0.3166   MSE: 0.3166   MAE: 0.2922
+Epoch 8680| Train | Loss: 0.2938   MSE: 0.2938   MAE: 0.2831
+Epoch 8680|  Val  | Loss: 0.3165   MSE: 0.3165   MAE: 0.2918
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 8700| Train | Loss: 0.2940   MSE: 0.2940   MAE: 0.2828
+Epoch 8700|  Val  | Loss: 0.3171   MSE: 0.3171   MAE: 0.2925
+Epoch 8720| Train | Loss: 0.2937   MSE: 0.2937   MAE: 0.2837
+Epoch 8720|  Val  | Loss: 0.3168   MSE: 0.3168   MAE: 0.2910
+Epoch 8740| Train | Loss: 0.2937   MSE: 0.2937   MAE: 0.2832
+Epoch 8740|  Val  | Loss: 0.3166   MSE: 0.3166   MAE: 0.2926
+Epoch 8760| Train | Loss: 0.2940   MSE: 0.2940   MAE: 0.2840
+Epoch 8760|  Val  | Loss: 0.3170   MSE: 0.3170   MAE: 0.2916
+Epoch 8780| Train | Loss: 0.2934   MSE: 0.2934   MAE: 0.2830
+Epoch 8780|  Val  | Loss: 0.3159   MSE: 0.3159   MAE: 0.2915
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 8800| Train | Loss: 0.2935   MSE: 0.2935   MAE: 0.2836
+Epoch 8800|  Val  | Loss: 0.3166   MSE: 0.3166   MAE: 0.2930
+Epoch 8820| Train | Loss: 0.2934   MSE: 0.2934   MAE: 0.2826
+Epoch 8820|  Val  | Loss: 0.3164   MSE: 0.3164   MAE: 0.2930
+Epoch 8840| Train | Loss: 0.2935   MSE: 0.2935   MAE: 0.2833
+Epoch 8840|  Val  | Loss: 0.3162   MSE: 0.3162   MAE: 0.2920
+Epoch 8860| Train | Loss: 0.2936   MSE: 0.2936   MAE: 0.2842
+Epoch 8860|  Val  | Loss: 0.3162   MSE: 0.3162   MAE: 0.2913
+Epoch 8880| Train | Loss: 0.2930   MSE: 0.2930   MAE: 0.2834
+Epoch 8880|  Val  | Loss: 0.3160   MSE: 0.3160   MAE: 0.2918
+Epoch 8900| Train | Loss: 0.2937   MSE: 0.2937   MAE: 0.2834
+Epoch 8900|  Val  | Loss: 0.3168   MSE: 0.3168   MAE: 0.2932
+Epoch 8920| Train | Loss: 0.2928   MSE: 0.2928   MAE: 0.2831
+Epoch 8920|  Val  | Loss: 0.3159   MSE: 0.3159   MAE: 0.2921
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 8940| Train | Loss: 0.2950   MSE: 0.2950   MAE: 0.2837
+Epoch 8940|  Val  | Loss: 0.3182   MSE: 0.3182   MAE: 0.2950
+Epoch 8960| Train | Loss: 0.2929   MSE: 0.2929   MAE: 0.2832
+Epoch 8960|  Val  | Loss: 0.3158   MSE: 0.3158   MAE: 0.2915
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 8980| Train | Loss: 0.2931   MSE: 0.2931   MAE: 0.2835
+Epoch 8980|  Val  | Loss: 0.3156   MSE: 0.3156   MAE: 0.2920
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 9000| Train | Loss: 0.2935   MSE: 0.2935   MAE: 0.2826
+Epoch 9000|  Val  | Loss: 0.3161   MSE: 0.3161   MAE: 0.2936
+Epoch 9020| Train | Loss: 0.2926   MSE: 0.2926   MAE: 0.2837
+Epoch 9020|  Val  | Loss: 0.3151   MSE: 0.3151   MAE: 0.2915
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 9040| Train | Loss: 0.2943   MSE: 0.2943   MAE: 0.2854
+Epoch 9040|  Val  | Loss: 0.3168   MSE: 0.3168   MAE: 0.2918
+Epoch 9060| Train | Loss: 0.2923   MSE: 0.2923   MAE: 0.2835
+Epoch 9060|  Val  | Loss: 0.3150   MSE: 0.3150   MAE: 0.2915
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 9080| Train | Loss: 0.2927   MSE: 0.2927   MAE: 0.2836
+Epoch 9080|  Val  | Loss: 0.3156   MSE: 0.3156   MAE: 0.2916
+Epoch 9100| Train | Loss: 0.2946   MSE: 0.2946   MAE: 0.2854
+Epoch 9100|  Val  | Loss: 0.3169   MSE: 0.3169   MAE: 0.2914
+Epoch 9120| Train | Loss: 0.2933   MSE: 0.2933   MAE: 0.2853
+Epoch 9120|  Val  | Loss: 0.3162   MSE: 0.3162   MAE: 0.2933
+Epoch 9140| Train | Loss: 0.2921   MSE: 0.2921   MAE: 0.2835
+Epoch 9140|  Val  | Loss: 0.3152   MSE: 0.3152   MAE: 0.2920
+Epoch 9160| Train | Loss: 0.2930   MSE: 0.2930   MAE: 0.2842
+Epoch 9160|  Val  | Loss: 0.3165   MSE: 0.3165   MAE: 0.2922
+Epoch 9180| Train | Loss: 0.2923   MSE: 0.2923   MAE: 0.2836
+Epoch 9180|  Val  | Loss: 0.3155   MSE: 0.3155   MAE: 0.2925
+Epoch 9200| Train | Loss: 0.2926   MSE: 0.2926   MAE: 0.2838
+Epoch 9200|  Val  | Loss: 0.3155   MSE: 0.3155   MAE: 0.2924
+Epoch 9220| Train | Loss: 0.2926   MSE: 0.2926   MAE: 0.2844
+Epoch 9220|  Val  | Loss: 0.3156   MSE: 0.3156   MAE: 0.2917
+Epoch 9240| Train | Loss: 0.2923   MSE: 0.2923   MAE: 0.2829
+Epoch 9240|  Val  | Loss: 0.3154   MSE: 0.3154   MAE: 0.2930
+Epoch 9260| Train | Loss: 0.2925   MSE: 0.2925   MAE: 0.2849
+Epoch 9260|  Val  | Loss: 0.3155   MSE: 0.3155   MAE: 0.2926
+Epoch 9280| Train | Loss: 0.2918   MSE: 0.2918   MAE: 0.2835
+Epoch 9280|  Val  | Loss: 0.3149   MSE: 0.3149   MAE: 0.2918
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 9300| Train | Loss: 0.2930   MSE: 0.2930   MAE: 0.2838
+Epoch 9300|  Val  | Loss: 0.3159   MSE: 0.3159   MAE: 0.2947
+Epoch 9320| Train | Loss: 0.2925   MSE: 0.2925   MAE: 0.2839
+Epoch 9320|  Val  | Loss: 0.3153   MSE: 0.3153   MAE: 0.2925
+Epoch 9340| Train | Loss: 0.2922   MSE: 0.2922   MAE: 0.2833
+Epoch 9340|  Val  | Loss: 0.3154   MSE: 0.3154   MAE: 0.2935
+Epoch 9360| Train | Loss: 0.2920   MSE: 0.2920   MAE: 0.2836
+Epoch 9360|  Val  | Loss: 0.3151   MSE: 0.3151   MAE: 0.2933
+Epoch 9380| Train | Loss: 0.2924   MSE: 0.2924   MAE: 0.2844
+Epoch 9380|  Val  | Loss: 0.3156   MSE: 0.3156   MAE: 0.2945
+Epoch 9400| Train | Loss: 0.2921   MSE: 0.2921   MAE: 0.2842
+Epoch 9400|  Val  | Loss: 0.3154   MSE: 0.3154   MAE: 0.2937
+Epoch 9420| Train | Loss: 0.2924   MSE: 0.2924   MAE: 0.2851
+Epoch 9420|  Val  | Loss: 0.3155   MSE: 0.3155   MAE: 0.2927
+Epoch 9440| Train | Loss: 0.2923   MSE: 0.2923   MAE: 0.2849
+Epoch 9440|  Val  | Loss: 0.3152   MSE: 0.3152   MAE: 0.2933
+Epoch 9460| Train | Loss: 0.2950   MSE: 0.2950   MAE: 0.2866
+Epoch 9460|  Val  | Loss: 0.3169   MSE: 0.3169   MAE: 0.2923
+Epoch 9480| Train | Loss: 0.2923   MSE: 0.2923   MAE: 0.2854
+Epoch 9480|  Val  | Loss: 0.3155   MSE: 0.3155   MAE: 0.2927
+Epoch 9500| Train | Loss: 0.2920   MSE: 0.2920   MAE: 0.2842
+Epoch 9500|  Val  | Loss: 0.3152   MSE: 0.3152   MAE: 0.2934
+Epoch 9520| Train | Loss: 0.2917   MSE: 0.2917   MAE: 0.2838
+Epoch 9520|  Val  | Loss: 0.3149   MSE: 0.3149   MAE: 0.2937
+Epoch 9540| Train | Loss: 0.2923   MSE: 0.2923   MAE: 0.2853
+Epoch 9540|  Val  | Loss: 0.3149   MSE: 0.3149   MAE: 0.2929
+Epoch 9560| Train | Loss: 0.2919   MSE: 0.2919   MAE: 0.2844
+Epoch 9560|  Val  | Loss: 0.3154   MSE: 0.3154   MAE: 0.2945
+Epoch 9580| Train | Loss: 0.2938   MSE: 0.2938   MAE: 0.2849
+Epoch 9580|  Val  | Loss: 0.3179   MSE: 0.3179   MAE: 0.2965
+Epoch 9600| Train | Loss: 0.2916   MSE: 0.2916   MAE: 0.2846
+Epoch 9600|  Val  | Loss: 0.3144   MSE: 0.3144   MAE: 0.2926
+Save model to results/test_sphere_datasize1024_0410_06-19/best_loss.pth
+Epoch 9620| Train | Loss: 0.2922   MSE: 0.2922   MAE: 0.2861
+Epoch 9620|  Val  | Loss: 0.3154   MSE: 0.3154   MAE: 0.2931
+Epoch 9640| Train | Loss: 0.2923   MSE: 0.2923   MAE: 0.2859
+Epoch 9640|  Val  | Loss: 0.3155   MSE: 0.3155   MAE: 0.2923
+Epoch 9660| Train | Loss: 0.2919   MSE: 0.2919   MAE: 0.2850
+Epoch 9660|  Val  | Loss: 0.3153   MSE: 0.3153   MAE: 0.2941
+Epoch 9680| Train | Loss: 0.2915   MSE: 0.2915   MAE: 0.2847
+Epoch 9680|  Val  | Loss: 0.3150   MSE: 0.3150   MAE: 0.2938
+Epoch 9700| Train | Loss: 0.2944   MSE: 0.2944   MAE: 0.2846
+Epoch 9700|  Val  | Loss: 0.3177   MSE: 0.3177   MAE: 0.2956
+Epoch 9720| Train | Loss: 0.2914   MSE: 0.2914   MAE: 0.2851
+Epoch 9720|  Val  | Loss: 0.3146   MSE: 0.3146   MAE: 0.2935
+Epoch 9740| Train | Loss: 0.2919   MSE: 0.2919   MAE: 0.2853
+Epoch 9740|  Val  | Loss: 0.3146   MSE: 0.3146   MAE: 0.2938
+Epoch 9760| Train | Loss: 0.2937   MSE: 0.2937   MAE: 0.2859
+Epoch 9760|  Val  | Loss: 0.3164   MSE: 0.3164   MAE: 0.2959
+Epoch 9780| Train | Loss: 0.2917   MSE: 0.2917   MAE: 0.2835
+Epoch 9780|  Val  | Loss: 0.3152   MSE: 0.3152   MAE: 0.2951
+Epoch 9800| Train | Loss: 0.2916   MSE: 0.2916   MAE: 0.2839
+Epoch 9800|  Val  | Loss: 0.3154   MSE: 0.3154   MAE: 0.2950
+Epoch 9820| Train | Loss: 0.2917   MSE: 0.2917   MAE: 0.2857
+Epoch 9820|  Val  | Loss: 0.3148   MSE: 0.3148   MAE: 0.2939
+Epoch 9840| Train | Loss: 0.2954   MSE: 0.2954   MAE: 0.2882
+Epoch 9840|  Val  | Loss: 0.3168   MSE: 0.3168   MAE: 0.2949
+Epoch 9860| Train | Loss: 0.2919   MSE: 0.2919   MAE: 0.2857
+Epoch 9860|  Val  | Loss: 0.3146   MSE: 0.3146   MAE: 0.2940
+Epoch 9880| Train | Loss: 0.2922   MSE: 0.2922   MAE: 0.2865
+Epoch 9880|  Val  | Loss: 0.3150   MSE: 0.3150   MAE: 0.2946
+Epoch 9900| Train | Loss: 0.2917   MSE: 0.2917   MAE: 0.2842
+Epoch 9900|  Val  | Loss: 0.3150   MSE: 0.3150   MAE: 0.2952
+Epoch 9920| Train | Loss: 0.2918   MSE: 0.2918   MAE: 0.2855
+Epoch 9920|  Val  | Loss: 0.3149   MSE: 0.3149   MAE: 0.2944
+Epoch 9940| Train | Loss: 0.2964   MSE: 0.2964   MAE: 0.2888
+Epoch 9940|  Val  | Loss: 0.3176   MSE: 0.3176   MAE: 0.2951
+Epoch 9960| Train | Loss: 0.2920   MSE: 0.2920   MAE: 0.2850
+Epoch 9960|  Val  | Loss: 0.3152   MSE: 0.3152   MAE: 0.2954
+Epoch 9980| Train | Loss: 0.2915   MSE: 0.2915   MAE: 0.2846
+Epoch 9980|  Val  | Loss: 0.3146   MSE: 0.3146   MAE: 0.2944
+Epoch 10000| Train | Loss: 0.2919   MSE: 0.2919   MAE: 0.2858
+Epoch 10000|  Val  | Loss: 0.3148   MSE: 0.3148   MAE: 0.2930

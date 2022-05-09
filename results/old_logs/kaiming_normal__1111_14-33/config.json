@@ -1,0 +1,12 @@
+{
+    "model_type": "fc",
+    "loss_type": "MSELoss",
+    "metric_monitor": "loss",
+    "lr": 0.001,
+    "train_batch_size": 1024,
+    "eval_batch_size": 1024,
+    "epoch": 10000,
+    "device": "cuda:0",
+    "exp_name": "kaiming_uniform_",
+    "working_dir": "results/kaiming_uniform__1111_14-33"
+}

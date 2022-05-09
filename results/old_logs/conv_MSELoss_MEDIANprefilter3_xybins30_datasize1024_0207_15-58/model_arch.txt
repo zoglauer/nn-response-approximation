@@ -1,0 +1,20 @@
+ApproxModel(
+  (model): Conv_CNN(
+    (fc): Sequential(
+      (0): Linear(in_features=2, out_features=90000, bias=True)
+      (1): ReLU()
+    )
+    (conv_layers): Sequential(
+      (0): Conv2d(1, 400, kernel_size=(5, 5), stride=(5, 5))
+      (1): ReLU()
+      (2): Conv2d(400, 400, kernel_size=(2, 2), stride=(2, 2))
+      (3): ReLU()
+      (4): Conv2d(400, 400, kernel_size=(1, 1), stride=(1, 1))
+      (5): ReLU()
+      (6): Conv2d(400, 4, kernel_size=(1, 1), stride=(1, 1))
+    )
+  )
+  (filter_layer): Filter(
+    (filter): MedianPool2d()
+  )
+)

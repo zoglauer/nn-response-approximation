@@ -1,0 +1,122 @@
+Number of parameters in model: 1082804
+Using NVIDIA GeForce RTX 3090
+Epoch   0| Train | Loss: 1.2353   MSE: 1.2353   MAE: 0.6750
+Epoch   0|  Val  | Loss: 1.1401   MSE: 1.1401   MAE: 0.7877
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch  20| Train | Loss: 1.0017   MSE: 1.0017   MAE: 0.6512
+Epoch  20|  Val  | Loss: 0.9873   MSE: 0.9873   MAE: 0.6750
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch  40| Train | Loss: 0.9073   MSE: 0.9073   MAE: 0.6324
+Epoch  40|  Val  | Loss: 0.8944   MSE: 0.8944   MAE: 0.6229
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch  60| Train | Loss: 0.8344   MSE: 0.8344   MAE: 0.5977
+Epoch  60|  Val  | Loss: 0.8221   MSE: 0.8221   MAE: 0.5836
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch  80| Train | Loss: 0.7202   MSE: 0.7202   MAE: 0.5680
+Epoch  80|  Val  | Loss: 0.7140   MSE: 0.7140   MAE: 0.5762
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 100| Train | Loss: 0.6489   MSE: 0.6489   MAE: 0.5653
+Epoch 100|  Val  | Loss: 0.6319   MSE: 0.6319   MAE: 0.5181
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 120| Train | Loss: 0.5327   MSE: 0.5327   MAE: 0.4944
+Epoch 120|  Val  | Loss: 0.5219   MSE: 0.5219   MAE: 0.4849
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 140| Train | Loss: 0.4733   MSE: 0.4733   MAE: 0.4624
+Epoch 140|  Val  | Loss: 0.4742   MSE: 0.4742   MAE: 0.4703
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 160| Train | Loss: 0.4552   MSE: 0.4552   MAE: 0.4582
+Epoch 160|  Val  | Loss: 0.4591   MSE: 0.4591   MAE: 0.4598
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 180| Train | Loss: 0.4130   MSE: 0.4130   MAE: 0.4337
+Epoch 180|  Val  | Loss: 0.4166   MSE: 0.4166   MAE: 0.4357
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 200| Train | Loss: 0.3918   MSE: 0.3918   MAE: 0.4222
+Epoch 200|  Val  | Loss: 0.3924   MSE: 0.3924   MAE: 0.4250
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 220| Train | Loss: 0.3780   MSE: 0.3780   MAE: 0.4175
+Epoch 220|  Val  | Loss: 0.3828   MSE: 0.3828   MAE: 0.4122
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 240| Train | Loss: 0.3651   MSE: 0.3651   MAE: 0.4093
+Epoch 240|  Val  | Loss: 0.3582   MSE: 0.3582   MAE: 0.4040
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 260| Train | Loss: 0.3447   MSE: 0.3447   MAE: 0.3991
+Epoch 260|  Val  | Loss: 0.3439   MSE: 0.3439   MAE: 0.3979
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 280| Train | Loss: 0.3452   MSE: 0.3452   MAE: 0.4060
+Epoch 280|  Val  | Loss: 0.3693   MSE: 0.3693   MAE: 0.4189
+Epoch 300| Train | Loss: 0.3256   MSE: 0.3256   MAE: 0.3926
+Epoch 300|  Val  | Loss: 0.3387   MSE: 0.3387   MAE: 0.3962
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 320| Train | Loss: 0.3088   MSE: 0.3088   MAE: 0.3802
+Epoch 320|  Val  | Loss: 0.3138   MSE: 0.3138   MAE: 0.3781
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 340| Train | Loss: 0.2966   MSE: 0.2966   MAE: 0.3726
+Epoch 340|  Val  | Loss: 0.3015   MSE: 0.3015   MAE: 0.3786
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 360| Train | Loss: 0.2886   MSE: 0.2886   MAE: 0.3694
+Epoch 360|  Val  | Loss: 0.2964   MSE: 0.2964   MAE: 0.3710
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 380| Train | Loss: 0.2870   MSE: 0.2870   MAE: 0.3698
+Epoch 380|  Val  | Loss: 0.2863   MSE: 0.2863   MAE: 0.3650
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 400| Train | Loss: 0.2784   MSE: 0.2784   MAE: 0.3650
+Epoch 400|  Val  | Loss: 0.2771   MSE: 0.2771   MAE: 0.3575
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 420| Train | Loss: 0.2699   MSE: 0.2699   MAE: 0.3582
+Epoch 420|  Val  | Loss: 0.2679   MSE: 0.2679   MAE: 0.3533
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 440| Train | Loss: 0.2617   MSE: 0.2617   MAE: 0.3519
+Epoch 440|  Val  | Loss: 0.2634   MSE: 0.2634   MAE: 0.3508
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 460| Train | Loss: 0.2557   MSE: 0.2557   MAE: 0.3477
+Epoch 460|  Val  | Loss: 0.2589   MSE: 0.2589   MAE: 0.3477
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 480| Train | Loss: 0.2515   MSE: 0.2515   MAE: 0.3462
+Epoch 480|  Val  | Loss: 0.2537   MSE: 0.2537   MAE: 0.3438
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 500| Train | Loss: 0.2510   MSE: 0.2510   MAE: 0.3455
+Epoch 500|  Val  | Loss: 0.2496   MSE: 0.2496   MAE: 0.3420
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 520| Train | Loss: 0.2491   MSE: 0.2491   MAE: 0.3466
+Epoch 520|  Val  | Loss: 0.2484   MSE: 0.2484   MAE: 0.3419
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 540| Train | Loss: 0.2389   MSE: 0.2389   MAE: 0.3374
+Epoch 540|  Val  | Loss: 0.2404   MSE: 0.2404   MAE: 0.3354
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 560| Train | Loss: 0.2360   MSE: 0.2360   MAE: 0.3352
+Epoch 560|  Val  | Loss: 0.2429   MSE: 0.2429   MAE: 0.3453
+Epoch 580| Train | Loss: 0.2344   MSE: 0.2344   MAE: 0.3343
+Epoch 580|  Val  | Loss: 0.2370   MSE: 0.2370   MAE: 0.3319
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 600| Train | Loss: 0.2304   MSE: 0.2304   MAE: 0.3328
+Epoch 600|  Val  | Loss: 0.2392   MSE: 0.2392   MAE: 0.3357
+Epoch 620| Train | Loss: 0.2270   MSE: 0.2270   MAE: 0.3290
+Epoch 620|  Val  | Loss: 0.2306   MSE: 0.2306   MAE: 0.3317
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 640| Train | Loss: 0.2245   MSE: 0.2245   MAE: 0.3265
+Epoch 640|  Val  | Loss: 0.2314   MSE: 0.2314   MAE: 0.3295
+Epoch 660| Train | Loss: 0.2191   MSE: 0.2191   MAE: 0.3223
+Epoch 660|  Val  | Loss: 0.2206   MSE: 0.2206   MAE: 0.3215
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 680| Train | Loss: 0.2205   MSE: 0.2205   MAE: 0.3263
+Epoch 680|  Val  | Loss: 0.2281   MSE: 0.2281   MAE: 0.3293
+Epoch 700| Train | Loss: 0.2160   MSE: 0.2160   MAE: 0.3209
+Epoch 700|  Val  | Loss: 0.2238   MSE: 0.2238   MAE: 0.3238
+Epoch 720| Train | Loss: 0.2080   MSE: 0.2080   MAE: 0.3131
+Epoch 720|  Val  | Loss: 0.2125   MSE: 0.2125   MAE: 0.3158
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 740| Train | Loss: 0.2082   MSE: 0.2082   MAE: 0.3137
+Epoch 740|  Val  | Loss: 0.2089   MSE: 0.2089   MAE: 0.3122
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 760| Train | Loss: 0.2102   MSE: 0.2102   MAE: 0.3191
+Epoch 760|  Val  | Loss: 0.2094   MSE: 0.2094   MAE: 0.3128
+Epoch 780| Train | Loss: 0.2041   MSE: 0.2041   MAE: 0.3099
+Epoch 780|  Val  | Loss: 0.2071   MSE: 0.2071   MAE: 0.3122
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth
+Epoch 800| Train | Loss: 0.2051   MSE: 0.2051   MAE: 0.3140
+Epoch 800|  Val  | Loss: 0.2139   MSE: 0.2139   MAE: 0.3197
+Epoch 820| Train | Loss: 0.2055   MSE: 0.2055   MAE: 0.3108
+Epoch 820|  Val  | Loss: 0.2102   MSE: 0.2102   MAE: 0.3139
+Epoch 840| Train | Loss: 0.1937   MSE: 0.1937   MAE: 0.3020
+Epoch 840|  Val  | Loss: 0.1976   MSE: 0.1976   MAE: 0.3027
+Save model to results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44/best_loss.pth

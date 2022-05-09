@@ -24,7 +24,9 @@ class FC(nn.Module):
             #nn.Linear(1000, 10000),
             #nn.Dropout(dropout_rate),
             #nn.ReLU(),
-            nn.Linear(1000, output_size)
+            nn.Linear(1000, output_size),
+            nn.Dropout(dropout_rate),
+            nn.ReLU(),
         )
         self.fc_layer.apply(self.init_weights)
         

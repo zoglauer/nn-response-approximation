@@ -1,0 +1,16 @@
+{
+    "model_type": "fc",
+    "loss_type": "MSELoss",
+    "metric_monitor": "loss",
+    "lr": 0.001,
+    "dropout_rate": 0.0,
+    "train_batch_size": 1024,
+    "eval_batch_size": 1024,
+    "epoch": 20000,
+    "device": "cuda:0",
+    "flattened": false,
+    "filter_size": 3,
+    "NSIDE": 6,
+    "exp_name": "sphere_fc_MSELoss_NSIDE6_datasize1024",
+    "working_dir": "results/sphere_fc_MSELoss_NSIDE6_datasize1024_0414_07-39"
+}

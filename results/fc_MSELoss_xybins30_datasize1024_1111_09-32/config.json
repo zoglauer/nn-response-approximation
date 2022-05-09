@@ -1,0 +1,12 @@
+{
+    "model_type": "fc",
+    "loss_type": "MSELoss",
+    "metric_monitor": "loss",
+    "lr": 0.001,
+    "train_batch_size": 1024,
+    "eval_batch_size": 1024,
+    "epoch": 10000,
+    "device": "cuda:0",
+    "exp_name": "fc_MSELoss_xybins30_datasize1024",
+    "working_dir": "results/fc_MSELoss_xybins30_datasize1024_1111_09-32"
+}

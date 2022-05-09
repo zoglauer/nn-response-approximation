@@ -1,0 +1,14 @@
+{
+    "model_type": "fc",
+    "loss_type": "MSELoss",
+    "metric_monitor": "loss",
+    "lr": 0.01,
+    "train_batch_size": 1024,
+    "eval_batch_size": 1024,
+    "epoch": 20000,
+    "device": "cuda:0",
+    "flattened": false,
+    "filter_size": 3,
+    "exp_name": "test_sphere_datasize1024",
+    "working_dir": "results/test_sphere_datasize1024_0409_07-32"
+}

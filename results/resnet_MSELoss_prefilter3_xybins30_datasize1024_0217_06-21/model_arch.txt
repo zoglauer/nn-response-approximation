@@ -1,0 +1,24 @@
+ApproxModel(
+  (model): ResNet(
+    (fc): Sequential(
+      (0): Linear(in_features=2, out_features=90000, bias=True)
+      (1): ReLU()
+    )
+    (conv_layers): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(1, 400, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(400, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2): Conv2d(400, 400, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(400, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (shortcut): Sequential(
+          (0): Conv2d(1, 400, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (1): BatchNorm2d(400, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): Conv2d(400, 4, kernel_size=(10, 10), stride=(10, 10))
+    )
+  )
+  (filter_layer): Filter(
+    (filter): AvgPool2d(kernel_size=3, stride=1, padding=1)
+  )
+)

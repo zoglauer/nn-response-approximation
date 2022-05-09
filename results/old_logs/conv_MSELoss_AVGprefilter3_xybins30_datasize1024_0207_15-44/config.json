@@ -1,0 +1,14 @@
+{
+    "model_type": "conv",
+    "loss_type": "MSELoss",
+    "metric_monitor": "loss",
+    "lr": 0.001,
+    "train_batch_size": 300,
+    "eval_batch_size": 300,
+    "epoch": 20000,
+    "device": "cuda:0",
+    "flattened": false,
+    "filter_size": 3,
+    "exp_name": "conv_MSELoss_prefilter3_xybins30_datasize1024",
+    "working_dir": "results/conv_MSELoss_prefilter3_xybins30_datasize1024_0207_15-44"
+}
