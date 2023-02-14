@@ -20,8 +20,8 @@ import argparse
 import signal
 
 # Own tools
-from ToyModel3DConeKeras import ToyModel3DCone
-from helpers import *
+from src.ToyModel3DConeKeras import ToyModel3DCone
+from utility.Helpers import *
   
 ###################################################################################################
 
@@ -48,9 +48,9 @@ args = parser.parse_args()
 
 AI = ToyModel3DCone()
 AI.setBatchMode(args.batch)
-
-if AI.train() == False:
-  sys.exit()
+if __name__ == "__main__":
+  if AI.train() == False:
+    sys.exit()
 
 
 # END

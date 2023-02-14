@@ -1,0 +1,16 @@
+{
+    "model_type": "conv",
+    "loss_type": "MSELoss",
+    "metric_monitor": "loss",
+    "lr": 0.001,
+    "dropout_rate": 0.0,
+    "train_batch_size": 1024,
+    "eval_batch_size": 1024,
+    "epoch": 5000,
+    "device": "cpu",
+    "flattened": false,
+    "filter_size": 3,
+    "NSIDE": 6,
+    "exp_name": "sphere_conv_MSELoss_NSIDE6_datasize1024",
+    "working_dir": "results/sphere_conv_MSELoss_NSIDE6_datasize1024_1103_11-10"
+}

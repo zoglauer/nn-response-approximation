@@ -1,0 +1,4 @@
+Number of parameters in model: 277644
+Epoch   0| Train | Loss: 1.4059   MSE: 1.4059   MAE: 0.5373
+Epoch   0|  Val  | Loss: 1.3672   MSE: 1.3672   MAE: 0.5194
+Save model to results/sphere_conv_MSELoss_NSIDE6_datasize1024_1103_11-10/best_loss.pth
