@@ -23,15 +23,15 @@ This creates the environment, activates it, and installs all required packages.
 These are some possible package issues that could be faced when running code from this branch or other branches.
 
 - ImportError: symbol not found in flat namespace (protobuf 3.20.2)
-  \*\* Please use this fix: https://github.com/protocolbuffers/protobuf/issues/10571#issuecomment-1249460270
+  - Please use this fix: https://github.com/protocolbuffers/protobuf/issues/10571#issuecomment-1249460270
 - No module ‘'mpl_toolkits'
-  \*\* Please remove import if this causes an error. Some older branches of this project use this package.
+  - Please remove import if this causes an error. Some older branches of this project use this package.
 - No module 'tensorflow'
-  \*\* M1 macs have had this issue with tensorflow. Please use pip to install tensorflow-macos instead.
+  - M1 macs have had this issue with tensorflow. Please use pip to install tensorflow-macos instead.
 - AttributeError: 'FigureCanvasMac' object has no attribute 'set_window_title'
-  \*\* Please remove the line if this causes an error. Some older versions of matplotlib have a function that is now deprecated.
+  - Please remove the line if this causes an error. Some older versions of matplotlib have a function that is now deprecated.
 - concurrent.futures.process.BrokenProcessPool: A process in the process pool was terminated abruptly while the future was running or pending.
-  \*\* Some older branches do not have code in a **main** method in run.py. Please place it inside a main method.
+  - Some older branches do not have code in a **main** method in run.py. Please place it inside a main method.
 
 ## Run it
 
