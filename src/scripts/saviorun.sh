@@ -32,6 +32,7 @@ echo "Starting analysis on host ${HOSTNAME} with job ID ${SLURM_JOB_ID}..."
 echo "Loading modules..."
 module load nano
 module load gcc
+module load python
 
 echo "Starting execution..."
 
