@@ -47,7 +47,7 @@ SET CONFIG OBJECT.
 
 """
 config = {
-    "INPUT_DIR": "/Users/akotamraju/Documents/dev/URAP/new-responseapprox/data/cross-sec-data",
+    "INPUT_DIR": "../../data/cross-sec-data",
     "DATA_INPUT_DIM": (2, 1),
     # ------------------- #
     "NSIDE": 128,
