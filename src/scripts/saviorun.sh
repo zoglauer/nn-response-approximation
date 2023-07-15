@@ -35,7 +35,7 @@ module load gcc
 
 echo "Starting execution..."
 
-python3 src/scripts/predict_cone.py
+python3 predict_cone.py
 
 echo "Waiting for all processes to end..."
 wait
