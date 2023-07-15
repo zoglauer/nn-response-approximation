@@ -317,6 +317,8 @@ expand8 = ConvExpand(lin8, conv8, config)
 # %%
 model = expand8
 
+model = model.to(dtype=config["base"], device=config["device"])
+
 # %%
 
 # Use MSE Loss
