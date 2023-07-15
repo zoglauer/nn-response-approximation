@@ -1,0 +1,16 @@
+ConvExpand(
+  (linear_layers): Sequential(
+    (0): Linear(in_features=2, out_features=12, bias=True)
+    (1): ReLU()
+  )
+  (conv_layers): Sequential(
+    (0): ConvTranspose2d(1, 16, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+    (1): ConvTranspose2d(16, 32, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+    (2): ConvTranspose2d(32, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+    (3): ConvTranspose2d(64, 64, kernel_size=(4, 4), stride=(4, 4))
+    (4): ReLU()
+    (5): ConvTranspose2d(64, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+    (6): ReLU()
+    (7): ConvTranspose2d(128, 36, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  )
+)

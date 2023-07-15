@@ -1,0 +1,6 @@
+.ipynb_checkpoints
+__pycache__
+__init__.py
+data/
+wandb/
+.DS_Store

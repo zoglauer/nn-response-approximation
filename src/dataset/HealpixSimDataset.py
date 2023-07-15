@@ -1,0 +1,62 @@
+import os
+import pickle
+from torch.utils.data import Dataset
+import torch
+import numpy as np
+import sys
+
+sys.path.append("../utils")
+from utils import normalize
+
+
+class HealpixSimDataset(Dataset):
+    """Dataset for the full simulations of healpix data."""
+
+    def __init__(self, config, transform=None):
+        # Stores filepaths of all the data
+        self.data_paths = []
+
+        input_dir = config["INPUT_DIR"]
+
+        for filename in os.listdir(input_dir):
+            # Load file with pickle
+            inp_path = os.path.join(input_dir, filename)
+
+            self.data_paths.append(inp_path)
+
+        self.input_dir = input_dir
+        self.transform = transform
+        self.config = config
+        self.normalize = config["NORMALIZE"]
+
+    def __len__(self):
+        return len(self.data_paths)
+
+    def __getitem__(self, index):
+        # Open the file at the given index
+        f = open(self.data_paths[index], "rb")
+        data = pickle.load(f)
+        f.close()
+
+        # Normalize y if needed
+        if self.normalize:
+            for i in range(len(data["y"])):
+                cross_sec = data["y"][i]
+
+                normalized_cross_sec = normalize(cross_sec)
+
+                # Update data
+                data["y"][i] = normalized_cross_sec
+
+        # Transform if needed
+        if self.transform:
+            data = self.transform(data)
+
+        x = data["x"]
+        y = data["y"]
+
+        # Convert to tensors
+        x = torch.tensor(x).to(dtype=self.config["base"], device=self.config["device"])
+        y = torch.tensor(y).to(dtype=self.config["base"], device=self.config["device"])
+
+        return x, y
