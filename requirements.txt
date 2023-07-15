@@ -41,7 +41,6 @@ ipykernel
 ipython 
 ipython-genutils==0.2.0
 jedi 
-Jinja2==3.1.2
 joblib==1.2.0
 jsonschema==4.17.3
 jupyter-server==1.23.6
