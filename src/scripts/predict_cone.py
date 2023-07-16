@@ -47,7 +47,7 @@ SET CONFIG OBJECT.
 
 """
 config = {
-    "INPUT_DIR": "../../data/cross-sec-data",
+    "INPUT_DIR": "/global/scratch/users/akotamraju/data/cross-sec-data",
     "DATA_INPUT_DIM": (2, 1),
     # ------------------- #
     "NSIDE": 128,

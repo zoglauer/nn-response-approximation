@@ -112,7 +112,7 @@ if __name__ == "__main__":
     NSIDE = 128
     NUMPIX = 12 * NSIDE**2
     COMPTON_RESOLUTION_DEG = 5
-    INPUT_DIR = "../../data/full-sim-data"
-    OUTPUT_DIR = "../../data/cross-sec-data"
+    INPUT_DIR = "/global/scratch/users/akotamraju/data/full-sim-data"
+    OUTPUT_DIR = "/global/scratch/users/akotamraju/data/cross-sec-data"
 
     save_cross_sec_data(INPUT_DIR, OUTPUT_DIR, NSIDE, NUMPIX, COMPTON_RESOLUTION_DEG)
