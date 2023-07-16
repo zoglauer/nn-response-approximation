@@ -47,7 +47,7 @@ SET CONFIG OBJECT.
 
 """
 config = {
-    "INPUT_DIR": "/global/scratch/users/akotamraju/data/cross-sec-data",
+    "INPUT_DIR": "../../data/cross-sec-data",
     "DATA_INPUT_DIM": (2, 1),
     # ------------------- #
     "NSIDE": 128,
@@ -77,6 +77,10 @@ config = {
 
 # Set other attributes that depend on config specifications
 config["NUMPIX"] = 12 * config["NSIDE"] ** 2
+
+# IF USING SAVIO, USE THE SCRATCH DIRECTORY
+if config["device"] != "cpu":
+    config["INPUT_DIR"] = "/global/scratch/users/akotamraju/data/cross-sec-data"
 
 
 # %%

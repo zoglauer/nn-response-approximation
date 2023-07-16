@@ -8,7 +8,7 @@
 
 #SBATCH --account=fc_cosi
 #SBATCH --partition=savio3_gpu
-#SBATCH --qos=savio_normal
+#SBATCH --qos=savio_lowprio
 
 #SBATCH -t 24:00:00
 
