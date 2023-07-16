@@ -25,6 +25,8 @@ class Trainer:
         self.curr_lr = config["LEARNING_RATE"]
 
     def init_wandb(self):
+        # wandb.login(key=os.environ.)
+
         wandb.init(
             # set the wandb project where this run will be logged
             project="nn_response",
