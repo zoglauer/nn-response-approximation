@@ -85,6 +85,8 @@ def save_cross_sec_data(INPUT_DIR, OUTPUT_DIR, NSIDE, NUMPIX, COMPTON_RESOLUTION
         # Load file with pickle
         inp_path = os.path.join(INPUT_DIR, filename)
 
+        print(inp_path)
+
         f = open(inp_path, "rb")
         data = pickle.load(f)
         f.close()
