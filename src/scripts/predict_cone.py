@@ -17,6 +17,7 @@ from torch.nn import (
     Conv3d,
     Tanh,
     Dropout,
+    DataParallel,
 )
 
 sys.path.append("../model")
@@ -49,6 +50,7 @@ SET CONFIG OBJECT.
 config = {
     "INPUT_DIR": "../../data/cross-sec-data",
     "DATA_INPUT_DIM": (2, 1),
+    "GPU_PARALLEL": False,
     # ------------------- #
     "NSIDE": 128,
     "SHOW_IMAGES": True,
@@ -82,6 +84,9 @@ config["NUMPIX"] = 12 * config["NSIDE"] ** 2
 if config["device"] != "cpu":
     config["INPUT_DIR"] = "/global/scratch/users/akotamraju/data/cross-sec-data"
 
+# IF USING SAVIO, DO DATA PARALLELISM
+if config["device"] != "cpu":
+    config["GPU_PARALLEL"] = True
 
 # %%
 
@@ -322,6 +327,10 @@ expand8 = ConvExpand(lin8, conv8, config)
 model = expand8
 
 model = model.to(dtype=config["base"], device=config["device"])
+
+# Use data parallelism if specified
+if config["GPU_PARALLEL"]:
+    model = DataParallel(model)
 
 # %%
 
