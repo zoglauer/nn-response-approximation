@@ -355,7 +355,7 @@ scheduler = ReduceLROnPlateau(
 #     cycle_momentum=False,
 # )
 
-# optimizer = torch.optim.SGD(model.parameters(), lr=config["LEARNING_RATE"])
+optimizer = torch.optim.SGD(model.parameters(), lr=config["LEARNING_RATE"])
 scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(
     optimizer,
     T_0=20,
