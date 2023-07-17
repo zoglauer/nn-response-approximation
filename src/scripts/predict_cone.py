@@ -73,7 +73,7 @@ config = {
     "device": get_device(),
     # NOTE:  THESE DEFINE THE DIMENSIONS OF THE MIDDLE IMAGE
     "MID_IMAGE_DEPTH": 1,
-    "MID_IMAGE_DIM": (6, 2),
+    "MID_IMAGE_DIM": (12, 4),
     "FINAL_IMAGE_DIM": (768, 256),
     # ------------------- #
     "SAVE_IMAGES": True,
