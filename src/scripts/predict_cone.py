@@ -63,10 +63,10 @@ config = {
     "BATCH_SIZE": 8,
     # ------------------- #
     "EPOCHS": 1000,
-    "PATIENCE": 50,
+    "PATIENCE": 20,
     "LEARNING_RATE": 0.01,
     # ------------------- #
-    "LR_PATIENCE": 10,
+    "LR_PATIENCE": 6,
     "LR_ADAPT_FACTOR": 0.5,
     # ------------------- #
     "base": torch.float32,
@@ -344,16 +344,16 @@ scheduler = ReduceLROnPlateau(
 )
 
 
-scheduler = CyclicLR(
-    optimizer,
-    base_lr=0.0001,  # Initial learning rate which is the lower boundary in the cycle for each parameter group
-    max_lr=config[
-        "LEARNING_RATE"
-    ],  # Upper learning rate boundaries in the cycle for each parameter group
-    step_size_up=15,  # Number of training iterations in the increasing half of a cycle
-    mode="triangular",
-    cycle_momentum=False,
-)
+# scheduler = CyclicLR(
+#     optimizer,
+#     base_lr=0.0001,  # Initial learning rate which is the lower boundary in the cycle for each parameter group
+#     max_lr=config[
+#         "LEARNING_RATE"
+#     ],  # Upper learning rate boundaries in the cycle for each parameter group
+#     step_size_up=15,  # Number of training iterations in the increasing half of a cycle
+#     mode="triangular",
+#     cycle_momentum=False,
+# )
 
 # optimizer = torch.optim.SGD(model.parameters(), lr=config["LEARNING_RATE"])
 # scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(
