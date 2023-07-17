@@ -135,64 +135,40 @@ conv8 = Sequential(
     # OUTPUTS: 12 by 4
     ConvTranspose2d(
         in_channels=config["MID_IMAGE_DEPTH"],
-        out_channels=16,
-        kernel_size=4,
-        stride=2,
-        padding=1,
-    ),
-    # Conv2d(in_channels=16, out_channels=16, kernel_size=3, stride=1, padding=1),
-    ReLU(),
-    # INPUTS: 12 by 4
-    # OUTPUTS: 24 by 8
-    ConvTranspose2d(
-        in_channels=16,
         out_channels=32,
         kernel_size=4,
         stride=2,
         padding=1,
     ),
-    # Conv2d(in_channels=32, out_channels=32, kernel_size=3, stride=1, padding=1),
-    ReLU(),
-    # INPUTS: 24 by 8
+    # INPUTS: 12 by 4
     # OUTPUTS: 48 by 16
     ConvTranspose2d(
         in_channels=32,
-        out_channels=128,
-        kernel_size=4,
-        stride=2,
-        padding=1,
-    ),
-    # Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=1, padding=1),
-    ReLU(),
-    # INPUTS: 48 by 16
-    # OUTPUTS: 192 by 64
-    ConvTranspose2d(
-        in_channels=128,
-        out_channels=256,
+        out_channels=64,
         kernel_size=4,
         stride=4,
         padding=0,
     ),
-    # Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=1, padding=1),
+    ReLU(),
+    # INPUTS: 48 by 16
+    # OUTPUTS: 192 by 64
+    ConvTranspose2d(
+        in_channels=64,
+        out_channels=128,
+        kernel_size=4,
+        stride=4,
+        padding=0,
+    ),
     ReLU(),
     # INPUTS: 192 by 64
-    # OUTPUTS: 384 by 128
+    # OUTPUTS: 768 by 256
     ConvTranspose2d(
-        in_channels=256,
-        out_channels=512,
-        kernel_size=4,
-        stride=2,
-        padding=1,
-    ),
-    # Conv2d(in_channels=128, out_channels=128, kernel_size=3, stride=1, padding=1),
-    ReLU(),
-    ConvTranspose2d(
-        in_channels=512,
+        in_channels=128,
         out_channels=config["DEPTH"],
         kernel_size=4,
-        stride=2,
-        padding=1,
-    ),
+        stride=4,
+        padding=0,
+    )
     # ConvTranspose2d(
     #     in_channels=1,
     #     out_channels=4,
