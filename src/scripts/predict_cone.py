@@ -72,8 +72,8 @@ config = {
     "base": torch.float32,
     "device": get_device(),
     # NOTE:  THESE DEFINE THE DIMENSIONS OF THE MIDDLE IMAGE
-    "MID_IMAGE_DEPTH": 1,
-    "MID_IMAGE_DIM": (12, 4),
+    "MID_IMAGE_DEPTH": 36,
+    "MID_IMAGE_DIM": (6, 2),
     "FINAL_IMAGE_DIM": (768, 256),
     # ------------------- #
     "SAVE_IMAGES": True,
@@ -125,7 +125,9 @@ train_loader, val_loader, test_loader = split_dataset(
 
 # IMPORTANT: change linear layer output to batch size * 256 so dimensions match? hmm
 lin8 = Sequential(
-    Linear(2, 48),
+    Linear(2, 12),
+    ReLU(),
+    Linear(12, 432),
     ReLU(),
     # Linear(48, 384),
     # ReLU(),
@@ -137,20 +139,20 @@ lin8 = Sequential(
 
 
 conv8 = Sequential(
-    # # INPUTS: 6 by 2
-    # # OUTPUTS: 12 by 4
-    # ConvTranspose2d(
-    #     in_channels=config["MID_IMAGE_DEPTH"],
-    #     out_channels=32,
-    #     kernel_size=4,
-    #     stride=2,
-    #     padding=1,
-    # ),
+    # INPUTS: 6 by 2
+    # OUTPUTS: 12 by 4
+    ConvTranspose2d(
+        in_channels=config["MID_IMAGE_DEPTH"],
+        out_channels=512,
+        kernel_size=4,
+        stride=2,
+        padding=1,
+    ),
     # INPUTS: 12 by 4
     # OUTPUTS: 48 by 16
     ConvTranspose2d(
-        in_channels=config["MID_IMAGE_DEPTH"],
-        out_channels=8,
+        in_channels=512,
+        out_channels=256,
         kernel_size=4,
         stride=4,
         padding=0,
@@ -159,8 +161,8 @@ conv8 = Sequential(
     # INPUTS: 48 by 16
     # OUTPUTS: 192 by 64
     ConvTranspose2d(
-        in_channels=8,
-        out_channels=16,
+        in_channels=256,
+        out_channels=128,
         kernel_size=4,
         stride=4,
         padding=0,
@@ -169,18 +171,11 @@ conv8 = Sequential(
     # INPUTS: 192 by 64
     # OUTPUTS: 768 by 256
     ConvTranspose2d(
-        in_channels=16,
-        out_channels=32,
+        in_channels=128,
+        out_channels=64,
         kernel_size=4,
         stride=4,
         padding=0,
-    ),
-    Conv2d(
-        in_channels=32,
-        out_channels=64,
-        kernel_size=3,
-        stride=1,
-        padding=1,
     ),
     Conv2d(
         in_channels=64,
