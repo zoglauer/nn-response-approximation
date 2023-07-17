@@ -172,7 +172,7 @@ class Trainer:
                 self.config["SAVE_IMAGES"]
                 and self.epoch % self.config["IMAGES_SAVE_INTERVAL"] == 0
             ):
-                img = pred[0].detach().numpy()
+                img = pred[0].cpu().numpy()
 
                 # Use epoch as filename
 
