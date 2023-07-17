@@ -127,8 +127,8 @@ train_loader, val_loader, test_loader = split_dataset(
 lin8 = Sequential(
     Linear(2, 12),
     ReLU(),
-    Linear(12, 432),
-    ReLU(),
+    # Linear(12, 432),
+    # ReLU(),
     # Linear(48, 384),
     # ReLU(),
     # Linear(384, 3840),
@@ -139,51 +139,53 @@ lin8 = Sequential(
 
 
 conv8 = Sequential(
-    # INPUTS: 6 by 2
-    # OUTPUTS: 12 by 4
-    ConvTranspose2d(
-        in_channels=config["MID_IMAGE_DEPTH"],
-        out_channels=512,
-        kernel_size=4,
-        stride=2,
-        padding=1,
-    ),
-    # INPUTS: 12 by 4
-    # OUTPUTS: 48 by 16
-    ConvTranspose2d(
-        in_channels=512,
-        out_channels=256,
-        kernel_size=4,
-        stride=4,
-        padding=0,
-    ),
+    ConvTranspose2d(1, 16, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
     ReLU(),
-    # INPUTS: 48 by 16
-    # OUTPUTS: 192 by 64
-    ConvTranspose2d(
-        in_channels=256,
-        out_channels=128,
-        kernel_size=4,
-        stride=4,
-        padding=0,
-    ),
+    ConvTranspose2d(16, 32, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
     ReLU(),
-    # INPUTS: 192 by 64
-    # OUTPUTS: 768 by 256
-    ConvTranspose2d(
-        in_channels=128,
-        out_channels=64,
-        kernel_size=4,
-        stride=4,
-        padding=0,
-    ),
-    Conv2d(
-        in_channels=64,
-        out_channels=config["DEPTH"],
-        kernel_size=3,
-        stride=1,
-        padding=1,
-    ),
+    ConvTranspose2d(32, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
+    ReLU(),
+    ConvTranspose2d(64, 128, kernel_size=(4, 4), stride=(4, 4)),
+    ReLU(),
+    ConvTranspose2d(128, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
+    ReLU(),
+    ConvTranspose2d(256, 36, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+    # # INPUTS: 12 by 4
+    # # OUTPUTS: 48 by 16
+    # ConvTranspose2d(
+    #     in_channels=16,
+    #     out_channels=32,
+    #     kernel_size=4,
+    #     stride=4,
+    #     padding=0,
+    # ),
+    # ReLU(),
+    # # INPUTS: 48 by 16
+    # # OUTPUTS: 192 by 64
+    # ConvTranspose2d(
+    #     in_channels=32,
+    #     out_channels=64,
+    #     kernel_size=4,
+    #     stride=4,
+    #     padding=0,
+    # ),
+    # ReLU(),
+    # # INPUTS: 192 by 64
+    # # OUTPUTS: 768 by 256
+    # ConvTranspose2d(
+    #     in_channels=64,
+    #     out_channels=128,
+    #     kernel_size=4,
+    #     stride=4,
+    #     padding=0,
+    # ),
+    # Conv2d(
+    #     in_channels=128,
+    #     out_channels=config["DEPTH"],
+    #     kernel_size=3,
+    #     stride=1,
+    #     padding=1,
+    # ),
     # ConvTranspose2d(
     #     in_channels=1,
     #     out_channels=4,
@@ -353,14 +355,13 @@ scheduler = ReduceLROnPlateau(
 #     cycle_momentum=False,
 # )
 
-# optimizer = torch.optim.SGD(model.parameters(), lr=config["LEARNING_RATE"])
-# scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(
-#     optimizer,
-#     T_0=10,
-#     T_mult=1,
-#     eta_min=0.001,
-#     last_epoch=-1,
-# )
+optimizer = torch.optim.SGD(model.parameters(), lr=config["LEARNING_RATE"])
+scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(
+    optimizer,
+    T_0=20,
+    T_mult=1,
+    eta_min=0.001,
+)
 
 
 trainer = Trainer(
