@@ -161,7 +161,7 @@ conv8 = Sequential(
     ),
     Conv2d(
         in_channels=128,
-        out_channels=256,
+        out_channels=128,
         kernel_size=3,
         stride=1,
         padding=1,
@@ -170,14 +170,14 @@ conv8 = Sequential(
     # INPUTS: 192 by 64
     # OUTPUTS: 768 by 256
     ConvTranspose2d(
-        in_channels=256,
-        out_channels=512,
+        in_channels=128,
+        out_channels=256,
         kernel_size=4,
         stride=4,
         padding=0,
     ),
     Conv2d(
-        in_channels=512,
+        in_channels=256,
         out_channels=config["DEPTH"],
         kernel_size=3,
         stride=1,
