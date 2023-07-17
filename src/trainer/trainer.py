@@ -2,6 +2,7 @@ import torch
 import math
 import os
 import wandb
+import numpy as np
 from torchsummary import summary
 
 
@@ -24,6 +25,8 @@ class Trainer:
 
         self.curr_lr = config["LEARNING_RATE"]
 
+        self.epoch = 0
+
     def init_wandb(self):
         # wandb.login(key=os.environ.)
 
@@ -41,10 +44,17 @@ class Trainer:
 
         wandb.save(os.path.join(wandb.run.dir, "model_arch.txt"))
 
+        # If saving images for logging, update image subdirectory with name of this run
+        if self.config["SAVE_IMAGES"]:
+            self.config["IMAGES_SAVE_DIR"] = os.path.join(
+                self.config["IMAGES_SAVE_DIR"], wandb.run.name
+            )
+
+            # Create the directory
+            os.mkdir(self.config["IMAGES_SAVE_DIR"])
+
     def train_epoch(self):
         running_loss = 0.0
-
-        self.init_wandb()
 
         for x, y in self.train_loader:
             torch.cuda.empty_cache()
@@ -90,6 +100,9 @@ class Trainer:
 
         smallest_val_loss = math.inf
 
+        # Initialize wandb
+        self.init_wandb()
+
         val_loss = self.validate()
 
         print(f"Initial Val Loss: {val_loss}")
@@ -132,8 +145,8 @@ class Trainer:
 
             epoch += 1
 
-        # Store epoch in object
-        self.epoch = epoch
+            # Store epoch in object
+            self.epoch = epoch
 
     def validate(self):
         model = self.model
@@ -153,6 +166,19 @@ class Trainer:
 
                 # Multiplied to get aggregate loss for the batch (average done below across all batches).
                 running_loss += loss.item() * pred.shape[0]
+
+            # Save an image from the last pred for logging
+            if (
+                self.config["SAVE_IMAGES"]
+                and self.epoch % self.config["IMAGES_SAVE_INTERVAL"] == 0
+            ):
+                img = pred[0].detach().numpy()
+
+                # Use epoch as filename
+
+                filename = os.path.join(self.config["IMAGES_SAVE_DIR"], str(self.epoch))
+                print("SAVING", filename)
+                np.save(filename, img)
 
             # Revert back to train mode
             model.train()

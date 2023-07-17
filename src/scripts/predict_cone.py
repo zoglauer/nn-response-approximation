@@ -75,6 +75,11 @@ config = {
     "MID_IMAGE_DEPTH": 1,
     "MID_IMAGE_DIM": (6, 2),
     "FINAL_IMAGE_DIM": (768, 256),
+    # ------------------- #
+    "SAVE_IMAGES": True,
+    "IMAGES_SAVE_DIR": "../../logs/saved-images/",
+    "IMAGES_SAVE_INTERVAL": 10,
+    # ------------------- #
 }
 
 # Set other attributes that depend on config specifications
@@ -83,6 +88,7 @@ config["NUMPIX"] = 12 * config["NSIDE"] ** 2
 # IF USING SAVIO, USE THE SCRATCH DIRECTORY
 if config["device"] != "cpu":
     config["INPUT_DIR"] = "/global/scratch/users/akotamraju/data/cross-sec-data"
+    config["IMAGES_SAVE_DIR"] = "/global/scratch/users/akotamraju/saved-images"
 
 # IF USING SAVIO, DO DATA PARALLELISM
 if config["device"] != "cpu":
@@ -159,13 +165,6 @@ conv8 = Sequential(
         stride=4,
         padding=0,
     ),
-    Conv2d(
-        in_channels=128,
-        out_channels=128,
-        kernel_size=3,
-        stride=1,
-        padding=1,
-    ),
     ReLU(),
     # INPUTS: 192 by 64
     # OUTPUTS: 768 by 256
@@ -175,6 +174,13 @@ conv8 = Sequential(
         kernel_size=4,
         stride=4,
         padding=0,
+    ),
+    Conv2d(
+        in_channels=256,
+        out_channels=256,
+        kernel_size=3,
+        stride=1,
+        padding=1,
     ),
     Conv2d(
         in_channels=256,
