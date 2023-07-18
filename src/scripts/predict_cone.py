@@ -18,6 +18,7 @@ from torch.nn import (
     Tanh,
     Dropout,
     DataParallel,
+    BatchNorm2d,
 )
 
 sys.path.append("../model")
@@ -140,14 +141,19 @@ lin8 = Sequential(
 
 conv8 = Sequential(
     ConvTranspose2d(1, 16, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
+    BatchNorm2d(16),
     ReLU(),
     ConvTranspose2d(16, 32, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
+    BatchNorm2d(32),
     ReLU(),
     ConvTranspose2d(32, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
+    BatchNorm2d(64),
     ReLU(),
     ConvTranspose2d(64, 128, kernel_size=(4, 4), stride=(4, 4)),
+    BatchNorm2d(128),
     ReLU(),
     ConvTranspose2d(128, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
+    BatchNorm2d(256),
     ReLU(),
     ConvTranspose2d(256, 36, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
     ReLU(),
@@ -345,19 +351,23 @@ scheduler = ReduceLROnPlateau(
 )
 
 
-scheduler = CyclicLR(
-    optimizer,
-    base_lr=0.0001,  # Initial learning rate which is the lower boundary in the cycle for each parameter group
-    max_lr=config[
-        "LEARNING_RATE"
-    ],  # Upper learning rate boundaries in the cycle for each parameter group
-    step_size_up=256,  # Number of training iterations in the increasing half of a cycle
-    mode="triangular",
-    cycle_momentum=False,
-)
+# scheduler = CyclicLR(
+#     optimizer,
+#     base_lr=0.0001,  # Initial learning rate which is the lower boundary in the cycle for each parameter group
+#     max_lr=config[
+#         "LEARNING_RATE"
+#     ],  # Upper learning rate boundaries in the cycle for each parameter group
+#     step_size_up=256,  # Number of training iterations in the increasing half of a cycle
+#     mode="triangular",
+#     cycle_momentum=False,
+# )
 
 # NOTE DOWN THE OPTIMIZER & SCHEDULER INTO THE CONFIG
-config["scheduler"] = str(scheduler)
+scheduler_string = str(scheduler)
+scheduler_params = scheduler.state_dict()
+scheduler_string_with_params = f"{scheduler_string}\nParameters: {scheduler_params}"
+config["scheduler"] = scheduler_string_with_params
+
 config["optimizer"] = str(optimizer)
 
 
