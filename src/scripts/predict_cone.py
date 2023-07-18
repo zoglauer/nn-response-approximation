@@ -61,7 +61,7 @@ config = {
     "DEPTH": 36,  # 180 / 5
     "train_pct": 0.7,
     "val_pct": 0.15,
-    "BATCH_SIZE": 16,
+    "BATCH_SIZE": 8,
     # ------------------- #
     "EPOCHS": 1000,
     "PATIENCE": 40,
@@ -345,16 +345,16 @@ scheduler = ReduceLROnPlateau(
 )
 
 
-# scheduler = CyclicLR(
-#     optimizer,
-#     base_lr=0.0001,  # Initial learning rate which is the lower boundary in the cycle for each parameter group
-#     max_lr=config[
-#         "LEARNING_RATE"
-#     ],  # Upper learning rate boundaries in the cycle for each parameter group
-#     step_size_up=256,  # Number of training iterations in the increasing half of a cycle
-#     mode="triangular",
-#     cycle_momentum=False,
-# )
+scheduler = CyclicLR(
+    optimizer,
+    base_lr=0.0001,  # Initial learning rate which is the lower boundary in the cycle for each parameter group
+    max_lr=config[
+        "LEARNING_RATE"
+    ],  # Upper learning rate boundaries in the cycle for each parameter group
+    step_size_up=256,  # Number of training iterations in the increasing half of a cycle
+    mode="triangular",
+    cycle_momentum=False,
+)
 
 # NOTE DOWN THE OPTIMIZER & SCHEDULER INTO THE CONFIG
 
