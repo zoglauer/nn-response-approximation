@@ -4,3 +4,4 @@ __init__.py
 data/
 wandb/
 .DS_Store
+logs/saved-images
