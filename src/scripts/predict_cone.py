@@ -351,7 +351,7 @@ scheduler = CyclicLR(
     max_lr=config[
         "LEARNING_RATE"
     ],  # Upper learning rate boundaries in the cycle for each parameter group
-    step_size_up=256,  # Number of training iterations in the increasing half of a cycle
+    step_size_up=1024,  # Number of training iterations in the increasing half of a cycle
     mode="triangular",
     cycle_momentum=False,
 )
