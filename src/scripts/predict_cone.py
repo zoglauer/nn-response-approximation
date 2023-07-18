@@ -73,7 +73,7 @@ config = {
     "device": get_device(),
     # NOTE:  THESE DEFINE THE DIMENSIONS OF THE MIDDLE IMAGE
     "MID_IMAGE_DEPTH": 1,
-    "MID_IMAGE_DIM": (6, 2),
+    "MID_IMAGE_DIM": (24, 8),
     "FINAL_IMAGE_DIM": (768, 256),
     # ------------------- #
     "SAVE_IMAGES": True,
@@ -127,10 +127,10 @@ train_loader, val_loader, test_loader = split_dataset(
 lin8 = Sequential(
     Linear(2, 12),
     ReLU(),
-    # Linear(12, 432),
-    # ReLU(),
-    # Linear(48, 384),
-    # ReLU(),
+    Linear(12, 48),
+    ReLU(),
+    Linear(48, 192),
+    ReLU(),
     # Linear(384, 3840),
     # ReLU(),
     # Linear(3840, 27648),
@@ -149,7 +149,8 @@ conv8 = Sequential(
     ReLU(),
     ConvTranspose2d(128, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
     ReLU(),
-    ConvTranspose2d(256, 36, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+    ConvTranspose2d(256, 36, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
+    ReLU(),
     # # INPUTS: 12 by 4
     # # OUTPUTS: 48 by 16
     # ConvTranspose2d(
@@ -344,16 +345,16 @@ scheduler = ReduceLROnPlateau(
 )
 
 
-# scheduler = CyclicLR(
-#     optimizer,
-#     base_lr=0.0001,  # Initial learning rate which is the lower boundary in the cycle for each parameter group
-#     max_lr=config[
-#         "LEARNING_RATE"
-#     ],  # Upper learning rate boundaries in the cycle for each parameter group
-#     step_size_up=15,  # Number of training iterations in the increasing half of a cycle
-#     mode="triangular",
-#     cycle_momentum=False,
-# )
+scheduler = CyclicLR(
+    optimizer,
+    base_lr=0.0001,  # Initial learning rate which is the lower boundary in the cycle for each parameter group
+    max_lr=config[
+        "LEARNING_RATE"
+    ],  # Upper learning rate boundaries in the cycle for each parameter group
+    step_size_up=256,  # Number of training iterations in the increasing half of a cycle
+    mode="triangular",
+    cycle_momentum=False,
+)
 
 # optimizer = torch.optim.SGD(model.parameters(), lr=config["LEARNING_RATE"])
 # scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(
