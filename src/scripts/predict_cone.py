@@ -64,7 +64,7 @@ config = {
     "BATCH_SIZE": 16,
     # ------------------- #
     "EPOCHS": 1000,
-    "PATIENCE": 30,
+    "PATIENCE": 40,
     "LEARNING_RATE": 0.01,
     # ------------------- #
     "LR_PATIENCE": 15,
@@ -140,24 +140,17 @@ lin8 = Sequential(
 
 
 conv8 = Sequential(
-    ConvTranspose2d(
-        config["MID_IMAGE_DEPTH"],
-        512,
-        kernel_size=(4, 4),
-        stride=(2, 2),
-        padding=(1, 1),
-    ),
+    ConvTranspose2d(1, 16, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
     ReLU(),
-    ConvTranspose2d(512, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
+    ConvTranspose2d(16, 32, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
     ReLU(),
-    ConvTranspose2d(256, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
+    ConvTranspose2d(32, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
     ReLU(),
-    ConvTranspose2d(128, 64, kernel_size=(4, 4), stride=(4, 4)),
+    ConvTranspose2d(64, 128, kernel_size=(4, 4), stride=(4, 4)),
     ReLU(),
-    ConvTranspose2d(64, 32, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
+    ConvTranspose2d(128, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
     ReLU(),
-    ConvTranspose2d(32, 36, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
-    ReLU(),
+    ConvTranspose2d(256, 36, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
     # # INPUTS: 12 by 4
     # # OUTPUTS: 48 by 16
     # ConvTranspose2d(
@@ -322,10 +315,10 @@ conv8 = Sequential(
     # ),
 )
 
-expand8 = ConvExpand(lin8, conv8, config)
+expand = ConvExpand(lin8, conv8, config)
 
 # %%
-model = expand8
+model = expand
 
 model = model.to(dtype=config["base"], device=config["device"])
 
@@ -364,12 +357,6 @@ scheduler = ReduceLROnPlateau(
 # )
 
 # NOTE DOWN THE OPTIMIZER & SCHEDULER INTO THE CONFIG
-scheduler_string = str(scheduler)
-scheduler_params = scheduler.state_dict()
-scheduler_string_with_params = f"{scheduler_string}\nParameters: {scheduler_params}"
-config["scheduler"] = scheduler_string_with_params
-
-config["optimizer"] = str(optimizer)
 
 
 # optimizer = torch.optim.SGD(model.parameters(), lr=config["LEARNING_RATE"])
@@ -388,63 +375,3 @@ trainer = Trainer(
 # %%
 
 trainer.train()
-
-# %%
-
-import healpy as hp
-import matplotlib.pyplot as plt
-
-
-def display_sample(model, data_loader, show_noised=True):
-    NUMPIX = config["NUMPIX"]
-
-    for x, y in data_loader:
-        # Set model to evaluation mode to conserve memory
-        model.eval()
-
-        # Don't want to waste memory on gradients
-        with torch.no_grad():
-            pred = model(x)
-
-            DEPTH = 2
-
-            model_pred = np.reshape(pred[10][DEPTH].detach().numpy(), (NUMPIX,))
-            truth = torch.reshape(y[10][DEPTH], (NUMPIX,)).detach().numpy()
-
-            diff = np.absolute(model_pred - truth)
-
-            # [0] because 1 channel so need to go inside
-            # Only show if parameter set to true. Set show_noised to false when evaluating on other model output, for ex.
-            if show_noised:
-                hp.mollview(torch.reshape(x[0], (NUMPIX,)), title="With Noise", nlocs=5)
-
-            hp.mollview(truth, title="Ground Truth", nlocs=5)
-            hp.mollview(model_pred, title="Model Prediction", nlocs=5)
-            hp.mollview(diff, title="Difference Map", nlocs=5)
-
-            # fig, axs = plt.subplots(1, 3, figsize=(15, 5))
-
-            # axs[0].imshow(hp.mollview(truth, return_projected_map=True), origin="lower")
-            # axs[1].imshow(hp.mollview(model_pred, return_projected_map=True), origin="lower")
-            # axs[2].imshow(hp.mollview(diff, return_projected_map=True), origin="lower")
-
-            # # Optionally, customize the subplots and figure
-            # axs[0].set_title("Ground Truth")
-            # axs[1].set_title("Model Prediction")
-            # axs[2].set_title("Difference Map")
-            # plt.setp(axs, xticks=[], yticks=[])  # Hide the axes on all subplots
-
-            # plt.show()
-
-            # plt.savefig(
-            #     "combined_image.png", dpi=300, bbox_inches="tight"
-            # )  # Replace 'combined_image.png' with your desired file name and format
-
-            # set back to train mode
-            model.train()
-            break
-
-
-display_sample(model, val_loader, show_noised=False)
-
-# %%

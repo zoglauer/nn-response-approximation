@@ -53,6 +53,16 @@ class Trainer:
             # Create the directory
             os.mkdir(self.config["IMAGES_SAVE_DIR"])
 
+        # Store scheduler and optimizer type
+        scheduler_string = str(self.scheduler)
+        scheduler_params = self.scheduler.state_dict()
+        scheduler_string_with_params = (
+            f"{scheduler_string}\nParameters: {scheduler_params}"
+        )
+
+        self.config["scheduler"] = scheduler_string_with_params
+        self.config["optimizer"] = str(self.optimizer)
+
     def train_epoch(self):
         running_loss = 0.0
 
