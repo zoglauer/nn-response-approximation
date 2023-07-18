@@ -73,7 +73,7 @@ config = {
     "base": torch.float32,
     "device": get_device(),
     # NOTE:  THESE DEFINE THE DIMENSIONS OF THE MIDDLE IMAGE
-    "MID_IMAGE_DEPTH": 1,
+    "MID_IMAGE_DEPTH": 64,
     "MID_IMAGE_DIM": (6, 2),
     "FINAL_IMAGE_DIM": (768, 256),
     # ------------------- #
@@ -126,7 +126,7 @@ train_loader, val_loader, test_loader = split_dataset(
 
 # IMPORTANT: change linear layer output to batch size * 256 so dimensions match? hmm
 lin8 = Sequential(
-    Linear(2, 12),
+    Linear(2, 768),
     ReLU(),
     # Linear(12, 48),
     # ReLU(),
@@ -140,18 +140,23 @@ lin8 = Sequential(
 
 
 conv8 = Sequential(
-    ConvTranspose2d(1, 16, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
-    BatchNorm2d(16),
+    ConvTranspose2d(
+        config["MID_IMAGE_DEPTH"],
+        512,
+        kernel_size=(4, 4),
+        stride=(2, 2),
+        padding=(1, 1),
+    ),
     ReLU(),
-    ConvTranspose2d(16, 32, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
+    ConvTranspose2d(512, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
     ReLU(),
-    ConvTranspose2d(32, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
+    ConvTranspose2d(256, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
     ReLU(),
-    ConvTranspose2d(64, 128, kernel_size=(4, 4), stride=(4, 4)),
+    ConvTranspose2d(128, 64, kernel_size=(4, 4), stride=(4, 4)),
     ReLU(),
-    ConvTranspose2d(128, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
+    ConvTranspose2d(64, 32, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
     ReLU(),
-    ConvTranspose2d(256, 36, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
+    ConvTranspose2d(32, 36, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
     ReLU(),
     # # INPUTS: 12 by 4
     # # OUTPUTS: 48 by 16
