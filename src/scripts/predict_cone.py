@@ -73,7 +73,7 @@ config = {
     "device": get_device(),
     # NOTE:  THESE DEFINE THE DIMENSIONS OF THE MIDDLE IMAGE
     "MID_IMAGE_DEPTH": 1,
-    "MID_IMAGE_DIM": (24, 8),
+    "MID_IMAGE_DIM": (6, 2),
     "FINAL_IMAGE_DIM": (768, 256),
     # ------------------- #
     "SAVE_IMAGES": True,
@@ -127,10 +127,10 @@ train_loader, val_loader, test_loader = split_dataset(
 lin8 = Sequential(
     Linear(2, 12),
     ReLU(),
-    Linear(12, 48),
-    ReLU(),
-    Linear(48, 192),
-    ReLU(),
+    # Linear(12, 48),
+    # ReLU(),
+    # Linear(48, 192),
+    # ReLU(),
     # Linear(384, 3840),
     # ReLU(),
     # Linear(3840, 27648),
@@ -355,6 +355,11 @@ scheduler = CyclicLR(
     mode="triangular",
     cycle_momentum=False,
 )
+
+# NOTE DOWN THE OPTIMIZER & SCHEDULER INTO THE CONFIG
+config["scheduler"] = str(scheduler)
+config["optimizer"] = str(optimizer)
+
 
 # optimizer = torch.optim.SGD(model.parameters(), lr=config["LEARNING_RATE"])
 # scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(
