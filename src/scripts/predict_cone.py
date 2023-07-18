@@ -64,16 +64,16 @@ config = {
     "BATCH_SIZE": 8,
     # ------------------- #
     "EPOCHS": 1000,
-    "PATIENCE": 20,
+    "PATIENCE": 30,
     "LEARNING_RATE": 0.01,
     # ------------------- #
-    "LR_PATIENCE": 6,
+    "LR_PATIENCE": 15,
     "LR_ADAPT_FACTOR": 0.5,
     # ------------------- #
     "base": torch.float32,
     "device": get_device(),
     # NOTE:  THESE DEFINE THE DIMENSIONS OF THE MIDDLE IMAGE
-    "MID_IMAGE_DEPTH": 128,
+    "MID_IMAGE_DEPTH": 1,
     "MID_IMAGE_DIM": (6, 2),
     "FINAL_IMAGE_DIM": (768, 256),
     # ------------------- #
@@ -126,7 +126,7 @@ train_loader, val_loader, test_loader = split_dataset(
 
 # IMPORTANT: change linear layer output to batch size * 256 so dimensions match? hmm
 lin8 = Sequential(
-    Linear(2, 1536),
+    Linear(2, 12),
     ReLU(),
     # Linear(12, 48),
     # ReLU(),
