@@ -67,7 +67,7 @@ config = {
     "PATIENCE": 40,
     "LEARNING_RATE": 0.01,
     # ------------------- #
-    "LR_PATIENCE": 15,
+    "LR_PATIENCE": 10,
     "LR_ADAPT_FACTOR": 0.5,
     # ------------------- #
     "base": torch.float32,
@@ -142,6 +142,7 @@ lin8 = Sequential(
 conv8 = Sequential(
     ConvTranspose2d(1, 16, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
     ReLU(),
+    BatchNorm2d(16),
     ConvTranspose2d(16, 32, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
     ReLU(),
     ConvTranspose2d(32, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
@@ -150,7 +151,8 @@ conv8 = Sequential(
     ReLU(),
     ConvTranspose2d(128, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
     ReLU(),
-    ConvTranspose2d(256, 36, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+    ConvTranspose2d(256, 36, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
+    ReLU(),
     # # INPUTS: 12 by 4
     # # OUTPUTS: 48 by 16
     # ConvTranspose2d(
@@ -345,16 +347,16 @@ scheduler = ReduceLROnPlateau(
 )
 
 
-scheduler = CyclicLR(
-    optimizer,
-    base_lr=0.0001,  # Initial learning rate which is the lower boundary in the cycle for each parameter group
-    max_lr=config[
-        "LEARNING_RATE"
-    ],  # Upper learning rate boundaries in the cycle for each parameter group
-    step_size_up=1024,  # Number of training iterations in the increasing half of a cycle
-    mode="triangular2",
-    cycle_momentum=False,
-)
+# scheduler = CyclicLR(
+#     optimizer,
+#     base_lr=0.0001,  # Initial learning rate which is the lower boundary in the cycle for each parameter group
+#     max_lr=config[
+#         "LEARNING_RATE"
+#     ],  # Upper learning rate boundaries in the cycle for each parameter group
+#     step_size_up=1024,  # Number of training iterations in the increasing half of a cycle
+#     mode="triangular2",
+#     cycle_momentum=False,
+# )
 
 # NOTE DOWN THE OPTIMIZER & SCHEDULER INTO THE CONFIG
 
