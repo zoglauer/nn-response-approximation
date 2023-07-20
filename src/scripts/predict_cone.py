@@ -61,7 +61,7 @@ config = {
     "DEPTH": 36,  # 180 / 5
     "train_pct": 0.7,
     "val_pct": 0.15,
-    "BATCH_SIZE": 8,
+    "BATCH_SIZE": 32,
     # ------------------- #
     "EPOCHS": 1000,
     "PATIENCE": 40,
