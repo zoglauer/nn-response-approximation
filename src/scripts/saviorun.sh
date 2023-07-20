@@ -7,15 +7,14 @@
 #SBATCH -J Python
 
 #SBATCH --account=fc_cosi
-#SBATCH --partition=savio3_gpu
-#SBATCH --qos=savio_lowprio
+#SBATCH --partition=savio3
+#SBATCH --qos=savio_normal
 
 #SBATCH -t 2:00:00
 
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=4
-#SBATCH --gres=gpu:TITAN:8
+#SBATCH --cpus-per-task=8
 
 #SBATCH --signal=2@60
 

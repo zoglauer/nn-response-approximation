@@ -73,6 +73,7 @@ config = {
     # ------------------- #
     "base": torch.float32,
     "device": get_device(),
+    "system": platform.system(),
     # NOTE:  THESE DEFINE THE DIMENSIONS OF THE MIDDLE IMAGE
     "MID_IMAGE_DEPTH": 1,
     "MID_IMAGE_DIM": (6, 2),
