@@ -76,7 +76,7 @@ config = {
     "system": platform.system(),
     # NOTE:  THESE DEFINE THE DIMENSIONS OF THE MIDDLE IMAGE
     "MID_IMAGE_DEPTH": 1,
-    "MID_IMAGE_DIM": (6, 2),
+    "MID_IMAGE_DIM": (24, 8),
     "FINAL_IMAGE_DIM": (768, 256),
     # ------------------- #
     "SAVE_IMAGES": True,
@@ -128,7 +128,9 @@ train_loader, val_loader, test_loader = split_dataset(
 
 # IMPORTANT: change linear layer output to batch size * 256 so dimensions match? hmm
 lin8 = Sequential(
-    Linear(2, 12),
+    Linear(2, 48),
+    ReLU(),
+    Linear(48, 192),
     ReLU(),
     # Linear(12, 48),
     # ReLU(),
@@ -142,13 +144,13 @@ lin8 = Sequential(
 
 
 conv8 = Sequential(
-    ConvTranspose2d(1, 16, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
-    ReLU(),
-    BatchNorm2d(16),
-    ConvTranspose2d(16, 32, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
-    ReLU(),
-    BatchNorm2d(32),
-    ConvTranspose2d(32, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
+    # ConvTranspose2d(1, 16, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
+    # ReLU(),
+    # BatchNorm2d(16),
+    # ConvTranspose2d(16, 32, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
+    # ReLU(),
+    # BatchNorm2d(32),
+    ConvTranspose2d(1, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
     ReLU(),
     BatchNorm2d(64),
     ConvTranspose2d(64, 128, kernel_size=(4, 4), stride=(4, 4)),
@@ -353,16 +355,16 @@ scheduler = ReduceLROnPlateau(
 )
 
 
-scheduler = CyclicLR(
-    optimizer,
-    base_lr=0.001,  # Initial learning rate which is the lower boundary in the cycle for each parameter group
-    max_lr=config[
-        "LEARNING_RATE"
-    ],  # Upper learning rate boundaries in the cycle for each parameter group
-    step_size_up=1024,  # Number of training iterations in the increasing half of a cycle
-    mode="triangular",
-    cycle_momentum=False,
-)
+# scheduler = CyclicLR(
+#     optimizer,
+#     base_lr=0.001,  # Initial learning rate which is the lower boundary in the cycle for each parameter group
+#     max_lr=config[
+#         "LEARNING_RATE"
+#     ],  # Upper learning rate boundaries in the cycle for each parameter group
+#     step_size_up=1024,  # Number of training iterations in the increasing half of a cycle
+#     mode="triangular",
+#     cycle_momentum=False,
+# )
 
 # NOTE DOWN THE OPTIMIZER & SCHEDULER INTO THE CONFIG
 
