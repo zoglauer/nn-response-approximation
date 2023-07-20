@@ -355,7 +355,7 @@ scheduler = ReduceLROnPlateau(
 
 scheduler = CyclicLR(
     optimizer,
-    base_lr=0.0001,  # Initial learning rate which is the lower boundary in the cycle for each parameter group
+    base_lr=0.001,  # Initial learning rate which is the lower boundary in the cycle for each parameter group
     max_lr=config[
         "LEARNING_RATE"
     ],  # Upper learning rate boundaries in the cycle for each parameter group
