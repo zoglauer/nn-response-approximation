@@ -76,8 +76,8 @@ config = {
     "system": platform.system(),
     # NOTE:  THESE DEFINE THE DIMENSIONS OF THE MIDDLE IMAGE
     "MID_IMAGE_DEPTH": 1,
-    "MID_IMAGE_DIM": (24, 8),
-    "FINAL_IMAGE_DIM": (768, 256),
+    "MID_IMAGE_DIM": (8, 6),
+    "FINAL_IMAGE_DIM": (512, 384),
     # ------------------- #
     "SAVE_IMAGES": True,
     "IMAGES_SAVE_DIR": "../../logs/saved-images/",
@@ -130,8 +130,6 @@ train_loader, val_loader, test_loader = split_dataset(
 lin8 = Sequential(
     Linear(2, 48),
     ReLU(),
-    Linear(48, 192),
-    ReLU(),
     # Linear(12, 48),
     # ReLU(),
     # Linear(48, 192),
@@ -144,16 +142,16 @@ lin8 = Sequential(
 
 
 conv8 = Sequential(
-    # ConvTranspose2d(1, 16, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
-    # ReLU(),
-    # BatchNorm2d(16),
-    # ConvTranspose2d(16, 32, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
-    # ReLU(),
-    # BatchNorm2d(32),
-    ConvTranspose2d(1, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
+    ConvTranspose2d(1, 16, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
+    ReLU(),
+    BatchNorm2d(16),
+    ConvTranspose2d(16, 32, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
+    ReLU(),
+    BatchNorm2d(32),
+    ConvTranspose2d(32, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
     ReLU(),
     BatchNorm2d(64),
-    ConvTranspose2d(64, 128, kernel_size=(4, 4), stride=(4, 4)),
+    ConvTranspose2d(64, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
     ReLU(),
     BatchNorm2d(128),
     ConvTranspose2d(128, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
