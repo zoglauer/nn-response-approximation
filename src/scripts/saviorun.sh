@@ -12,10 +12,10 @@
 
 #SBATCH -t 24:00:00
 
-#SBATCH --nodes=1
+#SBATCH --nodes=2
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=2
-#SBATCH --gres=gpu:GTX2080TI:4
+#SBATCH --gres=gpu:GTX2080TI:8
 
 #SBATCH --signal=2@60
 

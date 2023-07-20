@@ -61,7 +61,7 @@ config = {
     "DEPTH": 36,  # 180 / 5
     "train_pct": 0.7,
     "val_pct": 0.15,
-    "BATCH_SIZE": 4,
+    "BATCH_SIZE": 8,
     # ------------------- #
     "EPOCHS": 1000,
     "PATIENCE": 40,
@@ -151,8 +151,10 @@ conv8 = Sequential(
     BatchNorm2d(64),
     ConvTranspose2d(64, 128, kernel_size=(4, 4), stride=(4, 4)),
     ReLU(),
+    BatchNorm2d(128),
     ConvTranspose2d(128, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
     ReLU(),
+    BatchNorm2d(256),
     ConvTranspose2d(256, 36, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
     ReLU(),
     # # INPUTS: 12 by 4
