@@ -10,12 +10,12 @@
 #SBATCH --partition=savio3_gpu
 #SBATCH --qos=savio_lowprio
 
-#SBATCH -t 00:25:00
+#SBATCH -t 2:00:00
 
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=2
-#SBATCH --gres=gpu:GTX2080TI:4
+#SBATCH --cpus-per-task=8
+#SBATCH --gres=gpu:A40:2
 
 #SBATCH --signal=2@60
 
