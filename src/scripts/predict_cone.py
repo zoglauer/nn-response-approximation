@@ -5,6 +5,7 @@ import torch
 
 import pickle
 import numpy as np
+import platform
 
 from torch.nn import (
     Module,
@@ -87,11 +88,11 @@ config = {
 config["NUMPIX"] = 12 * config["NSIDE"] ** 2
 
 # IF USING SAVIO, USE THE SCRATCH DIRECTORY
-if config["device"] != "cpu":
+if platform.system() == "Linux":
     config["INPUT_DIR"] = "/global/scratch/users/akotamraju/data/cross-sec-data"
     config["IMAGES_SAVE_DIR"] = "/global/scratch/users/akotamraju/saved-images"
 
-# IF USING SAVIO, DO DATA PARALLELISM
+# IF USING GPU, DO DATA PARALLELISM
 if config["device"] != "cpu":
     config["GPU_PARALLEL"] = True
 
@@ -351,16 +352,16 @@ scheduler = ReduceLROnPlateau(
 )
 
 
-# scheduler = CyclicLR(
-#     optimizer,
-#     base_lr=0.0001,  # Initial learning rate which is the lower boundary in the cycle for each parameter group
-#     max_lr=config[
-#         "LEARNING_RATE"
-#     ],  # Upper learning rate boundaries in the cycle for each parameter group
-#     step_size_up=1024,  # Number of training iterations in the increasing half of a cycle
-#     mode="triangular2",
-#     cycle_momentum=False,
-# )
+scheduler = CyclicLR(
+    optimizer,
+    base_lr=0.0001,  # Initial learning rate which is the lower boundary in the cycle for each parameter group
+    max_lr=config[
+        "LEARNING_RATE"
+    ],  # Upper learning rate boundaries in the cycle for each parameter group
+    step_size_up=1024,  # Number of training iterations in the increasing half of a cycle
+    mode="triangular",
+    cycle_momentum=False,
+)
 
 # NOTE DOWN THE OPTIMIZER & SCHEDULER INTO THE CONFIG
 
