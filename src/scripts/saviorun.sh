@@ -14,8 +14,8 @@
 
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=4
-#SBATCH --gres=gpu:V100:2
+#SBATCH --cpus-per-task=8
+#SBATCH --gres=gpu:A40:2
 
 #SBATCH --signal=2@60
 
