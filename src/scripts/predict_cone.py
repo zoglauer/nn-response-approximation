@@ -76,8 +76,8 @@ config = {
     "system": platform.system(),
     # NOTE:  THESE DEFINE THE DIMENSIONS OF THE MIDDLE IMAGE
     "MID_IMAGE_DEPTH": 1,
-    "MID_IMAGE_DIM": (8, 6),
-    "FINAL_IMAGE_DIM": (512, 384),
+    "MID_IMAGE_DIM": (6, 8),
+    "FINAL_IMAGE_DIM": (384, 512),
     # ------------------- #
     "SAVE_IMAGES": True,
     "IMAGES_SAVE_DIR": "../../logs/saved-images/",
