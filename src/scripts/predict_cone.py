@@ -102,38 +102,12 @@ if config["device"] != "cpu":
 # %%
 
 
-# Denoises the data manually
-# Removes pixels whose neighbors fall below an energy threshold
-def denoise(cone, THRESHOLD):
-    result = []
-
-    for cross_sec in cone:
-        denoised_cross_sec = []
-
-        for i in range(len(cross_sec) - 1):
-            if cross_sec[i - 1] < THRESHOLD and cross_sec[i + 1] < THRESHOLD:
-                denoised_cross_sec.append(0)
-            else:
-                denoised_cross_sec.append(cross_sec[i])
-
-        # Add last element
-        denoised_cross_sec.append(cross_sec[-1])
-
-        denoised_cross_sec = np.asarray(denoised_cross_sec)
-
-        result.append(denoised_cross_sec)
-
-    return np.asarray(result)
-
-
 # Reshapes the 'y' of a datapoint (the healpix array) into the shape of (depth, length, width)
 def reshape_data(data):
-    denoised = denoise(data["y"], config["DENOISE_THRESHOLD"])
-
     return {
         "x": data["x"],
         "y": np.reshape(
-            denoised,
+            data["y"],
             (
                 config["DEPTH"],
                 config["FINAL_IMAGE_DIM"][0],

@@ -80,7 +80,37 @@ def create_cross_sec(arr, NSIDE, NUMPIX, COMPTON_RESOLUTION_DEG):
     return {"x": x, "y": list(split_data.values())}
 
 
-def save_cross_sec_data(INPUT_DIR, OUTPUT_DIR, NSIDE, NUMPIX, COMPTON_RESOLUTION_DEG):
+# Denoises the data manually
+# Removes pixels whose neighbors fall below an energy threshold
+def denoise(cone, THRESHOLD):
+    result = []
+
+    for cross_sec in cone:
+        denoised_cross_sec = []
+
+        for i in range(len(cross_sec) - 1):
+            if cross_sec[i - 1] < THRESHOLD and cross_sec[i + 1] < THRESHOLD:
+                denoised_cross_sec.append(0)
+            else:
+                denoised_cross_sec.append(cross_sec[i])
+
+        # Add last element
+        denoised_cross_sec.append(cross_sec[-1])
+
+        result.append(denoised_cross_sec)
+
+    return np.asarray(result)
+
+
+def save_cross_sec_data(
+    INPUT_DIR,
+    OUTPUT_DIR,
+    NSIDE,
+    NUMPIX,
+    COMPTON_RESOLUTION_DEG,
+    DENOISE,
+    DENOISE_THRESHOLD,
+):
     # Loop through each file in the input dir
     for filename in os.listdir(INPUT_DIR):
         # Load file with pickle
@@ -103,6 +133,10 @@ def save_cross_sec_data(INPUT_DIR, OUTPUT_DIR, NSIDE, NUMPIX, COMPTON_RESOLUTION
 
         split_data = create_cross_sec(arr, NSIDE, NUMPIX, COMPTON_RESOLUTION_DEG)
 
+        # Denoise cone if specified
+        if DENOISE:
+            split_data["y"] = denoise(split_data["y"], DENOISE_THRESHOLD)
+
         # Save data split into different cross sections
         out_path = os.path.join(OUTPUT_DIR, filename)
         with open(out_path, "wb") as handle:
@@ -110,16 +144,27 @@ def save_cross_sec_data(INPUT_DIR, OUTPUT_DIR, NSIDE, NUMPIX, COMPTON_RESOLUTION
 
 
 if __name__ == "__main__":
-    NSIDE = 64
+    NSIDE = 128
     NUMPIX = 12 * NSIDE**2
     COMPTON_RESOLUTION_DEG = 5
+
+    DENOISE = True
+    DENOISE_THRESHOLD = 50
 
     # If savio, point to scratch directory
     if platform.system() == "Linux":
         INPUT_DIR = "/global/scratch/users/akotamraju/data/full-sim-data"
-        OUTPUT_DIR = "/global/scratch/users/akotamraju/data/cross-sec-data"
+        OUTPUT_DIR = "/global/scratch/users/akotamraju/data/128-denoised"
     else:
         INPUT_DIR = "../../data/full-sim-data"
-        OUTPUT_DIR = "../../data/64-cross-sec-data"
+        OUTPUT_DIR = "../../data/128-denoised"
 
-    save_cross_sec_data(INPUT_DIR, OUTPUT_DIR, NSIDE, NUMPIX, COMPTON_RESOLUTION_DEG)
+    save_cross_sec_data(
+        INPUT_DIR,
+        OUTPUT_DIR,
+        NSIDE,
+        NUMPIX,
+        COMPTON_RESOLUTION_DEG,
+        DENOISE,
+        DENOISE_THRESHOLD,
+    )
