@@ -92,7 +92,7 @@ config["NUMPIX"] = 12 * config["NSIDE"] ** 2
 
 # IF USING SAVIO, USE THE SCRATCH DIRECTORY
 if platform.system() == "Linux":
-    config["INPUT_DIR"] = "/global/scratch/users/akotamraju/data/cross-sec-data"
+    config["INPUT_DIR"] = "/global/scratch/users/akotamraju/data/128-denoised"
     config["IMAGES_SAVE_DIR"] = "/global/scratch/users/akotamraju/saved-images"
 
 # IF USING GPU, DO DATA PARALLELISM
