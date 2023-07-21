@@ -110,15 +110,22 @@ def save_cross_sec_data(
     COMPTON_RESOLUTION_DEG,
     DENOISE,
     DENOISE_THRESHOLD,
+    OVERWRITE=True,
 ):
     # Loop through each file in the input dir
     for filename in os.listdir(INPUT_DIR):
         # Load file with pickle
         inp_path = os.path.join(INPUT_DIR, filename)
+        out_path = os.path.join(OUTPUT_DIR, filename)
 
         # If not pickle file, skip it
         if ".pkl" not in filename:
             print("Non-pickle file found in data")
+            continue
+
+        # If overwrite set to false and file already exists, skip it
+        if not OVERWRITE and os.path.exists(out_path):
+            print(f"SKIPPING { inp_path }")
             continue
 
         print(inp_path)
@@ -138,7 +145,7 @@ def save_cross_sec_data(
             split_data["y"] = denoise(split_data["y"], DENOISE_THRESHOLD)
 
         # Save data split into different cross sections
-        out_path = os.path.join(OUTPUT_DIR, filename)
+
         with open(out_path, "wb") as handle:
             pickle.dump(split_data, handle)
 
@@ -150,6 +157,8 @@ if __name__ == "__main__":
 
     DENOISE = True
     DENOISE_THRESHOLD = 50
+
+    OVERWRITE = False
 
     # If savio, point to scratch directory
     if platform.system() == "Linux":
@@ -167,4 +176,5 @@ if __name__ == "__main__":
         COMPTON_RESOLUTION_DEG,
         DENOISE,
         DENOISE_THRESHOLD,
+        OVERWRITE,
     )
