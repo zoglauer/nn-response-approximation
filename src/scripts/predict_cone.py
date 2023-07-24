@@ -50,7 +50,7 @@ SET CONFIG OBJECT.
 
 """
 config = {
-    "INPUT_DIR": "../../data/cross-sec-data",
+    "INPUT_DIR": "../../data/128-cartesian-1024-768",
     "DATA_INPUT_DIM": (2, 1),
     "GPU_PARALLEL": False,
     # ------------------- #
@@ -60,8 +60,8 @@ config = {
     "NORMALIZE": False,
     # ------------------- #
     "DEPTH": 36,  # 180 / 5
-    "train_pct": 0.95,
-    "val_pct": 0.04,
+    "train_pct": 0.15,
+    "val_pct": 0.15,
     "BATCH_SIZE": 32,
     # ------------------- #
     "EPOCHS": 1000,
@@ -77,7 +77,7 @@ config = {
     # NOTE:  THESE DEFINE THE DIMENSIONS OF THE MIDDLE IMAGE
     "MID_IMAGE_DEPTH": 1,
     "MID_IMAGE_DIM": (6, 8),
-    "FINAL_IMAGE_DIM": (384, 512),
+    "FINAL_IMAGE_DIM": (384 * 2, 512 * 2),
     # ------------------- #
     "SAVE_IMAGES": True,
     "IMAGES_SAVE_DIR": "../../logs/saved-images/",
@@ -92,7 +92,7 @@ config["NUMPIX"] = 12 * config["NSIDE"] ** 2
 
 # IF USING SAVIO, USE THE SCRATCH DIRECTORY
 if platform.system() == "Linux":
-    config["INPUT_DIR"] = "/global/scratch/users/akotamraju/data/128-denoised"
+    config["INPUT_DIR"] = "/global/scratch/users/akotamraju/data/128-cartesian-1024-768"
     config["IMAGES_SAVE_DIR"] = "/global/scratch/users/akotamraju/saved-images"
 
 # IF USING GPU, DO DATA PARALLELISM
@@ -104,17 +104,18 @@ if config["device"] != "cpu":
 
 # Reshapes the 'y' of a datapoint (the healpix array) into the shape of (depth, length, width)
 def reshape_data(data):
-    return {
-        "x": data["x"],
-        "y": np.reshape(
-            data["y"],
-            (
-                config["DEPTH"],
-                config["FINAL_IMAGE_DIM"][0],
-                config["FINAL_IMAGE_DIM"][1],
-            ),
-        ),
-    }
+    return data
+    # return {
+    #     "x": data["x"],
+    #     "y": np.reshape(
+    #         data["y"],
+    #         (
+    #             config["DEPTH"],
+    #             config["FINAL_IMAGE_DIM"][0],
+    #             config["FINAL_IMAGE_DIM"][1],
+    #         ),
+    #     ),
+    # }
 
 
 # %%
@@ -184,7 +185,12 @@ conv8 = Sequential(
     Conv2d(in_channels=48, out_channels=36, kernel_size=3, stride=1, padding=1),
     ReLU(),
     # CONV BLOCK
-    ConvTranspose2d(36, config["DEPTH"], kernel_size=4, stride=2, padding=1),
+    # NOTE: THIS transpose increases resolution by x 4
+    ConvTranspose2d(36, 36, kernel_size=4, stride=4, padding=0),
+    ReLU(),
+    Conv2d(
+        in_channels=36, out_channels=config["DEPTH"], kernel_size=3, stride=1, padding=1
+    ),
     ReLU(),
     # # CONV BLOCK
     # ConvTranspose2d(16, 32, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
