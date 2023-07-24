@@ -7,7 +7,7 @@ def save_mapping(NSIDE, x_dim, y_dim):
     healpix_arr = np.array(list(range(NSIDE**2 * 12)))
 
     cart_arr = hp.cartview(
-        healpix_arr, xsize=2048, ysize=1536, return_projected_map=True
+        healpix_arr, xsize=x_dim, ysize=y_dim, return_projected_map=True
     )
 
     cart_to_heal_map = {}

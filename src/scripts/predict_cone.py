@@ -146,6 +146,14 @@ lin8 = Sequential(
 
 conv8 = Sequential(
     # CONV BLOCK
+    ConvTranspose2d(1, 2048, kernel_size=4, stride=2, padding=1),
+    Conv2d(in_channels=2048, out_channels=1536, kernel_size=3, stride=1, padding=1),
+    BatchNorm2d(768),
+    ReLU(),
+    Conv2d(in_channels=1536, out_channels=1024, kernel_size=3, stride=1, padding=1),
+    BatchNorm2d(512),
+    ReLU(),
+    # CONV BLOCK
     ConvTranspose2d(1, 1024, kernel_size=4, stride=2, padding=1),
     Conv2d(in_channels=1024, out_channels=768, kernel_size=3, stride=1, padding=1),
     BatchNorm2d(768),
@@ -185,8 +193,11 @@ conv8 = Sequential(
     Conv2d(in_channels=48, out_channels=36, kernel_size=3, stride=1, padding=1),
     ReLU(),
     # CONV BLOCK
-    # NOTE: THIS transpose increases resolution by x 4
-    ConvTranspose2d(36, 36, kernel_size=4, stride=4, padding=0),
+    ConvTranspose2d(36, 36, kernel_size=4, stride=2, padding=1),
+    Conv2d(
+        in_channels=36, 36, kernel_size=3, stride=1, padding=1
+    ),
+    ReLU(),
     Conv2d(
         in_channels=36, out_channels=config["DEPTH"], kernel_size=3, stride=1, padding=1
     ),
