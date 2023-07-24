@@ -10,7 +10,7 @@
 #SBATCH --partition=savio3_gpu
 #SBATCH --qos=savio_lowprio
 
-#SBATCH -t 10:00:00
+#SBATCH -t 24:00:00
 
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1

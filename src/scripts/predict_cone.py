@@ -66,7 +66,7 @@ config = {
     # ------------------- #
     "EPOCHS": 1000,
     "PATIENCE": 40,
-    "LEARNING_RATE": 0.005,
+    "LEARNING_RATE": 0.01,
     # ------------------- #
     "LR_PATIENCE": 10,
     "LR_ADAPT_FACTOR": 0.5,
@@ -145,29 +145,27 @@ lin8 = Sequential(
 
 
 conv8 = Sequential(
-    # CONV BLOCK
+    # 2X CONV BLOCK
     ConvTranspose2d(1, 512, kernel_size=4, stride=2, padding=1),
-    # BatchNorm2d(384),
+    Conv2d(in_channels=512, out_channels=256, kernel_size=3, stride=1, padding=1),
+    BatchNorm2d(256),
     ReLU(),
-    # CONV BLOCK
-    ConvTranspose2d(512, 256, kernel_size=4, stride=2, padding=1),
-    # BatchNorm2d(256),
+    # 4X CONV BLOCK
+    ConvTranspose2d(256, 256, kernel_size=4, stride=4, padding=0),
+    Conv2d(in_channels=256, out_channels=128, kernel_size=3, stride=1, padding=1),
+    BatchNorm2d(128),
     ReLU(),
-    # CONV BLOCK
-    ConvTranspose2d(256, 128, kernel_size=4, stride=2, padding=1),
-    # BatchNorm2d(192),
+    # 4X CONV BLOCK
+    ConvTranspose2d(128, 128, kernel_size=4, stride=4, padding=0),
+    Conv2d(in_channels=128, out_channels=64, kernel_size=3, stride=1, padding=1),
+    BatchNorm2d(64),
     ReLU(),
-    # CONV BLOCK
-    ConvTranspose2d(128, 96, kernel_size=4, stride=2, padding=1),
-    # BatchNorm2d(128),
-    ReLU(),
-    # CONV BLOCK
-    ConvTranspose2d(96, 64, kernel_size=4, stride=2, padding=1),
-    # BatchNorm2d(64),
-    ReLU(),
-    # CONV BLOCK
-    # NOTE THAT THIS IS A 4X block
-    ConvTranspose2d(64, config["DEPTH"], kernel_size=4, stride=4, padding=0),
+    # 4X CONV BLOCK
+    ConvTranspose2d(64, 64, kernel_size=4, stride=4, padding=0),
+    Conv2d(
+        in_channels=64, out_channels=config["DEPTH"], kernel_size=3, stride=1, padding=1
+    ),
+    BatchNorm2d(config["DEPTH"]),
     ReLU(),
     # # CONV BLOCK
     # ConvTranspose2d(512, 512, kernel_size=4, stride=2, padding=1),
