@@ -66,7 +66,7 @@ config = {
     # ------------------- #
     "EPOCHS": 1000,
     "PATIENCE": 40,
-    "LEARNING_RATE": 0.01,
+    "LEARNING_RATE": 0.005,
     # ------------------- #
     "LR_PATIENCE": 10,
     "LR_ADAPT_FACTOR": 0.5,
@@ -171,6 +171,7 @@ conv8 = Sequential(
     BatchNorm2d(64),
     ReLU(),
     # CONV BLOCK
+    # NOTE THAT THIS IS A 4X block
     ConvTranspose2d(64, 64, kernel_size=4, stride=4, padding=0),
     Conv2d(
         in_channels=64, out_channels=config["DEPTH"], kernel_size=3, stride=1, padding=1
