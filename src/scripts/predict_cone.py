@@ -60,8 +60,8 @@ config = {
     "NORMALIZE": False,
     # ------------------- #
     "DEPTH": 36,  # 180 / 5
-    "train_pct": 0.15,
-    "val_pct": 0.15,
+    "train_pct": 0.95,
+    "val_pct": 0.04,
     "BATCH_SIZE": 32,
     # ------------------- #
     "EPOCHS": 1000,
