@@ -112,9 +112,17 @@ def convert_to_cartesian(cone, x_dim, y_dim):
     result = []
 
     for cross_sec in cone:
+        # Create dummy figure so can manually close later and save memory
+        fig, (ax1) = plt.subplots(ncols=1)
+
+        plt.axes(ax1)
+
         cart_arr = hp.cartview(
-            cross_sec, xsize=x_dim, ysize=y_dim, return_projected_map=True
+            cross_sec, xsize=x_dim, ysize=y_dim, return_projected_map=True, hold=True
         )
+
+        # IMPORTANT: needed for eliminating excess use of CPU memory for storing figures
+        plt.close(fig)
 
         result.append(cart_arr)
 
@@ -203,7 +211,7 @@ if __name__ == "__main__":
         COMPTON_RESOLUTION_DEG,
         DENOISE,
         DENOISE_THRESHOLD,
-        OVERWRITE=True,
+        OVERWRITE=False,
         CARTESIAN=True,
         x_dim=1024,
         y_dim=768,
