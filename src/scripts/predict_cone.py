@@ -148,10 +148,10 @@ conv8 = Sequential(
     # CONV BLOCK
     ConvTranspose2d(1, 2048, kernel_size=4, stride=2, padding=1),
     Conv2d(in_channels=2048, out_channels=1536, kernel_size=3, stride=1, padding=1),
-    BatchNorm2d(768),
+    BatchNorm2d(1536),
     ReLU(),
     Conv2d(in_channels=1536, out_channels=1024, kernel_size=3, stride=1, padding=1),
-    BatchNorm2d(512),
+    BatchNorm2d(1024),
     ReLU(),
     # CONV BLOCK
     ConvTranspose2d(1, 1024, kernel_size=4, stride=2, padding=1),
