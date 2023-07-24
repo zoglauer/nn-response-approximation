@@ -187,7 +187,6 @@ conv8 = Sequential(
     # CONV BLOCK
     # NOTE: THIS transpose increases resolution by x 4
     ConvTranspose2d(36, 36, kernel_size=4, stride=4, padding=0),
-    ReLU(),
     Conv2d(
         in_channels=36, out_channels=config["DEPTH"], kernel_size=3, stride=1, padding=1
     ),
