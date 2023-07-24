@@ -5,3 +5,4 @@ data/
 wandb/
 .DS_Store
 logs/saved-images
+mappings/*

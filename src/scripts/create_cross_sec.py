@@ -12,6 +12,7 @@ from math import pi, sin, cos
 import pickle
 import os
 import platform
+import matplotlib.pyplot as plt
 
 
 def deg_to_rad(ang):
@@ -102,6 +103,24 @@ def denoise(cone, THRESHOLD):
     return np.asarray(result)
 
 
+# Converts a cone to cartesian coordinates
+# Removes pixels whose neighbors fall below an energy threshold
+def convert_to_cartesian(cone, x_dim, y_dim):
+    # Disable showing of any plots
+    plt.ioff()
+
+    result = []
+
+    for cross_sec in cone:
+        cart_arr = hp.cartview(
+            cross_sec, xsize=x_dim, ysize=y_dim, return_projected_map=True
+        )
+
+        result.append(cart_arr)
+
+    return np.asarray(result)
+
+
 def save_cross_sec_data(
     INPUT_DIR,
     OUTPUT_DIR,
@@ -111,7 +130,14 @@ def save_cross_sec_data(
     DENOISE,
     DENOISE_THRESHOLD,
     OVERWRITE=True,
+    CARTESIAN=False,
+    x_dim=None,
+    y_dim=None,
 ):
+    # If directory not existing yet, create it.
+    if not os.path.exists(OUTPUT_DIR):
+        os.mkdir(OUTPUT_DIR)
+
     # Loop through each file in the input dir
     for filename in os.listdir(INPUT_DIR):
         # Load file with pickle
@@ -144,8 +170,11 @@ def save_cross_sec_data(
         if DENOISE:
             split_data["y"] = denoise(split_data["y"], DENOISE_THRESHOLD)
 
-        # Save data split into different cross sections
+        # Convert to cartesian before saving if specified
+        if CARTESIAN:
+            split_data["y"] = convert_to_cartesian(split_data["y"], x_dim, y_dim)
 
+        # Save data split into different cross sections
         with open(out_path, "wb") as handle:
             pickle.dump(split_data, handle)
 
@@ -158,15 +187,13 @@ if __name__ == "__main__":
     DENOISE = True
     DENOISE_THRESHOLD = 50
 
-    OVERWRITE = False
-
     # If savio, point to scratch directory
     if platform.system() == "Linux":
         INPUT_DIR = "/global/scratch/users/akotamraju/data/full-sim-data"
-        OUTPUT_DIR = "/global/scratch/users/akotamraju/data/128-denoised"
+        OUTPUT_DIR = "/global/scratch/users/akotamraju/data/128-cartesian-1024-768"
     else:
         INPUT_DIR = "../../data/full-sim-data"
-        OUTPUT_DIR = "../../data/128-denoised"
+        OUTPUT_DIR = "../../data/128-cartesian-1024-768"
 
     save_cross_sec_data(
         INPUT_DIR,
@@ -176,5 +203,8 @@ if __name__ == "__main__":
         COMPTON_RESOLUTION_DEG,
         DENOISE,
         DENOISE_THRESHOLD,
-        OVERWRITE,
+        OVERWRITE=True,
+        CARTESIAN=True,
+        x_dim=1024,
+        y_dim=768,
     )

@@ -24,7 +24,7 @@ def save_mapping(NSIDE, x_dim, y_dim):
         if r % 20 == 0:
             print("Row ", r, " completed")
 
-    with open(f"../../mappings/NSIDE_{NSIDE}_x{x_dim}_y{y_dim}.pickle", "wb") as f:
+    with open(f"../../mappings/NSIDE_{NSIDE}_x{x_dim}_y{y_dim}.pkl", "wb") as f:
         pickle.dump(cart_to_heal_map, f)
 
 
@@ -44,4 +44,4 @@ def reconstruct_from_cartesian(cart_arr, NSIDE, cart_to_heal_map):
 
 
 if __name__ == "__main__":
-    save_mapping(NSIDE=128, x_dim=2048, y_dim=1536)
+    save_mapping(NSIDE=128, x_dim=1024, y_dim=768)
