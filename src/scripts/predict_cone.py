@@ -147,35 +147,27 @@ lin8 = Sequential(
 conv8 = Sequential(
     # CONV BLOCK
     ConvTranspose2d(1, 512, kernel_size=4, stride=2, padding=1),
-    Conv2d(in_channels=512, out_channels=384, kernel_size=3, stride=1, padding=1),
     # BatchNorm2d(384),
     ReLU(),
     # CONV BLOCK
-    ConvTranspose2d(384, 384, kernel_size=4, stride=2, padding=1),
-    Conv2d(in_channels=384, out_channels=256, kernel_size=3, stride=1, padding=1),
+    ConvTranspose2d(512, 256, kernel_size=4, stride=2, padding=1),
     # BatchNorm2d(256),
     ReLU(),
     # CONV BLOCK
-    ConvTranspose2d(256, 256, kernel_size=4, stride=2, padding=1),
-    Conv2d(in_channels=256, out_channels=192, kernel_size=3, stride=1, padding=1),
+    ConvTranspose2d(256, 128, kernel_size=4, stride=2, padding=1),
     # BatchNorm2d(192),
     ReLU(),
     # CONV BLOCK
-    ConvTranspose2d(192, 192, kernel_size=4, stride=2, padding=1),
-    Conv2d(in_channels=192, out_channels=128, kernel_size=3, stride=1, padding=1),
+    ConvTranspose2d(128, 96, kernel_size=4, stride=2, padding=1),
     # BatchNorm2d(128),
     ReLU(),
     # CONV BLOCK
-    ConvTranspose2d(128, 96, kernel_size=4, stride=2, padding=1),
-    Conv2d(in_channels=96, out_channels=64, kernel_size=3, stride=1, padding=1),
+    ConvTranspose2d(96, 64, kernel_size=4, stride=2, padding=1),
     # BatchNorm2d(64),
     ReLU(),
     # CONV BLOCK
     # NOTE THAT THIS IS A 4X block
-    ConvTranspose2d(64, 64, kernel_size=4, stride=4, padding=0),
-    Conv2d(
-        in_channels=64, out_channels=config["DEPTH"], kernel_size=3, stride=1, padding=1
-    ),
+    ConvTranspose2d(64, config["DEPTH"], kernel_size=4, stride=4, padding=0),
     ReLU(),
     # # CONV BLOCK
     # ConvTranspose2d(512, 512, kernel_size=4, stride=2, padding=1),
