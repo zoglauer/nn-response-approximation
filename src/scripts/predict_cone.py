@@ -148,27 +148,27 @@ conv8 = Sequential(
     # CONV BLOCK
     ConvTranspose2d(1, 512, kernel_size=4, stride=2, padding=1),
     Conv2d(in_channels=512, out_channels=384, kernel_size=3, stride=1, padding=1),
-    BatchNorm2d(384),
+    # BatchNorm2d(384),
     ReLU(),
     # CONV BLOCK
     ConvTranspose2d(384, 384, kernel_size=4, stride=2, padding=1),
     Conv2d(in_channels=384, out_channels=256, kernel_size=3, stride=1, padding=1),
-    BatchNorm2d(256),
+    # BatchNorm2d(256),
     ReLU(),
     # CONV BLOCK
     ConvTranspose2d(256, 256, kernel_size=4, stride=2, padding=1),
     Conv2d(in_channels=256, out_channels=192, kernel_size=3, stride=1, padding=1),
-    BatchNorm2d(192),
+    # BatchNorm2d(192),
     ReLU(),
     # CONV BLOCK
     ConvTranspose2d(192, 192, kernel_size=4, stride=2, padding=1),
     Conv2d(in_channels=192, out_channels=128, kernel_size=3, stride=1, padding=1),
-    BatchNorm2d(128),
+    # BatchNorm2d(128),
     ReLU(),
     # CONV BLOCK
     ConvTranspose2d(128, 96, kernel_size=4, stride=2, padding=1),
     Conv2d(in_channels=96, out_channels=64, kernel_size=3, stride=1, padding=1),
-    BatchNorm2d(64),
+    # BatchNorm2d(64),
     ReLU(),
     # CONV BLOCK
     # NOTE THAT THIS IS A 4X block
