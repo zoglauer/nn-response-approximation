@@ -195,10 +195,12 @@ conv8 = Sequential(
     # CONV BLOCK
     ConvTranspose2d(36, 36, kernel_size=4, stride=2, padding=1),
     Conv2d(36, 36, kernel_size=3, stride=1, padding=1),
+    BatchNorm2d(36),
     ReLU(),
     Conv2d(
         in_channels=36, out_channels=config["DEPTH"], kernel_size=3, stride=1, padding=1
     ),
+    BatchNorm2d(config["DEPTH"]),
     ReLU(),
     # # CONV BLOCK
     # ConvTranspose2d(16, 32, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
