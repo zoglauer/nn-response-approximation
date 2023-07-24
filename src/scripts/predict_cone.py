@@ -62,7 +62,7 @@ config = {
     "DEPTH": 36,  # 180 / 5
     "train_pct": 0.95,
     "val_pct": 0.04,
-    "BATCH_SIZE": 32,
+    "BATCH_SIZE": 64,
     # ------------------- #
     "EPOCHS": 1000,
     "PATIENCE": 40,
@@ -146,15 +146,7 @@ lin8 = Sequential(
 
 conv8 = Sequential(
     # CONV BLOCK
-    ConvTranspose2d(1, 2048, kernel_size=4, stride=2, padding=1),
-    Conv2d(in_channels=2048, out_channels=1536, kernel_size=3, stride=1, padding=1),
-    BatchNorm2d(1536),
-    ReLU(),
-    Conv2d(in_channels=1536, out_channels=1024, kernel_size=3, stride=1, padding=1),
-    BatchNorm2d(1024),
-    ReLU(),
-    # CONV BLOCK
-    ConvTranspose2d(1024, 1024, kernel_size=4, stride=2, padding=1),
+    ConvTranspose2d(1, 1024, kernel_size=4, stride=2, padding=1),
     Conv2d(in_channels=1024, out_channels=768, kernel_size=3, stride=1, padding=1),
     BatchNorm2d(768),
     ReLU(),
@@ -193,14 +185,11 @@ conv8 = Sequential(
     Conv2d(in_channels=48, out_channels=36, kernel_size=3, stride=1, padding=1),
     ReLU(),
     # CONV BLOCK
-    ConvTranspose2d(36, 36, kernel_size=4, stride=2, padding=1),
-    Conv2d(36, 36, kernel_size=3, stride=1, padding=1),
-    BatchNorm2d(36),
-    ReLU(),
+    # NOTE: THIS transpose increases resolution by x 4
+    ConvTranspose2d(36, 36, kernel_size=4, stride=4, padding=0),
     Conv2d(
         in_channels=36, out_channels=config["DEPTH"], kernel_size=3, stride=1, padding=1
     ),
-    BatchNorm2d(config["DEPTH"]),
     ReLU(),
     # # CONV BLOCK
     # ConvTranspose2d(16, 32, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1)),
