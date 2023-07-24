@@ -165,7 +165,6 @@ conv8 = Sequential(
     Conv2d(
         in_channels=64, out_channels=config["DEPTH"], kernel_size=3, stride=1, padding=1
     ),
-    BatchNorm2d(config["DEPTH"]),
     ReLU(),
     # # CONV BLOCK
     # ConvTranspose2d(512, 512, kernel_size=4, stride=2, padding=1),
