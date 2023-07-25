@@ -169,6 +169,8 @@ class Trainer:
         with torch.no_grad():
             running_loss = 0.0
 
+            truth = None
+
             for x, y in data_loader:
                 pred = model(x)
 
@@ -177,18 +179,27 @@ class Trainer:
                 # Multiplied to get aggregate loss for the batch (average done below across all batches).
                 running_loss += loss.item() * pred.shape[0]
 
+                # Store ground truth to later save
+                truth = y
+
             # Save an image from the last pred for logging
             if (
                 self.config["SAVE_IMAGES"]
                 and self.epoch % self.config["IMAGES_SAVE_INTERVAL"] == 0
             ):
-                img = pred[0].cpu().numpy()
+                pred = pred[0].cpu().numpy()
 
-                # Use epoch as filename
-
+                # Save a sample validation prediction
                 filename = os.path.join(self.config["IMAGES_SAVE_DIR"], str(self.epoch))
                 print("SAVING", filename)
-                np.save(filename, img)
+                np.save(filename, pred)
+
+                # Save the ground truth for that prediction
+                truth_filename = os.path.join(
+                    self.config["IMAGES_SAVE_DIR"], str(self.epoch) + "-truth"
+                )
+                print("SAVING", truth_filename)
+                np.save(truth_filename, truth)
 
             # Revert back to train mode
             model.train()
