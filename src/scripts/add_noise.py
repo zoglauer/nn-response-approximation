@@ -48,7 +48,7 @@ SET CONFIG OBJECT.
 
 """
 config = {
-    "PROJECT": "nn_response",
+    "PROJECT": "add-noise",
     # ------------------- #
     "INPUT_DIR": "../../denoised_data/128-cartesian-1024-768",
     "GPU_PARALLEL": False,
