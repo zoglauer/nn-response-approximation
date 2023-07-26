@@ -25,7 +25,7 @@ class ConvNoiser(Module):
 
     # Run x through each layer
     def forward(self, x):
-        for layer in self.linear_layers:
+        for layer in self.layers:
             x = layer(x)
 
         return x
