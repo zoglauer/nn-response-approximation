@@ -65,7 +65,7 @@ config = {
     # ------------------- #
     "EPOCHS": 1000,
     "PATIENCE": 40,
-    "LEARNING_RATE": 0.01,
+    "LEARNING_RATE": 0.1,
     # ------------------- #
     "LR_PATIENCE": 10,
     "LR_ADAPT_FACTOR": 0.5,
