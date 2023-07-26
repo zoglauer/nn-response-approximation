@@ -32,6 +32,11 @@ def split_dataset(dataset, train_pct, val_pct, batch_size, shuffle=True):
     return train_loader, val_loader, test_loader
 
 
+# Scales array between 0 and 1
+def scale(arr):
+    return (arr - np.min(arr)) / np.max(arr)
+
+
 def normalize(arr):
     # # Normalize each cross section
     range_val = np.max(arr) - np.min(arr)
