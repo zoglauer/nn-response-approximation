@@ -2,6 +2,7 @@
 __pycache__
 __init__.py
 data/
+denoised_data/
 wandb/
 .DS_Store
 logs/saved-images

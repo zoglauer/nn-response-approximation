@@ -32,7 +32,7 @@ class Trainer:
 
         wandb.init(
             # set the wandb project where this run will be logged
-            project="nn_response",
+            project=self.config["PROJECT"],
             # track hyperparameters and run metadata
             config=self.config,
         )
