@@ -139,7 +139,7 @@ if __name__ == "__main__":
             "/global/scratch/users/akotamraju/denoised_data/128-cartesian-1024-768"
         )
     else:
-        INPUT_DIR = "../../data/128-cartesian-1024-768"
+        INPUT_DIR = "../../data/noisy-128-cartesian-1024-768"
         OUTPUT_DIR = "../../denoised_data/128-cartesian-1024-768"
 
     save_denoised_data(

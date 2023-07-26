@@ -21,7 +21,7 @@ from torch.nn import (
 )
 
 sys.path.append("../model")
-from ConvNoiseAdder import ConvNoiseAdder
+from ConvNoiser import ConvNoiser
 
 from torch.optim.lr_scheduler import ReduceLROnPlateau, CyclicLR
 import torch.optim as optim
@@ -51,7 +51,6 @@ config = {
     "PROJECT": "nn_response",
     # ------------------- #
     "INPUT_DIR": "../../denoised_data/128-cartesian-1024-768",
-    "DATA_INPUT_DIM": (2, 1),
     "GPU_PARALLEL": False,
     # ------------------- #
     "NSIDE": 128,
@@ -76,7 +75,7 @@ config = {
     "system": platform.system(),
     # ------------------- #
     "SAVE_IMAGES": True,
-    "IMAGES_SAVE_DIR": "../../logs/saved-images/",
+    "IMAGES_SAVE_DIR": "../../logs/noised-images/",
     "IMAGES_SAVE_INTERVAL": 10,
     # ------------------- #
     "DENOISE_THRESHOLD": 50,
@@ -88,8 +87,10 @@ config["NUMPIX"] = 12 * config["NSIDE"] ** 2
 
 # IF USING SAVIO, USE THE SCRATCH DIRECTORY
 if platform.system() == "Linux":
-    config["INPUT_DIR"] = "/global/scratch/users/akotamraju/data/128-cartesian-1024-768"
-    config["IMAGES_SAVE_DIR"] = "/global/scratch/users/akotamraju/saved-images"
+    config[
+        "INPUT_DIR"
+    ] = "/global/scratch/users/akotamraju/denoised_data/128-cartesian-1024-768"
+    config["IMAGES_SAVE_DIR"] = "/global/scratch/users/akotamraju/noised-images"
 
 # IF USING GPU, DO DATA PARALLELISM
 if config["device"] != "cpu":
@@ -108,9 +109,50 @@ train_loader, val_loader, test_loader = split_dataset(
 )
 
 
-layers = Sequential()
+layers = Sequential(
+    # ------------------------- ENCODER ------------------------- #
+    # 1/2X CONV BLOCK
+    Conv2d(config["DEPTH"], 64, kernel_size=3, stride=2, padding=1),
+    BatchNorm2d(64),
+    ReLU(),
+    # 1/2X CONV BLOCK
+    Conv2d(64, 128, kernel_size=3, stride=2, padding=1),
+    BatchNorm2d(128),
+    ReLU(),
+    # 1/2X CONV BLOCK
+    Conv2d(128, 256, kernel_size=3, stride=2, padding=1),
+    BatchNorm2d(256),
+    ReLU(),
+    # 1/2X CONV BLOCK
+    Conv2d(256, 512, kernel_size=3, stride=2, padding=1),
+    BatchNorm2d(512),
+    ReLU(),
+    # -------------------------         ------------------------- #
+    # ------------------------- DECODER ------------------------- #
+    # 2X CONV BLOCK
+    ConvTranspose2d(512, 512, kernel_size=4, stride=2, padding=1),
+    Conv2d(in_channels=512, out_channels=256, kernel_size=3, stride=1, padding=1),
+    BatchNorm2d(256),
+    ReLU(),
+    # 2X CONV BLOCK
+    ConvTranspose2d(256, 256, kernel_size=4, stride=2, padding=1),
+    Conv2d(in_channels=256, out_channels=128, kernel_size=3, stride=1, padding=1),
+    BatchNorm2d(128),
+    ReLU(),
+    # 2X CONV BLOCK
+    ConvTranspose2d(128, 128, kernel_size=4, stride=2, padding=1),
+    Conv2d(in_channels=128, out_channels=64, kernel_size=3, stride=1, padding=1),
+    BatchNorm2d(64),
+    ReLU(),
+    # 2X CONV BLOCK
+    ConvTranspose2d(64, 64, kernel_size=4, stride=2, padding=1),
+    Conv2d(
+        in_channels=64, out_channels=config["DEPTH"], kernel_size=3, stride=1, padding=1
+    ),
+    # -------------------------         ------------------------- #
+)
 
-model = ConvNoiseAdder(layers, config)
+model = ConvNoiser(layers, config)
 
 model = model.to(dtype=config["base"], device=config["device"])
 

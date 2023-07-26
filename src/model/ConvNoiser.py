@@ -16,7 +16,7 @@ Adds noise to given denoised Healpix image.
 """
 
 
-class ConvNoiseAdder(Module):
+class ConvNoiser(Module):
     def __init__(self, layers, config):
         super().__init__()
 
