@@ -195,6 +195,7 @@ class Trainer:
                 np.save(filename, pred)
 
                 # Save the ground truth for that prediction
+                truth = truth[0].cpu().numpy()
                 truth_filename = os.path.join(
                     self.config["IMAGES_SAVE_DIR"], str(self.epoch) + "-truth"
                 )
