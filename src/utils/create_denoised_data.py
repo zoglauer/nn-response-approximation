@@ -48,6 +48,7 @@ def denoise_img(img):
                 new_img[r].append(img[r][c])
             else:
                 new_img[r].append(0)
+    return new_img
 
 
 def denoise_cone(cone):
@@ -112,11 +113,15 @@ def save_denoised_data(
         data = pickle.load(f)["y"]
         f.close()
 
-        arr = np.array(data, dtype=object)
+        print(data)
+
+        arr = np.array(data)
 
         print(f"Loaded file { filename }. Array shape: { arr.shape }")
 
         denoised_cone = denoise_cone(arr)
+
+        print(denoised_cone)
 
         # input is denoised data, output is noisy data
         data = {"x": denoised_cone, "y": arr}
@@ -134,7 +139,7 @@ if __name__ == "__main__":
             "/global/scratch/users/akotamraju/denoised_data/128-cartesian-1024-768"
         )
     else:
-        INPUT_DIR = "../../data/noisy-128-cartesian-1024-768"
+        INPUT_DIR = "../../data/128-cartesian-1024-768"
         OUTPUT_DIR = "../../denoised_data/128-cartesian-1024-768"
 
     save_denoised_data(
