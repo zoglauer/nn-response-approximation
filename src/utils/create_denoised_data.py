@@ -129,12 +129,12 @@ def save_denoised_data(
 if __name__ == "__main__":
     # If savio, point to scratch directory
     if platform.system() == "Linux":
-        INPUT_DIR = "/global/scratch/users/akotamraju/data/128-cartesian-1024-768"
+        INPUT_DIR = "/global/scratch/users/akotamraju/data/noisy-128-cartesian-1024-768"
         OUTPUT_DIR = (
             "/global/scratch/users/akotamraju/denoised_data/128-cartesian-1024-768"
         )
     else:
-        INPUT_DIR = "../../data/128-cartesian-1024-768"
+        INPUT_DIR = "../../data/noisy-128-cartesian-1024-768"
         OUTPUT_DIR = "../../denoised_data/128-cartesian-1024-768"
 
     save_denoised_data(
