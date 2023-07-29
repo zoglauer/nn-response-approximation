@@ -7,3 +7,4 @@ wandb/
 .DS_Store
 logs/saved-images
 mappings/*
+logs/noised-images
