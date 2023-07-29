@@ -2,9 +2,9 @@ import torch
 import torch.nn as nn
 
 
-class BinaryNoiseInjectionLayer(nn.Module):
+class BernoulliNoiseInjectionLayer(nn.Module):
     def __init__(self):
-        super(BinaryNoiseInjectionLayer, self).__init__()
+        super(BernoulliNoiseInjectionLayer, self).__init__()
         self.probability = nn.Parameter(
             torch.tensor(0.5)
         )  # Initialize with 0.5 probability
