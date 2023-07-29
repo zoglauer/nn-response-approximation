@@ -128,8 +128,7 @@ layers = Sequential(
     ReLU(),
     BernoulliNoiseInjectionLayer(),
     # 1/2X CONV BLOCK
-    Conv2d(256, 512, kernel_size=3, stride=1, padding=1),
-    BatchNorm2d(512),
+    Conv2d(256, config["DEPTH"], kernel_size=3, stride=1, padding=1),
     ReLU(),
     BernoulliNoiseInjectionLayer(),
     # # -------------------------         ------------------------- #
