@@ -1,19 +1,18 @@
 import torch
-
 import torch.nn as nn
 
 
-class BernoulliNoiseInjectionLayer(nn.Module):
+class BinaryNoiseInjectionLayer(nn.Module):
     def __init__(self):
-        super(BernoulliNoiseInjectionLayer, self).__init__()
+        super(BinaryNoiseInjectionLayer, self).__init__()
         self.probability = nn.Parameter(
             torch.tensor(0.5)
         )  # Initialize with 0.5 probability
 
     def forward(self, x):
-        # Create a mask of random binary values with the same shape as the input x
-        mask = torch.bernoulli(torch.full_like(x, self.probability))
-        # Set the pixels to 1 where the mask is 1
+        # Create a binary mask with values sampled from a Bernoulli distribution
+        mask = torch.bernoulli(self.probability * torch.ones_like(x))
+        # Set the masked pixels to 1
         noisy_x = x + mask
         # Clamp the values to 1 (if noisy_x is larger than 1)
         noisy_x = torch.clamp(noisy_x, min=0, max=1)
