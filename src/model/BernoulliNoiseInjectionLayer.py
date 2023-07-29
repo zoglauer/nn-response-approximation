@@ -6,7 +6,7 @@ class BernoulliNoiseInjectionLayer(nn.Module):
     def __init__(self):
         super(BernoulliNoiseInjectionLayer, self).__init__()
         self.probability = nn.Parameter(
-            torch.tensor(0.5)
+            torch.tensor(0.1)
         )  # Initialize with 0.5 probability
 
     def forward(self, x):
