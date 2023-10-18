@@ -198,9 +198,9 @@ if __name__ == "__main__":
 
     # If savio, point to scratch directory
     if platform.system() == "Linux":
-        INPUT_DIR = "/global/scratch/users/akotamraju/data/full-sim-data"
+        INPUT_DIR = "/global/scratch/users/akotamraju/data/big-sim-data"
         OUTPUT_DIR = (
-            "/global/scratch/users/akotamraju/data/noisy-128-cartesian-1024-768"
+            "/global/scratch/users/akotamraju/data/cross-sec-big-sim-data-128-healpix"
         )
     else:
         INPUT_DIR = "../../data/raw-big-sim-data"
