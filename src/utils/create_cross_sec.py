@@ -68,10 +68,10 @@ def create_cross_sec(arr, NSIDE, NUMPIX, COMPTON_RESOLUTION_DEG):
 
         # The y values for the model
         # Note that there was an event reconstructed to this healpix index
-        y_val = 1
 
         # Place the x and y values into its correct compton interval array
-        closest_interval[heal_index] = y_val
+
+        closest_interval[heal_index] += 1
 
         if i % 100000 == 0:
             print(f"---> { i } values loaded")
@@ -191,7 +191,7 @@ def save_cross_sec_data(
 if __name__ == "__main__":
     NSIDE = 128
     NUMPIX = 12 * NSIDE**2
-    COMPTON_RESOLUTION_DEG = 5
+    COMPTON_RESOLUTION_DEG = 10
 
     DENOISE = False
     DENOISE_THRESHOLD = 50
@@ -203,8 +203,8 @@ if __name__ == "__main__":
             "/global/scratch/users/akotamraju/data/noisy-128-cartesian-1024-768"
         )
     else:
-        INPUT_DIR = "../../data/full-sim-data"
-        OUTPUT_DIR = "../../data/noisy-128-cartesian-1024-768"
+        INPUT_DIR = "../../data/raw-big-sim-data"
+        OUTPUT_DIR = "../../data/cross-sec-big-noisy-128-healpix"
 
     save_cross_sec_data(
         INPUT_DIR,
@@ -214,8 +214,8 @@ if __name__ == "__main__":
         COMPTON_RESOLUTION_DEG,
         DENOISE,
         DENOISE_THRESHOLD,
-        OVERWRITE=False,
-        CARTESIAN=True,
+        OVERWRITE=True,
+        CARTESIAN=False,
         x_dim=1024,
         y_dim=768,
     )
