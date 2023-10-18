@@ -54,7 +54,7 @@ kiwisolver==1.4.4
 libclang==14.0.6
 llvmlite==0.39.1
 Markdown==3.4.1
-MarkupSafe==2.1.1
+MarkupSafe==2.0.1
 matplotlib==3.5.3
 matplotlib-inline==0.1.6
 mistune==2.0.5
