@@ -189,7 +189,7 @@ def save_cross_sec_data(
 
 
 if __name__ == "__main__":
-    NSIDE = 128
+    NSIDE = 16
     NUMPIX = 12 * NSIDE**2
     COMPTON_RESOLUTION_DEG = 10
 
