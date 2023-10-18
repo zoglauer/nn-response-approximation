@@ -7,8 +7,8 @@
 #SBATCH -J Python
 
 #SBATCH --account=fc_cosi
-#SBATCH --partition=savio3_gpu
-#SBATCH --qos=savio_lowprio
+#SBATCH --partition=savio4_gpu
+#SBATCH --qos=savio_normal
 
 #SBATCH -t 24:00:00
 
