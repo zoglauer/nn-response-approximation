@@ -189,7 +189,7 @@ def save_cross_sec_data(
 
 
 if __name__ == "__main__":
-    NSIDE = 16
+    NSIDE = 32
     NUMPIX = 12 * NSIDE**2
     COMPTON_RESOLUTION_DEG = 10
 
@@ -203,8 +203,8 @@ if __name__ == "__main__":
             "/global/scratch/users/akotamraju/data/cross-sec-big-sim-data-128-healpix"
         )
     else:
-        INPUT_DIR = "../../data/raw-big-sim-data"
-        OUTPUT_DIR = "../../data/cross-sec-big-noisy-128-healpix"
+        INPUT_DIR = "../../data/full-sim-data"
+        OUTPUT_DIR = f"../../data/cross-sec-full-sim-data-{NSIDE}-healpix"
 
     save_cross_sec_data(
         INPUT_DIR,
@@ -214,7 +214,7 @@ if __name__ == "__main__":
         COMPTON_RESOLUTION_DEG,
         DENOISE,
         DENOISE_THRESHOLD,
-        OVERWRITE=True,
+        OVERWRITE=False,
         CARTESIAN=False,
         x_dim=1024,
         y_dim=768,
