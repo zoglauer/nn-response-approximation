@@ -162,6 +162,11 @@ def save_cross_sec_data(
         if not OVERWRITE and os.path.exists(out_path):
             print(f"SKIPPING { inp_path }")
             continue
+        elif not OVERWRITE and not os.path.exists(out_path):
+            # Otherwise if path doesn't exist, create a temporary file
+            # Allows for multiple scripts to create at same time
+            with open(out_path, "w") as fp:
+                pass
 
         print(inp_path)
 
