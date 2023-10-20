@@ -52,7 +52,7 @@ SET CONFIG OBJECT.
 config = {
     "PROJECT": "nn_response_fixed",
     # ------------------- #
-    "INPUT_DIR": "../../data/128-cartesian-1024-768",
+    "INPUT_DIR": "../../data/meme",
     "DATA_INPUT_DIM": (2, 1),
     "GPU_PARALLEL": False,
     # ------------------- #
@@ -61,10 +61,10 @@ config = {
     "RECT": True,
     "NORMALIZE": False,
     # ------------------- #
-    "DEPTH": 18,  # 180 / 5
-    "train_pct": 0.94,
-    "val_pct": 0.05,
-    "BATCH_SIZE": 32,
+    "DEPTH": 18,  # 180 / compton_bin_size
+    "train_pct": 0.7,
+    "val_pct": 0.2,
+    "BATCH_SIZE": 16,
     # ------------------- #
     "EPOCHS": 1000,
     "PATIENCE": 40,
@@ -78,8 +78,8 @@ config = {
     "system": platform.system(),
     # NOTE:  THESE DEFINE THE DIMENSIONS OF THE MIDDLE IMAGE
     "MID_IMAGE_DEPTH": 1,
-    "MID_IMAGE_DIM": (8, 6),
-    "FINAL_IMAGE_DIM": (64 * 2, 48 * 2),
+    "MID_IMAGE_DIM": (6, 8),
+    "FINAL_IMAGE_DIM": (48 * 2, 64 * 2),
     # ------------------- #
     "SAVE_IMAGES": True,
     "IMAGES_SAVE_DIR": "../../logs/saved-images/",
@@ -244,7 +244,7 @@ trainer = Trainer(
     model, criterion, optimizer, scheduler, config, train_loader, val_loader
 )
 
-print("Trainer create. Training starting.")
+print("Trainer created. Training starting.")
 
 # %%
 

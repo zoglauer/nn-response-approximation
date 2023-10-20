@@ -219,6 +219,6 @@ if __name__ == "__main__":
         DENOISE_THRESHOLD,
         OVERWRITE=False,
         CARTESIAN=False,
-        x_dim=1024,
-        y_dim=768,
+        x_dim=128,
+        y_dim=96,
     )

@@ -44,4 +44,4 @@ def reconstruct_from_cartesian(cart_arr, NSIDE, cart_to_heal_map):
 
 
 if __name__ == "__main__":
-    save_mapping(NSIDE=128, x_dim=1024, y_dim=768)
+    save_mapping(NSIDE=16, x_dim=64 * 2, y_dim=48 * 2)
