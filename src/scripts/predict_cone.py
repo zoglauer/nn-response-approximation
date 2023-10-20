@@ -126,10 +126,14 @@ def reshape_data(data):
 
 dataset = HealpixSimDataset(config, transform=reshape_data)
 
+print("Dataset created")
+
 # %%
 train_loader, val_loader, test_loader = split_dataset(
     dataset, config["train_pct"], config["val_pct"], config["BATCH_SIZE"], shuffle=True
 )
+
+print("Data Loaders created")
 
 # %%
 
@@ -185,6 +189,9 @@ model = expand
 
 model = model.to(dtype=config["base"], device=config["device"])
 
+print("Model Compiled")
+
+
 # Use data parallelism if specified
 if config["GPU_PARALLEL"]:
     model = DataParallel(model)
@@ -206,6 +213,8 @@ scheduler = ReduceLROnPlateau(
     patience=config["LR_PATIENCE"],
     verbose=True,
 )
+
+print("Optimizer, Scheduler, and Criterion Created")
 
 
 # scheduler = CyclicLR(
@@ -234,6 +243,8 @@ scheduler = ReduceLROnPlateau(
 trainer = Trainer(
     model, criterion, optimizer, scheduler, config, train_loader, val_loader
 )
+
+print("Trainer create. Training starting.")
 
 # %%
 
