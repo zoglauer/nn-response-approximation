@@ -11,14 +11,34 @@ def convert_existing_healpix_to_cartesian(INPUT_DIR, OUTPUT_DIR, x_dim, y_dim):
 
     # Loop through each file in the input dir
     for filename in os.listdir(INPUT_DIR):
-        f = open(filename, "rb")
+        inp_path = os.path.join(INPUT_DIR, filename)
+        out_path = os.path.join(OUTPUT_DIR, filename)
+
+        file_size = os.path.getsize(inp_path)
+
+        # Make sure file has some data
+        if file_size < 10:
+            continue
+
+        # if output path exists, skip
+        if os.path.exists(out_path):
+            print(f"SKIPPING { inp_path }")
+            continue
+        else:
+            # Create empty file
+            # Otherwise if path doesn't exist, create a temporary file
+            # Allows for multiple scripts to create at same time
+            with open(out_path, "w") as fp:
+                pass
+
+        f = open(inp_path, "rb")
         data = pickle.load(f)
         f.close()
 
         data["y"] = convert_to_cartesian(data["y"], x_dim, y_dim)
 
         # Save data split into different cross sections
-        with open(OUTPUT_DIR, "wb") as handle:
+        with open(out_path, "wb") as handle:
             pickle.dump(data, handle)
 
 
