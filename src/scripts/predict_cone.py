@@ -78,7 +78,7 @@ config = {
     "system": platform.system(),
     # NOTE:  THESE DEFINE THE DIMENSIONS OF THE MIDDLE IMAGE
     "MID_IMAGE_DEPTH": 1,
-    "MID_IMAGE_DIM": (6, 8),
+    "MID_IMAGE_DIM": (8, 6),
     "FINAL_IMAGE_DIM": (64 * 2, 48 * 2),
     # ------------------- #
     "SAVE_IMAGES": True,
@@ -94,7 +94,9 @@ config["NUMPIX"] = 12 * config["NSIDE"] ** 2
 
 # IF USING SAVIO, USE THE SCRATCH DIRECTORY
 if platform.system() == "Linux":
-    config["INPUT_DIR"] = "/global/scratch/users/akotamraju/data/128-cartesian-1024-768"
+    config[
+        "INPUT_DIR"
+    ] = "/global/scratch/users/akotamraju/data/cross-sec-big-sim-data-16-cartesian"
     config["IMAGES_SAVE_DIR"] = "/global/scratch/users/akotamraju/saved-images"
 
 # IF USING GPU, DO DATA PARALLELISM
@@ -148,26 +150,32 @@ lin8 = Sequential(
 
 conv8 = Sequential(
     # 2X CONV BLOCK
-    ConvTranspose2d(1, 512, kernel_size=4, stride=2, padding=1),
-    Conv2d(in_channels=512, out_channels=256, kernel_size=3, stride=1, padding=1),
-    BatchNorm2d(256),
-    ReLU(),
-    # 4X CONV BLOCK
-    ConvTranspose2d(256, 256, kernel_size=4, stride=4, padding=0),
-    Conv2d(in_channels=256, out_channels=128, kernel_size=3, stride=1, padding=1),
-    BatchNorm2d(128),
-    ReLU(),
-    # 4X CONV BLOCK
-    ConvTranspose2d(128, 128, kernel_size=4, stride=4, padding=0),
+    ConvTranspose2d(1, 128, kernel_size=4, stride=2, padding=1),
     Conv2d(in_channels=128, out_channels=64, kernel_size=3, stride=1, padding=1),
     BatchNorm2d(64),
     ReLU(),
+    # 2X CONV BLOCK
+    ConvTranspose2d(64, 64, kernel_size=4, stride=2, padding=1),
+    Conv2d(in_channels=64, out_channels=32, kernel_size=3, stride=1, padding=1),
+    BatchNorm2d(32),
+    ReLU(),
     # 4X CONV BLOCK
-    ConvTranspose2d(64, 64, kernel_size=4, stride=4, padding=0),
+    ConvTranspose2d(32, 32, kernel_size=4, stride=4, padding=0),
     Conv2d(
-        in_channels=64, out_channels=config["DEPTH"], kernel_size=3, stride=1, padding=1
+        in_channels=32, out_channels=config["DEPTH"], kernel_size=3, stride=1, padding=1
     ),
     ReLU(),
+    # # 4X CONV BLOCK
+    # ConvTranspose2d(256, 256, kernel_size=4, stride=4, padding=0),
+    # Conv2d(in_channels=256, out_channels=128, kernel_size=3, stride=1, padding=1),
+    # BatchNorm2d(128),
+    # ReLU(),
+    # 4X CONV BLOCK
+    # ConvTranspose2d(64, 64, kernel_size=4, stride=4, padding=0),
+    # Conv2d(
+    #     in_channels=64, out_channels=config["DEPTH"], kernel_size=3, stride=1, padding=1
+    # ),
+    # ReLU(),
 )
 
 expand = ConvExpand(lin8, conv8, config)
