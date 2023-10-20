@@ -79,7 +79,7 @@ config = {
     # NOTE:  THESE DEFINE THE DIMENSIONS OF THE MIDDLE IMAGE
     "MID_IMAGE_DEPTH": 1,
     "MID_IMAGE_DIM": (6, 8),
-    "FINAL_IMAGE_DIM": (48 * 2, 64 * 2),
+    "FINAL_IMAGE_DIM": (48 * 2, 64 * 2),  # first is y, second is x
     # ------------------- #
     "SAVE_IMAGES": True,
     "IMAGES_SAVE_DIR": "../../logs/saved-images/",
