@@ -56,7 +56,7 @@ config = {
     "DATA_INPUT_DIM": (2, 1),
     "GPU_PARALLEL": False,
     # ------------------- #
-    "NSIDE": 16,
+    "NSIDE": 32,
     "SHOW_IMAGES": True,
     "RECT": True,
     "NORMALIZE": False,
