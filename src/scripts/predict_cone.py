@@ -56,7 +56,7 @@ config = {
     "DATA_INPUT_DIM": (2, 1),
     "GPU_PARALLEL": False,
     # ------------------- #
-    "NSIDE": 32,
+    "NSIDE": 16,
     "SHOW_IMAGES": True,
     "RECT": True,
     "NORMALIZE": False,
@@ -70,7 +70,7 @@ config = {
     "PATIENCE": 40,
     "LEARNING_RATE": 0.01,
     # ------------------- #
-    "LR_PATIENCE": 10,
+    "LR_PATIENCE": 15,
     "LR_ADAPT_FACTOR": 0.5,
     # ------------------- #
     "base": torch.float32,
