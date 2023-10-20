@@ -50,18 +50,18 @@ SET CONFIG OBJECT.
 
 """
 config = {
-    "PROJECT": "nn_response",
+    "PROJECT": "nn_response_fixed",
     # ------------------- #
     "INPUT_DIR": "../../data/128-cartesian-1024-768",
     "DATA_INPUT_DIM": (2, 1),
     "GPU_PARALLEL": False,
     # ------------------- #
-    "NSIDE": 128,
+    "NSIDE": 16,
     "SHOW_IMAGES": True,
     "RECT": True,
     "NORMALIZE": False,
     # ------------------- #
-    "DEPTH": 36,  # 180 / 5
+    "DEPTH": 18,  # 180 / 5
     "train_pct": 0.94,
     "val_pct": 0.05,
     "BATCH_SIZE": 32,
@@ -79,7 +79,7 @@ config = {
     # NOTE:  THESE DEFINE THE DIMENSIONS OF THE MIDDLE IMAGE
     "MID_IMAGE_DEPTH": 1,
     "MID_IMAGE_DIM": (6, 8),
-    "FINAL_IMAGE_DIM": (384 * 2, 512 * 2),
+    "FINAL_IMAGE_DIM": (64 * 2, 48 * 2),
     # ------------------- #
     "SAVE_IMAGES": True,
     "IMAGES_SAVE_DIR": "../../logs/saved-images/",
