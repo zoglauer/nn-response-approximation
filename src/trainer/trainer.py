@@ -3,7 +3,6 @@ import math
 import os
 import wandb
 import numpy as np
-from torchsummary import summary
 
 
 class Trainer:
