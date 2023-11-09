@@ -19,13 +19,19 @@ def deg_to_rad(ang):
     return ang * 2 * pi / 360.0
 
 
-def create_cross_sec(arr, NSIDE, NUMPIX, COMPTON_RESOLUTION_DEG):
+def create_cross_sec(arr, NSIDE, NUMPIX, COMPTON_RESOLUTION_DEG, AREA_SCALING=True):
     # Create map to store data for each compton scatter angle interval
     split_data = {}
 
     x = np.array(arr[0])
 
     num_vals = len(arr[1])
+
+    # TS = total numer of events
+    TS_NUM_PHOTONS_STARTED = float(arr[7])
+
+    # Constant representing simulation start area far field value
+    START_AREA_FAR_FIELD = float(arr[8])
 
     curr_angle = 0
     while curr_angle < 180:
@@ -75,6 +81,22 @@ def create_cross_sec(arr, NSIDE, NUMPIX, COMPTON_RESOLUTION_DEG):
 
         if i % 100000 == 0:
             print(f"---> { i } values loaded")
+
+    # If area_scaling is set to True, scale using the following formula
+    # Area_effective = Area_start * Num_photons_detected / Num_photons_started
+    # Num_photons_detected is the number of photons in that pixel
+    if AREA_SCALING:
+        for angle_bin in split_data:
+            num_photons_detected = split_data[angle_bin]
+
+            effective_area = (
+                1.0
+                * START_AREA_FAR_FIELD
+                * num_photons_detected
+                / TS_NUM_PHOTONS_STARTED
+            )
+
+            split_data[angle_bin] = effective_area
 
     print(f"---> All values loaded.")
 
@@ -204,10 +226,10 @@ if __name__ == "__main__":
     # If savio, point to scratch directory
     if platform.system() == "Linux":
         INPUT_DIR = "/global/scratch/users/akotamraju/data/big-sim-data"
-        OUTPUT_DIR = f"/global/scratch/users/akotamraju/data/cross-sec-big-sim-data-{NSIDE}-healpix"
+        OUTPUT_DIR = f"/global/scratch/users/akotamraju/data/area_scaled-cross-sec-big-sim-data-{NSIDE}-healpix"
     else:
-        INPUT_DIR = "../../data/full-sim-data"
-        OUTPUT_DIR = f"../../data/cross-sec-full-sim-data-{NSIDE}-healpix"
+        INPUT_DIR = "/Users/akotamraju/Documents/dev/URAP/main-responseapprox/data/scaled-massive-full-sim-data"
+        OUTPUT_DIR = f"../../data/area_scaled-cross-sec-full-sim-data-{NSIDE}-healpix"
 
     save_cross_sec_data(
         INPUT_DIR,
@@ -218,7 +240,7 @@ if __name__ == "__main__":
         DENOISE,
         DENOISE_THRESHOLD,
         OVERWRITE=False,
-        CARTESIAN=False,
+        CARTESIAN=True,
         y_dim=96,
         x_dim=128,
     )
