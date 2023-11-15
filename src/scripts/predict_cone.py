@@ -58,7 +58,6 @@ config = {
     # ------------------- #
     "NSIDE": 16,
     "SHOW_IMAGES": True,
-    "RECT": True,
     "NORMALIZE": False,
     # ------------------- #
     "DEPTH": 18,  # 180 / compton_bin_size
@@ -96,7 +95,7 @@ config["NUMPIX"] = 12 * config["NSIDE"] ** 2
 if platform.system() == "Linux":
     config[
         "INPUT_DIR"
-    ] = "/global/scratch/users/akotamraju/data/cross-sec-big-sim-data-16-cartesian"
+    ] = "/global/scratch/users/akotamraju/data/area_scaled-cross-sec-big-sim-data-16-healpix"
     config["IMAGES_SAVE_DIR"] = "/global/scratch/users/akotamraju/saved-images"
 
 # IF USING GPU, DO DATA PARALLELISM
