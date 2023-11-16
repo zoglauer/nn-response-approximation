@@ -91,36 +91,36 @@ config = {
 print("Starting Training.")
 
 # # Set other attributes that depend on config specifications
-# config["NUMPIX"] = 12 * config["NSIDE"] ** 2
+config["NUMPIX"] = 12 * config["NSIDE"] ** 2
 
-# # IF USING SAVIO, USE THE SCRATCH DIRECTORY
-# if platform.system() == "Linux":
-#     config[
-#         "INPUT_DIR"
-#     ] = "/global/scratch/users/akotamraju/data/area_scaled-cross-sec-big-sim-data-16-healpix"
-#     config["IMAGES_SAVE_DIR"] = "/global/scratch/users/akotamraju/saved-images"
+# IF USING SAVIO, USE THE SCRATCH DIRECTORY
+if platform.system() == "Linux":
+    config[
+        "INPUT_DIR"
+    ] = "/global/scratch/users/akotamraju/data/area_scaled-cross-sec-big-sim-data-16-healpix"
+    config["IMAGES_SAVE_DIR"] = "/global/scratch/users/akotamraju/saved-images"
 
-# # IF USING GPU, DO DATA PARALLELISM
-# if config["device"] != "cpu":
-#     config["GPU_PARALLEL"] = True
+# IF USING GPU, DO DATA PARALLELISM
+if config["device"] != "cpu":
+    config["GPU_PARALLEL"] = True
 
-# # %%
+# %%
 
 
-# # Reshapes the 'y' of a datapoint (the healpix array) into the shape of (depth, length, width)
-# def reshape_data(data):
-#     return data
-#     # return {
-#     #     "x": data["x"],
-#     #     "y": np.reshape(
-#     #         data["y"],
-#     #         (
-#     #             config["DEPTH"],
-#     #             config["FINAL_IMAGE_DIM"][0],
-#     #             config["FINAL_IMAGE_DIM"][1],
-#     #         ),
-#     #     ),
-#     # }
+# Reshapes the 'y' of a datapoint (the healpix array) into the shape of (depth, length, width)
+def reshape_data(data):
+    return data
+    # return {
+    #     "x": data["x"],
+    #     "y": np.reshape(
+    #         data["y"],
+    #         (
+    #             config["DEPTH"],
+    #             config["FINAL_IMAGE_DIM"][0],
+    #             config["FINAL_IMAGE_DIM"][1],
+    #         ),
+    #     ),
+    # }
 
 
 # # %%
