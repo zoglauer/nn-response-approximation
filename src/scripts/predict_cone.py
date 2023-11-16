@@ -125,9 +125,9 @@ def reshape_data(data):
 
 # # %%
 
-# dataset = HealpixSimDataset(config, transform=reshape_data)
+dataset = HealpixSimDataset(config, transform=reshape_data)
 
-# print("Dataset created")
+print("Dataset created")
 
 # # %%
 # train_loader, val_loader, test_loader = split_dataset(
