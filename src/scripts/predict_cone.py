@@ -63,7 +63,7 @@ config = {
     "DEPTH": 18,  # 180 / compton_bin_size
     "train_pct": 0.95,
     "val_pct": 0.04,
-    "BATCH_SIZE": 1,
+    "BATCH_SIZE": 4,
     # ------------------- #
     "EPOCHS": 1000,
     "PATIENCE": 40,
