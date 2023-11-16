@@ -22,26 +22,26 @@ from torch.nn import (
     BatchNorm2d,
 )
 
-# sys.path.append("../model")
-# from ConvExpand import ConvExpand
+sys.path.append("../model")
+from ConvExpand import ConvExpand
 
-# from torch.optim.lr_scheduler import ReduceLROnPlateau, CyclicLR
-# import torch.optim as optim
+from torch.optim.lr_scheduler import ReduceLROnPlateau, CyclicLR
+import torch.optim as optim
 
-# from torch.nn import MSELoss
+from torch.nn import MSELoss
 
-# sys.path.append("../trainer")
-# from trainer import Trainer
+sys.path.append("../trainer")
+from trainer import Trainer
 
-# # Add utils directory to list of directories to search through
-# sys.path.append("../utils")
-# from utils import get_device, set_seed, make_dir, save_img, split_dataset
+# Add utils directory to list of directories to search through
+sys.path.append("../utils")
+from utils import get_device, set_seed, make_dir, save_img, split_dataset
 
-# # Add dataset dirrectory
-# sys.path.append("../dataset")
-# from HealpixSimDataset import HealpixSimDataset
+# Add dataset dirrectory
+sys.path.append("../dataset")
+from HealpixSimDataset import HealpixSimDataset
 
-# set_seed(2023)
+set_seed(2023)
 
 
 # """
