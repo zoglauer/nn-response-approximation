@@ -129,10 +129,10 @@ dataset = HealpixSimDataset(config, transform=reshape_data)
 
 print("Dataset created")
 
-# # %%
-# train_loader, val_loader, test_loader = split_dataset(
-#     dataset, config["train_pct"], config["val_pct"], config["BATCH_SIZE"], shuffle=True
-# )
+# %%
+train_loader, val_loader, test_loader = split_dataset(
+    dataset, config["train_pct"], config["val_pct"], config["BATCH_SIZE"], shuffle=True
+)
 
 # print("Data Loaders created")
 
