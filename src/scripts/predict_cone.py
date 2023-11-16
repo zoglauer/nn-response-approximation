@@ -88,6 +88,8 @@ config = {
     # ------------------- #
 }
 
+print("Starting Training")
+
 # Set other attributes that depend on config specifications
 config["NUMPIX"] = 12 * config["NSIDE"] ** 2
 
