@@ -13,8 +13,8 @@
 #SBATCH -t 24:00:00
 
 #SBATCH --nodes=1
-#SBATCH --ntasks=8
-#SBATCH --cpus-per-task=4
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=32
 #SBATCH --gres=gpu:A5000:8
 
 #SBATCH --signal=2@60
