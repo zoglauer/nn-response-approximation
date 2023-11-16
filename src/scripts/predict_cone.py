@@ -138,84 +138,84 @@ print("Data Loaders created")
 
 # # %%
 
-# # IMPORTANT: change linear layer output to batch size * 256 so dimensions match? hmm
-# lin8 = Sequential(
-#     Linear(2, 48),
-#     ReLU(),
-#     # Linear(12, 48),
-#     # ReLU(),
-#     # Linear(48, 192),
-#     # ReLU(),
-#     # Linear(384, 3840),
-#     # ReLU(),
-#     # Linear(3840, 27648),
-#     # ReLU(),
-# )
+# IMPORTANT: change linear layer output to batch size * 256 so dimensions match? hmm
+lin8 = Sequential(
+    Linear(2, 48),
+    ReLU(),
+    # Linear(12, 48),
+    # ReLU(),
+    # Linear(48, 192),
+    # ReLU(),
+    # Linear(384, 3840),
+    # ReLU(),
+    # Linear(3840, 27648),
+    # ReLU(),
+)
 
 
-# conv8 = Sequential(
-#     # 2X CONV BLOCK
-#     ConvTranspose2d(1, 128, kernel_size=4, stride=2, padding=1),
-#     Conv2d(in_channels=128, out_channels=64, kernel_size=3, stride=1, padding=1),
-#     BatchNorm2d(64),
-#     ReLU(),
-#     # 2X CONV BLOCK
-#     ConvTranspose2d(64, 64, kernel_size=4, stride=2, padding=1),
-#     Conv2d(in_channels=64, out_channels=32, kernel_size=3, stride=1, padding=1),
-#     BatchNorm2d(32),
-#     ReLU(),
-#     # 4X CONV BLOCK
-#     ConvTranspose2d(32, 32, kernel_size=4, stride=4, padding=0),
-#     Conv2d(
-#         in_channels=32, out_channels=config["DEPTH"], kernel_size=3, stride=1, padding=1
-#     ),
-#     ReLU(),
-#     # # 4X CONV BLOCK
-#     # ConvTranspose2d(256, 256, kernel_size=4, stride=4, padding=0),
-#     # Conv2d(in_channels=256, out_channels=128, kernel_size=3, stride=1, padding=1),
-#     # BatchNorm2d(128),
-#     # ReLU(),
-#     # 4X CONV BLOCK
-#     # ConvTranspose2d(64, 64, kernel_size=4, stride=4, padding=0),
-#     # Conv2d(
-#     #     in_channels=64, out_channels=config["DEPTH"], kernel_size=3, stride=1, padding=1
-#     # ),
-#     # ReLU(),
-# )
+conv8 = Sequential(
+    # 2X CONV BLOCK
+    ConvTranspose2d(1, 128, kernel_size=4, stride=2, padding=1),
+    Conv2d(in_channels=128, out_channels=64, kernel_size=3, stride=1, padding=1),
+    BatchNorm2d(64),
+    ReLU(),
+    # 2X CONV BLOCK
+    ConvTranspose2d(64, 64, kernel_size=4, stride=2, padding=1),
+    Conv2d(in_channels=64, out_channels=32, kernel_size=3, stride=1, padding=1),
+    BatchNorm2d(32),
+    ReLU(),
+    # 4X CONV BLOCK
+    ConvTranspose2d(32, 32, kernel_size=4, stride=4, padding=0),
+    Conv2d(
+        in_channels=32, out_channels=config["DEPTH"], kernel_size=3, stride=1, padding=1
+    ),
+    ReLU(),
+    # # 4X CONV BLOCK
+    # ConvTranspose2d(256, 256, kernel_size=4, stride=4, padding=0),
+    # Conv2d(in_channels=256, out_channels=128, kernel_size=3, stride=1, padding=1),
+    # BatchNorm2d(128),
+    # ReLU(),
+    # 4X CONV BLOCK
+    # ConvTranspose2d(64, 64, kernel_size=4, stride=4, padding=0),
+    # Conv2d(
+    #     in_channels=64, out_channels=config["DEPTH"], kernel_size=3, stride=1, padding=1
+    # ),
+    # ReLU(),
+)
 
-# expand = ConvExpand(lin8, conv8, config)
+expand = ConvExpand(lin8, conv8, config)
 
-# # %%
-# model = expand
+# %%
+model = expand
 
-# model = model.to(dtype=config["base"], device=config["device"])
+model = model.to(dtype=config["base"], device=config["device"])
 
-# print("Model Compiled")
+print("Model Compiled")
 
 
-# # Use data parallelism if specified
-# if config["GPU_PARALLEL"]:
-#     model = DataParallel(model)
+# Use data parallelism if specified
+if config["GPU_PARALLEL"]:
+    model = DataParallel(model)
 
-# # %%
+# %%
 
-# # Use MSE Loss
-# # need to specify cpu
-# criterion = MSELoss().to(dtype=config["base"], device=config["device"])
+# Use MSE Loss
+# need to specify cpu
+criterion = MSELoss().to(dtype=config["base"], device=config["device"])
 
-# # Use Adam optimizer
-# optimizer = optim.Adam(model.parameters(), lr=config["LEARNING_RATE"])
+# Use Adam optimizer
+optimizer = optim.Adam(model.parameters(), lr=config["LEARNING_RATE"])
 
-# # Create scheduler to have adaptive learning rate
-# scheduler = ReduceLROnPlateau(
-#     optimizer,
-#     mode="min",
-#     factor=config["LR_ADAPT_FACTOR"],
-#     patience=config["LR_PATIENCE"],
-#     verbose=True,
-# )
+# Create scheduler to have adaptive learning rate
+scheduler = ReduceLROnPlateau(
+    optimizer,
+    mode="min",
+    factor=config["LR_ADAPT_FACTOR"],
+    patience=config["LR_PATIENCE"],
+    verbose=True,
+)
 
-# print("Optimizer, Scheduler, and Criterion Created")
+print("Optimizer, Scheduler, and Criterion Created")
 
 
 # # scheduler = CyclicLR(
