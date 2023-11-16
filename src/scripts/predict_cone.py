@@ -63,7 +63,7 @@ config = {
     "DEPTH": 18,  # 180 / compton_bin_size
     "train_pct": 0.95,
     "val_pct": 0.04,
-    "BATCH_SIZE": 16,
+    "BATCH_SIZE": 1,
     # ------------------- #
     "EPOCHS": 1000,
     "PATIENCE": 40,
@@ -218,35 +218,35 @@ scheduler = ReduceLROnPlateau(
 print("Optimizer, Scheduler, and Criterion Created")
 
 
-# # scheduler = CyclicLR(
-# #     optimizer,
-# #     base_lr=0.001,  # Initial learning rate which is the lower boundary in the cycle for each parameter group
-# #     max_lr=config[
-# #         "LEARNING_RATE"
-# #     ],  # Upper learning rate boundaries in the cycle for each parameter group
-# #     step_size_up=1024,  # Number of training iterations in the increasing half of a cycle
-# #     mode="triangular",
-# #     cycle_momentum=False,
-# # )
-
-# # NOTE DOWN THE OPTIMIZER & SCHEDULER INTO THE CONFIG
-
-
-# # optimizer = torch.optim.SGD(model.parameters(), lr=config["LEARNING_RATE"])
-# # scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(
-# #     optimizer,
-# #     T_0=20,
-# #     T_mult=1,
-# #     eta_min=0.001,
-# # )
-
-
-# trainer = Trainer(
-#     model, criterion, optimizer, scheduler, config, train_loader, val_loader
+# scheduler = CyclicLR(
+#     optimizer,
+#     base_lr=0.001,  # Initial learning rate which is the lower boundary in the cycle for each parameter group
+#     max_lr=config[
+#         "LEARNING_RATE"
+#     ],  # Upper learning rate boundaries in the cycle for each parameter group
+#     step_size_up=1024,  # Number of training iterations in the increasing half of a cycle
+#     mode="triangular",
+#     cycle_momentum=False,
 # )
 
-# print("Trainer created. Training starting.")
+# NOTE DOWN THE OPTIMIZER & SCHEDULER INTO THE CONFIG
+
+
+# optimizer = torch.optim.SGD(model.parameters(), lr=config["LEARNING_RATE"])
+# scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(
+#     optimizer,
+#     T_0=20,
+#     T_mult=1,
+#     eta_min=0.001,
+# )
+
+
+trainer = Trainer(
+    model, criterion, optimizer, scheduler, config, train_loader, val_loader
+)
+
+print("Trainer created. Training starting.")
 
 # # %%
 
-# trainer.train()
+trainer.train()
