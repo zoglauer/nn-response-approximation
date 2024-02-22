@@ -55,6 +55,11 @@ def create_cross_sec(arr, NSIDE, NUMPIX, COMPTON_RESOLUTION_DEG, AREA_SCALING=Tr
         theta = arr[3][i]
         phi = arr[4][i]
         angle = arr[5][i]
+        distance = arr[6][i]
+
+        # Ignore entires with a distance <= 1cm (detector can't process them properly)
+        if distance <= 1:
+            continue
 
         # Get which compton interval this datapoint fits into
         closest_interval_mod = angle % COMPTON_RESOLUTION_DEG
