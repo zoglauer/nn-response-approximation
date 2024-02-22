@@ -65,11 +65,11 @@ config = {
     "val_pct": 0.04,
     "BATCH_SIZE": 16,
     # ------------------- #
-    "EPOCHS": 1000,
+    "EPOCHS": 100,
     "PATIENCE": 40,
     "LEARNING_RATE": 0.01,
     # ------------------- #
-    "LR_PATIENCE": 15,
+    "LR_PATIENCE": 12,
     "LR_ADAPT_FACTOR": 0.5,
     # ------------------- #
     "base": torch.float32,
@@ -95,9 +95,9 @@ config["NUMPIX"] = 12 * config["NSIDE"] ** 2
 
 # IF USING SAVIO, USE THE SCRATCH DIRECTORY
 if platform.system() == "Linux":
-    config[
-        "INPUT_DIR"
-    ] = "/global/scratch/users/akotamraju/data/area_scaled-cross-sec-big-sim-data-16-healpix"
+    config["INPUT_DIR"] = (
+        "/global/scratch/users/akotamraju/data/area_scaled-cross-sec-big-sim-data-16-healpix"
+    )
     config["IMAGES_SAVE_DIR"] = "/global/scratch/users/akotamraju/saved-images"
 
 # IF USING GPU, DO DATA PARALLELISM
@@ -164,12 +164,23 @@ conv8 = Sequential(
     Conv2d(in_channels=64, out_channels=32, kernel_size=3, stride=1, padding=1),
     BatchNorm2d(32),
     ReLU(),
-    # 4X CONV BLOCK
-    ConvTranspose2d(32, 32, kernel_size=4, stride=4, padding=0),
+    # 2X CONV BLOCK
+    ConvTranspose2d(32, 32, kernel_size=4, stride=2, padding=1),
+    Conv2d(in_channels=32, out_channels=24, kernel_size=3, stride=1, padding=1),
+    BatchNorm2d(24),
+    ReLU(),
+    # 2X CONV BLOCK
+    ConvTranspose2d(24, 24, kernel_size=4, stride=2, padding=1),
     Conv2d(
-        in_channels=32, out_channels=config["DEPTH"], kernel_size=3, stride=1, padding=1
+        in_channels=24, out_channels=config["DEPTH"], kernel_size=3, stride=1, padding=1
     ),
     ReLU(),
+    # # 4X CONV BLOCK
+    # ConvTranspose2d(32, 32, kernel_size=4, stride=4, padding=0),
+    # Conv2d(
+    #     in_channels=32, out_channels=config["DEPTH"], kernel_size=3, stride=1, padding=1
+    # ),
+    # ReLU(),
     # # 4X CONV BLOCK
     # ConvTranspose2d(256, 256, kernel_size=4, stride=4, padding=0),
     # Conv2d(in_channels=256, out_channels=128, kernel_size=3, stride=1, padding=1),
