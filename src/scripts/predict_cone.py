@@ -63,11 +63,11 @@ config = {
     "DEPTH": 18,  # 180 / compton_bin_size
     "train_pct": 0.95,
     "val_pct": 0.04,
-    "BATCH_SIZE": 16,
+    "BATCH_SIZE": 32,
     # ------------------- #
     "EPOCHS": 500,
     "PATIENCE": 40,
-    "LEARNING_RATE": 0.01,
+    "LEARNING_RATE": 0.0001,
     # ------------------- #
     "LR_PATIENCE": 12,
     "LR_ADAPT_FACTOR": 0.5,
