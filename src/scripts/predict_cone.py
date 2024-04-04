@@ -140,7 +140,7 @@ print("Data Loaders created")
 
 # IMPORTANT: change linear layer output to batch size * 256 so dimensions match? hmm
 lin8 = Sequential(
-    Linear(2, 48),
+    Linear(2, 12),
     ReLU(),  # try splitting this into more linear layers (Can still end up with 48)
     # Linear(12, 48),
     # ReLU(),
