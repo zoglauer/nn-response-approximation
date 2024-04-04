@@ -155,12 +155,7 @@ lin8 = Sequential(
 
 conv8 = Sequential(
     # 2X CONV BLOCK
-    ConvTranspose2d(1, 512, kernel_size=4, stride=2, padding=1),
-    Conv2d(in_channels=512, out_channels=256, kernel_size=3, stride=1, padding=1),
-    BatchNorm2d(256),
-    ReLU(),
-    # 2X CONV BLOCK
-    ConvTranspose2d(256, 256, kernel_size=4, stride=2, padding=1),
+    ConvTranspose2d(1, 256, kernel_size=4, stride=2, padding=1),
     Conv2d(in_channels=256, out_channels=128, kernel_size=3, stride=1, padding=1),
     BatchNorm2d(128),
     ReLU(),
