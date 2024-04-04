@@ -77,7 +77,7 @@ config = {
     "system": platform.system(),
     # NOTE:  THESE DEFINE THE DIMENSIONS OF THE MIDDLE IMAGE
     "MID_IMAGE_DEPTH": 1,
-    "MID_IMAGE_DIM": (6, 8),
+    "MID_IMAGE_DIM": (3, 4),
     "FINAL_IMAGE_DIM": (48 * 2, 64 * 2),  # first is y, second is x
     # ------------------- #
     "SAVE_IMAGES": True,
@@ -141,7 +141,7 @@ print("Data Loaders created")
 # IMPORTANT: change linear layer output to batch size * 256 so dimensions match? hmm
 lin8 = Sequential(
     Linear(2, 48),
-    ReLU(),
+    ReLU(),  # try splitting this into more linear layers (Can still end up with 48)
     # Linear(12, 48),
     # ReLU(),
     # Linear(48, 192),
@@ -155,7 +155,17 @@ lin8 = Sequential(
 
 conv8 = Sequential(
     # 2X CONV BLOCK
-    ConvTranspose2d(1, 128, kernel_size=4, stride=2, padding=1),
+    ConvTranspose2d(1, 512, kernel_size=4, stride=2, padding=1),
+    Conv2d(in_channels=512, out_channels=256, kernel_size=3, stride=1, padding=1),
+    BatchNorm2d(256),
+    ReLU(),
+    # 2X CONV BLOCK
+    ConvTranspose2d(256, 256, kernel_size=4, stride=2, padding=1),
+    Conv2d(in_channels=256, out_channels=128, kernel_size=3, stride=1, padding=1),
+    BatchNorm2d(128),
+    ReLU(),
+    # 2X CONV BLOCK
+    ConvTranspose2d(128, 128, kernel_size=4, stride=2, padding=1),
     Conv2d(in_channels=128, out_channels=64, kernel_size=3, stride=1, padding=1),
     BatchNorm2d(64),
     ReLU(),
