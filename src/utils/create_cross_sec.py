@@ -230,8 +230,8 @@ if __name__ == "__main__":
 
     # If savio, point to scratch directory
     if platform.system() == "Linux":
-        INPUT_DIR = "/global/scratch/users/akotamraju/data/big-sim-data"
-        OUTPUT_DIR = f"/global/scratch/users/akotamraju/data/area_scaled-cross-sec-big-sim-data-{NSIDE}-healpix"
+        INPUT_DIR = "/global/scratch/users/akotamraju/data/new-raw-data"
+        OUTPUT_DIR = f"/global/scratch/users/akotamraju/data/new-area_scaled-cross-sec-{NSIDE}-healpix"
     else:
         INPUT_DIR = "/Users/akotamraju/Documents/dev/URAP/main-responseapprox/data/scaled-massive-full-sim-data"
         OUTPUT_DIR = f"../../data/area_scaled-cross-sec-full-sim-data-{NSIDE}-healpix"
