@@ -31,7 +31,13 @@ def create_cross_sec(arr, NSIDE, NUMPIX, COMPTON_RESOLUTION_DEG, AREA_SCALING=Tr
     TS_NUM_PHOTONS_STARTED = float(arr[7])
 
     # Constant representing simulation start area far field value
-    START_AREA_FAR_FIELD = float(arr[8])
+    try:
+        START_AREA_FAR_FIELD = float(arr[8])
+    except:
+        print(
+            "WARNING! Defaulting start area far field value as there is none passed in"
+        )
+        START_AREA_FAR_FIELD = 31478.8
 
     curr_angle = 0
     while curr_angle < 180:
