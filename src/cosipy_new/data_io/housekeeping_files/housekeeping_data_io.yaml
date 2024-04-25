@@ -1,9 +1,0 @@
-#----------#
-
-# Full path to geometry file:
-geo_file: "/home/eshread/COSItools/massmodel-comptonsphere/ComptonSphere.geo.setup"
-
-# default mimrec configuration file:
-mimrec_config: "/home/eshread/COSItools/massmodel-comptonsphere/Mimrec.cfg"
-
-#----------#
