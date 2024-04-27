@@ -7,6 +7,6 @@ TestSource.520.inc1.id1.tra.gz: The tra file used for testing, but any of the tr
 image_deconvolution_test_main.ipynb: The main Jupyter notebook script for testing the image deconvolution algorithm.
 
 The below 3 classes have been edited for our purposes. So far, everything else has been unchanged.
-data_loader.py: Edited load_from_filepath() and set_event_from_filepath() to read in the event data from a .tra file and output the unbinned data in an hdf5 file as an intermediate step. This data is then binned and outputted as an hdf5 file. Also, I think you could completely skip the step of reading in the data as a tra file, and edit it to read in just the .pkl files!
+data_loader.py: Edited load_from_filepath() and set_event_from_filepath() to read in the event data from a .tra file and output the unbinned data in an hdf5 file as an intermediate step. This data is then binned and outputted as an hdf5 file. Something I never got around to, but would save time: completely skip the step of reading in the data as a .tra file, and edit it to read in just the .pkl files!
 UnBinnedData.py: Edited to exclude spacecraft pointing information. Assumes fixed galactic coordinates, i.e. with detector always pointing directly "up." In this sense, the local coordinates coincide with the galactic coordinates.  
 BinnedData.py: Edited for our local coordinate system (technically a fixed galactic frame), i.e. no correction for spacecraft frame.
